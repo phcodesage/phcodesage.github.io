@@ -46,13 +46,6 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
 
-const glow = document.querySelector('.cursor-glow');
-window.addEventListener('pointermove', (event) => {
-  if (!glow || event.pointerType !== 'mouse') return;
-  glow.style.left = `${event.clientX}px`;
-  glow.style.top = `${event.clientY}px`;
-}, { passive: true });
-
 if (window.matchMedia('(pointer: fine)').matches) {
   document.querySelectorAll('.project-card').forEach((card) => {
     card.addEventListener('pointermove', (event) => {

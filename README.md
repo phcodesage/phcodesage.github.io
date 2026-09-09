@@ -1,6 +1,6 @@
 # Rechcel Toledo — GitHub Pages portfolio
 
-Static portfolio built with semantic HTML, responsive CSS, and lightweight vanilla JavaScript. It has no build step and is ready to publish from the repository root with GitHub Pages.
+Static portfolio built with semantic HTML, responsive CSS, and lightweight vanilla JavaScript. It has no build step and is ready to publish from the repository root with GitHub Pages. The public GitHub profile photo is used as the portrait, logo, and favicon.
 
 ## Run locally
 
@@ -19,4 +19,4 @@ Then visit <http://localhost:4173>.
 3. In **Settings → Pages**, choose **Deploy from a branch**, select the default branch and `/ (root)`, then save.
 4. GitHub will publish the site at `https://phcodesage.github.io/`.
 
-The site uses relative asset paths, so it also works if it is published from a normal repository subpath.
+The site uses relative asset paths for its code, so it also works if it is published from a normal repository subpath. The portrait is loaded from the public GitHub avatar URL for `phcodesage`.
