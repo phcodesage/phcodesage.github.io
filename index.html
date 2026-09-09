@@ -2,87 +2,219 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Rechcel Toledo is a full-stack developer building clear, useful digital products." />
-    <meta property="og:title" content="Rechcel Toledo — Developer" />
-    <meta property="og:description" content="Full-stack developer building clear, useful digital products." />
-    <meta property="og:type" content="website" />
-    <title>Rechcel Toledo — Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rechcel Toledo is a full-stack developer and maintainer based in Davao, Philippines."
+    />
+    <meta name="theme-color" content="#f5f5f3" />
+    <title>Rechcel Toledo — Developer &amp; Maintainer</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/97998537?v=4" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gantari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gantari:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script>
-      window.tailwind = { config: { theme: { extend: {
-        fontFamily: { sans: ['Gantari', 'Arial', 'Helvetica', 'sans-serif'], mono: ['DM Mono', 'Courier New', 'monospace'] },
-        keyframes: { marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } } },
-        animation: { marquee: 'marquee 28s linear infinite' }
-      } } } };
+      window.tailwind = {
+        config: {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Gantari', 'Arial', 'Helvetica', 'sans-serif'],
+                mono: ['DM Mono', 'Courier New', 'monospace'],
+              },
+            },
+          },
+        },
+      };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Tailwind utilities remain the primary system; this small floor keeps labels readable on every screen. */
-      .text-\[8px\], .text-\[9px\], .text-\[10px\] { font-size: .75rem !important; }
-      .text-\[11px\] { font-size: .8125rem !important; }
-      .text-\[15vw\], .text-\[14vw\], .text-\[13vw\] { font-size: clamp(4rem, 10vw, 8rem) !important; }
-      .grayscale { filter: none !important; }
-    </style>
-    <script defer src="./script.js"></script>
+    <script src="script.js" defer></script>
   </head>
-  <body class="overflow-x-hidden bg-[#f7f7f5] font-sans text-[#080808] antialiased">
-    <header class="absolute left-1/2 top-0 z-40 flex w-[calc(100%-2rem)] max-w-[1180px] -translate-x-1/2 items-center justify-between py-5 md:w-[calc(100%-4rem)] md:py-7">
-      <a class="flex items-center gap-2.5 text-[11px] font-extrabold tracking-[.12em]" href="#top" aria-label="Rechcel Toledo home">
-        <img class="h-8 w-8 rounded-full object-cover" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" />
-        <span>RECHCEL TOLEDO</span>
-      </a>
-      <button class="menu-toggle block cursor-pointer border-0 bg-transparent p-2 md:hidden" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Toggle navigation</span><span class="my-1 block h-px w-6 bg-black"></span><span class="my-1 block h-px w-6 bg-black"></span>
-      </button>
-      <nav class="site-nav hidden absolute right-0 top-[62px] w-full flex-col gap-0 border border-black bg-white p-2 text-[11px] font-bold md:static md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0" id="site-nav" aria-label="Primary navigation">
-        <a class="p-3 transition-opacity hover:opacity-50 md:p-0" href="#work">Work</a><a class="p-3 transition-opacity hover:opacity-50 md:p-0" href="#about">About</a><a class="p-3 transition-opacity hover:opacity-50 md:p-0" href="#services">Services</a><a class="p-3 transition-opacity hover:opacity-50 md:p-0" href="#contact">Contact</a>
-      </nav>
-    </header>
+  <body class="h-screen overflow-hidden bg-[#f5f5f3] font-sans text-[#080808] antialiased">
+    <div class="relative h-screen overflow-hidden">
+      <header class="absolute inset-x-0 top-0 z-20 px-4 py-4 md:px-8 md:py-6">
+        <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4">
+          <button
+            type="button"
+            data-view-target="home"
+            class="group flex items-center gap-3 text-left"
+            aria-label="Open home"
+          >
+            <img
+              src="https://avatars.githubusercontent.com/u/97998537?v=4"
+              alt=""
+              class="h-11 w-11 rounded-full object-cover ring-2 ring-black ring-offset-2 ring-offset-[#f5f5f3] transition duration-300 group-hover:rotate-6 md:h-12 md:w-12"
+            />
+            <span class="hidden text-lg font-semibold tracking-[-0.04em] sm:block">Rechcel Toledo</span>
+          </button>
 
-    <main id="top">
-      <section class="relative min-h-[760px] overflow-hidden bg-white pt-32 md:min-h-screen md:pt-36" aria-labelledby="hero-title">
-        <div class="relative mx-auto min-h-[650px] max-w-[1280px] px-6 md:px-12">
-          <div class="flex justify-between border-b border-black/20 pb-4 font-mono text-[9px] uppercase tracking-[.18em] text-black/60"><span>FULL-STACK DEVELOPER</span><span>DAVAO · PH</span></div>
-          <div class="relative z-10 flex min-h-[580px] flex-col justify-center">
-            <p class="hero-intro mb-9 max-w-[270px] text-[12px] leading-[1.5] text-black/60 md:mb-6 md:max-w-[300px]">I turn ambitious ideas into calm, useful digital products for the web, open source, and on-chain spaces.</p>
-            <h1 class="relative -ml-1 max-w-[1100px] text-[clamp(4.5rem,16vw,12rem)] font-extrabold leading-[.78] tracking-[-.12em] md:text-[13.5vw]" id="hero-title"><span class="block">RECHCEL</span><em class="ml-[10vw] block font-serif font-normal not-italic tracking-[-.11em] md:ml-[14vw]">TOLEDO</em></h1>
-          </div>
-          <div class="hero-photo-main absolute left-1/2 top-[39%] z-20 h-[265px] w-[205px] -translate-x-1/2 overflow-hidden border border-black bg-[#d9d9d5] shadow-[12px_12px_0_#080808] md:top-[25%] md:h-[390px] md:w-[310px]">
-            <img class="h-full w-full object-cover" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Portrait of Rechcel Toledo" />
-            <span class="absolute bottom-4 left-4 font-mono text-[9px] uppercase tracking-[.1em] text-white">RT / 001</span><span class="absolute bottom-4 right-4 font-mono text-[9px] uppercase tracking-[.1em] text-white">Builder at work</span>
-          </div>
-          <div class="hero-tile-left absolute left-0 top-[28%] z-10 flex h-[135px] w-[175px] flex-col justify-between bg-black p-4 text-white md:left-[7%] md:h-[170px] md:w-[220px] md:p-5"><span class="font-mono text-[8px] tracking-[.1em] text-white/60">01 / WEB3</span><strong class="text-[22px] leading-[.85] tracking-[-.07em] md:text-[28px]">COOKIE<br />CHECKPOINT</strong><small class="font-mono text-[8px] tracking-[.08em] text-white/60">ON-CHAIN UX</small></div>
-          <div class="hero-tile-right absolute right-0 top-[58%] z-30 flex h-[135px] w-[175px] flex-col justify-between border border-black bg-[#d7d7d2] p-4 md:right-[7%] md:h-[170px] md:w-[220px] md:p-5"><span class="font-mono text-[8px] tracking-[.1em] text-black/60">02 / PRODUCT</span><strong class="text-[22px] leading-[.85] tracking-[-.07em] md:text-[28px]">SAGE<br />CINEMA</strong><small class="font-mono text-[8px] tracking-[.08em] text-black/60">DISCOVERY PLATFORM</small></div>
-          <div class="absolute bottom-4 left-0 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[.1em] text-black/50 md:bottom-0"><span>SCROLL TO EXPLORE</span><span class="h-px w-12 bg-black/40"></span><span class="text-black">↓</span></div>
+          <button
+            type="button"
+            class="menu-toggle inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/20 bg-white text-xl md:hidden"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label="Toggle navigation"
+          >
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <nav
+            id="site-navigation"
+            class="site-nav absolute right-4 top-[4.75rem] hidden w-56 rounded-2xl border border-black/15 bg-white p-2 shadow-[0_16px_44px_rgba(0,0,0,0.12)] md:static md:flex md:w-auto md:items-center md:gap-1 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+            aria-label="Primary navigation"
+          >
+            <button type="button" data-view-target="home" class="nav-item rounded-full bg-black px-5 py-3 text-base font-semibold text-white transition hover:bg-black/80" aria-current="page">Home</button>
+            <button type="button" data-view-target="work" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">Work</button>
+            <button type="button" data-view-target="about" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">About</button>
+            <button type="button" data-view-target="services" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">Services</button>
+            <button type="button" data-view-target="contact" class="nav-item rounded-full bg-[#c7ff35] px-5 py-3 text-base font-semibold transition hover:bg-[#b6ed27]">Contact</button>
+          </nav>
         </div>
-      </section>
+      </header>
 
-      <section class="section-shell px-0 pb-28 pt-28 md:pb-36 md:pt-36" id="work" aria-labelledby="work-title">
-        <div class="mb-5 flex items-center gap-4 border-b border-black pb-4 font-mono text-[9px] uppercase tracking-[.16em] text-black/50"><span class="text-black">01</span><span>Selected work</span></div>
-        <div class="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end"><h2 class="text-[15vw] font-extrabold leading-[.8] tracking-[-.12em] md:text-[9vw]" id="work-title">Built to be<br /><em class="font-serif font-normal not-italic">experienced.</em></h2><p class="max-w-[330px] text-[13px] leading-[1.7] text-black/60">A mix of shipped products, open-source work, and experiments built around a simple idea: make the complicated part feel simple.</p></div>
-        <div class="filter-bar mb-7 flex gap-1 overflow-x-auto border-b border-black/10 pb-4" role="group" aria-label="Filter projects"><button class="filter-button is-active whitespace-nowrap rounded-full bg-black px-4 py-2 text-[10px] font-bold text-white transition-colors hover:bg-black/75" type="button" data-filter="all">All work</button><button class="filter-button whitespace-nowrap rounded-full px-4 py-2 text-[10px] font-bold text-black/55 transition-colors hover:bg-black hover:text-white" type="button" data-filter="product">Products</button><button class="filter-button whitespace-nowrap rounded-full px-4 py-2 text-[10px] font-bold text-black/55 transition-colors hover:bg-black hover:text-white" type="button" data-filter="open-source">Open source</button><button class="filter-button whitespace-nowrap rounded-full px-4 py-2 text-[10px] font-bold text-black/55 transition-colors hover:bg-black hover:text-white" type="button" data-filter="agent">Agents</button></div>
-        <div class="project-grid grid gap-6 md:grid-cols-2">
-          <article class="project-card project-featured reveal opacity-0 translate-y-6 transition-all duration-700 md:col-span-2" data-category="product open-source"><a class="group relative block min-h-[330px] overflow-hidden bg-[#161616] p-5 text-white md:min-h-[490px]" href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" aria-label="View Cookie Checkpoint"><div class="absolute inset-5 border border-white/15"></div><div class="relative z-10 flex justify-between font-mono text-[8px] tracking-[.1em] text-white/60"><span>LIVE ON COOKIE CHAIN</span><span>01 / 04</span></div><div class="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/70 shadow-[0_0_0_20px_#232323,0_0_0_21px_#555]"><span class="text-5xl transition-transform duration-500 group-hover:rotate-45">✦</span></div><div class="absolute bottom-5 left-5 right-5 z-10 flex justify-between font-mono text-[8px] tracking-[.1em]"><span>COOKIE CHECKPOINT</span><span>↗</span></div></a><div class="flex flex-col bg-white p-6 md:p-8"><div class="mb-5 flex justify-between font-mono text-[8px] uppercase tracking-[.08em] text-black/50"><span class="text-black">Web3 product</span><span>2026</span></div><h3 class="mb-3 text-3xl font-bold tracking-[-.07em]">Cookie Checkpoint</h3><p class="mb-6 max-w-[510px] text-[13px] leading-[1.65] text-black/60">A calm, verifiable on-chain streak app that turns a daily check-in into a readable Cookie Chain transaction.</p><div class="tag-row mb-6 flex flex-wrap gap-1.5"><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Next.js</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Nightly</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Solana RPC</span></div><a class="project-link mt-auto text-[11px] font-bold hover:underline" href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer">View live project <span>↗</span></a></div></article>
-          <article class="project-card reveal reveal-delay opacity-0 translate-y-6 transition-all duration-700" data-category="product"><a class="group relative block min-h-[290px] overflow-hidden bg-[#d7d7d2] p-5 text-black md:min-h-[350px]" href="https://sage-cinema-jet.vercel.app" target="_blank" rel="noreferrer" aria-label="View Sage Cinema"><div class="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black"><span class="absolute left-1/2 top-1/2 h-px w-[290px] -translate-x-1/2 rotate-45 bg-black"></span><span class="absolute left-1/2 top-1/2 h-px w-[290px] -translate-x-1/2 -rotate-45 bg-black"></span><i class="absolute left-10 top-5 h-3 w-3 rounded-full border border-black"></i><i class="absolute bottom-5 right-3 h-3 w-3 rounded-full border border-black"></i></div><div class="relative z-10 flex justify-between font-mono text-[8px] tracking-[.1em] text-black/60"><span>SAGE CINEMA</span><span>02 / 04</span></div><div class="absolute bottom-5 left-5 right-5 z-10 flex justify-between font-mono text-[8px] tracking-[.1em]"><span>DISCOVER · WATCH · REPEAT</span><span>↗</span></div></a><div class="flex flex-col bg-white p-6"><div class="mb-5 flex justify-between font-mono text-[8px] uppercase tracking-[.08em] text-black/50"><span class="text-black">Entertainment platform</span><span>2026</span></div><h3 class="mb-3 text-2xl font-bold tracking-[-.07em]">Sage Cinema</h3><p class="mb-6 text-[13px] leading-[1.65] text-black/60">A cinematic discovery experience powered by TMDB, with search, recommendations, watch history, and a resilient API layer.</p><div class="tag-row mb-6 flex flex-wrap gap-1.5"><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">React</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">TMDB API</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Motion</span></div><a class="project-link mt-auto text-[11px] font-bold hover:underline" href="https://sage-cinema-jet.vercel.app" target="_blank" rel="noreferrer">Explore the build <span>↗</span></a></div></article>
-          <article class="project-card reveal opacity-0 translate-y-6 transition-all duration-700 delay-100" data-category="agent open-source"><a class="group relative block min-h-[290px] overflow-hidden bg-[#c9c9c4] p-5 text-black md:min-h-[350px]" href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" aria-label="View Mermail Skills"><div class="absolute -bottom-16 -right-16 h-64 w-64 rounded-full border border-black/60 shadow-[0_0_0_20px_#c9c9c4,0_0_0_21px_#777,0_0_0_50px_#c9c9c4,0_0_0_51px_#999]"></div><div class="absolute left-1/2 top-[42%] h-24 w-52 -translate-x-1/2 -rotate-6 border border-black bg-white/40 p-4 shadow-[18px_18px_0_rgba(0,0,0,.12)]"><span class="mr-1 inline-block h-1.5 w-1.5 rounded-full border border-black"></span><span class="mr-1 inline-block h-1.5 w-1.5 rounded-full border border-black"></span><span class="mr-1 inline-block h-1.5 w-1.5 rounded-full border border-black"></span><i class="mt-3 block h-1 w-3/4 bg-black"></i><i class="mt-3 block h-1 w-1/2 bg-black/50"></i><i class="mt-3 block h-1 w-5/6 bg-black/70"></i></div><span class="absolute bottom-20 left-12 text-3xl transition-transform duration-500 group-hover:rotate-45">✦</span><div class="relative z-10 flex justify-between font-mono text-[8px] tracking-[.1em] text-black/60"><span>TOOLS FOR AGENTS</span><span>03 / 04</span></div><div class="absolute bottom-5 left-5 right-5 z-10 flex justify-between font-mono text-[8px] tracking-[.1em]"><span>INBOX · AUTOMATION · FLOW</span><span>↗</span></div></a><div class="flex flex-col bg-white p-6"><div class="mb-5 flex justify-between font-mono text-[8px] uppercase tracking-[.08em] text-black/50"><span class="text-black">Developer tooling</span><span>2026</span></div><h3 class="mb-3 text-2xl font-bold tracking-[-.07em]">Mermail Skills</h3><p class="mb-6 text-[13px] leading-[1.65] text-black/60">Portable agent workflows for inbox provisioning, email operations, scheduling, support, and GTM automation.</p><div class="tag-row mb-6 flex flex-wrap gap-1.5"><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">MCP</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Skills</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">TypeScript</span></div><a class="project-link mt-auto text-[11px] font-bold hover:underline" href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a></div></article>
-          <article class="project-card project-wide reveal reveal-delay opacity-0 translate-y-6 transition-all duration-700 md:col-span-2 md:grid md:grid-cols-[1.05fr_.95fr]" data-category="open-source"><a class="relative block min-h-[290px] overflow-hidden bg-[#111111] p-5 text-white" href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" aria-label="Read the Causify Helpers pull request"><div class="absolute bottom-[-42px] right-[12%] h-44 w-44 rounded-full border border-white/50 shadow-[0_0_0_20px_#111,0_0_0_21px_#555,0_0_0_49px_#111,0_0_0_50px_#333]"></div><div class="absolute left-[11%] top-1/2 grid -translate-y-1/2 gap-3 font-mono text-[11px] leading-tight text-white/85"><span>def find_private_functions</span><span class="pl-5 text-white/60">→ inspect AST nodes</span><span class="pl-10 text-white/80">→ report actionable lint</span><span class="pl-[3.25rem] text-white/50">→ ship with tests</span></div><div class="relative z-10 flex justify-between font-mono text-[8px] tracking-[.1em] text-white/60"><span>OPEN SOURCE CONTRIBUTION</span><span>04 / 04</span></div><div class="absolute bottom-5 left-5 right-5 z-10 flex justify-between font-mono text-[8px] tracking-[.1em]"><span>CAUSIFY / HELPERS</span><span>↗</span></div></a><div class="flex flex-col bg-white p-6 md:p-8"><div class="mb-5 flex justify-between font-mono text-[8px] uppercase tracking-[.08em] text-black/50"><span class="text-black">OSS contribution</span><span>Python</span></div><h3 class="mb-3 text-2xl font-bold tracking-[-.07em]">Private-function linter</h3><p class="mb-6 text-[13px] leading-[1.65] text-black/60">A focused contribution to Causify Helpers: AST-based linting, precise diagnostics, and tests designed for maintainers to build on.</p><div class="tag-row mb-6 flex flex-wrap gap-1.5"><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Python</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">AST</span><span class="border border-black/15 px-2 py-1 font-mono text-[8px] text-black/60">Pytest</span></div><a class="project-link mt-auto text-[11px] font-bold hover:underline" href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer">Read the pull request <span>↗</span></a></div></article>
+      <main class="h-full px-4 pb-5 pt-[5.5rem] md:px-8 md:pb-7 md:pt-[6.5rem]">
+        <div class="mx-auto h-full max-w-[1180px]">
+          <section data-view-panel="home" class="view-panel flex h-full min-h-0 flex-col justify-center gap-5 md:gap-6">
+            <div class="grid min-h-0 flex-1 items-center gap-6 lg:grid-cols-[1.55fr_0.85fr] lg:gap-12">
+              <div class="max-w-3xl">
+                <p class="mb-5 font-mono text-sm font-medium uppercase tracking-[0.22em] text-black/60">01 / Developer + maintainer / Davao, PH</p>
+                <h1 class="max-w-4xl text-[clamp(3rem,10vw,9.5rem)] font-semibold leading-[0.82] tracking-[-0.095em]">
+                  I make<br />
+                  useful things<br />
+                  feel <span class="text-[#6b25ff]">clear.</span>
+                </h1>
+                <p class="mt-7 max-w-xl text-lg leading-7 text-black/75 md:text-xl md:leading-8">
+                  Full-stack products, open-source contributions, on-chain experiments, and reliable web platforms—built with care from Davao.
+                </p>
+                <div class="mt-7 flex flex-wrap gap-3">
+                  <button type="button" data-view-target="work" class="rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#6b25ff]">See selected work <span aria-hidden="true">↗</span></button>
+                  <a href="mailto:rechceltoledo@gmail.com" class="rounded-full border border-black/20 bg-white px-6 py-3 text-base font-semibold transition hover:-translate-y-0.5 hover:border-black">Start a conversation</a>
+                </div>
+              </div>
+
+              <div class="relative mx-auto w-full max-w-[170px] sm:max-w-[220px] lg:mr-0 lg:max-w-[360px]">
+                <div class="absolute -inset-4 rotate-3 rounded-[2rem] bg-[#c7ff35]"></div>
+                <div class="relative overflow-hidden rounded-[2rem] border-2 border-black bg-black p-3 shadow-[10px_10px_0_#080808]">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/97998537?v=4"
+                    alt="Portrait of Rechcel Toledo"
+                    class="aspect-[0.9] w-full rounded-[1.35rem] object-cover"
+                  />
+                <div class="flex items-center justify-between gap-3 px-2 pb-1 pt-4 text-white">
+                    <span class="text-base font-semibold sm:text-lg">Rechcel Toledo</span>
+                    <span class="rounded-full bg-[#6b25ff] px-3 py-1.5 text-sm font-semibold">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid shrink-0 grid-cols-2 gap-3 border-t border-black/15 pt-4 md:grid-cols-4">
+              <div><p class="font-mono text-sm text-black/55">FOCUS</p><p class="mt-1 text-lg font-semibold">Full-stack web</p></div>
+              <div><p class="font-mono text-sm text-black/55">MAINTAINING</p><p class="mt-1 text-lg font-semibold">2 live platforms</p></div>
+              <div><p class="font-mono text-sm text-black/55">OPEN SOURCE</p><p class="mt-1 text-lg font-semibold">Causify contributor</p></div>
+              <div><p class="font-mono text-sm text-black/55">NOW</p><p class="mt-1 text-lg font-semibold">Open to good work</p></div>
+            </div>
+          </section>
+
+          <section data-view-panel="work" class="view-panel hidden h-full min-h-0 flex-col gap-4">
+            <div class="flex shrink-0 flex-col justify-between gap-4 border-b border-black/15 pb-4 md:flex-row md:items-end">
+              <div>
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-black/60">02 / Selected work</p>
+                <h2 class="mt-2 text-5xl font-semibold leading-none tracking-[-0.08em] md:text-7xl">Built to be used.</h2>
+              </div>
+              <div class="flex flex-wrap gap-2" aria-label="Filter work">
+                <button type="button" data-filter="all" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">All work</button>
+                <button type="button" data-filter="product" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Products</button>
+                <button type="button" data-filter="opensource" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Open source</button>
+                <button type="button" data-filter="maintained" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Maintained</button>
+              </div>
+            </div>
+
+            <div class="grid min-h-0 flex-1 grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-2">
+              <a href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" data-category="product web3" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">01</span><span class="rounded-full bg-[#c7ff35] px-2.5 py-1 text-xs font-semibold text-black">WEB3</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Cookie Checkpoint</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">Nightly wallet check-ins on Cookie Chain.</p></div>
+              </a>
+              <a href="https://sage-cinema-jet.vercel.app" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">02</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-xs font-semibold text-black">PRODUCT</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Sage Cinema</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">A focused movie discovery experience.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" data-category="opensource agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">03</span><span class="rounded-full bg-[#6b25ff] px-2.5 py-1 text-xs font-semibold text-white">AGENTS</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Mermail Skills</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">Portable workflows for useful agent work.</p></div>
+              </a>
+              <a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" data-category="opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">04</span><span class="rounded-full bg-[#54d9ff] px-2.5 py-1 text-xs font-semibold text-black">OSS</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Causify Helpers</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">Python linting, diagnostics, and tests.</p></div>
+              </a>
+              <a href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" data-category="maintained product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">05</span><span class="rounded-full bg-[#c7ff35] px-2.5 py-1 text-xs font-semibold text-black">MAINTAINED</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Exceed Learning Center</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">Education, tutoring, and test-prep platform.</p></div>
+              </a>
+              <a href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" data-category="maintained product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white">
+                <div class="flex items-center justify-between gap-3"><span class="font-mono text-sm text-black/50 group-hover:text-white/60">06</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-xs font-semibold text-black">MAINTAINED</span></div>
+                <div class="mt-5"><h3 class="text-2xl font-semibold leading-none tracking-[-0.05em]">Unbreakable You</h3><p class="mt-2 text-sm leading-5 text-black/65 group-hover:text-white/70">Healing and empowerment coaching platform.</p></div>
+              </a>
+            </div>
+          </section>
+
+          <section data-view-panel="about" class="view-panel hidden h-full min-h-0 items-center">
+            <div class="grid w-full items-center gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+              <div class="relative mx-auto w-full max-w-[170px] sm:max-w-[220px] lg:max-w-[320px]">
+                <div class="absolute -bottom-4 -left-4 h-full w-full rounded-[2rem] bg-[#6b25ff]"></div>
+                <img src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Portrait of Rechcel Toledo" class="relative aspect-square w-full rounded-[2rem] border-2 border-black object-cover" />
+              </div>
+              <div>
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-black/60">03 / About</p>
+                <h2 class="mt-3 max-w-3xl text-4xl font-semibold leading-[0.9] tracking-[-0.08em] sm:text-5xl md:text-8xl">Developer with a maintainer’s mindset.</h2>
+                <p class="mt-5 max-w-2xl text-base leading-6 text-black/75 sm:text-lg sm:leading-8 md:mt-7 md:text-xl">I’m Rechcel, a full-stack developer from Davao, Philippines. I work across interfaces, APIs, open source, agent tooling, and blockchain products—with a bias toward clear systems that keep working after launch.</p>
+                <div class="mt-8 grid grid-cols-2 gap-4 border-t border-black/15 pt-5 sm:grid-cols-4">
+                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">6</p><p class="mt-1 text-sm text-black/60">featured projects</p></div>
+                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">2</p><p class="mt-1 text-sm text-black/60">maintained sites</p></div>
+                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">4</p><p class="mt-1 text-sm text-black/60">focus areas</p></div>
+                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">PH</p><p class="mt-1 text-sm text-black/60">based in Davao</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section data-view-panel="services" class="view-panel hidden h-full min-h-0 flex-col justify-center">
+            <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+              <div>
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-black/60">04 / Services</p>
+                <h2 class="mt-3 text-5xl font-semibold leading-[0.88] tracking-[-0.09em] md:text-8xl">From first idea to steady product.</h2>
+              </div>
+              <div class="divide-y divide-black/15 border-y border-black/15">
+                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">01 / Product builds</p><p class="mt-1 text-base text-black/65 md:text-lg">React, Next.js, responsive interfaces, and polished interactions.</p></div><span class="text-2xl">↗</span></div>
+                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">02 / Backend systems</p><p class="mt-1 text-base text-black/65 md:text-lg">APIs, integrations, data flows, and testable foundations.</p></div><span class="text-2xl">↗</span></div>
+                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">03 / Maintenance</p><p class="mt-1 text-base text-black/65 md:text-lg">Thoughtful improvements that keep live platforms healthy.</p></div><span class="text-2xl">↗</span></div>
+                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">04 / Open source</p><p class="mt-1 text-base text-black/65 md:text-lg">Useful tools, clear documentation, and contributions that last.</p></div><span class="text-2xl">↗</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section data-view-panel="contact" class="view-panel hidden h-full min-h-0 flex-col justify-center">
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-black bg-black px-6 py-10 text-white md:px-14 md:py-14">
+              <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#c7ff35] blur-[1px]"></div>
+              <div class="relative max-w-4xl">
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-white/60">05 / Contact</p>
+                <h2 class="mt-4 text-6xl font-semibold leading-[0.86] tracking-[-0.09em] md:text-9xl">Have something<br /><span class="text-[#c7ff35]">worth making?</span></h2>
+                <p class="mt-7 max-w-2xl text-lg leading-8 text-white/75 md:text-xl">Tell me what you’re building, what’s stuck, or what needs care. I’m based in Davao and open to thoughtful product work.</p>
+                <a href="mailto:rechceltoledo@gmail.com" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#c7ff35] px-6 py-3 text-lg font-semibold text-black transition hover:bg-white">rechceltoledo@gmail.com <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-4 text-base text-black/65">
+              <span>Davao, Philippines · Available for selected work</span>
+              <div class="flex gap-5"><a href="https://github.com/phcodesage" target="_blank" rel="noreferrer" class="transition hover:text-black">GitHub</a><a href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer" class="transition hover:text-black">Instagram</a><a href="https://x.com/phcodesage" target="_blank" rel="noreferrer" class="transition hover:text-black">X</a></div>
+            </div>
+          </section>
         </div>
-      </section>
+      </main>
 
-      <section class="section-shell border-t border-black pb-28 pt-28 md:pb-36 md:pt-36" id="about" aria-labelledby="about-title"><div class="mb-12 flex items-center gap-4 border-b border-black pb-4 font-mono text-[9px] uppercase tracking-[.16em] text-black/50"><span class="text-black">02</span><span>About</span></div><div class="grid items-center gap-14 md:grid-cols-[.72fr_1.28fr] md:gap-28"><div class="reveal opacity-0 translate-y-6 transition-all duration-700"><img class="aspect-square w-full max-w-[370px] object-cover grayscale" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Rechcel Toledo" /><span class="mt-3 block font-mono text-[9px] uppercase text-black/50">Nice to meet you.</span></div><div class="reveal opacity-0 translate-y-6 transition-all delay-100 duration-700"><h2 class="text-[13vw] font-extrabold leading-[.82] tracking-[-.12em] md:text-[7.5vw]" id="about-title">Curious by<br /><em class="font-serif font-normal not-italic">default.</em></h2><p class="mt-8 max-w-[430px] text-[14px] leading-[1.7] text-black/60">I enjoy the space between product thinking and implementation: shaping the flow, choosing the right tools, and polishing the details that make software feel considered.</p><div class="mt-8 flex flex-wrap gap-x-5 gap-y-3 font-mono text-[10px]"><a class="border-b border-black pb-1 hover:opacity-50" href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub ↗</a><a class="border-b border-black pb-1 hover:opacity-50" href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="border-b border-black pb-1 hover:opacity-50" href="https://www.threads.com/@phcodesage" target="_blank" rel="noreferrer">Threads ↗</a><a class="border-b border-black pb-1 hover:opacity-50" href="https://x.com/phcodesage" target="_blank" rel="noreferrer">X ↗</a></div></div></div></section>
-
-      <section class="section-shell pb-28 md:pb-36" id="services" aria-labelledby="services-title"><div class="mb-12 flex items-center gap-4 border-b border-black pb-4 font-mono text-[9px] uppercase tracking-[.16em] text-black/50"><span class="text-black">03</span><span>What I can help with</span></div><h2 class="mb-14 text-[14vw] font-extrabold leading-[.8] tracking-[-.12em] md:text-[8vw]" id="services-title">Useful work,<br /><em class="font-serif font-normal not-italic">well made.</em></h2><div class="service-list border-t border-black"><a class="group grid grid-cols-[35px_1fr_auto] items-center gap-3 border-b border-black px-0 py-6 transition-colors hover:bg-black hover:px-4 hover:text-white md:grid-cols-[50px_1fr_1fr_30px]" href="mailto:rechceltoledo@gmail.com?subject=Frontend%20product%20build"><span class="font-mono text-[9px] opacity-50">01</span><strong class="text-xl tracking-[-.06em]">Frontend products</strong><small class="hidden font-mono text-[9px] uppercase opacity-50 md:block">React · Next.js · responsive UI</small><b>↗</b></a><a class="group grid grid-cols-[35px_1fr_auto] items-center gap-3 border-b border-black px-0 py-6 transition-colors hover:bg-black hover:px-4 hover:text-white md:grid-cols-[50px_1fr_1fr_30px]" href="mailto:rechceltoledo@gmail.com?subject=Backend%20and%20API%20work"><span class="font-mono text-[9px] opacity-50">02</span><strong class="text-xl tracking-[-.06em]">Backend & APIs</strong><small class="hidden font-mono text-[9px] uppercase opacity-50 md:block">Integrations · data flows · testing</small><b>↗</b></a><a class="group grid grid-cols-[35px_1fr_auto] items-center gap-3 border-b border-black px-0 py-6 transition-colors hover:bg-black hover:px-4 hover:text-white md:grid-cols-[50px_1fr_1fr_30px]" href="mailto:rechceltoledo@gmail.com?subject=Web3%20product%20build"><span class="font-mono text-[9px] opacity-50">03</span><strong class="text-xl tracking-[-.06em]">Web3 experiences</strong><small class="hidden font-mono text-[9px] uppercase opacity-50 md:block">Wallets · RPC · on-chain UX</small><b>↗</b></a><a class="group grid grid-cols-[35px_1fr_auto] items-center gap-3 border-b border-black px-0 py-6 transition-colors hover:bg-black hover:px-4 hover:text-white md:grid-cols-[50px_1fr_1fr_30px]" href="mailto:rechceltoledo@gmail.com?subject=Agent%20tooling%20project"><span class="font-mono text-[9px] opacity-50">04</span><strong class="text-xl tracking-[-.06em]">Agent tooling</strong><small class="hidden font-mono text-[9px] uppercase opacity-50 md:block">MCP · skills · workflow automation</small><b>↗</b></a></div></section>
-
-      <section class="overflow-hidden border-y border-black bg-black py-8 text-white" aria-label="Contact call to action"><div class="flex w-max animate-marquee items-center gap-8 whitespace-nowrap font-sans text-[16vw] font-extrabold leading-none tracking-[-.1em] md:text-[11vw]"><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i><span>LET’S TALK</span><i class="text-[.6em] not-italic">✳</i></div></section>
-
-      <section class="section-shell border-b border-black pb-24 pt-28 md:pb-36 md:pt-36" id="contact" aria-labelledby="contact-title"><div class="grid gap-14 md:grid-cols-[1.15fr_.85fr] md:items-end"><div><p class="eyebrow font-mono text-[10px] uppercase tracking-[.13em] text-black/50">Have a good problem?</p><h2 class="text-[14vw] font-extrabold leading-[.8] tracking-[-.12em] md:text-[8vw]" id="contact-title">Let’s create your<br /><em class="font-serif font-normal not-italic">next project.</em></h2></div><div class="flex flex-col items-start gap-4 font-mono text-[11px]"><a class="border-b border-black pb-2 text-xl font-bold tracking-[-.04em] hover:opacity-50" href="mailto:rechceltoledo@gmail.com">Email me ↗</a><a class="hover:opacity-50" href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="hover:opacity-50" href="https://www.threads.com/@phcodesage" target="_blank" rel="noreferrer">Threads ↗</a><a class="hover:opacity-50" href="https://x.com/phcodesage" target="_blank" rel="noreferrer">X ↗</a></div></div></section>
-    </main>
-
-    <footer class="section-shell pb-7"><div class="flex flex-col justify-between gap-5 border-b border-black py-7 md:flex-row md:items-center"><a class="flex items-center gap-2.5 text-[11px] font-extrabold tracking-[.12em]" href="#top" aria-label="Back to top"><img class="h-8 w-8 rounded-full object-cover grayscale" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" /><span>RECHCEL TOLEDO</span></a><p class="m-0 text-[11px] text-black/60">Built with intention, shipped from Davao.</p><a class="text-[11px] font-bold hover:opacity-50" href="#top">Back to top ↑</a></div><div class="flex flex-wrap justify-between gap-4 pt-5 font-mono text-[8px] uppercase tracking-[.05em] text-black/50"><span>© <span id="year"></span> Rechcel Toledo</span><span>Frontend · Backend · Product</span><a class="hover:text-black" href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
+      <div class="pointer-events-none absolute bottom-3 left-0 right-0 hidden px-4 text-center font-mono text-sm text-black/45 md:block">© <span id="year"></span> Rechcel Toledo</div>
+    </div>
   </body>
 </html>

@@ -10,12 +10,50 @@ menuToggle?.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-siteNav?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    siteNav.classList.add('hidden');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+const navItems = document.querySelectorAll('[data-view-target]');
+const viewPanels = document.querySelectorAll('[data-view-panel]');
+const validViews = new Set([...viewPanels].map((panel) => panel.dataset.viewPanel));
+
+function revealPanel(panel) {
+  panel.querySelectorAll('.reveal').forEach((item) => {
+    item.classList.remove('opacity-0', 'translate-y-6');
+    item.classList.add('opacity-100', 'translate-y-0');
   });
+}
+
+function activateView(view, updateUrl = true) {
+  const nextView = validViews.has(view) ? view : 'home';
+
+  viewPanels.forEach((panel) => {
+    const isActive = panel.dataset.viewPanel === nextView;
+    panel.classList.toggle('hidden', !isActive);
+    panel.classList.toggle('flex', isActive && panel.dataset.viewPanel !== 'about');
+    panel.classList.toggle('grid', isActive && panel.dataset.viewPanel === 'about');
+    revealPanel(panel);
+  });
+
+  navItems.forEach((item) => {
+    if (!item.classList.contains('nav-item')) return;
+    const isActive = item.dataset.viewTarget === nextView;
+    item.classList.toggle('bg-black', isActive && nextView !== 'contact');
+    item.classList.toggle('text-white', isActive && nextView !== 'contact');
+    item.classList.toggle('text-black/60', !isActive || nextView === 'contact');
+    item.setAttribute('aria-current', isActive ? 'page' : 'false');
+  });
+
+  if (updateUrl) {
+    window.history.replaceState(null, '', nextView === 'home' ? '#' : `#${nextView}`);
+  }
+
+  siteNav?.classList.add('hidden');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+}
+
+navItems.forEach((item) => {
+  item.addEventListener('click', () => activateView(item.dataset.viewTarget));
 });
+
+window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1), false));
 
 const filterButtons = document.querySelectorAll('[data-filter]');
 const projectCards = document.querySelectorAll('.project-card');
@@ -28,7 +66,7 @@ filterButtons.forEach((button) => {
       item.classList.toggle('is-active', isActive);
       item.classList.toggle('bg-black', isActive);
       item.classList.toggle('text-white', isActive);
-      item.classList.toggle('text-black/55', !isActive);
+      item.classList.toggle('text-black/60', !isActive);
     });
 
     projectCards.forEach((card) => {
@@ -48,15 +86,6 @@ function revealItem(item) {
   item.classList.add(...revealVisibleClasses);
 }
 
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      revealItem(entry.target);
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12 });
-  revealItems.forEach((item) => revealObserver.observe(item));
-} else {
-  revealItems.forEach(revealItem);
-}
+revealItems.forEach(revealItem);
+
+activateView(window.location.hash.slice(1), false);

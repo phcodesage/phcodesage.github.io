@@ -15,12 +15,40 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 - [Mermail Skills](https://github.com/phcodesage/mermail-skills) — portable agent workflows for email, scheduling, support, and GTM automation.
 - [Causify Helpers contribution](https://github.com/causify-ai/helpers/pull/1396) — a Python AST-based private-function linter with tests and actionable diagnostics.
 
+## Development & maintenance
+
+- [Exceed Learning Center](https://www.exceedlearningcenterny.com/) — education, tutoring, enrichment, and test-prep platform. I’m the developer and maintainer.
+- [Unbreakable You](https://unbreakable-you.com/) — healing and empowerment coaching platform. I’m the developer and maintainer.
+
 ## Focus areas
 
 - Frontend: React, Next.js, responsive interfaces, interaction design
 - Backend: APIs, data flows, integrations, testing, maintainability
 - Web3: Solana-compatible applications, wallets, RPC, on-chain UX
 - Agent tooling: MCP servers, portable skills, and workflow automation
+
+## Work graph
+
+```mermaid
+flowchart LR
+    R[Rechcel Toledo<br/>Full-stack developer<br/>Davao, Philippines]
+    R --> P[Products]
+    R --> O[Open source]
+    R --> W[Web3]
+    R --> A[Agent tooling]
+    R --> M[Development + maintenance]
+    P --> P1[Sage Cinema]
+    P --> P2[Cookie Checkpoint]
+    O --> O1[Causify Helpers]
+    W --> W1[Cookie Checkpoint]
+    A --> A1[Mermail Skills]
+    M --> M1[Exceed Learning Center]
+    M --> M2[Unbreakable You]
+```
+
+## GitHub activity
+
+![GitHub contribution graph for phcodesage](https://ghchart.rshah.org/6b25ff/phcodesage)
 
 ## Contact
 
@@ -29,23 +57,3 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 - Instagram: [@phcodesage](https://www.instagram.com/phcodesage/)
 - Threads: [@phcodesage](https://www.threads.com/@phcodesage)
 - X: [@phcodesage](https://x.com/phcodesage)
-
-## Run locally
-
-This is a static site with no build step. Tailwind is loaded from its browser CDN. Open `index.html` directly, or run a local server:
-
-```bash
-python3 -m http.server 4173
-```
-
-Then visit <http://localhost:4173>.
-
-## Publish with GitHub Pages
-
-This repository is already configured as the personal GitHub Pages site for `phcodesage`:
-
-1. Push changes to the `main` branch.
-2. In **Settings → Pages**, choose **Deploy from a branch**.
-3. Select `main` and `/ (root)` if the Pages source needs to be configured again.
-
-GitHub publishes the site at <https://phcodesage.github.io/>.
