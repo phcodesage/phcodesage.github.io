@@ -32,7 +32,7 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 
 ## Run locally
 
-This is a static site with no build step. Open `index.html` directly, or run a local server:
+This is a static site with no build step. Tailwind is loaded from its browser CDN. Open `index.html` directly, or run a local server:
 
 ```bash
 python3 -m http.server 4173
