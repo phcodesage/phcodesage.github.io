@@ -1,6 +1,6 @@
 # Rechcel Toledo — Developer Portfolio
 
-Hi, I’m Rechcel Toledo, a full-stack developer based in Manila. I build thoughtful digital products across frontend, backend, open source, on-chain applications, and agent tooling.
+Hi, I’m Rechcel Toledo, a full-stack developer based in Davao, Philippines. I build thoughtful digital products across frontend, backend, open source, on-chain applications, and agent tooling.
 
 I enjoy turning rough ideas into clear, useful experiences—from polished interfaces and API-driven products to developer tools and blockchain experiments. I care about good product decisions, maintainable code, and the small details that make software feel considered.
 

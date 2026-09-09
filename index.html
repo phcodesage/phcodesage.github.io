@@ -21,12 +21,19 @@
       } } } };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Tailwind utilities remain the primary system; this small floor keeps labels readable on every screen. */
+      .text-\[8px\], .text-\[9px\], .text-\[10px\] { font-size: .75rem !important; }
+      .text-\[11px\] { font-size: .8125rem !important; }
+      .text-\[15vw\], .text-\[14vw\], .text-\[13vw\] { font-size: clamp(4rem, 10vw, 8rem) !important; }
+      .grayscale { filter: none !important; }
+    </style>
     <script defer src="./script.js"></script>
   </head>
   <body class="overflow-x-hidden bg-[#f7f7f5] font-sans text-[#080808] antialiased">
     <header class="absolute left-1/2 top-0 z-40 flex w-[calc(100%-2rem)] max-w-[1180px] -translate-x-1/2 items-center justify-between py-5 md:w-[calc(100%-4rem)] md:py-7">
       <a class="flex items-center gap-2.5 text-[11px] font-extrabold tracking-[.12em]" href="#top" aria-label="Rechcel Toledo home">
-        <img class="h-8 w-8 rounded-full object-cover grayscale" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" />
+        <img class="h-8 w-8 rounded-full object-cover" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" />
         <span>RECHCEL TOLEDO</span>
       </a>
       <button class="menu-toggle block cursor-pointer border-0 bg-transparent p-2 md:hidden" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -40,13 +47,13 @@
     <main id="top">
       <section class="relative min-h-[760px] overflow-hidden bg-white pt-32 md:min-h-screen md:pt-36" aria-labelledby="hero-title">
         <div class="relative mx-auto min-h-[650px] max-w-[1280px] px-6 md:px-12">
-          <div class="flex justify-between border-b border-black/20 pb-4 font-mono text-[9px] uppercase tracking-[.18em] text-black/60"><span>FULL-STACK DEVELOPER</span><span>MANILA · PH</span></div>
+          <div class="flex justify-between border-b border-black/20 pb-4 font-mono text-[9px] uppercase tracking-[.18em] text-black/60"><span>FULL-STACK DEVELOPER</span><span>DAVAO · PH</span></div>
           <div class="relative z-10 flex min-h-[580px] flex-col justify-center">
             <p class="hero-intro mb-9 max-w-[270px] text-[12px] leading-[1.5] text-black/60 md:mb-6 md:max-w-[300px]">I turn ambitious ideas into calm, useful digital products for the web, open source, and on-chain spaces.</p>
-            <h1 class="relative -ml-1 max-w-[1100px] text-[18vw] font-extrabold leading-[.78] tracking-[-.12em] md:text-[13.5vw]" id="hero-title"><span class="block">RECHCEL</span><em class="ml-[10vw] block font-serif font-normal not-italic tracking-[-.11em] md:ml-[14vw]">TOLEDO</em></h1>
+            <h1 class="relative -ml-1 max-w-[1100px] text-[clamp(4.5rem,16vw,12rem)] font-extrabold leading-[.78] tracking-[-.12em] md:text-[13.5vw]" id="hero-title"><span class="block">RECHCEL</span><em class="ml-[10vw] block font-serif font-normal not-italic tracking-[-.11em] md:ml-[14vw]">TOLEDO</em></h1>
           </div>
           <div class="hero-photo-main absolute left-1/2 top-[39%] z-20 h-[265px] w-[205px] -translate-x-1/2 overflow-hidden border border-black bg-[#d9d9d5] shadow-[12px_12px_0_#080808] md:top-[25%] md:h-[390px] md:w-[310px]">
-            <img class="h-full w-full object-cover grayscale contrast-110" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Portrait of Rechcel Toledo" />
+            <img class="h-full w-full object-cover" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Portrait of Rechcel Toledo" />
             <span class="absolute bottom-4 left-4 font-mono text-[9px] uppercase tracking-[.1em] text-white">RT / 001</span><span class="absolute bottom-4 right-4 font-mono text-[9px] uppercase tracking-[.1em] text-white">Builder at work</span>
           </div>
           <div class="hero-tile-left absolute left-0 top-[28%] z-10 flex h-[135px] w-[175px] flex-col justify-between bg-black p-4 text-white md:left-[7%] md:h-[170px] md:w-[220px] md:p-5"><span class="font-mono text-[8px] tracking-[.1em] text-white/60">01 / WEB3</span><strong class="text-[22px] leading-[.85] tracking-[-.07em] md:text-[28px]">COOKIE<br />CHECKPOINT</strong><small class="font-mono text-[8px] tracking-[.08em] text-white/60">ON-CHAIN UX</small></div>
@@ -76,6 +83,6 @@
       <section class="section-shell border-b border-black pb-24 pt-28 md:pb-36 md:pt-36" id="contact" aria-labelledby="contact-title"><div class="grid gap-14 md:grid-cols-[1.15fr_.85fr] md:items-end"><div><p class="eyebrow font-mono text-[10px] uppercase tracking-[.13em] text-black/50">Have a good problem?</p><h2 class="text-[14vw] font-extrabold leading-[.8] tracking-[-.12em] md:text-[8vw]" id="contact-title">Let’s create your<br /><em class="font-serif font-normal not-italic">next project.</em></h2></div><div class="flex flex-col items-start gap-4 font-mono text-[11px]"><a class="border-b border-black pb-2 text-xl font-bold tracking-[-.04em] hover:opacity-50" href="mailto:rechceltoledo@gmail.com">Email me ↗</a><a class="hover:opacity-50" href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer">Instagram ↗</a><a class="hover:opacity-50" href="https://www.threads.com/@phcodesage" target="_blank" rel="noreferrer">Threads ↗</a><a class="hover:opacity-50" href="https://x.com/phcodesage" target="_blank" rel="noreferrer">X ↗</a></div></div></section>
     </main>
 
-    <footer class="section-shell pb-7"><div class="flex flex-col justify-between gap-5 border-b border-black py-7 md:flex-row md:items-center"><a class="flex items-center gap-2.5 text-[11px] font-extrabold tracking-[.12em]" href="#top" aria-label="Back to top"><img class="h-8 w-8 rounded-full object-cover grayscale" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" /><span>RECHCEL TOLEDO</span></a><p class="m-0 text-[11px] text-black/60">Built with intention, shipped from Manila.</p><a class="text-[11px] font-bold hover:opacity-50" href="#top">Back to top ↑</a></div><div class="flex flex-wrap justify-between gap-4 pt-5 font-mono text-[8px] uppercase tracking-[.05em] text-black/50"><span>© <span id="year"></span> Rechcel Toledo</span><span>Frontend · Backend · Product</span><a class="hover:text-black" href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
+    <footer class="section-shell pb-7"><div class="flex flex-col justify-between gap-5 border-b border-black py-7 md:flex-row md:items-center"><a class="flex items-center gap-2.5 text-[11px] font-extrabold tracking-[.12em]" href="#top" aria-label="Back to top"><img class="h-8 w-8 rounded-full object-cover grayscale" src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="" /><span>RECHCEL TOLEDO</span></a><p class="m-0 text-[11px] text-black/60">Built with intention, shipped from Davao.</p><a class="text-[11px] font-bold hover:opacity-50" href="#top">Back to top ↑</a></div><div class="flex flex-wrap justify-between gap-4 pt-5 font-mono text-[8px] uppercase tracking-[.05em] text-black/50"><span>© <span id="year"></span> Rechcel Toledo</span><span>Frontend · Backend · Product</span><a class="hover:text-black" href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
   </body>
 </html>
