@@ -44,3 +44,24 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
+function recordPortfolioVisit() {
+  if (!window.location.hostname.endsWith("github.io")) return;
+
+  const analyticsUrl = "https://bounty-radar.rechceltoledo.workers.dev/api/analytics/view";
+  const sessionKey = "phcodesage-analytics-session";
+  let sessionId = sessionStorage.getItem(sessionKey);
+
+  if (!sessionId) {
+    sessionId = window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    sessionStorage.setItem(sessionKey, sessionId);
+  }
+
+  const payload = JSON.stringify({ path: window.location.pathname, sessionId });
+  const body = new Blob([payload], { type: "text/plain" });
+
+  if (!navigator.sendBeacon?.(analyticsUrl, body)) {
+    fetch(analyticsUrl, { method: "POST", body: payload, headers: { "content-type": "text/plain" }, keepalive: true }).catch(() => {});
+  }
+}
+
+recordPortfolioVisit();
