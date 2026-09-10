@@ -1,4 +1,4 @@
-# Rechcel Toledo — Founder & CEO, phcodesage
+# Rechcel Toledo — Software Developer, phcodesage
 
 Hi, I’m Rechcel Toledo. I run phcodesage, a one-person product studio based in Davao, Philippines, and I still ship the code. I build thoughtful digital products across frontend, backend, open source, on-chain applications, and agent tooling.
 
