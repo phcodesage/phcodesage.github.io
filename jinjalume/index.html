@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Jinjalume is an open-source Tailwind UI kit for Flask, Jinja, and Python web apps." />
+    <meta name="description" content="Jinjalume is an open-source Tailwind UI kit for Flask, Jinja, and Python web apps, now available on PyPI." />
     <meta name="theme-color" content="#f7f4ed" />
     <meta property="og:title" content="Jinjalume — UI for Python apps" />
-    <meta property="og:description" content="Server-rendered Tailwind UI components for Flask, Jinja, and Python web apps." />
+    <meta property="og:description" content="Server-rendered Tailwind UI components for Flask, Jinja, and Python web apps. Install Jinjalume from PyPI." />
     <meta property="og:url" content="https://phcodesage.github.io/jinjalume/" />
     <title>Jinjalume — UI for Python apps</title>
     <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png" />
@@ -54,6 +54,7 @@
           <a href="#components" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Components</a>
           <a href="#principles" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Why Jinjalume</a>
           <a href="#contribute" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Contribute</a>
+          <a href="https://pypi.org/project/jinjalume/" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink" target="_blank" rel="noreferrer">PyPI <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/phcodesage/jinjalume" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
         </div>
         <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink text-lg text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
@@ -62,6 +63,7 @@
         <a href="#components" class="block rounded-2xl px-4 py-3 text-base font-semibold">Components</a>
         <a href="#principles" class="block rounded-2xl px-4 py-3 text-base font-semibold">Why Jinjalume</a>
         <a href="#contribute" class="block rounded-2xl px-4 py-3 text-base font-semibold">Contribute</a>
+        <a href="https://pypi.org/project/jinjalume/" class="block rounded-2xl px-4 py-3 text-base font-semibold" target="_blank" rel="noreferrer">Install from PyPI ↗</a>
         <a href="https://github.com/phcodesage/jinjalume" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white" target="_blank" rel="noreferrer">View on GitHub ↗</a>
       </div>
     </header>
@@ -76,6 +78,7 @@
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Open source · MIT</span>
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Flask + Jinja</span>
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Tailwind CSS</span>
+              <a href="https://pypi.org/project/jinjalume/" class="rounded-full border border-ink/15 bg-lime px-3 py-1.5 text-ink transition hover:bg-ink hover:text-white" target="_blank" rel="noreferrer">PyPI · v0.1.0 ↗</a>
             </div>
             <p class="mb-7 font-sans text-sm font-medium text-violet" data-reveal>// the missing UI layer for Python’s server-rendered web</p>
             <h1 class="max-w-4xl text-[clamp(3.7rem,8vw,8rem)] font-medium leading-[0.88] tracking-[-0.09em]" data-reveal>
@@ -86,6 +89,13 @@
             <div class="mt-9 flex flex-wrap gap-3" data-reveal data-delay="2">
               <a href="#components" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">Explore components <span aria-hidden="true">↓</span></a>
               <a href="https://github.com/phcodesage/jinjalume" class="rounded-full border border-ink/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-ink" target="_blank" rel="noreferrer">Read the source <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center gap-3" data-reveal data-delay="2">
+              <div class="flex items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-sm text-white shadow-[0_4px_0_rgba(119,89,238,.85)]">
+                <span class="text-lime" aria-hidden="true">$</span><code id="pip-install-snippet" class="font-sans">pip install jinjalume</code>
+                <button type="button" data-copy="pip-install-snippet" class="rounded-lg border border-white/20 px-2.5 py-1.5 text-xs font-semibold text-white transition hover:border-lime hover:text-lime">Copy</button>
+              </div>
+              <a href="https://pypi.org/project/jinjalume/" class="text-sm font-semibold text-ink underline decoration-violet decoration-2 underline-offset-4 transition hover:text-violet" target="_blank" rel="noreferrer">View package on PyPI ↗</a>
             </div>
           </div>
 
