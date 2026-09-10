@@ -43,7 +43,7 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 
 ```mermaid
 flowchart LR
-    R[Rechcel Toledo<br/>Full-stack developer<br/>Davao, Philippines]
+    R[Rechcel Toledo<br/>Software developer<br/>Davao, Philippines]
     R --> P[Products]
     R --> O[Open source]
     R --> W[Web3]
