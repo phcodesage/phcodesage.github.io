@@ -85,7 +85,7 @@ flowchart LR
 
 - Email: [rechceltoledo@gmail.com](mailto:rechceltoledo@gmail.com)
 - WhatsApp: [Message me](https://wa.me/639703224930)
-- Telegram bot: coming soon
+- Telegram bot: [@phcodesage-portfolio](https://t.me/phcodesage-portfolio)
 - GitHub: [@phcodesage](https://github.com/phcodesage)
 - Instagram: [@phcodesage](https://www.instagram.com/phcodesage/)
 - Threads: [@phcodesage](https://www.threads.com/@phcodesage)
