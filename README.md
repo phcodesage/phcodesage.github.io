@@ -8,6 +8,8 @@ I enjoy turning rough ideas into clear, useful experiences—from polished inter
 
 Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/).
 
+The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the header and profile card, with a square favicon crop at `assets/favicon.png`.
+
 ## Portfolio
 
 - [Cookie Checkpoint](https://cookie-checkpoint.vercel.app) — an open-source on-chain streak app for Cookie Chain.
