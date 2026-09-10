@@ -83,7 +83,7 @@ flowchart LR
 
 ## Office
 
-- Email: [rechceltoledo@gmail.com](mailto:rechceltoledo@gmail.com)
+- Telegram: [@phcodesage](https://t.me/phcodesage)
 - GitHub: [@phcodesage](https://github.com/phcodesage)
 - Instagram: [@phcodesage](https://www.instagram.com/phcodesage/)
 - Threads: [@phcodesage](https://www.threads.com/@phcodesage)
