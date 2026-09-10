@@ -124,22 +124,28 @@
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/60">02 / Selected work</p>
                 <h2 class="mt-2 text-5xl font-semibold leading-none tracking-[-0.08em] md:text-7xl">Built to be used.</h2>
               </div>
-              <div class="flex flex-wrap gap-2" aria-label="Filter work">
-                <button type="button" data-filter="all" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">All work</button>
-                <button type="button" data-filter="product" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Products</button>
-                <button type="button" data-filter="opensource" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Open source</button>
-                <button type="button" data-filter="maintained" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Maintained</button>
+              <div class="flex max-w-full flex-wrap justify-end gap-2" aria-label="Work controls">
+                <div class="flex flex-wrap gap-2" aria-label="Project set">
+                  <button type="button" data-work-set="featured" aria-pressed="true" class="work-set-button rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">Featured</button>
+                  <button type="button" data-work-set="more" aria-pressed="false" class="work-set-button rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">More work</button>
+                </div>
+                <div class="flex flex-wrap gap-2" aria-label="Filter work">
+                  <button type="button" data-filter="all" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">All</button>
+                  <button type="button" data-filter="product" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Products</button>
+                  <button type="button" data-filter="opensource" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Open source</button>
+                  <button type="button" data-filter="maintained" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Maintained</button>
+                </div>
               </div>
             </div>
 
-            <div class="grid min-h-0 flex-1 grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-2">
+            <div data-work-grid="featured" class="grid min-h-0 flex-1 grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-2">
               <a href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" data-category="product web3" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
                 <div class="h-20 overflow-hidden rounded-xl bg-[#8b5cf6] sm:h-24"><img src="https://cookie-checkpoint.vercel.app/favicon.svg" alt="Cookie Checkpoint icon" class="h-full w-full object-contain p-5" loading="lazy" /></div>
                 <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">01</span><span class="rounded-full bg-[#8b5cf6] px-2.5 py-1 text-sm font-semibold text-black">WEB3</span></div>
                 <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Cookie Checkpoint</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Nightly wallet check-ins on Cookie Chain.</p></div>
               </a>
-              <a href="https://sage-cinema-jet.vercel.app" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-black sm:h-24"><img src="https://cdn.jsdelivr.net/gh/phcodesage/sage_movies@main/public/logo192.png" alt="Sage Cinema logo" class="h-full w-full object-contain p-5" loading="lazy" /></div>
+              <a href="https://sage-cinema-nu.vercel.app/" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="h-20 overflow-hidden rounded-xl bg-black sm:h-24"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Cinema logo" class="h-full w-full object-contain p-5" loading="lazy" /></div>
                 <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">02</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-sm font-semibold text-black">PRODUCT</span></div>
                 <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Sage Cinema</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">A focused movie discovery experience.</p></div>
               </a>
@@ -162,6 +168,54 @@
                 <div class="h-20 overflow-hidden rounded-xl bg-[#ede9fe] sm:h-24"><img src="https://fszvdwlpibr9z2z6.public.blob.vercel-storage.com/uploads/1781627900764-48z0lu.jpeg" alt="Unbreakable You preview" class="h-full w-full object-cover" loading="lazy" /></div>
                 <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">06</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-sm font-semibold text-black">MAINTAINED</span></div>
                 <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Unbreakable You</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Healing and empowerment coaching platform.</p></div>
+              </a>
+            </div>
+
+            <div data-work-grid="more" class="hidden min-h-0 flex-1 grid grid-cols-3 grid-rows-3 gap-3">
+              <a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="h-14 overflow-hidden rounded-xl bg-black sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/yawp/main/docs/demo.svg" alt="yawp dictation preview" class="h-full w-full object-cover" loading="lazy" /></div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">07</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">SWIFT</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">yawp</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Local macOS dictation.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/sonoscribe-drop" target="_blank" rel="noreferrer" data-category="product agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="flex h-14 items-center justify-center rounded-xl bg-[#f1f5f9] text-lg font-semibold text-black sm:h-16">SONOSCRIBE</div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">08</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">PYTHON</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Sonoscribe</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Timestamped recording workspace.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="h-14 overflow-hidden rounded-xl bg-[#8b5cf6] sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/Swift-Pos/main/static/images/swiftpos_banner.jpg" alt="SwiftPOS preview" class="h-full w-full object-cover" loading="lazy" /></div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">09</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">POS</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">SwiftPOS</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Point of sale for small stores.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="flex h-14 items-center justify-center rounded-xl bg-[#171717] px-2 text-center font-mono text-sm text-[#c4b5fd] sm:h-16">sage_movies_tui</div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">10</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">RUST</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">SageMovies TUI</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Keyboard-first movie terminal.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="h-14 overflow-hidden rounded-xl bg-[#ede9fe] sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/Virex/main/landing/demo.gif" alt="Virex writing assistant preview" class="h-full w-full object-cover" loading="lazy" /></div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">11</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">TAURI</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Virex</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Native writing assistant.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="flex h-14 items-center justify-center rounded-xl bg-[#8b5cf6] text-lg font-semibold text-black sm:h-16">BEAMLY ↗</div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">12</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">WEBRTC</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Beamly</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Encrypted peer-to-peer transfer.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/applyph" target="_blank" rel="noreferrer" data-category="product agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="flex h-14 items-center justify-center rounded-xl bg-[#f1f5f9] text-center text-base font-semibold sm:h-16">APPLY<span class="text-[#6b25ff]">PH</span> AI</div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">13</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">AI</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">ApplyPH AI</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Job search for Filipino talent.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/controlX" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="flex h-14 items-center justify-center rounded-xl bg-black px-2 text-center text-base font-semibold text-white sm:h-16">controlX / WebRTC</div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">14</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">RUST</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">controlX</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Low-latency remote desktop.</p></div>
+              </a>
+              <a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
+                <div class="h-14 overflow-hidden rounded-xl bg-black sm:h-16"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Movies repository preview" class="h-full w-full object-contain p-4" loading="lazy" /></div>
+                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">15</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">NEXT.JS</span></div>
+                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Sage Movies</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Movie platform source repository.</p></div>
               </a>
             </div>
           </section>

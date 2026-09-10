@@ -11,9 +11,21 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 ## Selected work
 
 - [Cookie Checkpoint](https://cookie-checkpoint.vercel.app) — an open-source on-chain streak app for Cookie Chain.
-- [Sage Cinema](https://sage-cinema-jet.vercel.app) — a TMDB-powered movie discovery experience with search, recommendations, and watch history.
+- [Sage Cinema](https://sage-cinema-nu.vercel.app/) — a TMDB-powered movie discovery experience with search, recommendations, and watch history.
 - [Mermail Skills](https://github.com/phcodesage/mermail-skills) — portable agent workflows for email, scheduling, support, and GTM automation.
 - [Causify Helpers contribution](https://github.com/causify-ai/helpers/pull/1396) — a Python AST-based private-function linter with tests and actionable diagnostics.
+
+## Additional work
+
+- [yawp](https://github.com/phcodesage/yawp) — a private, fully local macOS dictation tool built in Swift.
+- [Sonoscribe](https://github.com/phcodesage/sonoscribe-drop) — a timestamped audio/video transcription and AI workspace.
+- [SwiftPOS](https://github.com/phcodesage/Swift-Pos) — a browser-based point-of-sale system for small Philippine stores.
+- [SageMovies TUI](https://github.com/phcodesage/sagemovies-tui) — a keyboard-first Rust terminal interface for movies and series.
+- [Virex](https://github.com/phcodesage/Virex) — a native macOS writing assistant built with Rust, Tauri, and SolidJS.
+- [Beamly](https://github.com/phcodesage/beamly) — an end-to-end encrypted peer-to-peer file transfer app.
+- [ApplyPH AI](https://github.com/phcodesage/applyph) — an AI job-search assistant for Filipino job seekers.
+- [controlX](https://github.com/phcodesage/controlX) — a low-latency remote desktop system using Rust and WebRTC.
+- [Sage Movies source](https://github.com/phcodesage/sage_movies) — the open-source movie platform behind Sage Cinema.
 
 ## Development & maintenance
 
@@ -42,8 +54,14 @@ flowchart LR
     O --> O1[Causify Helpers]
     W --> W1[Cookie Checkpoint]
     A --> A1[Mermail Skills]
+    A --> A2[Sonoscribe]
     M --> M1[Exceed Learning Center]
     M --> M2[Unbreakable You]
+    P --> P3[SwiftPOS]
+    P --> P4[Beamly]
+    O --> O2[yawp]
+    O --> O3[Virex]
+    O --> O4[controlX]
 ```
 
 ## GitHub activity

@@ -57,23 +57,45 @@ window.addEventListener('hashchange', () => activateView(window.location.hash.sl
 
 const filterButtons = document.querySelectorAll('[data-filter]');
 const projectCards = document.querySelectorAll('.project-card');
+const workSetButtons = document.querySelectorAll('[data-work-set]');
+const workGrids = document.querySelectorAll('[data-work-grid]');
+
+function styleToggle(item, isActive) {
+  item.classList.toggle('bg-black', isActive);
+  item.classList.toggle('bg-white', !isActive);
+  item.classList.toggle('text-white', isActive);
+  item.classList.toggle('text-black/60', !isActive);
+  item.classList.toggle('border', !isActive);
+  item.classList.toggle('border-black/15', !isActive);
+  item.classList.toggle('hover:text-white', isActive);
+  item.classList.toggle('hover:text-black', !isActive);
+  item.setAttribute('aria-pressed', String(isActive));
+}
+
+let activeFilter = 'all';
+
+function applyFilter(filter) {
+  activeFilter = filter;
+
+  filterButtons.forEach((item) => styleToggle(item, item.dataset.filter === filter));
+
+  projectCards.forEach((card) => {
+    const categories = card.dataset.category?.split(' ') ?? [];
+    const shouldShow = filter === 'all' || categories.includes(filter);
+    card.classList.toggle('hidden', !shouldShow);
+  });
+}
 
 filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle('is-active', isActive);
-      item.classList.toggle('bg-black', isActive);
-      item.classList.toggle('text-white', isActive);
-      item.classList.toggle('text-black/60', !isActive);
-    });
+  button.addEventListener('click', () => applyFilter(button.dataset.filter));
+});
 
-    projectCards.forEach((card) => {
-      const categories = card.dataset.category?.split(' ') ?? [];
-      const shouldShow = filter === 'all' || categories.includes(filter);
-      card.classList.toggle('hidden', !shouldShow);
-    });
+workSetButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const workSet = button.dataset.workSet;
+    workGrids.forEach((grid) => grid.classList.toggle('hidden', grid.dataset.workGrid !== workSet));
+    workSetButtons.forEach((item) => styleToggle(item, item === button));
+    applyFilter('all');
   });
 });
 
