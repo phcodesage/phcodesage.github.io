@@ -58,6 +58,9 @@
       .project-card:hover .project-image { transform: scale(1.06); filter: saturate(1.12); }
       .project-card:hover .project-arrow { transform: translate(4px, -4px); }
       .project-arrow { transition: transform 300ms cubic-bezier(.22,1,.36,1); }
+      .footer-link { position: relative; width: fit-content; }
+      .footer-link::after { position: absolute; bottom: -0.3rem; left: 0; height: 1px; width: 100%; transform: scaleX(0); transform-origin: right; background: currentColor; content: ''; transition: transform 300ms cubic-bezier(.22,1,.36,1); }
+      .footer-link:hover::after { transform: scaleX(1); transform-origin: left; }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
         *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -293,17 +296,44 @@
           </div>
         </section>
 
-        <section id="contact" class="px-5 py-28 md:px-10 md:py-40">
+        <section id="contact" class="overflow-hidden bg-ink px-5 pb-6 pt-28 text-white md:px-10 md:pb-8 md:pt-40">
           <div class="mx-auto max-w-[1320px]">
-            <div class="rounded-[2rem] bg-violet px-6 py-14 text-white md:px-16 md:py-20" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/65">(06) Contact</p>
-              <h2 class="mt-8 max-w-5xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-medium leading-[0.95] tracking-[-0.075em]">Let’s make<br />something useful.</h2>
-              <div class="mt-12 flex flex-col justify-between gap-8 border-t border-white/25 pt-6 md:flex-row md:items-end"><p class="max-w-md text-lg leading-8 text-white/80">Have a product to build, a platform to maintain, or a problem worth untangling?</p><a href="mailto:rechceltoledo@gmail.com" class="text-xl font-semibold underline decoration-white/40 underline-offset-8 transition hover:decoration-white md:text-2xl">rechceltoledo@gmail.com ↗</a></div>
+            <div class="grid gap-16 border-b border-white/15 pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24" data-reveal>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lilac">(06) Contact</p>
+                <h2 class="mt-8 max-w-5xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-medium leading-[0.95] tracking-[-0.075em]">Let’s make<br /><span class="text-violet">something useful.</span></h2>
+              </div>
+              <div class="flex flex-col justify-end gap-9 lg:pb-2">
+                <p class="max-w-md text-xl leading-8 text-white/75">Have a product to build, a platform to maintain, or a problem worth untangling?</p>
+                <a href="mailto:rechceltoledo@gmail.com" class="footer-link text-[clamp(1.35rem,2.4vw,2.25rem)] font-medium tracking-[-0.04em]">rechceltoledo@gmail.com ↗</a>
+                <div class="grid grid-cols-2 gap-6 border-t border-white/15 pt-5 text-base">
+                  <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Based in</p><p class="mt-2 text-white/90">Davao, Philippines</p></div>
+                  <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Availability</p><p class="mt-2 flex items-center gap-2 text-white/90"><span class="h-2 w-2 rounded-full bg-violet"></span>Open to good work</p></div>
+                </div>
+              </div>
             </div>
-            <footer class="flex flex-col justify-between gap-6 border-t border-black/15 pt-7 text-base text-black/60 md:flex-row md:items-center">
-              <p>© <span id="year"></span> Rechcel Toledo · Davao, Philippines</p>
-              <div class="flex flex-wrap gap-5"><a href="https://github.com/phcodesage" rel="me" class="transition hover:text-black">GitHub</a><a href="https://x.com/phcodesage" rel="me" class="transition hover:text-black">X</a><a href="https://www.instagram.com/phcodesage/" rel="me" class="transition hover:text-black">Instagram</a><a href="https://www.threads.com/@phcodesage" rel="me" class="transition hover:text-black">Threads</a></div>
+
+            <p class="select-none whitespace-nowrap pt-16 text-[clamp(5rem,18vw,16rem)] font-medium leading-[0.72] tracking-[-0.1em] text-white/[0.08]" aria-hidden="true">phcodesage.</p>
+
+            <footer class="grid gap-12 border-t border-white/15 py-10 text-base text-white/70 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:gap-8">
+              <div>
+                <a href="#top" class="footer-link text-3xl font-semibold tracking-[-0.08em] text-white">PH.</a>
+                <p class="mt-4 max-w-xs leading-7">Software developer and maintainer building from Davao, Philippines.</p>
+              </div>
+              <nav aria-label="Footer navigation">
+                <p class="mb-4 text-sm uppercase tracking-[0.16em] text-white/40">Explore</p>
+                <div class="grid gap-3"><a href="#about" class="footer-link">About</a><a href="#experience" class="footer-link">Experience</a><a href="#work" class="footer-link">Selected work</a><a href="#practice" class="footer-link">Practice</a></div>
+              </nav>
+              <div>
+                <p class="mb-4 text-sm uppercase tracking-[0.16em] text-white/40">Connect</p>
+                <div class="grid gap-3"><a href="https://github.com/phcodesage" rel="me" class="footer-link">GitHub ↗</a><a href="https://x.com/phcodesage" rel="me" class="footer-link">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me" class="footer-link">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me" class="footer-link">Threads ↗</a></div>
+              </div>
             </footer>
+
+            <div class="flex flex-col justify-between gap-5 border-t border-white/15 pt-6 text-sm text-white/45 md:flex-row md:items-center">
+              <p>© <span id="year"></span> Rechcel Toledo · Davao, Philippines</p>
+              <a href="#top" class="footer-link text-white/75">Back to top ↑</a>
+            </div>
           </div>
         </section>
       </main>
