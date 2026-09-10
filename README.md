@@ -19,6 +19,7 @@ The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the
 
 ## Also in the portfolio
 
+- [Jinjalume](https://phcodesage.github.io/jinjalume/) — open-source Tailwind UI components for Flask, Jinja, and Python web apps.
 - [yawp](https://github.com/phcodesage/yawp) — a private, fully local macOS dictation tool built in Swift.
 - [Sonoscribe](https://github.com/phcodesage/sonoscribe-drop) — a timestamped audio/video transcription and AI workspace.
 - [SwiftPOS](https://github.com/phcodesage/Swift-Pos) — a browser-based point-of-sale system for small Philippine stores.
