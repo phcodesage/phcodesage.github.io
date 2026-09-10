@@ -44,6 +44,41 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
+
+const contactForm = document.querySelector('#contact-form');
+const contactStatus = document.querySelector('#contact-status');
+const contactSubmit = document.querySelector('#contact-submit');
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
+
+  contactSubmit.disabled = true;
+  contactSubmit.textContent = 'Sending…';
+  contactStatus.textContent = 'Sending your inquiry…';
+  contactStatus.className = 'text-base text-white/55';
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/rechceltoledo@gmail.com', {
+      method: 'POST',
+      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries())),
+    });
+    const result = await response.json();
+    if (!response.ok || result.success === false) throw new Error('Submission failed');
+
+    contactForm.reset();
+    contactStatus.textContent = 'Message sent. I’ll get back to you soon.';
+    contactStatus.className = 'text-base text-lilac';
+  } catch {
+    contactStatus.textContent = 'Could not send right now. Use Email or WhatsApp below instead.';
+    contactStatus.className = 'text-base text-red-300';
+  } finally {
+    contactSubmit.disabled = false;
+    contactSubmit.textContent = 'Send inquiry ↗';
+  }
+});
+
 function recordPortfolioVisit() {
   if (!window.location.hostname.endsWith("github.io")) return;
 

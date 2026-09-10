@@ -69,6 +69,10 @@
       .footer-link { position: relative; width: fit-content; }
       .footer-link::after { position: absolute; bottom: -0.3rem; left: 0; height: 1px; width: 100%; transform: scaleX(0); transform-origin: right; background: currentColor; content: ''; transition: transform 300ms cubic-bezier(.22,1,.36,1); }
       .footer-link:hover::after { transform: scaleX(1); transform-origin: left; }
+      .contact-input { width: 100%; border: 1px solid rgba(255,255,255,.2); border-radius: 1rem; background: rgba(255,255,255,.07); padding: .85rem 1rem; color: #ffffff; outline: none; transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease; }
+      .contact-input:focus { border-color: #c4b5fd; background: rgba(255,255,255,.1); box-shadow: 0 0 0 3px rgba(196,181,253,.16); }
+      .contact-input option { background: #0b0b0d; color: #ffffff; }
+      #contact-submit:disabled { cursor: wait; opacity: .65; }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
         *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -121,7 +125,7 @@
               </p>
               <div class="mt-9 flex flex-wrap gap-3 hero-line">
                 <a href="#work" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">View selected work <span aria-hidden="true">↗</span></a>
-                <a href="https://t.me/phcodesage" target="_blank" rel="me noopener noreferrer" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">Message me on Telegram ↗</a>
+                <a href="#contact" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">Send an inquiry ↗</a>
               </div>
             </div>
 
@@ -306,15 +310,33 @@
 
         <section id="contact" class="overflow-hidden bg-ink px-5 pb-6 pt-28 text-white md:px-10 md:pb-8 md:pt-40">
           <div class="mx-auto max-w-[1320px]">
-            <div class="grid gap-16 border-b border-white/15 pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24" data-reveal>
+            <div class="grid gap-16 border-b border-white/15 pb-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24" data-reveal>
               <div>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lilac">(06) Contact</p>
                 <h2 class="mt-8 max-w-5xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-medium leading-[0.95] tracking-[-0.075em]">Let’s make<br /><span class="text-violet">something useful.</span></h2>
+                <p class="mt-8 max-w-md text-xl leading-8 text-white/75">Tell me what you’re building, what’s stuck, or what needs a careful second pair of hands.</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a href="mailto:rechceltoledo@gmail.com" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Email directly ↗</a>
+                  <a href="https://wa.me/639703224930" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">WhatsApp ↗</a>
+                  <span class="rounded-full border border-white/15 px-5 py-3 text-base text-white/45" title="Telegram bot link will be added after bot setup">Telegram bot · soon</span>
+                </div>
               </div>
-              <div class="flex flex-col justify-end gap-9 lg:pb-2">
-                <p class="max-w-md text-xl leading-8 text-white/75">Have a product to build, a platform to maintain, or a problem worth untangling?</p>
-                <a href="https://t.me/phcodesage" target="_blank" rel="me noopener noreferrer" class="footer-link text-[clamp(1.35rem,2.4vw,2.25rem)] font-medium tracking-[-0.04em]">@phcodesage on Telegram ↗</a>
-                <div class="grid grid-cols-2 gap-6 border-t border-white/15 pt-5 text-base">
+              <div class="lg:pb-2">
+                <form id="contact-form" class="grid gap-4" novalidate>
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <label class="grid gap-2 text-base"><span class="text-white/65">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
+                    <label class="grid gap-2 text-base"><span class="text-white/65">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
+                  </div>
+                  <label class="grid gap-2 text-base"><span class="text-white/65">Preferred reply</span><select class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram bot">Telegram bot</option></select></label>
+                  <label class="grid gap-2 text-base"><span class="text-white/65">What can I help with?</span><textarea class="contact-input min-h-40 resize-y" name="message" rows="5" required></textarea></label>
+                  <input class="hidden" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+                  <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
+                  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <button id="contact-submit" type="submit" class="rounded-full bg-violet px-6 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-lilac hover:text-ink">Send inquiry ↗</button>
+                    <p id="contact-status" class="text-base text-white/55" role="status" aria-live="polite">I’ll reply through your preferred channel.</p>
+                  </div>
+                </form>
+                <div class="mt-10 grid grid-cols-2 gap-6 border-t border-white/15 pt-5 text-base">
                   <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Based in</p><p class="mt-2 text-white/90">Davao, Philippines</p></div>
                   <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Availability</p><p class="mt-2 flex items-center gap-2 text-white/90"><span class="h-2 w-2 rounded-full bg-violet"></span>Open to good work</p></div>
                 </div>
@@ -334,7 +356,7 @@
               </nav>
               <div>
                 <p class="mb-4 text-sm uppercase tracking-[0.16em] text-white/40">Connect</p>
-                <div class="grid gap-3"><a href="https://github.com/phcodesage" rel="me" class="footer-link">GitHub ↗</a><a href="https://t.me/phcodesage" target="_blank" rel="me noopener noreferrer" class="footer-link">Telegram ↗</a><a href="https://x.com/phcodesage" rel="me" class="footer-link">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me" class="footer-link">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me" class="footer-link">Threads ↗</a><a href="https://bounty-radar.rechceltoledo.workers.dev/analytics.html" target="_blank" rel="noreferrer" class="footer-link">Site pulse ↗</a></div>
+                <div class="grid gap-3"><a href="https://github.com/phcodesage" rel="me" class="footer-link">GitHub ↗</a><a href="mailto:rechceltoledo@gmail.com" class="footer-link">Email ↗</a><a href="https://wa.me/639703224930" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp ↗</a><a href="https://x.com/phcodesage" rel="me" class="footer-link">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me" class="footer-link">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me" class="footer-link">Threads ↗</a><a href="https://bounty-radar.rechceltoledo.workers.dev/analytics.html" target="_blank" rel="noreferrer" class="footer-link">Site pulse ↗</a></div>
               </div>
             </footer>
 
