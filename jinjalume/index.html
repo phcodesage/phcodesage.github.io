@@ -124,8 +124,8 @@ Jinjalume(app)
       <section id="components" class="border-y border-ink/15 bg-white px-5 py-28 md:px-10 md:py-36">
         <div class="mx-auto max-w-7xl">
           <div class="mb-14 flex items-end justify-between gap-8 border-b border-ink/15 pb-5" data-reveal>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink/55">(01) Component shelf</p>
-            <p class="hidden text-sm text-ink/55 md:block">Useful primitives, ready for your templates</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink">(01) Component shelf</p>
+            <div class="component-shelf-meta hidden items-center gap-5 text-sm md:flex"><span>Useful primitives, ready for your templates</span><a href="https://github.com/phcodesage/jinjalume/tree/main/jinjalume/templates/jinjalume/components" target="_blank" rel="noreferrer">Inspect source ↗</a></div>
           </div>
           <div class="grid gap-5 lg:grid-cols-12">
             <article class="component-card lg:col-span-7" data-reveal>
@@ -135,7 +135,8 @@ Jinjalume(app)
                 <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-ink shadow-sm ring-1 ring-inset ring-ink/20 transition hover:bg-ink/5">Preview</button>
                 <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-500">Delete</button>
               </div>
-              <div class="component-card-foot">three variants · three sizes · link or button</div>
+              <div class="component-card-foot component-card-footer"><span>three variants · three sizes · link or button</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/button.html" import button %}
+{{ button("Save changes", variant="primary") }}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-5" data-reveal data-delay="1">
               <div class="component-card-head"><span>Status</span><code>badge.html</code></div>
@@ -144,7 +145,8 @@ Jinjalume(app)
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700"><i class="h-1.5 w-1.5 rounded-full bg-emerald-500"></i>Published</span>
                 <span class="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-800">Needs review</span>
               </div>
-              <div class="component-card-foot">neutral · success · warning · danger</div>
+              <div class="component-card-foot component-card-footer"><span>neutral · success · warning · danger</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/badge.html" import badge %}
+{{ badge("Published", variant="success") }}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-5" data-reveal>
               <div class="component-card-head"><span>Feedback</span><code>alert.html</code></div>
@@ -152,15 +154,25 @@ Jinjalume(app)
                 <div role="alert" class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"><p class="font-semibold">Changes saved</p><p class="mt-1">Your settings are now live.</p></div>
                 <div role="alert" class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">This action needs your attention.</div>
               </div>
-              <div class="component-card-foot">semantic role · four variants</div>
+              <div class="component-card-foot component-card-footer"><span>semantic role · four variants</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/alert.html" import alert %}
+{{ alert("Changes saved", variant="success") }}</code></pre></details></div>
+            </article>
+            <article class="component-card lg:col-span-7" data-reveal data-delay="1">
+              <div class="component-card-head"><span>Content surface</span><code>card.html</code></div>
+              <div class="min-h-48 bg-paper p-6 md:p-10">
+                <div class="material-surface max-w-md bg-white p-5"><div class="flex items-start justify-between gap-4"><div><p class="font-mono text-xs uppercase tracking-[0.16em] text-ink">Release note</p><h3 class="mt-2 text-xl font-semibold tracking-[-0.04em]">Ship the small things.</h3></div><span class="h-3 w-3 rounded-full bg-lime ring-4 ring-lime/20"></span></div><p class="mt-3 text-sm leading-6 text-ink">A flexible caller block for dashboards, settings, and the everyday surfaces around your app.</p></div>
+              </div>
+              <div class="component-card-foot component-card-footer"><span>title · description · caller block</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/card.html" import card %}
+{% call card("Release note") %}Content here{% endcall %}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-7" data-reveal data-delay="1">
               <div class="component-card-head"><span>Form fields</span><code>input.html · textarea.html</code></div>
               <div class="grid gap-5 bg-paper p-6 md:grid-cols-2 md:p-10">
-                <label class="grid gap-2 text-sm font-medium"><span>Email address</span><input type="email" value="you@example.com" class="rounded-lg border-0 bg-white px-3 py-2.5 font-normal shadow-sm ring-1 ring-inset ring-ink/20 outline-none focus:ring-2 focus:ring-violet" /></label>
-                <label class="grid gap-2 text-sm font-medium"><span>Message</span><textarea rows="2" placeholder="Tell us more..." class="resize-none rounded-lg border-0 bg-white px-3 py-2.5 font-normal shadow-sm ring-1 ring-inset ring-ink/20 outline-none placeholder:text-ink/35 focus:ring-2 focus:ring-violet"></textarea></label>
+                <label class="grid gap-2 text-sm font-medium text-ink"><span>Email address</span><input type="email" value="you@example.com" class="rounded-lg border-0 bg-white px-3 py-2.5 font-normal text-ink shadow-sm ring-1 ring-inset ring-ink/20 outline-none focus:ring-2 focus:ring-violet" /></label>
+                <label class="grid gap-2 text-sm font-medium text-ink"><span>Message</span><textarea rows="2" placeholder="Tell us more..." class="resize-none rounded-lg border-0 bg-white px-3 py-2.5 font-normal text-ink placeholder:text-ink focus:ring-2 focus:ring-violet"></textarea></label>
               </div>
-              <div class="component-card-foot">labels · help text · error states · required fields</div>
+              <div class="component-card-foot component-card-footer"><span>labels · help text · error states · required fields</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/input.html" import input_field %}
+{{ input_field("email", label="Email address", required=True) }}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-4" data-reveal>
               <div class="component-card-head"><span>Identity</span><code>avatar.html</code></div>
@@ -169,7 +181,8 @@ Jinjalume(app)
                 <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-lime text-sm font-semibold text-ink ring-2 ring-white">J</span>
                 <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-ink text-lg font-semibold text-white ring-2 ring-white">JL</span>
               </div>
-              <div class="component-card-foot">image or initials · three sizes</div>
+              <div class="component-card-foot component-card-footer"><span>image or initials · three sizes</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/avatar.html" import avatar %}
+{{ avatar("Jinjalume") }}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-4" data-reveal data-delay="1">
               <div class="component-card-head"><span>Loading</span><code>spinner.html</code></div>
@@ -178,15 +191,17 @@ Jinjalume(app)
                 <span class="inline-flex h-7 w-7 animate-spin rounded-full border-[3px] border-violet/25 border-t-violet" role="status" aria-label="Loading"></span>
                 <span class="inline-flex h-9 w-9 animate-spin rounded-full border-4 border-violet/25 border-t-violet" role="status" aria-label="Loading"></span>
               </div>
-              <div class="component-card-foot">accessible status · three sizes</div>
+              <div class="component-card-foot component-card-footer"><span>accessible status · three sizes</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/spinner.html" import spinner %}
+{{ spinner("Saving") }}</code></pre></details></div>
             </article>
             <article class="component-card lg:col-span-4" data-reveal data-delay="2">
               <div class="component-card-head"><span>Progressive interaction</span><code>modal.html</code></div>
               <div class="flex min-h-44 flex-col items-start justify-center bg-paper p-6 md:p-10">
-                <p class="mb-4 text-sm text-ink/60">Native HTML dialog. Add the JavaScript you need.</p>
+                <p class="mb-4 text-sm text-ink">Native HTML dialog. Add the JavaScript you need.</p>
                 <button type="button" data-open-dialog="demo-dialog" class="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Open dialog ↗</button>
               </div>
-              <div class="component-card-foot">native dialog · no framework required</div>
+              <div class="component-card-foot component-card-footer"><span>native dialog · no framework required</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/modal.html" import modal %}
+{% call modal("example", "Example dialog") %}Content{% endcall %}</code></pre></details></div>
             </article>
           </div>
         </div>
