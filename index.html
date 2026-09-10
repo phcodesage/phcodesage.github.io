@@ -49,8 +49,9 @@
       .hero-line:nth-child(2) { animation-delay: 100ms; }
       .hero-line:nth-child(3) { animation-delay: 200ms; }
       @keyframes hero-line { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-      .marquee-track { animation: marquee 28s linear infinite; }
+      @keyframes logo-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .logo-track { animation: logo-marquee 32s linear infinite; }
+      .logo-marquee:hover .logo-track { animation-play-state: paused; }
       .project-image { transition: transform 900ms cubic-bezier(.22,1,.36,1), filter 500ms ease; }
       .project-card:hover .project-image { transform: scale(1.06); filter: saturate(1.12); }
       .project-card:hover .project-arrow { transform: translate(4px, -4px); }
@@ -76,6 +77,7 @@
           </a>
           <div class="hidden items-center gap-1 md:flex">
             <a href="#about" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">About</a>
+            <a href="#experience" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Experience</a>
             <a href="#work" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Work</a>
             <a href="#practice" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Practice</a>
             <a href="#contact" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Let’s talk <span aria-hidden="true">↗</span></a>
@@ -84,6 +86,7 @@
         </nav>
         <div id="mobile-menu" data-mobile-menu class="mx-auto mt-2 hidden max-w-[1320px] rounded-3xl border border-black/10 bg-white p-3 shadow-xl md:hidden">
           <a href="#about" class="block rounded-2xl px-4 py-3 text-base font-semibold">About</a>
+          <a href="#experience" class="block rounded-2xl px-4 py-3 text-base font-semibold">Experience</a>
           <a href="#work" class="block rounded-2xl px-4 py-3 text-base font-semibold">Work</a>
           <a href="#practice" class="block rounded-2xl px-4 py-3 text-base font-semibold">Practice</a>
           <a href="#contact" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white">Let’s talk ↗</a>
@@ -127,10 +130,32 @@
           </div>
         </section>
 
-        <div class="overflow-hidden border-y border-black/15 bg-ink py-4 text-white">
-          <div class="marquee-track flex w-max items-center gap-8 whitespace-nowrap text-sm font-semibold uppercase tracking-[0.18em]">
-            <span>Products</span><span class="text-violet">✳</span><span>Open source</span><span class="text-lilac">✳</span><span>Web3</span><span class="text-violet">✳</span><span>Agent tooling</span><span class="text-lilac">✳</span><span>Maintenance</span><span class="text-violet">✳</span>
-            <span>Products</span><span class="text-violet">✳</span><span>Open source</span><span class="text-lilac">✳</span><span>Web3</span><span class="text-violet">✳</span><span>Agent tooling</span><span class="text-lilac">✳</span><span>Maintenance</span><span class="text-violet">✳</span>
+        <div class="logo-marquee overflow-hidden border-y border-black/15 bg-ink py-5 md:py-7" aria-label="Organizations and companies Rechcel has worked with">
+          <div class="logo-track flex w-max items-center gap-5 px-5 md:gap-8 md:px-10">
+            <a href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer" aria-label="Unconventional Psychotherapy" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
+              <img src="https://unconventionalpsychotherapy.com/wp-content/uploads/2024/11/Unconventional-Psychotherapy-Header-Logo.png" alt="Unconventional Psychotherapy" class="max-h-14 w-full object-contain" loading="lazy" />
+            </a>
+            <a href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer" aria-label="Tri-State Coach Bus" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
+              <img src="https://tristatecoachbus.net/wp-content/uploads/2025/05/Logo-Tricoach-1-scaled.webp" alt="Tri-State Coach Bus" class="max-h-14 w-full object-contain" loading="lazy" />
+            </a>
+            <a href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" aria-label="Exceed Learning Center" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
+              <img src="https://exceedlearningcenter.com/images/Exceed-Learning-Center-Logo-black-1920w.webp" alt="Exceed Learning Center" class="max-h-14 w-full object-contain" loading="lazy" />
+            </a>
+            <a href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" aria-label="Unbreakable You" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
+              <img src="https://unbreakable-you.com/uploads/1781525810885-lhwcbc.png" alt="Unbreakable You" class="max-h-14 w-full object-contain" loading="lazy" />
+            </a>
+            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
+              <img src="https://unconventionalpsychotherapy.com/wp-content/uploads/2024/11/Unconventional-Psychotherapy-Header-Logo.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
+            </div>
+            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
+              <img src="https://tristatecoachbus.net/wp-content/uploads/2025/05/Logo-Tricoach-1-scaled.webp" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
+            </div>
+            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
+              <img src="https://exceedlearningcenter.com/images/Exceed-Learning-Center-Logo-black-1920w.webp" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
+            </div>
+            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
+              <img src="https://unbreakable-you.com/uploads/1781525810885-lhwcbc.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
+            </div>
           </div>
         </div>
 
@@ -155,10 +180,36 @@
           </div>
         </section>
 
+        <section id="experience" class="border-y border-black/15 bg-white px-5 py-28 md:px-10 md:py-36">
+          <div class="mx-auto max-w-[1320px]">
+            <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(02) Experience</p><p class="hidden text-sm text-black/55 md:block">Work history from portfolioV2</p>
+            </div>
+            <div class="divide-y divide-black/15 border-y border-black/15">
+              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal>
+                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Aug 2023 — Present</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Software Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Onlinejobs.ph</p></div>
+                <p class="text-lg leading-8 text-black/70">Leading the development of a sophisticated real-time communication system using Flask. Architecting and implementing a full-featured chat and video call platform similar to Skype, including real-time messaging, voice and video calls, and user presence management with WebRTC and WebSockets.</p>
+              </article>
+              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="1">
+                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Jun — Aug 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Web Development Instructor</h3><p class="mt-2 text-xl font-medium text-black/60">Udemy</p></div>
+                <p class="text-lg leading-8 text-black/70">Created and taught comprehensive web development courses on Udemy’s learning platform, delivering practical front-end and back-end lessons, project-based course materials, and hands-on guidance for aspiring developers.</p>
+              </article>
+              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="2">
+                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">March — May 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Junior Frontend Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Purple Roof</p></div>
+                <p class="text-lg leading-8 text-black/70">Contributed to a mortgage solutions platform under senior developer guidance, implementing and maintaining user-facing features for Purple Roof’s mortgage services platform.</p>
+              </article>
+              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="3">
+                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Dec 2022 — Mar 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Backend Python Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Rooche Digital</p></div>
+                <p class="text-lg leading-8 text-black/70">Developed and maintained backend APIs for ecommerce clients using Python, with a focus on robust integrations, scalability, performance, and clean collaboration with frontend teams.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section id="practice" class="border-y border-black/15 bg-white px-5 py-28 md:px-10 md:py-36">
           <div class="mx-auto max-w-[1320px]">
             <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(02) Practice</p><p class="hidden text-sm text-black/55 md:block">How I make things</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(03) Practice</p><p class="hidden text-sm text-black/55 md:block">How I make things</p>
             </div>
             <div class="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
               <h2 class="text-5xl font-semibold leading-[0.94] tracking-[-0.08em] md:text-7xl" data-reveal>The tools are only useful when the thinking is clear.</h2>
@@ -175,7 +226,7 @@
         <section id="work" class="px-5 py-28 md:px-10 md:py-40">
           <div class="mx-auto max-w-[1320px]">
             <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(03) Selected work</p><p class="hidden text-sm text-black/55 md:block">A few things I’ve shipped</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(04) Selected work</p><p class="hidden text-sm text-black/55 md:block">A few things I’ve shipped</p>
             </div>
             <div class="grid gap-x-6 gap-y-16 md:grid-cols-2 md:gap-y-24">
               <a href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" class="project-card group" data-reveal>
@@ -201,7 +252,7 @@
         <section class="border-y border-black/15 bg-ink px-5 py-28 text-white md:px-10 md:py-36">
           <div class="mx-auto max-w-[1320px]">
             <div class="mb-14 flex items-end justify-between gap-8 border-b border-white/20 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">(04) On the side</p><p class="hidden text-sm text-white/60 md:block">Open-source experiments &amp; tools</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">(05) On the side</p><p class="hidden text-sm text-white/60 md:block">Open-source experiments &amp; tools</p>
             </div>
             <div class="grid gap-x-8 gap-y-0 md:grid-cols-2 lg:grid-cols-3">
               <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Mermail Skills</p><p class="mt-2 text-base text-white/60">Portable agent workflows</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
@@ -222,7 +273,7 @@
         <section id="contact" class="px-5 py-28 md:px-10 md:py-40">
           <div class="mx-auto max-w-[1320px]">
             <div class="rounded-[2rem] bg-violet px-6 py-14 text-white md:px-16 md:py-20" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/65">(05) Contact</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/65">(06) Contact</p>
               <h2 class="mt-8 max-w-5xl text-[clamp(3.6rem,9vw,9rem)] font-semibold leading-[0.86] tracking-[-0.095em]">Let’s make<br />something useful.</h2>
               <div class="mt-12 flex flex-col justify-between gap-8 border-t border-white/25 pt-6 md:flex-row md:items-end"><p class="max-w-md text-lg leading-8 text-white/80">Have a product to build, a platform to maintain, or a problem worth untangling?</p><a href="mailto:rechceltoledo@gmail.com" class="text-xl font-semibold underline decoration-white/40 underline-offset-8 transition hover:decoration-white md:text-2xl">rechceltoledo@gmail.com ↗</a></div>
             </div>

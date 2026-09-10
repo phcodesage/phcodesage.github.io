@@ -29,8 +29,19 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 
 ## Clients & stewardship
 
+- [Unconventional Psychotherapy](https://unconventionalpsychotherapy.com/about/) — psychotherapy practice platform.
+- [Tri-State Coach Bus](https://tristatecoachbus.net/) — coach and group transportation platform.
 - [Exceed Learning Center](https://www.exceedlearningcenterny.com/) — education, tutoring, enrichment, and test-prep platform. I’m the developer and maintainer.
 - [Unbreakable You](https://unbreakable-you.com/) — healing and empowerment coaching platform. I’m the developer and maintainer.
+
+## Work history
+
+The experience section on the site is based on the public history in [portfolioV2](https://github.com/phcodesage/portfolioV2):
+
+- **Onlinejobs.ph** (Aug 2023 — Present) — Software Developer, building real-time communication systems with Flask, WebRTC, and WebSockets.
+- **Udemy** (Jun — Aug 2023) — Web Development Instructor, creating practical front-end and back-end courses.
+- **Purple Roof** (March — May 2023) — Junior Frontend Developer, contributing to mortgage platform features.
+- **Rooche Digital** (Dec 2022 — Mar 2023) — Backend Python Developer, developing and maintaining ecommerce APIs.
 
 ## Practice
 
