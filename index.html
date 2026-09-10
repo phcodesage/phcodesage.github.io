@@ -1,279 +1,494 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rechcel Toledo — Founder &amp; CEO, phcodesage</title>
     <meta
       name="description"
-      content="Rechcel Toledo is a full-stack developer and maintainer based in Davao, Philippines."
+      content="Rechcel Toledo — founder and CEO of phcodesage, a product studio in Davao, Philippines building software across products, open source, on-chain, and agent tooling."
     />
-    <meta name="theme-color" content="#f5f5f3" />
-    <title>Rechcel Toledo — Developer &amp; Maintainer</title>
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="https://avatars.githubusercontent.com/u/97998537?v=4" />
+    <link rel="canonical" href="https://phcodesage.github.io/" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Rechcel Toledo — Founder &amp; CEO, phcodesage" />
+    <meta
+      property="og:description"
+      content="A product studio in Davao, Philippines. Products, open source, on-chain, and agent tooling."
+    />
+    <meta property="og:url" content="https://phcodesage.github.io/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/97998537?v=4" />
+    <meta name="twitter:card" content="summary" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <script>
-      window.tailwind = {
-        config: {
-          theme: {
-            extend: {
-              fontFamily: {
-                sans: ['DM Sans', 'Arial', 'Helvetica', 'sans-serif'],
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js" defer></script>
+
+    <style>
+      :root {
+        --bg: #faf9f6;
+        --fg: #16161a;
+        --muted: #71717d;
+        --rule: #e2e1da;
+        --accent: #16161a;
+        --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b0b0c;
+          --fg: #ececeb;
+          --muted: #8d8d97;
+          --rule: #242427;
+          --accent: #ececeb;
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0 1.5rem;
+        background: var(--bg);
+        color: var(--fg);
+        font: 400 clamp(0.97rem, 0.93rem + 0.2vw, 1.06rem) / 1.65 ui-sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      main {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding-block: clamp(3.5rem, 9vw, 6.5rem) 3.5rem;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        transition: border-color 0.15s ease;
+      }
+
+      a:hover {
+        border-bottom-color: var(--accent);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      .eyebrow {
+        margin: 0;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      /* ---------- masthead ---------- */
+
+      .masthead {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        padding-bottom: 1.75rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .masthead img {
+        width: 60px;
+        height: 60px;
+        border-radius: 999px;
+        object-fit: cover;
+        flex: none;
+        background: var(--rule);
+      }
+
+      .masthead h1 {
+        margin: 0.1rem 0 0;
+        font-family: var(--serif);
+        font-size: clamp(1.85rem, 1.4rem + 2vw, 2.6rem);
+        font-weight: 400;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+      }
+
+      /* ---------- statement ---------- */
+
+      .statement {
+        margin: clamp(2.25rem, 5vw, 3rem) 0 0;
+        font-family: var(--serif);
+        font-size: clamp(1.35rem, 1.05rem + 1.5vw, 1.95rem);
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -0.005em;
+        max-width: 34ch;
+      }
+
+      .statement em {
+        font-style: italic;
+      }
+
+      .lede {
+        margin: 1.5rem 0 0;
+        color: var(--muted);
+        max-width: 40rem;
+      }
+
+      /* ---------- figures ---------- */
+
+      .figures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        gap: 1.5rem 2rem;
+        margin-top: clamp(2.5rem, 6vw, 3.5rem);
+        padding: 1.75rem 0;
+        border-block: 1px solid var(--rule);
+      }
+
+      .figures dt {
+        font-family: var(--serif);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .figures dd {
+        margin: 0.45rem 0 0;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      dl {
+        margin: 0;
+      }
+
+      /* ---------- sections ---------- */
+
+      section {
+        margin-top: clamp(3rem, 7vw, 4.5rem);
+      }
+
+      h2 {
+        margin: 0 0 1.75rem;
+        padding-bottom: 0.65rem;
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ventures li {
+        margin-bottom: 1.6rem;
+      }
+
+      .ventures li:last-child {
+        margin-bottom: 0;
+      }
+
+      .name {
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        letter-spacing: -0.005em;
+      }
+
+      .ventures p {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+        max-width: 40rem;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-left: 0.6rem;
+        padding: 0.12rem 0.45rem;
+        border: 1px solid var(--rule);
+        border-radius: 3px;
+        font-size: 0.66rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        vertical-align: 0.28em;
+        white-space: nowrap;
+      }
+
+      .compact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1.2rem 2.5rem;
+      }
+
+      .compact .name {
+        font-size: 1.08rem;
+      }
+
+      .compact p {
+        margin: 0.1rem 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .practice {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1.4rem 2.5rem;
+      }
+
+      .practice dt {
+        font-weight: 600;
+        font-size: 0.93rem;
+        margin-bottom: 0.15rem;
+      }
+
+      .practice dd {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      /* ---------- contact ---------- */
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem 1.75rem;
+      }
+
+      footer {
+        margin-top: clamp(3.5rem, 8vw, 5rem);
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      footer a {
+        border-bottom-color: transparent;
+      }
+
+      @media (max-width: 30rem) {
+        .masthead {
+          gap: 0.9rem;
+        }
+
+        .masthead img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
   </head>
-  <body class="h-screen overflow-hidden bg-[#f5f5f3] font-sans text-[#080808] antialiased">
-    <div class="relative h-screen overflow-hidden">
-      <header class="absolute inset-x-0 top-0 z-20 px-4 py-4 md:px-8 md:py-6">
-        <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4">
-          <button
-            type="button"
-            data-view-target="home"
-            class="group flex items-center gap-3 text-left"
-            aria-label="Open home"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/97998537?v=4"
-              alt=""
-              class="h-11 w-11 rounded-full object-cover ring-2 ring-black ring-offset-2 ring-offset-[#f5f5f3] transition duration-300 group-hover:rotate-6 md:h-12 md:w-12"
-            />
-            <span class="hidden text-lg font-semibold tracking-[-0.04em] sm:block">Rechcel Toledo</span>
-          </button>
 
-          <button
-            type="button"
-            class="menu-toggle inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/20 bg-white text-xl md:hidden"
-            aria-expanded="false"
-            aria-controls="site-navigation"
-            aria-label="Toggle navigation"
-          >
-            <span aria-hidden="true">☰</span>
-          </button>
-
-          <nav
-            id="site-navigation"
-            class="site-nav absolute right-4 top-[4.75rem] hidden w-56 rounded-2xl border border-black/15 bg-white p-2 shadow-[0_16px_44px_rgba(0,0,0,0.12)] md:static md:flex md:w-auto md:items-center md:gap-1 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none"
-            aria-label="Primary navigation"
-          >
-            <button type="button" data-view-target="home" class="nav-item rounded-full bg-black px-5 py-3 text-base font-semibold text-white transition hover:bg-black/80" aria-current="page">Home</button>
-            <button type="button" data-view-target="work" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">Work</button>
-            <button type="button" data-view-target="about" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">About</button>
-            <button type="button" data-view-target="services" class="nav-item rounded-full px-5 py-3 text-base font-semibold text-black/60 transition hover:bg-black/10 hover:text-black">Services</button>
-            <button type="button" data-view-target="contact" class="nav-item rounded-full bg-[#8b5cf6] px-5 py-3 text-base font-semibold transition hover:bg-[#7c3aed]">Contact</button>
-          </nav>
+  <body>
+    <main>
+      <header class="masthead">
+        <img
+          src="https://avatars.githubusercontent.com/u/97998537?v=4"
+          alt="Rechcel Toledo"
+          width="60"
+          height="60"
+        />
+        <div>
+          <p class="eyebrow">Founder &amp; CEO · phcodesage</p>
+          <h1>Rechcel Toledo</h1>
         </div>
       </header>
 
-      <main class="h-full px-4 pb-5 pt-[5.5rem] md:px-8 md:pb-7 md:pt-[6.5rem]">
-        <div class="mx-auto h-full max-w-[1180px]">
-          <section data-view-panel="home" class="view-panel flex h-full min-h-0 flex-col justify-center gap-5 md:gap-6">
-            <div class="grid min-h-0 flex-1 items-center gap-6 lg:grid-cols-[1.55fr_0.85fr] lg:gap-12">
-              <div class="max-w-3xl">
-                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-black/60 md:mb-4">01 / Developer + maintainer / Davao, PH</p>
-                <h1 class="max-w-4xl text-[clamp(3rem,7.6vw,7.2rem)] font-semibold leading-[0.84] tracking-[-0.09em]">
-                  I make<br />
-                  useful things<br />
-                  feel <span class="text-[#6b25ff]">clear.</span>
-                </h1>
-                <p class="mt-5 max-w-xl text-base leading-6 text-black/75 md:mt-5 md:text-lg md:leading-7">
-                  Full-stack products, open-source contributions, on-chain experiments, and reliable web platforms—built with care from Davao.
-                </p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                  <button type="button" data-view-target="work" class="rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#7c3aed]">See selected work <span aria-hidden="true">↗</span></button>
-                  <a href="mailto:rechceltoledo@gmail.com" class="rounded-full border border-black/20 bg-white px-6 py-3 text-base font-semibold transition hover:-translate-y-0.5 hover:border-black">Start a conversation</a>
-                </div>
-              </div>
+      <p class="statement">
+        I run a one-person product studio out of Davao — and I still <em>ship the code</em>.
+      </p>
 
-              <div class="relative mx-auto hidden w-full max-w-[150px] sm:block sm:max-w-[210px] lg:mr-0 lg:max-w-[300px]">
-                <div class="absolute -inset-4 rotate-3 rounded-[2rem] bg-[#8b5cf6]"></div>
-                <div class="relative overflow-hidden rounded-[2rem] border-2 border-black bg-black p-3 shadow-[10px_10px_0_#080808]">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/97998537?v=4"
-                    alt="Portrait of Rechcel Toledo"
-                    class="aspect-[0.9] w-full rounded-[1.35rem] object-cover"
-                  />
-                <div class="flex items-center justify-between gap-3 px-2 pb-1 pt-4 text-white">
-                    <span class="text-base font-semibold sm:text-lg">Rechcel Toledo</span>
-                    <span class="rounded-full bg-[#8b5cf6] px-3 py-1.5 text-sm font-semibold">Available</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <p class="lede">
+        phcodesage is where I design, build, and maintain software end to end: consumer products,
+        open-source tools, on-chain applications, and the agent tooling that runs behind them. No
+        handoffs, no layers — product decisions and the commits that follow them come from the same
+        desk.
+      </p>
 
-            <div class="grid shrink-0 grid-cols-2 gap-3 border-t border-black/15 pt-4 md:grid-cols-4">
-              <div><p class="text-sm font-semibold tracking-[0.12em] text-black/55">FOCUS</p><p class="mt-1 text-base font-semibold md:text-lg">Full-stack web</p></div>
-              <div><p class="text-sm font-semibold tracking-[0.12em] text-black/55">MAINTAINING</p><p class="mt-1 text-base font-semibold md:text-lg">2 live platforms</p></div>
-              <div><p class="text-sm font-semibold tracking-[0.12em] text-black/55">OPEN SOURCE</p><p class="mt-1 text-base font-semibold md:text-lg">Causify contributor</p></div>
-              <div><p class="text-sm font-semibold tracking-[0.12em] text-black/55">NOW</p><p class="mt-1 text-base font-semibold md:text-lg">Open to good work</p></div>
-            </div>
-          </section>
-
-          <section data-view-panel="work" class="view-panel hidden h-full min-h-0 flex-col gap-4">
-            <div class="flex shrink-0 flex-col justify-between gap-4 border-b border-black/15 pb-4 md:flex-row md:items-end">
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/60">02 / Selected work</p>
-                <h2 class="mt-2 text-5xl font-semibold leading-none tracking-[-0.08em] md:text-7xl">Built to be used.</h2>
-              </div>
-              <div class="flex max-w-full flex-wrap justify-end gap-2" aria-label="Work controls">
-                <div class="flex flex-wrap gap-2" aria-label="Project set">
-                  <button type="button" data-work-set="featured" aria-pressed="true" class="work-set-button rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">Featured</button>
-                  <button type="button" data-work-set="more" aria-pressed="false" class="work-set-button rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">More work</button>
-                </div>
-                <div class="flex flex-wrap gap-2" aria-label="Filter work">
-                  <button type="button" data-filter="all" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition">All</button>
-                  <button type="button" data-filter="product" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Products</button>
-                  <button type="button" data-filter="opensource" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Open source</button>
-                  <button type="button" data-filter="maintained" class="rounded-full border border-black/15 bg-white px-4 py-2 text-sm font-semibold text-black/60 transition hover:border-black hover:text-black">Maintained</button>
-                </div>
-              </div>
-            </div>
-
-            <div data-work-grid="featured" class="grid min-h-0 flex-1 grid-cols-2 gap-3 md:grid-cols-3 md:grid-rows-2">
-              <a href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" data-category="product web3" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-[#8b5cf6] sm:h-24"><img src="https://cookie-checkpoint.vercel.app/favicon.svg" alt="Cookie Checkpoint icon" class="h-full w-full object-contain p-5" loading="lazy" /></div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">01</span><span class="rounded-full bg-[#8b5cf6] px-2.5 py-1 text-sm font-semibold text-black">WEB3</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Cookie Checkpoint</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Nightly wallet check-ins on Cookie Chain.</p></div>
-              </a>
-              <a href="https://sage-cinema-nu.vercel.app/" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-black sm:h-24"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Cinema logo" class="h-full w-full object-contain p-5" loading="lazy" /></div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">02</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-sm font-semibold text-black">PRODUCT</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Sage Cinema</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">A focused movie discovery experience.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" data-category="opensource agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-[#ede9fe] sm:h-24"><img src="https://raw.githubusercontent.com/phcodesage/mermail-skills/main/assets/screenshot-1.png" alt="Mermail Skills preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">03</span><span class="rounded-full bg-[#6b25ff] px-2.5 py-1 text-sm font-semibold text-white">AGENTS</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Mermail Skills</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Portable workflows for useful agent work.</p></div>
-              </a>
-              <a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" data-category="opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-20 items-center justify-center rounded-xl bg-[#171717] px-4 text-center text-base font-semibold text-white sm:h-24">private function finder</div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">04</span><span class="rounded-full bg-[#54d9ff] px-2.5 py-1 text-sm font-semibold text-black">OSS</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Causify Helpers</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Python linting, diagnostics, and tests.</p></div>
-              </a>
-              <a href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" data-category="maintained product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-[#8b5cf6] sm:h-24"><img src="https://exceedlearningcenter.com/Exceed-learning-center-1920w.png" alt="Exceed Learning Center preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">05</span><span class="rounded-full bg-[#8b5cf6] px-2.5 py-1 text-sm font-semibold text-black">MAINTAINED</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Exceed Learning Center</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Education, tutoring, and test-prep platform.</p></div>
-              </a>
-              <a href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" data-category="maintained product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-20 overflow-hidden rounded-xl bg-[#ede9fe] sm:h-24"><img src="https://fszvdwlpibr9z2z6.public.blob.vercel-storage.com/uploads/1781627900764-48z0lu.jpeg" alt="Unbreakable You preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-3 flex items-center justify-between gap-3"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">06</span><span class="rounded-full bg-[#ff7a63] px-2.5 py-1 text-sm font-semibold text-black">MAINTAINED</span></div>
-                <div class="mt-3"><h3 class="text-xl font-semibold leading-none tracking-[-0.05em] md:text-2xl">Unbreakable You</h3><p class="mt-2 text-base leading-5 text-black/65 group-hover:text-white/70">Healing and empowerment coaching platform.</p></div>
-              </a>
-            </div>
-
-            <div data-work-grid="more" class="hidden min-h-0 flex-1 grid grid-cols-3 grid-rows-3 gap-3">
-              <a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-14 overflow-hidden rounded-xl bg-black sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/yawp/main/docs/demo.svg" alt="yawp dictation preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">07</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">SWIFT</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">yawp</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Local macOS dictation.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/sonoscribe-drop" target="_blank" rel="noreferrer" data-category="product agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-14 items-center justify-center rounded-xl bg-[#f1f5f9] text-lg font-semibold text-black sm:h-16">SONOSCRIBE</div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">08</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">PYTHON</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Sonoscribe</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Timestamped recording workspace.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" data-category="product" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-14 overflow-hidden rounded-xl bg-[#8b5cf6] sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/Swift-Pos/main/static/images/swiftpos_banner.jpg" alt="SwiftPOS preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">09</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">POS</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">SwiftPOS</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Point of sale for small stores.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-14 items-center justify-center rounded-xl bg-[#171717] px-2 text-center font-mono text-sm text-[#c4b5fd] sm:h-16">sage_movies_tui</div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">10</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">RUST</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">SageMovies TUI</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Keyboard-first movie terminal.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-14 overflow-hidden rounded-xl bg-[#ede9fe] sm:h-16"><img src="https://raw.githubusercontent.com/phcodesage/Virex/main/landing/demo.gif" alt="Virex writing assistant preview" class="h-full w-full object-cover" loading="lazy" /></div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">11</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">TAURI</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Virex</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Native writing assistant.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-14 items-center justify-center rounded-xl bg-[#8b5cf6] text-lg font-semibold text-black sm:h-16">BEAMLY ↗</div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">12</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">WEBRTC</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Beamly</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Encrypted peer-to-peer transfer.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/applyph" target="_blank" rel="noreferrer" data-category="product agents" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-14 items-center justify-center rounded-xl bg-[#f1f5f9] text-center text-base font-semibold sm:h-16">APPLY<span class="text-[#6b25ff]">PH</span> AI</div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">13</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">AI</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">ApplyPH AI</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Job search for Filipino talent.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/controlX" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="flex h-14 items-center justify-center rounded-xl bg-black px-2 text-center text-base font-semibold text-white sm:h-16">controlX / WebRTC</div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">14</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">RUST</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">controlX</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Low-latency remote desktop.</p></div>
-              </a>
-              <a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" data-category="product opensource" class="project-card group flex min-h-0 flex-col justify-between overflow-hidden rounded-2xl border border-black/15 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:p-4">
-                <div class="h-14 overflow-hidden rounded-xl bg-black sm:h-16"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Movies repository preview" class="h-full w-full object-contain p-4" loading="lazy" /></div>
-                <div class="mt-2 flex items-center justify-between gap-2"><span class="text-sm font-semibold text-black/50 group-hover:text-white/60">15</span><span class="text-sm font-semibold text-[#6b25ff] group-hover:text-[#c4b5fd]">NEXT.JS</span></div>
-                <div class="mt-2"><h3 class="text-lg font-semibold leading-none tracking-[-0.05em] md:text-xl">Sage Movies</h3><p class="mt-1 text-sm leading-4 text-black/65 group-hover:text-white/70">Movie platform source repository.</p></div>
-              </a>
-            </div>
-          </section>
-
-          <section data-view-panel="about" class="view-panel hidden h-full min-h-0 items-center">
-            <div class="grid w-full items-center gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-              <div class="relative mx-auto w-full max-w-[170px] sm:max-w-[220px] lg:max-w-[320px]">
-                <div class="absolute -bottom-4 -left-4 h-full w-full rounded-[2rem] bg-[#8b5cf6]"></div>
-                <img src="https://avatars.githubusercontent.com/u/97998537?v=4" alt="Portrait of Rechcel Toledo" class="relative aspect-square w-full rounded-[2rem] border-2 border-black object-cover" />
-              </div>
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/60">03 / About</p>
-                <h2 class="mt-3 max-w-3xl text-4xl font-semibold leading-[0.9] tracking-[-0.08em] sm:text-5xl md:text-8xl">Developer with a maintainer’s mindset.</h2>
-                <p class="mt-5 max-w-2xl text-base leading-6 text-black/75 sm:text-lg sm:leading-8 md:mt-7 md:text-xl">I’m Rechcel, a full-stack developer from Davao, Philippines. I work across interfaces, APIs, open source, agent tooling, and blockchain products—with a bias toward clear systems that keep working after launch.</p>
-                <div class="mt-8 grid grid-cols-2 gap-4 border-t border-black/15 pt-5 sm:grid-cols-4">
-                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">6</p><p class="mt-1 text-sm text-black/60">featured projects</p></div>
-                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">2</p><p class="mt-1 text-sm text-black/60">maintained sites</p></div>
-                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">4</p><p class="mt-1 text-sm text-black/60">focus areas</p></div>
-                  <div><p class="text-3xl font-semibold tracking-[-0.06em]">PH</p><p class="mt-1 text-sm text-black/60">based in Davao</p></div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section data-view-panel="services" class="view-panel hidden h-full min-h-0 flex-col justify-center">
-            <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/60">04 / Services</p>
-                <h2 class="mt-3 text-5xl font-semibold leading-[0.88] tracking-[-0.09em] md:text-8xl">From first idea to steady product.</h2>
-              </div>
-              <div class="divide-y divide-black/15 border-y border-black/15">
-                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">01 / Product builds</p><p class="mt-1 text-base text-black/65 md:text-lg">React, Next.js, responsive interfaces, and polished interactions.</p></div><span class="text-2xl">↗</span></div>
-                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">02 / Backend systems</p><p class="mt-1 text-base text-black/65 md:text-lg">APIs, integrations, data flows, and testable foundations.</p></div><span class="text-2xl">↗</span></div>
-                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">03 / Maintenance</p><p class="mt-1 text-base text-black/65 md:text-lg">Thoughtful improvements that keep live platforms healthy.</p></div><span class="text-2xl">↗</span></div>
-                <div class="flex items-center justify-between gap-5 py-4 md:py-5"><div><p class="text-xl font-semibold tracking-[-0.05em] md:text-2xl">04 / Open source</p><p class="mt-1 text-base text-black/65 md:text-lg">Useful tools, clear documentation, and contributions that last.</p></div><span class="text-2xl">↗</span></div>
-              </div>
-            </div>
-          </section>
-
-          <section data-view-panel="contact" class="view-panel hidden h-full min-h-0 flex-col justify-center">
-            <div class="relative overflow-hidden rounded-[2rem] border-2 border-black bg-black px-6 py-10 text-white md:px-14 md:py-14">
-              <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#8b5cf6] blur-[1px]"></div>
-              <div class="relative max-w-4xl">
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">05 / Contact</p>
-                <h2 class="mt-4 text-6xl font-semibold leading-[0.86] tracking-[-0.09em] md:text-9xl">Have something<br /><span class="text-[#c4b5fd]">worth making?</span></h2>
-                <p class="mt-7 max-w-2xl text-lg leading-8 text-white/75 md:text-xl">Tell me what you’re building, what’s stuck, or what needs care. I’m based in Davao and open to thoughtful product work.</p>
-                <a href="mailto:rechceltoledo@gmail.com" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#8b5cf6] px-6 py-3 text-lg font-semibold text-black transition hover:bg-white">rechceltoledo@gmail.com <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-            <div class="mt-5 flex flex-wrap items-center justify-between gap-4 text-base text-black/65">
-              <span>Davao, Philippines · Available for selected work</span>
-              <div class="flex gap-5"><a href="https://github.com/phcodesage" target="_blank" rel="noreferrer" class="transition hover:text-black">GitHub</a><a href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer" class="transition hover:text-black">Instagram</a><a href="https://x.com/phcodesage" target="_blank" rel="noreferrer" class="transition hover:text-black">X</a></div>
-            </div>
-          </section>
+      <dl class="figures">
+        <div>
+          <dt>12</dt>
+          <dd>Products shipped</dd>
         </div>
-      </main>
+        <div>
+          <dt>2</dt>
+          <dd>Platforms maintained</dd>
+        </div>
+        <div>
+          <dt>4</dt>
+          <dd>Practice areas</dd>
+        </div>
+        <div>
+          <dt>PH</dt>
+          <dd>Davao, Philippines</dd>
+        </div>
+      </dl>
 
-      <div class="pointer-events-none absolute bottom-3 left-0 right-0 hidden px-4 text-center text-sm text-black/55 md:block">© <span id="year"></span> Rechcel Toledo</div>
-    </div>
+      <section>
+        <h2>Portfolio</h2>
+        <ul class="ventures">
+          <li>
+            <a href="https://cookie-checkpoint.vercel.app" class="name">Cookie Checkpoint</a
+            ><span class="tag">Web3</span>
+            <p>An open-source on-chain streak app for Cookie Chain.</p>
+          </li>
+          <li>
+            <a href="https://sage-cinema-nu.vercel.app/" class="name">Sage Cinema</a
+            ><span class="tag">Product</span>
+            <p>
+              A TMDB-powered movie discovery experience with search, recommendations, and watch
+              history.
+            </p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/mermail-skills" class="name">Mermail Skills</a
+            ><span class="tag">Agents</span>
+            <p>Portable agent workflows for email, scheduling, support, and GTM automation.</p>
+          </li>
+          <li>
+            <a href="https://github.com/causify-ai/helpers/pull/1396" class="name"
+              >Causify Helpers</a
+            ><span class="tag">Open source</span>
+            <p>
+              A Python AST-based private-function linter with tests and actionable diagnostics,
+              contributed upstream.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Also in the portfolio</h2>
+        <ul class="compact">
+          <li>
+            <a href="https://github.com/phcodesage/yawp" class="name">yawp</a>
+            <p>Private, fully local macOS dictation, in Swift.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/sonoscribe-drop" class="name">Sonoscribe</a>
+            <p>Timestamped audio/video transcription and AI workspace.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/Swift-Pos" class="name">SwiftPOS</a>
+            <p>Browser-based point-of-sale for small Philippine stores.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/sagemovies-tui" class="name">SageMovies TUI</a>
+            <p>Keyboard-first Rust terminal UI for movies and series.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/Virex" class="name">Virex</a>
+            <p>Native macOS writing assistant — Rust, Tauri, SolidJS.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/beamly" class="name">Beamly</a>
+            <p>End-to-end encrypted peer-to-peer file transfer.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/applyph" class="name">ApplyPH AI</a>
+            <p>AI job-search assistant for Filipino job seekers.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/controlX" class="name">controlX</a>
+            <p>Low-latency remote desktop using Rust and WebRTC.</p>
+          </li>
+          <li>
+            <a href="https://github.com/phcodesage/sage_movies" class="name">Sage Movies</a>
+            <p>The open-source platform behind Sage Cinema.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Clients &amp; stewardship</h2>
+        <ul class="ventures">
+          <li>
+            <a href="https://www.exceedlearningcenterny.com/" class="name"
+              >Exceed Learning Center</a
+            >
+            <p>
+              Education, tutoring, enrichment, and test-prep platform. I am the developer and
+              maintainer.
+            </p>
+          </li>
+          <li>
+            <a href="https://unbreakable-you.com/" class="name">Unbreakable You</a>
+            <p>Healing and empowerment coaching platform. I am the developer and maintainer.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Practice</h2>
+        <dl class="practice">
+          <div>
+            <dt>Frontend</dt>
+            <dd>React, Next.js, responsive interfaces, interaction design</dd>
+          </div>
+          <div>
+            <dt>Backend</dt>
+            <dd>APIs, data flows, integrations, testing, maintainability</dd>
+          </div>
+          <div>
+            <dt>Web3</dt>
+            <dd>Solana-compatible apps, wallets, RPC, on-chain UX</dd>
+          </div>
+          <div>
+            <dt>Agent tooling</dt>
+            <dd>MCP servers, portable skills, workflow automation</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Office</h2>
+        <ul class="contact">
+          <li><a href="mailto:rechceltoledo@gmail.com">Email</a></li>
+          <li><a href="https://github.com/phcodesage" rel="me">GitHub</a></li>
+          <li><a href="https://x.com/phcodesage" rel="me">X</a></li>
+          <li><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram</a></li>
+          <li><a href="https://www.threads.com/@phcodesage" rel="me">Threads</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        phcodesage · <span id="year">2026</span> · Davao, Philippines · Built and hosted on
+        <a href="https://github.com/phcodesage/phcodesage.github.io">GitHub Pages</a>.
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

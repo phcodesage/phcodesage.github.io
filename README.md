@@ -1,21 +1,21 @@
-# Rechcel Toledo — Developer Portfolio
+# Rechcel Toledo — Founder & CEO, phcodesage
 
-Hi, I’m Rechcel Toledo, a full-stack developer based in Davao, Philippines. I build thoughtful digital products across frontend, backend, open source, on-chain applications, and agent tooling.
+Hi, I’m Rechcel Toledo. I run phcodesage, a one-person product studio based in Davao, Philippines, and I still ship the code. I build thoughtful digital products across frontend, backend, open source, on-chain applications, and agent tooling.
 
 I enjoy turning rough ideas into clear, useful experiences—from polished interfaces and API-driven products to developer tools and blockchain experiments. I care about good product decisions, maintainable code, and the small details that make software feel considered.
 
-## Portfolio
+## Live site
 
 Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/).
 
-## Selected work
+## Portfolio
 
 - [Cookie Checkpoint](https://cookie-checkpoint.vercel.app) — an open-source on-chain streak app for Cookie Chain.
 - [Sage Cinema](https://sage-cinema-nu.vercel.app/) — a TMDB-powered movie discovery experience with search, recommendations, and watch history.
 - [Mermail Skills](https://github.com/phcodesage/mermail-skills) — portable agent workflows for email, scheduling, support, and GTM automation.
 - [Causify Helpers contribution](https://github.com/causify-ai/helpers/pull/1396) — a Python AST-based private-function linter with tests and actionable diagnostics.
 
-## Additional work
+## Also in the portfolio
 
 - [yawp](https://github.com/phcodesage/yawp) — a private, fully local macOS dictation tool built in Swift.
 - [Sonoscribe](https://github.com/phcodesage/sonoscribe-drop) — a timestamped audio/video transcription and AI workspace.
@@ -27,12 +27,12 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 - [controlX](https://github.com/phcodesage/controlX) — a low-latency remote desktop system using Rust and WebRTC.
 - [Sage Movies source](https://github.com/phcodesage/sage_movies) — the open-source movie platform behind Sage Cinema.
 
-## Development & maintenance
+## Clients & stewardship
 
 - [Exceed Learning Center](https://www.exceedlearningcenterny.com/) — education, tutoring, enrichment, and test-prep platform. I’m the developer and maintainer.
 - [Unbreakable You](https://unbreakable-you.com/) — healing and empowerment coaching platform. I’m the developer and maintainer.
 
-## Focus areas
+## Practice
 
 - Frontend: React, Next.js, responsive interfaces, interaction design
 - Backend: APIs, data flows, integrations, testing, maintainability
@@ -68,7 +68,7 @@ flowchart LR
 
 ![GitHub contribution graph for phcodesage](https://ghchart.rshah.org/6b25ff/phcodesage)
 
-## Contact
+## Office
 
 - Email: [rechceltoledo@gmail.com](mailto:rechceltoledo@gmail.com)
 - GitHub: [@phcodesage](https://github.com/phcodesage)
