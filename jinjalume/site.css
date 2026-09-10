@@ -92,7 +92,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  font-family: "DM Mono", SFMono-Regular, Menlo, monospace;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: .72rem;
   letter-spacing: .02em;
 }
@@ -145,7 +145,7 @@ body {
   gap: 1rem;
   padding: .7rem .85rem;
   color: #111116;
-  font-family: "DM Mono", SFMono-Regular, Menlo, monospace;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: .72rem;
   font-weight: 500;
   list-style: none;
@@ -161,7 +161,7 @@ body {
   padding: .9rem;
   background: #111116;
   color: #ffffff;
-  font-family: "DM Mono", SFMono-Regular, Menlo, monospace;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: .7rem;
   line-height: 1.7;
 }
