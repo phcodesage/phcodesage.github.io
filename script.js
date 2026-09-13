@@ -99,4 +99,22 @@ function recordPortfolioVisit() {
   }
 }
 
+async function loadPortfolioPageViews() {
+  const pageViews = document.querySelector('#portfolio-page-views');
+  if (!pageViews) return;
+
+  try {
+    const response = await fetch(`https://bounty-radar.rechceltoledo.workers.dev/api/analytics/summary?refresh=${Date.now()}`, {
+      cache: 'no-store',
+    });
+    if (!response.ok) throw new Error('Analytics unavailable');
+
+    const data = await response.json();
+    pageViews.textContent = `Page views · ${Number(data.views || 0).toLocaleString()} in the last 30 days`;
+  } catch {
+    pageViews.textContent = 'Page views · unavailable';
+  }
+}
+
 recordPortfolioVisit();
+loadPortfolioPageViews();
