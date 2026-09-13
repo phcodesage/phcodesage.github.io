@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Rechcel Toledo is a software developer at phcodesage in Davao, Philippines."
+      content="Rechcel Toledo is a product-minded software developer in Davao, Philippines, building web products, real-time systems, and developer tools."
     />
     <meta name="theme-color" content="#f6f5f2" />
     <title>Rechcel Toledo — Software Developer, phcodesage</title>
     <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
     <link rel="canonical" href="https://phcodesage.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rechcel Toledo — Software Developer, phcodesage" />
+    <meta property="og:description" content="Web products, real-time systems, and developer tools by Rechcel Toledo." />
+    <meta property="og:url" content="https://phcodesage.github.io/" />
+    <meta property="og:image" content="https://phcodesage.github.io/assets/rechcel-portrait.png" />
+    <meta property="og:image:alt" content="Portrait of Rechcel Toledo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rechcel Toledo — Software Developer, phcodesage" />
+    <meta name="twitter:description" content="Web products, real-time systems, and developer tools by Rechcel Toledo." />
+    <meta name="twitter:image" content="https://phcodesage.github.io/assets/rechcel-portrait.png" />
+    <meta name="twitter:image:alt" content="Portrait of Rechcel Toledo" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rechcel Toledo",
+        "url": "https://phcodesage.github.io/",
+        "jobTitle": "Software Developer",
+        "image": "https://phcodesage.github.io/assets/rechcel-portrait.png",
+        "homeLocation": { "@type": "Place", "name": "Davao, Philippines" },
+        "sameAs": [
+          "https://github.com/phcodesage",
+          "https://x.com/phcodesage",
+          "https://www.instagram.com/phcodesage/",
+          "https://www.threads.com/@phcodesage"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,6 +67,8 @@
       html { scroll-behavior: smooth; }
       body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
       ::selection { background: #7c3aed; color: #ffffff; }
+      .skip-link { position: fixed; left: 1rem; top: 1rem; z-index: 70; transform: translateY(-150%); border-radius: 999px; background: #0b0b0d; padding: .75rem 1rem; color: #ffffff; transition: transform 200ms ease; }
+      .skip-link:focus { transform: translateY(0); }
       .hairline { border-color: rgba(11, 11, 13, 0.16); }
       [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 850ms cubic-bezier(.22,1,.36,1), transform 850ms cubic-bezier(.22,1,.36,1); }
       [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
@@ -80,11 +110,13 @@
       }
     </style>
     <script src="script.js" defer></script>
+    <script src="site-analytics.js" defer></script>
   </head>
 
-  <body class="overflow-x-hidden bg-paper font-sans text-ink">
+  <body class="overflow-x-clip bg-paper font-sans text-ink">
     <div id="top" class="relative overflow-hidden">
       <div id="scroll-progress" class="fixed left-0 top-0 z-[60] h-1 origin-left scale-x-0 bg-violet transition-transform duration-100" aria-hidden="true"></div>
+      <a class="skip-link" href="#main-content">Skip to content</a>
 
       <header class="fixed inset-x-0 top-0 z-50 px-5 py-5 md:px-10 md:py-7">
         <nav class="mx-auto flex max-w-[1320px] items-center justify-between rounded-full border border-black/10 bg-paper/85 px-4 py-3 backdrop-blur-xl md:px-5">
@@ -97,6 +129,7 @@
             <a href="#experience" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Experience</a>
             <a href="#work" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Work</a>
             <a href="#practice" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Practice</a>
+            <a href="resume.html" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Resume</a>
             <a href="#contact" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Let’s talk <span aria-hidden="true">↗</span></a>
           </div>
           <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink text-lg text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
@@ -106,11 +139,12 @@
           <a href="#experience" class="block rounded-2xl px-4 py-3 text-base font-semibold">Experience</a>
           <a href="#work" class="block rounded-2xl px-4 py-3 text-base font-semibold">Work</a>
           <a href="#practice" class="block rounded-2xl px-4 py-3 text-base font-semibold">Practice</a>
+          <a href="resume.html" class="block rounded-2xl px-4 py-3 text-base font-semibold">Resume</a>
           <a href="#contact" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white">Let’s talk ↗</a>
         </div>
       </header>
 
-      <main>
+      <main id="main-content">
         <section class="relative flex min-h-screen items-start px-5 pb-12 pt-28 sm:pt-32 md:px-10 md:pb-16 lg:items-end lg:pt-48">
           <div class="mx-auto grid w-full max-w-[1320px] items-end gap-16 lg:grid-cols-[1.25fr_0.75fr] lg:gap-24">
             <div>
@@ -121,11 +155,12 @@
                 <span class="hero-line block text-violet">feels right.</span>
               </h1>
               <p class="mt-9 max-w-2xl text-lg leading-8 text-black/70 md:text-xl md:leading-9 hero-line">
-                A one-person product studio for clear interfaces, solid systems, open source, on-chain experiments, and the tools that make work lighter.
+                I help startups, small teams, and product owners ship polished web products, real-time systems, and developer tools—from the first interface decision to the details that keep a live product healthy.
               </p>
               <div class="mt-9 flex flex-wrap gap-3 hero-line">
                 <a href="#work" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">View selected work <span aria-hidden="true">↗</span></a>
-                <a href="#contact" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">Send an inquiry ↗</a>
+                <a href="resume.html" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">View resume ↗</a>
+                <a href="#contact" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">Start a project ↗</a>
               </div>
             </div>
 
@@ -210,7 +245,7 @@
               </div>
             </div>
             <dl class="mt-20 grid grid-cols-2 gap-8 border-y border-black/15 py-8 md:grid-cols-4" data-reveal>
-              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">15</dt><dd class="mt-2 text-sm font-medium text-black/55">Projects in the catalog</dd></div>
+              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">16</dt><dd class="mt-2 text-sm font-medium text-black/55">Projects in the catalog</dd></div>
               <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">2</dt><dd class="mt-2 text-sm font-medium text-black/55">Platforms maintained</dd></div>
               <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">4</dt><dd class="mt-2 text-sm font-medium text-black/55">Practice areas</dd></div>
               <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">PH</dt><dd class="mt-2 text-sm font-medium text-black/55">Based in Davao</dd></div>
@@ -250,12 +285,12 @@
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(03) Practice</p><p class="hidden text-sm text-black/55 md:block">How I make things</p>
             </div>
             <div class="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
-              <h2 class="text-5xl font-medium leading-[0.96] tracking-[-0.075em] md:text-7xl" data-reveal>The tools are only useful when the thinking is clear.</h2>
+                <h2 class="text-5xl font-medium leading-[0.96] tracking-[-0.075em] md:text-7xl" data-reveal>Clear thinking, careful systems, and a path to done.</h2>
               <div class="divide-y divide-black/15 border-y border-black/15" data-reveal data-delay="1">
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Frontend</p><p class="mt-2 text-lg text-black/60">React, Next.js, responsive interfaces, interaction design</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Backend</p><p class="mt-2 text-lg text-black/60">APIs, data flows, integrations, testing, maintainability</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Web3</p><p class="mt-2 text-lg text-black/60">Solana-compatible apps, wallets, RPC, on-chain UX</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Agent tooling</p><p class="mt-2 text-lg text-black/60">MCP servers, portable skills, workflow automation</p></div><span class="text-2xl text-violet">↗</span></div>
+                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Product builds</p><p class="mt-2 text-lg text-black/60">MVPs, product surfaces, responsive interfaces, and shipped features</p></div><span class="text-2xl text-violet">↗</span></div>
+                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Real-time systems</p><p class="mt-2 text-lg text-black/60">Flask, WebRTC, WebSockets, APIs, data flows, and integrations</p></div><span class="text-2xl text-violet">↗</span></div>
+                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Developer tools</p><p class="mt-2 text-lg text-black/60">Python, Rust, agent workflows, MCP servers, and UI kits</p></div><span class="text-2xl text-violet">↗</span></div>
+                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Ongoing stewardship</p><p class="mt-2 text-lg text-black/60">Maintenance, performance, accessibility, and incremental product improvement</p></div><span class="text-2xl text-violet">↗</span></div>
               </div>
             </div>
           </div>
@@ -267,11 +302,11 @@
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(04) Selected work</p><p class="hidden text-sm text-black/55 md:block">A few things I’ve shipped</p>
             </div>
             <div class="grid gap-x-6 gap-y-16 md:grid-cols-2 md:gap-y-24">
-              <a href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer" class="project-card group" data-reveal>
+              <a href="case-studies/cookie-checkpoint.html" class="project-card group" data-reveal>
                 <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-violet"><img src="https://cookie-checkpoint.vercel.app/favicon.svg" alt="Cookie Checkpoint preview" class="project-image h-full w-full object-contain p-20" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold">Web3</span></div>
                 <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">01 / Product</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Cookie Checkpoint</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A verifiable daily signal on Cookie Chain with Nightly wallet support.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
               </a>
-              <a href="https://sage-cinema-nu.vercel.app/" target="_blank" rel="noreferrer" class="project-card group md:mt-24" data-reveal data-delay="1">
+              <a href="case-studies/sage-cinema.html" class="project-card group md:mt-24" data-reveal data-delay="1">
                 <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-ink"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Cinema preview" class="project-image h-full w-full object-contain p-24" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-violet px-3 py-1.5 text-sm font-semibold text-white">Product</span></div>
                 <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">02 / Product</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Sage Cinema</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A movie discovery experience shaped around search, recommendations, and watch history.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
               </a>
@@ -293,17 +328,17 @@
               <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">(05) On the side</p><p class="hidden text-sm text-white/60 md:block">Open-source experiments &amp; tools</p>
             </div>
             <div class="grid gap-x-8 gap-y-0 md:grid-cols-2 lg:grid-cols-3">
-              <a href="jinjalume/" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Jinjalume</p><p class="mt-2 text-base text-white/60">Tailwind UI for Flask &amp; Jinja</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
+              <a href="case-studies/jinjalume.html" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Jinjalume</p><p class="mt-2 text-base text-white/60">Tailwind UI for Flask &amp; Jinja</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Mermail Skills</p><p class="mt-2 text-base text-white/60">Portable agent workflows</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Causify Helpers</p><p class="mt-2 text-base text-white/60">Python AST linter contribution</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">yawp</p><p class="mt-2 text-base text-white/60">Local macOS dictation</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/sonoscribe-drop" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Sonoscribe</p><p class="mt-2 text-base text-white/60">Timestamped AI workspace</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
+              <a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">IssueAnvil</p><p class="mt-2 text-base text-white/60">Deterministic GitHub housekeeping CLI</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">SwiftPOS</p><p class="mt-2 text-base text-white/60">Point of sale for small stores</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">SageMovies TUI</p><p class="mt-2 text-base text-white/60">Keyboard-first Rust terminal</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Virex</p><p class="mt-2 text-base text-white/60">Native writing assistant</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Beamly</p><p class="mt-2 text-base text-white/60">Encrypted peer-to-peer transfer</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/applyph" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">ApplyPH AI</p><p class="mt-2 text-base text-white/60">Job search for Filipino talent</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/controlX" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">controlX</p><p class="mt-2 text-base text-white/60">Low-latency remote desktop</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
+              <a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">CodeSage Orchestrator</p><p class="mt-2 text-base text-white/60">Multi-agent Codex workflow</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
+              <a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">RemoteX</p><p class="mt-2 text-base text-white/60">Attended remote-support foundation</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
               <a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Sage Movies</p><p class="mt-2 text-base text-white/60">Open-source platform source</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
             </div>
           </div>
@@ -320,6 +355,7 @@
                   <a href="mailto:rechceltoledo@gmail.com" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Email directly ↗</a>
                   <a href="https://wa.me/639703224930" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">WhatsApp ↗</a>
                   <a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Telegram bot ↗</a>
+                  <a href="resume.html" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Resume ↗</a>
                 </div>
               </div>
               <div class="lg:pb-2">
@@ -329,6 +365,7 @@
                     <label class="grid gap-2 text-base"><span class="text-white/65">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
                   </div>
                   <label class="grid gap-2 text-base"><span class="text-white/65">Preferred reply</span><select class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram bot">Telegram bot</option></select></label>
+                  <label class="grid gap-2 text-base"><span class="text-white/65">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
                   <label class="grid gap-2 text-base"><span class="text-white/65">What can I help with?</span><textarea class="contact-input min-h-40 resize-y" name="message" rows="5" required></textarea></label>
                   <input class="hidden" type="text" name="_honey" tabindex="-1" autocomplete="off" />
                   <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />

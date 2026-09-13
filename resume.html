@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Resume for Rechcel Toledo, a software developer building web products, real-time systems, and developer tools." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Resume - Rechcel Toledo" />
+    <meta property="og:description" content="Software developer building web products, real-time systems, and developer tools." />
+    <meta property="og:url" content="https://phcodesage.github.io/resume.html" />
+    <link rel="canonical" href="https://phcodesage.github.io/resume.html" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <style>
+      :root { --ink: #0b0b0d; --paper: #f6f5f2; --violet: #7c3aed; --muted: rgba(11, 11, 13, .62); --line: rgba(11, 11, 13, .14); }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter, Arial, sans-serif; line-height: 1.55; }
+      .page { width: min(960px, calc(100% - 40px)); margin: 0 auto; }
+      header { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; border-bottom: 2px solid var(--ink); padding: 48px 0 28px; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { margin-bottom: 8px; font-size: clamp(2.4rem, 6vw, 4.8rem); letter-spacing: -.08em; line-height: .95; }
+      .role { color: var(--violet); font-size: 1.1rem; font-weight: 700; }
+      .contact { color: var(--muted); font-size: .9rem; line-height: 1.8; text-align: right; }
+      a { color: inherit; }
+      .actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px 0; }
+      .button { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 9px 15px; font-size: .9rem; font-weight: 700; text-decoration: none; }
+      .button.primary { border-color: var(--ink); background: var(--ink); color: #fff; }
+      .button:hover { border-color: var(--violet); background: var(--violet); color: #fff; }
+      .summary { border-bottom: 1px solid var(--line); padding: 6px 0 28px; color: var(--muted); font-size: 1.08rem; }
+      main { display: grid; grid-template-columns: .7fr 1.3fr; gap: 64px; padding: 36px 0 64px; }
+      section + section { margin-top: 44px; }
+      .label { margin-bottom: 16px; color: var(--violet); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      h2 { margin-bottom: 18px; font-size: 1.2rem; letter-spacing: -.04em; }
+      h3 { margin-bottom: 2px; font-size: 1.05rem; letter-spacing: -.03em; }
+      .muted { color: var(--muted); }
+      .entry { border-top: 1px solid var(--line); padding: 18px 0; }
+      .entry:first-of-type { border-top: 0; padding-top: 0; }
+      .entry-meta { color: var(--violet); font-size: .85rem; font-weight: 700; }
+      .entry p { margin-bottom: 0; color: var(--muted); font-size: .95rem; }
+      .skills { display: grid; gap: 14px; }
+      .skill strong { display: block; font-size: .95rem; }
+      .skill span { color: var(--muted); font-size: .92rem; }
+      footer { border-top: 1px solid var(--line); padding: 18px 0 40px; color: var(--muted); font-size: .85rem; }
+      @media (max-width: 700px) {
+        .page { width: min(100% - 28px, 960px); }
+        header { display: block; }
+        .contact { margin-top: 18px; text-align: left; }
+        main { display: block; padding-top: 28px; }
+        main > aside { margin-bottom: 42px; }
+      }
+      @media print {
+        body { background: #fff; }
+        .page { width: 100%; }
+        .actions { display: none; }
+        header { padding-top: 0; }
+        a { text-decoration: none; }
+      }
+    </style>
+    <script src="site-analytics.js" defer></script>
+    <title>Resume - Rechcel Toledo</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div><h1>Rechcel Toledo</h1><p class="role">Software Developer · phcodesage</p></div>
+        <div class="contact">Davao, Philippines<br /><a href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com</a><br /><a href="https://github.com/phcodesage">github.com/phcodesage</a><br /><a href="https://phcodesage.github.io/">phcodesage.github.io</a></div>
+      </header>
+      <div class="actions"><a class="button primary" href="output/pdf/rechcel-toledo-resume.pdf" download>Download PDF</a><a class="button" href="./">Back to portfolio</a><a class="button" href="mailto:rechceltoledo@gmail.com">Email Rechcel</a></div>
+      <p class="summary">Product-minded software developer building polished web products, real-time systems, open-source tools, and on-chain experiments. Available for contract, freelance, and select product work.</p>
+      <main>
+        <aside>
+          <section><p class="label">Practice</p><div class="skills"><div class="skill"><strong>Product frontend</strong><span>React, Next.js, responsive interfaces, interaction design</span></div><div class="skill"><strong>Backend and APIs</strong><span>Python, Flask, integrations, testing, maintainability</span></div><div class="skill"><strong>Real-time systems</strong><span>WebRTC, WebSockets, presence, chat, video calls</span></div><div class="skill"><strong>Developer tools</strong><span>Rust, agent workflows, MCP servers, Jinja UI components</span></div><div class="skill"><strong>Web3</strong><span>Wallets, RPC, Solana-compatible applications, on-chain UX</span></div></div></section>
+          <section><p class="label">Selected work</p><p class="muted"><a href="https://cookie-checkpoint.vercel.app">Cookie Checkpoint</a><br />Verifiable daily check-ins on Cookie Chain.</p><p class="muted"><a href="https://sage-cinema-nu.vercel.app/">Sage Cinema</a><br />Movie discovery and playback experience.</p><p class="muted"><a href="https://pypi.org/project/jinjalume/">Jinjalume</a><br />Server-rendered UI components for Flask and Jinja.</p><p class="muted"><a href="https://github.com/phcodesage/issueanvil">IssueAnvil</a><br />Deterministic GitHub housekeeping CLI.</p></section>
+        </aside>
+        <div>
+          <section><p class="label">Experience</p><article class="entry"><div class="entry-meta">Aug 2023 - Present</div><h3>Software Developer · Onlinejobs.ph</h3><p>Developing a real-time communication system with Flask, WebRTC, WebSockets, messaging, voice and video calls, and user presence management.</p></article><article class="entry"><div class="entry-meta">Jun - Aug 2023</div><h3>Web Development Instructor · Udemy</h3><p>Created and taught practical front-end and back-end web development courses with project-based materials.</p></article><article class="entry"><div class="entry-meta">Mar - May 2023</div><h3>Junior Frontend Developer · Purple Roof</h3><p>Implemented and maintained user-facing features for a mortgage services platform.</p></article><article class="entry"><div class="entry-meta">Dec 2022 - Mar 2023</div><h3>Backend Python Developer · Rooche Digital</h3><p>Developed and maintained ecommerce APIs with a focus on integrations, scalability, performance, and clean collaboration.</p></article></section>
+          <section><p class="label">Open source and community</p><article class="entry"><h3><a href="https://github.com/phcodesage/codesage-orchestrator">CodeSage Orchestrator</a></h3><p>Drop-in multi-agent setup for OpenAI Codex with bounded scout, builder, verifier, scholar, and critic roles.</p></article><article class="entry"><h3><a href="https://github.com/causify-ai/helpers/pull/1396">Causify Helpers contribution</a></h3><p>Python AST-based private-function linter contribution with tests and actionable diagnostics.</p></article></section>
+        </div>
+      </main>
+      <footer>References, testimonials, and detailed project evidence are available on request. <a href="mailto:rechceltoledo@gmail.com">Contact Rechcel</a>.</footer>
+    </div>
+  </body>
+</html>

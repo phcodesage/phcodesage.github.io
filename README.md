@@ -8,6 +8,8 @@ I enjoy turning rough ideas into clear, useful experiences—from polished inter
 
 Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/).
 
+You can also [view the resume](https://phcodesage.github.io/resume.html) or browse the [case studies](https://phcodesage.github.io/#work).
+
 The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the header and profile card, with a square favicon crop at `assets/favicon.png`.
 
 ## Portfolio
@@ -21,13 +23,13 @@ The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the
 
 - [Jinjalume](https://phcodesage.github.io/jinjalume/) — open-source Tailwind UI components for Flask, Jinja, and Python web apps.
 - [yawp](https://github.com/phcodesage/yawp) — a private, fully local macOS dictation tool built in Swift.
-- [Sonoscribe](https://github.com/phcodesage/sonoscribe-drop) — a timestamped audio/video transcription and AI workspace.
+- [IssueAnvil](https://github.com/phcodesage/issueanvil) — a deterministic Rust CLI and GitHub Action for project housekeeping.
 - [SwiftPOS](https://github.com/phcodesage/Swift-Pos) — a browser-based point-of-sale system for small Philippine stores.
 - [SageMovies TUI](https://github.com/phcodesage/sagemovies-tui) — a keyboard-first Rust terminal interface for movies and series.
 - [Virex](https://github.com/phcodesage/Virex) — a native macOS writing assistant built with Rust, Tauri, and SolidJS.
 - [Beamly](https://github.com/phcodesage/beamly) — an end-to-end encrypted peer-to-peer file transfer app.
-- [ApplyPH AI](https://github.com/phcodesage/applyph) — an AI job-search assistant for Filipino job seekers.
-- [controlX](https://github.com/phcodesage/controlX) — a low-latency remote desktop system using Rust and WebRTC.
+- [CodeSage Orchestrator](https://github.com/phcodesage/codesage-orchestrator) — a multi-agent Codex workflow with bounded roles and verification.
+- [RemoteX](https://github.com/phcodesage/remoteX) — an attended remote-support foundation using Python, FastAPI, PySide6, and WebRTC.
 - [Sage Movies source](https://github.com/phcodesage/sage_movies) — the open-source movie platform behind Sage Cinema.
 
 ## Clients & stewardship
@@ -68,14 +70,14 @@ flowchart LR
     O --> O1[Causify Helpers]
     W --> W1[Cookie Checkpoint]
     A --> A1[Mermail Skills]
-    A --> A2[Sonoscribe]
+    A --> A2[CodeSage Orchestrator]
     M --> M1[Exceed Learning Center]
     M --> M2[Unbreakable You]
     P --> P3[SwiftPOS]
     P --> P4[Beamly]
     O --> O2[yawp]
     O --> O3[Virex]
-    O --> O4[controlX]
+    O --> O4[IssueAnvil]
 ```
 
 ## GitHub activity

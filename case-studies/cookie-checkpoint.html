@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Case study: Cookie Checkpoint, a verifiable daily on-chain streak app for Cookie Chain." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cookie Checkpoint - Case study" />
+    <meta property="og:description" content="A verifiable daily signal on Cookie Chain with Nightly wallet support." />
+    <meta property="og:url" content="https://phcodesage.github.io/case-studies/cookie-checkpoint.html" />
+    <link rel="canonical" href="https://phcodesage.github.io/case-studies/cookie-checkpoint.html" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../site-analytics.js" defer></script>
+    <title>Cookie Checkpoint - Case study | Rechcel Toledo</title>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar"><a class="brand" href="../">phcodesage</a><a class="back" href="../#work">Back to selected work <span aria-hidden="true">↗</span></a></header>
+      <main>
+        <section class="hero">
+          <p class="eyebrow">Case study 01 / Product</p>
+          <h1>Make a daily check-in verifiable.</h1>
+          <p class="lead">Cookie Checkpoint turns a simple streak habit into a real, inspectable Cookie Chain transaction without asking users to trust a private database.</p>
+          <div class="hero-actions"><a class="button" href="https://cookie-checkpoint.vercel.app" target="_blank" rel="noreferrer">Open the product ↗</a><a class="button secondary" href="https://github.com/phcodesage/cookie-checkpoint" target="_blank" rel="noreferrer">Read the source ↗</a></div>
+        </section>
+        <section class="facts" aria-label="Project facts">
+          <div class="fact"><div class="fact-label">Role</div><div class="fact-value">Product design and full-stack implementation</div></div>
+          <div class="fact"><div class="fact-label">Stack</div><div class="fact-value">React, TypeScript, wallet APIs, Cookie Chain RPC</div></div>
+          <div class="fact"><div class="fact-label">Proof</div><div class="fact-value">Each completed checkpoint links to Cookiescan</div></div>
+        </section>
+        <section class="content">
+          <aside><p class="eyebrow">The brief</p><h2>A small interaction with a public trail.</h2></aside>
+          <div>
+            <div class="panel"><h2>Challenge</h2><p>The experience needed to feel as quick as a normal daily check-in while still producing a verifiable on-chain record. It also needed to work with Nightly on Cookie Chain without collecting seed phrases or private keys.</p></div>
+            <div class="panel"><h2>What I built</h2><ul><li>Nightly wallet detection and connection through the standard Solana wallet interface.</li><li>Network checks before the user is asked to approve a transaction.</li><li>COOK balance, current slot, and recent-signature reads from the Cookie Chain RPC.</li><li>A zero-value self-transfer with a readable Memo Program payload, followed by confirmation and a Cookiescan link.</li><li>A local streak trail in browser storage while keeping the signed checkpoint itself public and verifiable.</li></ul></div>
+            <div class="panel"><h2>Result</h2><p>The result is a lightweight product demo where the meaningful action is not just a UI state: every completed checkpoint can be inspected on the network. The implementation keeps the transaction model simple and makes wallet safety and network clarity visible in the flow.</p></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"><a href="../resume.html">View resume</a> · <a href="mailto:rechceltoledo@gmail.com">Start a conversation</a></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Case study: Sage Cinema, a TMDB-backed movie discovery and playback experience." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Sage Cinema - Case study" />
+    <meta property="og:description" content="A movie discovery experience shaped around search, recommendations, watch history, and playback." />
+    <meta property="og:url" content="https://phcodesage.github.io/case-studies/sage-cinema.html" />
+    <link rel="canonical" href="https://phcodesage.github.io/case-studies/sage-cinema.html" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../site-analytics.js" defer></script>
+    <title>Sage Cinema - Case study | Rechcel Toledo</title>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar"><a class="brand" href="../">phcodesage</a><a class="back" href="../#work">Back to selected work <span aria-hidden="true">↗</span></a></header>
+      <main>
+        <section class="hero">
+          <p class="eyebrow">Case study 02 / Product</p>
+          <h1>Make discovery feel like part of watching.</h1>
+          <p class="lead">Sage Cinema is a TMDB-backed movie and series experience built around search, recommendations, watch history, resume playback, and a custom player flow.</p>
+          <div class="hero-actions"><a class="button" href="https://sage-cinema-nu.vercel.app/" target="_blank" rel="noreferrer">Open the product ↗</a><a class="button secondary" href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer">Read the source ↗</a></div>
+        </section>
+        <section class="facts" aria-label="Project facts">
+          <div class="fact"><div class="fact-label">Role</div><div class="fact-value">Product design, frontend, backend, and playback integration</div></div>
+          <div class="fact"><div class="fact-label">Stack</div><div class="fact-value">Next.js, React, TypeScript, Tailwind, TMDB, HLS.js</div></div>
+          <div class="fact"><div class="fact-label">Proof</div><div class="fact-value">Search, history, recommendations, subtitles, and signed media proxy flows</div></div>
+        </section>
+        <section class="content">
+          <aside><p class="eyebrow">The brief</p><h2>One calm surface for finding and continuing a title.</h2></aside>
+          <div>
+            <div class="panel"><h2>Challenge</h2><p>A catalogue can have plenty of titles and still feel hard to use. Sage Cinema needed an interface that made search, browsing, similar titles, watch history, and playback feel like one connected product rather than separate screens.</p></div>
+            <div class="panel"><h2>What I built</h2><ul><li>Client-facing collection, search, genre, detail, and recommendation flows backed by local API routes.</li><li>Watch history and resume positions using browser storage with stable keys for films and episodes.</li><li>A custom playback path with HLS.js or native video, subtitle lookup, signed proxy URLs, and playlist rewriting.</li><li>Consent-gated anonymous visit and movie-view counters with a durable production store when configured.</li><li>Responsive visual systems for discovery pages, detail views, loading states, and player interactions.</li></ul></div>
+            <div class="panel"><h2>Result</h2><p>The product brings browsing and watching into a single loop: search for something, understand why it might fit, start watching, and return later without losing context. The public demo and source make the architecture inspectable rather than presenting only a static mockup.</p></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer"><a href="../resume.html">View resume</a> · <a href="mailto:rechceltoledo@gmail.com">Start a conversation</a></footer>
+    </div>
+  </body>
+</html>
