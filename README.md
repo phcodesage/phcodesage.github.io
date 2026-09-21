@@ -38,6 +38,8 @@ The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the
 - [Tri-State Coach Bus](https://tristatecoachbus.net/) — coach and group transportation platform.
 - [Exceed Learning Center](https://www.exceedlearningcenterny.com/) — education, tutoring, enrichment, and test-prep platform. I’m the developer and maintainer.
 - [Unbreakable You](https://unbreakable-you.com/) — healing and empowerment coaching platform. I’m the developer and maintainer.
+- [Swim Studs](https://swimstuds.com/) — professional pool cleaning, maintenance, and repair services.
+- [Ventured](https://www.venturedbrands.com/) — brand accelerator and consumer-brand portfolio platform.
 
 ## Work history
 
