@@ -14,6 +14,8 @@ The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the
 
 ## Portfolio
 
+- [Bugnaw Aircon Care](https://bugnaw.lovable.app/) — a Metro Cebu aircon care booking experience with multilingual messaging, available slots, and reminders.
+- [Unban Discord Now](https://unban-discord-now.pages.dev/) — a public campaign collecting Filipino workers’ stories and reports about Discord access disruptions.
 - [Cookie Checkpoint](https://cookie-checkpoint.vercel.app) — an open-source on-chain streak app for Cookie Chain.
 - [Sage Cinema](https://sage-cinema-nu.vercel.app/) — a TMDB-powered movie discovery experience with search, recommendations, and watch history.
 - [Mermail Skills](https://github.com/phcodesage/mermail-skills) — portable agent workflows for email, scheduling, support, and GTM automation.
@@ -69,6 +71,9 @@ flowchart LR
     R --> M[Development + maintenance]
     P --> P1[Sage Cinema]
     P --> P2[Cookie Checkpoint]
+    P --> P5[Bugnaw Aircon Care]
+    R --> C[Civic campaigns]
+    C --> C1[Unban Discord Now]
     O --> O1[Causify Helpers]
     W --> W1[Cookie Checkpoint]
     A --> A1[Mermail Skills]
