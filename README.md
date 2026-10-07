@@ -10,13 +10,13 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 
 You can also [view the resume](https://phcodesage.github.io/resume.html) or browse the [case studies](https://phcodesage.github.io/#work).
 
-The portfolio uses the bundled portrait at `assets/rechcel-portrait.png` for the header and profile card, with a square favicon crop at `assets/favicon.png`.
+The About section uses the optimized `assets/rechcel-portrait.webp` portrait, with a 32-pixel favicon at `assets/favicon-32.png`. Original PNG assets remain available.
 
 ## Portfolio
 
 - [Bugnaw Aircon Care](https://bugnaw.lovable.app/) — a Metro Cebu aircon care booking experience with multilingual messaging, available slots, and reminders.
 - [Unban Discord Now](https://unban-discord-now.pages.dev/) — a public campaign collecting Filipino workers’ stories and reports about Discord access disruptions.
-- [Cookie Checkpoint](https://cookie-checkpoint.vercel.app) — an open-source on-chain streak app for Cookie Chain.
+- [Cookie Checkpoint](https://phcodesage.github.io/case-studies/cookie-checkpoint.html) — an open-source on-chain streak app for Cookie Chain. The hosted demo is currently unavailable; the case study links to its source and local setup instructions.
 - [Sage Cinema](https://sage-cinema-nu.vercel.app/) — a TMDB-powered movie discovery experience with search, recommendations, and watch history.
 - [Mermail Skills](https://github.com/phcodesage/mermail-skills) — portable agent workflows for email, scheduling, support, and GTM automation.
 - [Causify Helpers contribution](https://github.com/causify-ai/helpers/pull/1396) — a Python AST-based private-function linter with tests and actionable diagnostics.
@@ -100,3 +100,23 @@ flowchart LR
 - Instagram: [@phcodesage](https://www.instagram.com/phcodesage/)
 - Threads: [@phcodesage](https://www.threads.com/@phcodesage)
 - X: [@phcodesage](https://x.com/phcodesage)
+
+## Local development
+
+This is a static site. Generated Tailwind CSS is committed, so GitHub Pages does not need a build service and the pages do not compile CSS in visitors’ browsers.
+
+```bash
+npm ci
+npm run build
+python3 -m http.server 8765
+```
+
+Open `http://localhost:8765`. After changing utility classes in the homepage, Jinjalume gallery, or their scripts, run `npm run build` and commit the generated `assets/site.css` and `jinjalume/tailwind.css`. Hand-written styles live in `styles/site.css`, `jinjalume/site.css`, and `case-studies/styles.css`.
+
+Project screenshots are stored locally in `assets/projects/`; capture sources are documented there. The contact form collects a reply number or username when WhatsApp or Telegram is selected. With JavaScript disabled, it submits through FormSubmit’s standard form endpoint using email as the reply channel.
+
+## Visual design and motion
+
+The portfolio uses a cinematic red, near-black, and ivory palette with DM Sans for reading and Barlow Condensed for display headings. Body copy is 17–19 pixels; labels and controls are generally 14–16 pixels. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
+
+The hero sculpture is projected and drawn locally on a 2D canvas in `script.js`, with no additional animation dependency. It responds to the pointer and scroll position, stops drawing when off-screen or in a background tab, and supports the visible pause control and the system reduced-motion preference. Content and navigation remain usable without JavaScript. Project scenes use the existing optimized interface screenshots. A separate requestAnimationFrame callback updates project depth, rotation, backdrop lettering, and the chapter transition on native scroll events. The pause control and reduced-motion preference disable these scroll transforms.

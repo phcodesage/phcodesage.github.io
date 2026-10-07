@@ -1,0 +1,11 @@
+{
+  "name": "phcodesage-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.cjs -i styles/tailwind.css -o assets/site.css --minify && tailwindcss -c jinjalume/tailwind.config.cjs -i styles/tailwind.css -o jinjalume/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

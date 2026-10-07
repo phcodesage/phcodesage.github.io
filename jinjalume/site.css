@@ -41,13 +41,13 @@ body {
   background: #111116;
 }
 
-[data-reveal] {
+[data-reveal].reveal-ready {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity 800ms cubic-bezier(.22, 1, .36, 1), transform 800ms cubic-bezier(.22, 1, .36, 1);
 }
 
-[data-reveal].is-visible {
+[data-reveal].reveal-ready.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -207,5 +207,5 @@ dialog[open] {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  [data-reveal] { opacity: 1; transform: none; }
+  [data-reveal].reveal-ready { opacity: 1; transform: none; }
 }

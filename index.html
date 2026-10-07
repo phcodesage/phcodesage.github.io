@@ -7,9 +7,9 @@
       name="description"
       content="Rechcel Toledo is a product-minded software developer in Davao, Philippines, building web products, real-time systems, and developer tools."
     />
-    <meta name="theme-color" content="#f6f5f2" />
+    <meta name="theme-color" content="#10120f" />
     <title>Rechcel Toledo — Software Developer, phcodesage</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="canonical" href="https://phcodesage.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Rechcel Toledo — Software Developer, phcodesage" />
@@ -42,389 +42,143 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
-            },
-            colors: {
-              ink: '#0b0b0d',
-              paper: '#f6f5f2',
-              violet: '#7c3aed',
-              lilac: '#c4b5fd',
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      html { scroll-behavior: smooth; }
-      body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-      ::selection { background: #7c3aed; color: #ffffff; }
-      .skip-link { position: fixed; left: 1rem; top: 1rem; z-index: 70; transform: translateY(-150%); border-radius: 999px; background: #0b0b0d; padding: .75rem 1rem; color: #ffffff; transition: transform 200ms ease; }
-      .skip-link:focus { transform: translateY(0); }
-      .hairline { border-color: rgba(11, 11, 13, 0.16); }
-      [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 850ms cubic-bezier(.22,1,.36,1), transform 850ms cubic-bezier(.22,1,.36,1); }
-      [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
-      [data-reveal][data-delay="1"] { transition-delay: 90ms; }
-      [data-reveal][data-delay="2"] { transition-delay: 180ms; }
-      [data-reveal][data-delay="3"] { transition-delay: 270ms; }
-      .hero-line { animation: hero-line 900ms cubic-bezier(.22,1,.36,1) both; }
-      .hero-line:nth-child(2) { animation-delay: 100ms; }
-      .hero-line:nth-child(3) { animation-delay: 200ms; }
-      @keyframes hero-line { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
-      .hero-highlight { display: block; width: fit-content; background: #6d28d9; color: #ffffff; padding-inline: .06em; }
-      @keyframes logo-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-      .logo-track { animation: logo-marquee 32s linear infinite; }
-      .logo-marquee:hover .logo-track { animation-play-state: paused; }
-      .logo-marquee { background-color: #0b0b0d; }
-      .logo-track > a, .logo-track > div { height: 8.5rem; width: 21rem; border-radius: 1.75rem; padding: 1.5rem; transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms cubic-bezier(.22,1,.36,1); }
-      .logo-track > a:hover { border-color: rgba(196, 181, 253, .9); box-shadow: 0 12px 0 rgba(124, 58, 237, .22); transform: translateY(-5px); }
-      .logo-track img { width: 82%; height: 6rem; max-height: none; object-fit: contain; transition: transform 300ms cubic-bezier(.22,1,.36,1); }
-      .logo-track > a:hover img { transform: scale(1.06); }
-      @media (max-width: 767px) {
-        .logo-track > a, .logo-track > div { height: 7rem; width: 15rem; padding: 1rem; }
-        .logo-track img { height: 5rem; }
-      }
-      .project-image { transition: transform 900ms cubic-bezier(.22,1,.36,1), filter 500ms ease; }
-      .project-card:hover .project-image { transform: scale(1.06); filter: saturate(1.12); }
-      .project-card:hover .project-arrow { transform: translate(4px, -4px); }
-      .project-arrow { transition: transform 300ms cubic-bezier(.22,1,.36,1); }
-      .footer-link { position: relative; width: fit-content; }
-      .footer-link::after { position: absolute; bottom: -0.3rem; left: 0; height: 1px; width: 100%; transform: scaleX(0); transform-origin: right; background: currentColor; content: ''; transition: transform 300ms cubic-bezier(.22,1,.36,1); }
-      .footer-link:hover::after { transform: scaleX(1); transform-origin: left; }
-      .contact-input { width: 100%; border: 1px solid rgba(255,255,255,.2); border-radius: 1rem; background: rgba(255,255,255,.07); padding: .85rem 1rem; color: #ffffff; outline: none; transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease; }
-      .contact-input:focus { border-color: #c4b5fd; background: rgba(255,255,255,.1); box-shadow: 0 0 0 3px rgba(196,181,253,.16); }
-      .contact-input option { background: #0b0b0d; color: #ffffff; }
-      #contact-submit:disabled { cursor: wait; opacity: .65; }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-        [data-reveal] { opacity: 1; transform: none; }
-      }
-    </style>
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+    <noscript><style>label:has(#preferred-contact) { display: none; }</style></noscript>
     <script src="script.js" defer></script>
     <script src="site-analytics.js" defer></script>
   </head>
 
-  <body class="overflow-x-clip bg-paper font-sans text-ink">
-    <div id="top" class="relative overflow-hidden">
-      <div id="scroll-progress" class="fixed left-0 top-0 z-[60] h-1 origin-left scale-x-0 bg-violet transition-transform duration-100" aria-hidden="true"></div>
+  <body>
+    <div id="top">
       <a class="skip-link" href="#main-content">Skip to content</a>
-
-      <header class="fixed inset-x-0 top-0 z-50 px-5 py-5 md:px-10 md:py-7">
-        <nav class="mx-auto flex max-w-[1320px] items-center justify-between rounded-full border border-black/10 bg-paper/85 px-4 py-3 backdrop-blur-xl md:px-5">
-          <a href="#top" class="group flex items-center gap-3" aria-label="Back to the top">
-            <img src="assets/rechcel-portrait.png" alt="" class="h-10 w-10 rounded-full object-cover ring-1 ring-black/20 transition duration-500 group-hover:rotate-6 group-hover:ring-violet md:h-11 md:w-11" />
-            <span class="text-base font-semibold tracking-[-0.04em] md:text-lg">phcodesage</span>
-          </a>
-          <div class="hidden items-center gap-1 md:flex">
-            <a href="#about" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">About</a>
-            <a href="#experience" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Experience</a>
-            <a href="#work" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Work</a>
-            <a href="#practice" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Practice</a>
-            <a href="resume.html" class="rounded-full px-4 py-2 text-sm font-medium text-black/60 transition hover:bg-black/5 hover:text-black">Resume</a>
-            <a href="#contact" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Let’s talk <span aria-hidden="true">↗</span></a>
-          </div>
-          <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink text-lg text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
+      <div id="scroll-progress" aria-hidden="true"></div>
+      <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark" aria-hidden="true">PH</span> phcodesage<span class="brand-period">.</span></a>
+          <div class="desktop-nav"><a href="#work">Work <span>06</span></a><a href="#about">About</a><a href="#practice">Expertise</a><a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a></div>
+          <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
         </nav>
-        <div id="mobile-menu" data-mobile-menu class="mx-auto mt-2 hidden max-w-[1320px] rounded-3xl border border-black/10 bg-white p-3 shadow-xl md:hidden">
-          <a href="#about" class="block rounded-2xl px-4 py-3 text-base font-semibold">About</a>
-          <a href="#experience" class="block rounded-2xl px-4 py-3 text-base font-semibold">Experience</a>
-          <a href="#work" class="block rounded-2xl px-4 py-3 text-base font-semibold">Work</a>
-          <a href="#practice" class="block rounded-2xl px-4 py-3 text-base font-semibold">Practice</a>
-          <a href="resume.html" class="block rounded-2xl px-4 py-3 text-base font-semibold">Resume</a>
-          <a href="#contact" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white">Let’s talk ↗</a>
-        </div>
+        <div id="mobile-menu" class="mobile-menu hidden" data-mobile-menu><a href="#work">Selected work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#practice">Expertise</a><a href="resume.html">Resume ↗</a><a href="#contact">Let’s talk ↗</a></div>
       </header>
 
       <main id="main-content">
-        <section class="relative flex min-h-screen items-start px-5 pb-12 pt-28 sm:pt-32 md:px-10 md:pb-16 lg:items-end lg:pt-48">
-          <div class="mx-auto grid w-full max-w-[1320px] items-end gap-16 lg:grid-cols-[1.25fr_0.75fr] lg:gap-24">
-            <div>
-              <p class="mb-8 text-sm font-semibold uppercase tracking-[0.22em] text-black/55 hero-line">Software Developer · phcodesage · Davao, PH</p>
-              <h1 class="max-w-5xl text-[clamp(3.25rem,7.4vw,7.5rem)] font-medium leading-[0.95] tracking-[-0.075em]">
-                <span class="hero-line block">I build</span>
-                <span class="hero-line hero-highlight w-fit bg-violet px-1 text-white">software that</span>
-                <span class="hero-line block text-violet">feels right.</span>
-              </h1>
-              <p class="mt-9 max-w-2xl text-lg leading-8 text-black/70 md:text-xl md:leading-9 hero-line">
-                I help startups, small teams, and product owners ship polished web products, real-time systems, and developer tools—from the first interface decision to the details that keep a live product healthy.
-              </p>
-              <div class="mt-9 flex flex-wrap gap-3 hero-line">
-                <a href="#work" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">View selected work <span aria-hidden="true">↗</span></a>
-                <a href="resume.html" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">View resume ↗</a>
-                <a href="#contact" class="rounded-full border border-black/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-black">Start a project ↗</a>
-              </div>
-            </div>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-grid" aria-hidden="true"></div><div class="hero-beam" aria-hidden="true"></div>
+          <div class="hero-orbit" aria-hidden="true"><canvas id="orbit-canvas"></canvas><span class="orbit-coordinate orbit-coordinate-top">SYSTEM ONLINE / 001</span><span class="orbit-coordinate orbit-coordinate-bottom">DESIGN × ENGINEERING</span></div>
+          <div class="hero-kicker eyebrow"><span class="status-dot"></span> Independent developer &amp; product builder <span class="hero-location">Davao, Philippines / <span data-local-time>UTC+08</span></span></div>
+          <h1 id="hero-title"><span class="hero-line">Built to <em>work.</em></span><span class="hero-line hero-line-second">Made to <em>feel.</em></span></h1>
+          <div class="hero-bottom"><div class="hero-intro"><p>I’m Rechcel. I build web products, real-time systems, and tools that make the complicated feel effortless.</p><a class="button button-accent" href="#work">Discover the work <span aria-hidden="true">↘</span></a></div><div class="hero-aside"><span class="eyebrow">Thoughtful interfaces.<br />Serious engineering.</span><button type="button" id="motion-toggle" aria-pressed="false" hidden>Pause motion <span aria-hidden="true">Ⅱ</span></button></div></div>
+          <div class="hero-footnote eyebrow"><span>Design-minded. Systems-aware.</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a><span>Available for good work <i class="status-dot"></i></span></div>
+        </section>
 
-            <div class="hidden justify-self-end lg:block" data-reveal data-delay="2">
-              <div class="relative w-[min(32vw,390px)] rotate-2">
-                <div class="absolute -inset-4 -rotate-6 rounded-[2rem] bg-violet/15"></div>
-                <div class="relative overflow-hidden rounded-[2rem] border border-black/15 bg-white p-3 shadow-[12px_14px_0_rgba(11,11,13,0.9)]">
-                  <img src="assets/rechcel-portrait.png" alt="Portrait of Rechcel Toledo" class="aspect-[0.86] w-full rounded-[1.5rem] object-cover" />
-                  <div class="flex items-center justify-between gap-4 px-2 pb-1 pt-4">
-                    <div><p class="text-lg font-semibold tracking-[-0.04em]">Rechcel Toledo</p><p class="mt-1 text-sm text-black/55">Developer &amp; maintainer</p></div>
-                    <span class="rounded-full bg-violet px-3 py-1.5 text-sm font-semibold text-white">Available</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="chapter-break" aria-hidden="true" data-scroll-scene><div class="chapter-track"><span>THE NEXT CHAPTER</span><strong>IDEAS INTO ACTION.</strong><span>SCROLL TO DISCOVER ↓</span></div></div>
+        <section id="work" class="work-section" aria-labelledby="work-title">
+          <div class="section-heading" data-reveal><div><p class="eyebrow section-index">01 / Selected work</p><h2 id="work-title">Ideas into<br /><em>real things.</em></h2></div><p class="section-summary">A collection of products, experiments, and client platforms. Built with intention. Shipped into the world.</p></div>
+          <div class="project-grid">
+            <a class="project-card project-sage project-featured" href="case-studies/sage-cinema.html" data-reveal>
+              <div class="project-topline"><span class="eyebrow">01 / Product design / Full-stack</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Sage</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Sage Cinema</span></div><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A better way to find your next world.</span></div>
+              <div class="project-info"><div><h3>Sage Cinema</h3><p>Search, recommendations, and watch history in one movie discovery experience.</p></div><span class="project-cta">Explore case study <span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="project-card project-bugnaw project-featured" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer" data-reveal>
+              <div class="project-topline"><span class="eyebrow">02 / Web product / Booking</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Bugnaw</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Bugnaw Aircon Care</span></div><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">From “pwede ba ugma?” to booked.</span></div>
+              <div class="project-info"><div><h3>Bugnaw Aircon Care</h3><p>An aircon care booking experience for Metro Cebu, with multilingual messaging and available slots.</p></div><span class="project-cta">Visit live project <span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="project-card project-cookie " href="case-studies/cookie-checkpoint.html" data-reveal>
+              <div class="project-topline"><span class="eyebrow">03 / On-chain / Open source</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Cookie</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cookie Checkpoint</span></div><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A small action. A public signal.</span></div>
+              <div class="project-info"><div><h3>Cookie Checkpoint</h3><p>Verifiable daily check-ins on Cookie Chain with Nightly wallet support.</p></div><span class="project-cta">Explore case study <span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="project-card project-discord " href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer" data-reveal>
+              <div class="project-topline"><span class="eyebrow">04 / Civic tech / Campaign</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Unban</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Unban Discord Now</span></div><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">Built to give people a voice.</span></div>
+              <div class="project-info"><div><h3>Unban Discord Now</h3><p>Collecting Filipino workers’ stories and reports about Discord access disruptions.</p></div><span class="project-cta">Visit live project <span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="project-card project-exceed " href="case-studies/exceed-learning-center.html" data-reveal>
+              <div class="project-topline"><span class="eyebrow">05 / Client work / Maintenance</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Exceed</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Exceed Learning Center</span></div><img src="assets/projects/exceed.webp" alt="Exceed Learning Center interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">Room to learn. Built to grow.</span></div>
+              <div class="project-info"><div><h3>Exceed Learning Center</h3><p>Development and maintenance for an education, tutoring, and test-prep platform.</p></div><span class="project-cta">Explore client work <span aria-hidden="true">↗</span></span></div>
+            </a>
+            <a class="project-card project-unbreakable " href="case-studies/unbreakable-you.html" data-reveal>
+              <div class="project-topline"><span class="eyebrow">06 / Client work / Maintenance</span><span class="project-open" aria-hidden="true">↗</span></div>
+              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Unbreakable</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Unbreakable You</span></div><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A thoughtful space for a new chapter.</span></div>
+              <div class="project-info"><div><h3>Unbreakable You</h3><p>Development and maintenance for a healing and empowerment coaching platform.</p></div><span class="project-cta">Explore client work <span aria-hidden="true">↗</span></span></div>
+            </a>
+
           </div>
-          <div class="absolute bottom-5 left-5 right-5 mx-auto flex max-w-[1320px] items-center justify-between border-t border-black/15 pt-4 text-sm text-black/55 md:left-10 md:right-10">
-            <span>Scroll to explore</span><span aria-hidden="true">↓</span>
+          <div class="work-note"><span class="brand-mark" aria-hidden="true">✳</span><p>From the first interface to the life of the product.<br /><span>Development &amp; maintenance for Exceed Learning Center and Unbreakable You.</span></p><a href="#contact" class="text-link">Your project next? ↗</a></div>
+        </section>
+
+        <section id="about" class="about-section" aria-labelledby="about-title">
+          <div class="about-top eyebrow"><span>02 / The person behind the work</span><span>Based in Davao. Building everywhere.</span></div>
+          <div class="about-grid"><div class="about-portrait" data-reveal><img src="assets/rechcel-portrait.webp" alt="Rechcel Toledo" width="780" height="780" loading="lazy" /><div class="portrait-caption"><span>Rechcel Toledo</span><span>Developer &amp; maintainer ↗</span></div></div><div class="about-copy" data-reveal><h2 id="about-title">A builder.<br />A thinker.<br /><em>Still curious.</em></h2><p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I care about how a product feels—and what keeps it working six months later.</p><p>Consumer experiences, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems. The same care.</p><a href="resume.html" class="button button-dark">A little more about me <span aria-hidden="true">↗</span></a></div></div>
+          <div class="about-principles"><span>01 — Make it useful.</span><span>02 — Make it considered.</span><span>03 — Keep making it better.</span></div>
+        </section>
+
+        <section id="experience" class="experience-section" aria-labelledby="experience-title">
+          <div class="section-heading compact" data-reveal><div><p class="eyebrow section-index">03 / Experience</p><h2 id="experience-title">Time at<br /><em>the keyboard.</em></h2></div><a href="resume.html" class="text-link">View full resume ↗</a></div>
+          <div class="experience-list">
+            <article data-reveal><span class="experience-date">2023 — Present</span><div><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p></div><p>Building real-time communication with Flask, WebRTC, and WebSockets: messaging, voice and video calls, and user presence.</p><span class="experience-number" aria-hidden="true">01</span></article>
+            <article data-reveal><span class="experience-date">Jun — Aug 2023</span><div><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p></div><p>Practical frontend and backend lessons, project-based course materials, and hands-on guidance for aspiring developers.</p><span class="experience-number" aria-hidden="true">02</span></article>
+            <article data-reveal><span class="experience-date">Mar — May 2023</span><div><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p></div><p>Implementing and maintaining user-facing features for a mortgage platform under senior developer guidance.</p><span class="experience-number" aria-hidden="true">03</span></article>
+            <article data-reveal><span class="experience-date">Dec 2022 — Mar 2023</span><div><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p></div><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p><span class="experience-number" aria-hidden="true">04</span></article>
           </div>
         </section>
 
-        <div class="logo-marquee overflow-hidden border-y border-black/15 bg-ink py-8 md:py-10" aria-label="Organizations and companies Rechcel has worked with">
-          <div class="mx-auto max-w-[1320px] px-5 pb-7 md:px-10">
-            <p class="text-base font-semibold uppercase tracking-[0.2em] text-white/60">Companies &amp; organizations I’ve worked with</p>
-          </div>
-          <div class="logo-track flex w-max items-center gap-6 px-5 md:gap-10 md:px-10">
-            <a href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer" aria-label="Unconventional Psychotherapy" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="https://unconventionalpsychotherapy.com/wp-content/uploads/2024/11/Unconventional-Psychotherapy-Header-Logo.png" alt="Unconventional Psychotherapy" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer" aria-label="Tri-State Coach Bus" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/coach-bus.svg" alt="Tri-State Coach Bus" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" aria-label="Exceed Learning Center" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/exceed-wordmark.webp" alt="Exceed Learning Center" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" aria-label="Unbreakable You" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/unbreakable-you-logo.png" alt="Unbreakable You" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://swimstuds.com/" target="_blank" rel="noreferrer" aria-label="Swim Studs" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/swim-studs-logo.png" alt="Swim Studs" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer" aria-label="Ventured" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/ventured-wordmark.png" alt="Ventured" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://purpleroof.com/" target="_blank" rel="noreferrer" aria-label="Purple Roof" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="https://purpleroof.com/images/logo-col.png" alt="Purple Roof" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://www.udemy.com/" target="_blank" rel="noreferrer" aria-label="Udemy" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="assets/udemy.svg" alt="Udemy" class="max-h-10 w-full object-contain" loading="lazy" />
-            </a>
-            <a href="https://rooche.net/" target="_blank" rel="noreferrer" aria-label="Rooche Digital" class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 transition duration-300 hover:border-violet md:h-24 md:w-64">
-              <img src="https://rooche.net/assets/logo-icon.svg" alt="Rooche Digital" class="max-h-14 w-full object-contain" loading="lazy" />
-            </a>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="https://unconventionalpsychotherapy.com/wp-content/uploads/2024/11/Unconventional-Psychotherapy-Header-Logo.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/coach-bus.svg" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/exceed-wordmark.webp" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/unbreakable-you-logo.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/swim-studs-logo.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/ventured-wordmark.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="https://purpleroof.com/images/logo-col.png" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="assets/udemy.svg" alt="" class="max-h-10 w-full object-contain" loading="lazy" />
-            </div>
-            <div class="flex h-20 w-52 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white px-7 py-4 md:h-24 md:w-64" aria-hidden="true">
-              <img src="https://rooche.net/assets/logo-icon.svg" alt="" class="max-h-14 w-full object-contain" loading="lazy" />
-            </div>
-          </div>
-        </div>
-
-        <section id="about" class="px-5 py-28 md:px-10 md:py-40">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="mb-16 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(01) About</p><p class="hidden text-sm text-black/55 md:block">The person behind the commits</p>
-            </div>
-            <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-              <div data-reveal><p class="text-xl font-medium leading-8 text-black/75 md:text-2xl md:leading-10">I’m Rechcel, a software developer from Davao, Philippines. I run phcodesage and still work close to the code—from the first interface decision to the details that keep a live product healthy.</p></div>
-              <div data-reveal data-delay="1">
-                <h2 class="max-w-4xl text-5xl font-medium leading-[0.96] tracking-[-0.075em] md:text-8xl">Design-minded.<br />Systems-aware.<br /><span class="text-violet">Still shipping.</span></h2>
-                <p class="mt-9 max-w-2xl text-lg leading-8 text-black/65">I like useful products, calm information hierarchies, honest documentation, and software that is easier to change six months later. My work moves between consumer experiences, developer tools, on-chain applications, and platforms I maintain over time.</p>
-              </div>
-            </div>
-            <dl class="mt-20 grid grid-cols-2 gap-8 border-y border-black/15 py-8 md:grid-cols-4" data-reveal>
-              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">18</dt><dd class="mt-2 text-sm font-medium text-black/55">Projects in the catalog</dd></div>
-              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">2</dt><dd class="mt-2 text-sm font-medium text-black/55">Platforms maintained</dd></div>
-              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">4</dt><dd class="mt-2 text-sm font-medium text-black/55">Practice areas</dd></div>
-              <div><dt class="text-5xl font-semibold tracking-[-0.08em] md:text-6xl">PH</dt><dd class="mt-2 text-sm font-medium text-black/55">Based in Davao</dd></div>
-            </dl>
+        <section id="practice" class="practice-section" aria-labelledby="practice-title">
+          <div class="practice-intro" data-reveal><p class="eyebrow section-index">04 / What I bring</p><h2 id="practice-title">The details<br />make the<br /><em>difference.</em></h2><p>From a rough idea to a reliable product. I connect the design decisions with the systems behind them.</p><a href="#contact" class="text-link">Let’s build something ↗</a></div>
+          <div class="service-list">
+            <article data-reveal><span class="eyebrow">01 / Interface &amp; experience</span><h3>Product builds</h3><p>MVPs, responsive interfaces, and features that take a product from concept to launch.</p><div class="service-tags"><span>React</span><span>Next.js</span><span>UI systems</span></div></article>
+            <article data-reveal><span class="eyebrow">02 / Connection &amp; infrastructure</span><h3>Real-time systems</h3><p>Messaging, live calls, APIs, and the integrations that keep information moving.</p><div class="service-tags"><span>Flask</span><span>WebRTC</span><span>WebSockets</span></div></article>
+            <article data-reveal><span class="eyebrow">03 / Tools for the makers</span><h3>Developer tools</h3><p>Open-source packages, agent workflows, and utilities that remove friction from everyday work.</p><div class="service-tags"><span>Python</span><span>Rust</span><span>MCP</span></div></article>
+            <article data-reveal><span class="eyebrow">04 / Beyond the launch</span><h3>Ongoing care</h3><p>Maintenance, performance, accessibility, and thoughtful improvements to a live product.</p><div class="service-tags"><span>Maintenance</span><span>Performance</span><span>Accessibility</span></div></article>
           </div>
         </section>
 
-        <section id="experience" class="border-y border-black/15 bg-white px-5 py-28 md:px-10 md:py-36">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(02) Experience</p><p class="hidden text-sm text-black/55 md:block">Work history from portfolioV2</p>
-            </div>
-            <div class="divide-y divide-black/15 border-y border-black/15">
-              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal>
-                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Aug 2023 — Present</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Software Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Onlinejobs.ph</p></div>
-                <p class="text-lg leading-8 text-black/70">Leading the development of a sophisticated real-time communication system using Flask. Architecting and implementing a full-featured chat and video call platform similar to Skype, including real-time messaging, voice and video calls, and user presence management with WebRTC and WebSockets.</p>
-              </article>
-              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="1">
-                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Jun — Aug 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Web Development Instructor</h3><p class="mt-2 text-xl font-medium text-black/60">Udemy</p></div>
-                <p class="text-lg leading-8 text-black/70">Created and taught comprehensive web development courses on Udemy’s learning platform, delivering practical front-end and back-end lessons, project-based course materials, and hands-on guidance for aspiring developers.</p>
-              </article>
-              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="2">
-                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">March — May 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Junior Frontend Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Purple Roof</p></div>
-                <p class="text-lg leading-8 text-black/70">Contributed to a mortgage solutions platform under senior developer guidance, implementing and maintaining user-facing features for Purple Roof’s mortgage services platform.</p>
-              </article>
-              <article class="grid gap-6 py-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20" data-reveal data-delay="3">
-                <div><p class="text-sm font-semibold uppercase tracking-[0.16em] text-violet">Dec 2022 — Mar 2023</p><h3 class="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Backend Python Developer</h3><p class="mt-2 text-xl font-medium text-black/60">Rooche Digital</p></div>
-                <p class="text-lg leading-8 text-black/70">Developed and maintained backend APIs for ecommerce clients using Python, with a focus on robust integrations, scalability, performance, and clean collaboration with frontend teams.</p>
-              </article>
-            </div>
+        <section class="archive-section" aria-labelledby="archive-title">
+          <div class="section-heading compact" data-reveal><div><p class="eyebrow section-index">05 / The lab</p><h2 id="archive-title">Curiosity,<br /><em>in public.</em></h2></div><p class="section-summary">Smaller experiments. Open-source contributions. Tools I wanted to exist.</p></div>
+          <div class="archive-list">
+<a href="case-studies/jinjalume.html" class="archive-item"><span class="archive-number">01</span><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">02</span><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">03</span><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">04</span><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">05</span><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">06</span><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">07</span><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">08</span><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">09</span><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">10</span><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">11</span><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">12</span><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true">↗</span></a>
           </div>
         </section>
 
-        <section id="practice" class="border-y border-black/15 bg-white px-5 py-28 md:px-10 md:py-36">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(03) Practice</p><p class="hidden text-sm text-black/55 md:block">How I make things</p>
-            </div>
-            <div class="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
-                <h2 class="text-5xl font-medium leading-[0.96] tracking-[-0.075em] md:text-7xl" data-reveal>Clear thinking, careful systems, and a path to done.</h2>
-              <div class="divide-y divide-black/15 border-y border-black/15" data-reveal data-delay="1">
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Product builds</p><p class="mt-2 text-lg text-black/60">MVPs, product surfaces, responsive interfaces, and shipped features</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Real-time systems</p><p class="mt-2 text-lg text-black/60">Flask, WebRTC, WebSockets, APIs, data flows, and integrations</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Developer tools</p><p class="mt-2 text-lg text-black/60">Python, Rust, agent workflows, MCP servers, and UI kits</p></div><span class="text-2xl text-violet">↗</span></div>
-                <div class="flex items-start justify-between gap-8 py-6"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Ongoing stewardship</p><p class="mt-2 text-lg text-black/60">Maintenance, performance, accessibility, and incremental product improvement</p></div><span class="text-2xl text-violet">↗</span></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="work" class="px-5 py-28 md:px-10 md:py-40">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="mb-14 flex items-end justify-between gap-8 border-b border-black/15 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-black/55">(04) Selected work</p><p class="hidden text-sm text-black/55 md:block">A few things I’ve shipped</p>
-            </div>
-            <div class="grid gap-x-6 gap-y-16 md:grid-cols-2 md:gap-y-24">
-              <a href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer" class="project-card group" data-reveal>
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-[#0b1c2c]"><img src="assets/bugnaw-hero.jpg" alt="Bugnaw aircon care preview" class="project-image h-full w-full object-cover" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold">Booking</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">01 / Product</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Bugnaw Aircon Care</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">Aircon care booking for Metro Cebu, with multilingual messaging, real open slots, and reminders.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-              <a href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer" class="project-card group md:mt-24" data-reveal data-delay="1">
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-[#f5f9ff]"><img src="assets/unban-discord-now.png" alt="Unban Discord Now campaign preview" class="project-image h-full w-full object-contain" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-ink px-3 py-1.5 text-sm font-semibold text-white">Civic tech</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">02 / Campaign</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Unban Discord Now</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A public campaign collecting Filipino workers’ stories and reports about Discord access disruptions.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-              <a href="case-studies/cookie-checkpoint.html" class="project-card group" data-reveal>
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-violet"><img src="https://cookie-checkpoint.vercel.app/favicon.svg" alt="Cookie Checkpoint preview" class="project-image h-full w-full object-contain p-20" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-white px-3 py-1.5 text-sm font-semibold">Web3</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">03 / Product</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Cookie Checkpoint</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A verifiable daily signal on Cookie Chain with Nightly wallet support.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-              <a href="case-studies/sage-cinema.html" class="project-card group md:mt-24" data-reveal data-delay="1">
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-ink"><img src="https://sage-cinema-nu.vercel.app/logo192.png" alt="Sage Cinema preview" class="project-image h-full w-full object-contain p-24" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-violet px-3 py-1.5 text-sm font-semibold text-white">Product</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">04 / Product</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Sage Cinema</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A movie discovery experience shaped around search, recommendations, and watch history.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-              <a href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" class="project-card group" data-reveal>
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-[#f4f4f1]"><img src="assets/exceed-logo-2026.webp" alt="Exceed Learning Center preview" class="project-image h-full w-full object-contain p-10 md:p-16" loading="lazy" /><span class="absolute right-5 top-5 rounded-full bg-ink px-3 py-1.5 text-sm font-semibold text-white">Maintained</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">05 / Stewardship</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Exceed Learning Center</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">Education, tutoring, enrichment, and test-prep platform. Development and maintenance.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-              <a href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" class="project-card group md:mt-24" data-reveal data-delay="1">
-                <div class="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-[#b8664a]"><img src="https://fszvdwlpibr9z2z6.public.blob.vercel-storage.com/uploads/1781627900764-48z0lu.jpeg" alt="Unbreakable You preview" class="project-image h-full w-full object-cover" loading="lazy" /><div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div><span class="absolute right-5 top-5 rounded-full bg-violet px-3 py-1.5 text-sm font-semibold text-white">Maintained</span></div>
-                <div class="mt-5 flex items-start justify-between gap-5"><div><p class="text-sm font-semibold uppercase tracking-[0.15em] text-black/50">06 / Stewardship</p><h3 class="mt-2 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Unbreakable You</h3><p class="mt-3 max-w-md text-lg leading-7 text-black/60">A healing and empowerment coaching platform. Development and maintenance.</p></div><span class="project-arrow text-3xl text-violet">↗</span></div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="border-y border-black/15 bg-ink px-5 py-28 text-white md:px-10 md:py-36">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="mb-14 flex items-end justify-between gap-8 border-b border-white/20 pb-5" data-reveal>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">(05) On the side</p><p class="hidden text-sm text-white/60 md:block">Open-source experiments &amp; tools</p>
-            </div>
-            <div class="grid gap-x-8 gap-y-0 md:grid-cols-2 lg:grid-cols-3">
-              <a href="case-studies/jinjalume.html" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Jinjalume</p><p class="mt-2 text-base text-white/60">Tailwind UI for Flask &amp; Jinja</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Mermail Skills</p><p class="mt-2 text-base text-white/60">Portable agent workflows</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Causify Helpers</p><p class="mt-2 text-base text-white/60">Python AST linter contribution</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">yawp</p><p class="mt-2 text-base text-white/60">Local macOS dictation</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">IssueAnvil</p><p class="mt-2 text-base text-white/60">Deterministic GitHub housekeeping CLI</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">SwiftPOS</p><p class="mt-2 text-base text-white/60">Point of sale for small stores</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">SageMovies TUI</p><p class="mt-2 text-base text-white/60">Keyboard-first Rust terminal</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Virex</p><p class="mt-2 text-base text-white/60">Native writing assistant</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Beamly</p><p class="mt-2 text-base text-white/60">Encrypted peer-to-peer transfer</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="2"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">CodeSage Orchestrator</p><p class="mt-2 text-base text-white/60">Multi-agent Codex workflow</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">RemoteX</p><p class="mt-2 text-base text-white/60">Attended remote-support foundation</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-              <a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="group border-b border-white/15 py-6" data-reveal data-delay="1"><div class="flex items-start justify-between"><div><p class="text-2xl font-semibold tracking-[-0.05em]">Sage Movies</p><p class="mt-2 text-base text-white/60">Open-source platform source</p></div><span class="project-arrow text-2xl text-lilac">↗</span></div></a>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="overflow-hidden bg-ink px-5 pb-6 pt-28 text-white md:px-10 md:pb-8 md:pt-40">
-          <div class="mx-auto max-w-[1320px]">
-            <div class="grid gap-16 border-b border-white/15 pb-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24" data-reveal>
-              <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-lilac">(06) Contact</p>
-                <h2 class="mt-8 max-w-5xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-medium leading-[0.95] tracking-[-0.075em]">Let’s make<br /><span class="text-violet">something useful.</span></h2>
-                <p class="mt-8 max-w-md text-xl leading-8 text-white/75">Tell me what you’re building, what’s stuck, or what needs a careful second pair of hands.</p>
-                <div class="mt-8 flex flex-wrap gap-3">
-                  <a href="mailto:rechceltoledo@gmail.com" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Email directly ↗</a>
-                  <a href="https://wa.me/639703224930" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">WhatsApp ↗</a>
-                  <a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Telegram bot ↗</a>
-                  <a href="resume.html" class="rounded-full border border-white/25 px-5 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-ink">Resume ↗</a>
-                </div>
-              </div>
-              <div class="lg:pb-2">
-                <form id="contact-form" class="grid gap-4" novalidate>
+        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+          <div class="contact-heading" data-reveal><p class="eyebrow section-index">06 / Your next chapter</p><h2 id="contact-title">Have a good<br /><em>feeling?</em><a href="mailto:rechceltoledo@gmail.com" class="contact-orb" aria-label="Email Rechcel"><span aria-hidden="true">↗</span></a></h2></div>
+          <div class="contact-grid"><div class="contact-intro"><h3>Let’s make something useful.</h3><p>Tell me what you’re building, what’s stuck, or what needs a careful second pair of hands.</p><a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com ↗</a><div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot ↗</a></div><div class="contact-availability"><span class="status-dot"></span> Open to good work <span>Davao, Philippines · UTC+08</span></div></div><div class="contact-form-wrap">
+<form id="contact-form" class="grid gap-4" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
                   <div class="grid gap-4 sm:grid-cols-2">
                     <label class="grid gap-2 text-base"><span class="text-white/65">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
                     <label class="grid gap-2 text-base"><span class="text-white/65">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
                   </div>
-                  <label class="grid gap-2 text-base"><span class="text-white/65">Preferred reply</span><select class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram bot">Telegram bot</option></select></label>
+                  <label class="grid gap-2 text-base"><span class="text-white/65">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
+                  <label id="reply-detail-field" class="grid gap-2 text-base" hidden><span id="reply-detail-label" class="text-white/65">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="text-sm text-white/65"></span></label>
                   <label class="grid gap-2 text-base"><span class="text-white/65">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
                   <label class="grid gap-2 text-base"><span class="text-white/65">What can I help with?</span><textarea class="contact-input min-h-40 resize-y" name="message" rows="5" required></textarea></label>
                   <input class="hidden" type="text" name="_honey" tabindex="-1" autocomplete="off" />
                   <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
                   <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <button id="contact-submit" type="submit" class="rounded-full bg-violet px-6 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-lilac hover:text-ink">Send inquiry ↗</button>
-                    <p id="contact-status" class="text-base text-white/55" role="status" aria-live="polite">I’ll reply through your preferred channel.</p>
+                    <p id="contact-status" class="text-base text-white/55" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
                   </div>
                 </form>
-                <div class="mt-10 grid grid-cols-2 gap-6 border-t border-white/15 pt-5 text-base">
-                  <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Based in</p><p class="mt-2 text-white/90">Davao, Philippines</p></div>
-                  <div><p class="text-sm uppercase tracking-[0.16em] text-white/45">Availability</p><p class="mt-2 flex items-center gap-2 text-white/90"><span class="h-2 w-2 rounded-full bg-violet"></span>Open to good work</p></div>
-                </div>
-              </div>
-            </div>
-
-            <p class="select-none whitespace-nowrap pt-16 text-[clamp(5rem,18vw,16rem)] font-medium leading-[0.72] tracking-[-0.1em] text-white/[0.08]" aria-hidden="true">phcodesage.</p>
-
-            <footer class="grid gap-12 border-t border-white/15 py-10 text-base text-white/70 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:gap-8">
-              <div>
-                <a href="#top" class="footer-link text-3xl font-semibold tracking-[-0.08em] text-white">PH.</a>
-                <p class="mt-4 max-w-xs leading-7">Software developer and maintainer building from Davao, Philippines.</p>
-              </div>
-              <nav aria-label="Footer navigation">
-                <p class="mb-4 text-sm uppercase tracking-[0.16em] text-white/40">Explore</p>
-                <div class="grid gap-3"><a href="#about" class="footer-link">About</a><a href="#experience" class="footer-link">Experience</a><a href="#work" class="footer-link">Selected work</a><a href="#practice" class="footer-link">Practice</a></div>
-              </nav>
-              <div>
-                <p class="mb-4 text-sm uppercase tracking-[0.16em] text-white/40">Connect</p>
-                <div class="grid gap-3"><a href="https://github.com/phcodesage" rel="me" class="footer-link">GitHub ↗</a><a href="mailto:rechceltoledo@gmail.com" class="footer-link">Email ↗</a><a href="https://wa.me/639703224930" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp ↗</a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram bot ↗</a><a href="https://x.com/phcodesage" rel="me" class="footer-link">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me" class="footer-link">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me" class="footer-link">Threads ↗</a><a href="https://bounty-radar.rechceltoledo.workers.dev/analytics.html" target="_blank" rel="noreferrer" class="footer-link">Site pulse ↗</a></div>
-              </div>
-            </footer>
-
-            <p id="portfolio-page-views" class="border-t border-white/10 pt-5 text-sm text-white/45" aria-live="polite">Page views · loading…</p>
-
-            <div class="flex flex-col justify-between gap-5 border-t border-white/15 pt-6 text-sm text-white/45 md:flex-row md:items-center">
-              <p>© <span id="year"></span> Rechcel Toledo · Davao, Philippines</p>
-              <a href="#top" class="footer-link text-white/75">Back to top ↑</a>
-            </div>
-          </div>
+          </div></div>
+          <footer class="site-footer"><a href="#top" class="wordmark"><span class="brand-mark" aria-hidden="true">PH</span> phcodesage.</a><div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub ↗</a><a href="https://x.com/phcodesage" rel="me">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me">Threads ↗</a><a href="resume.html">Resume ↗</a></div><a href="#top" class="back-top">Back to top ↑</a><div class="footer-bottom"><p>© <span id="year">2026</span> Rechcel Toledo</p><p>Built with care. Always in progress.</p><p id="portfolio-page-views">Page views · loading…</p></div></footer>
         </section>
       </main>
     </div>

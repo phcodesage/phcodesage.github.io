@@ -42,7 +42,7 @@ document.querySelectorAll('[data-open-dialog]').forEach((openButton) => {
 });
 
 const revealItems = document.querySelectorAll('[data-reveal]');
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const observer = new IntersectionObserver((entries, currentObserver) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -50,7 +50,12 @@ if ('IntersectionObserver' in window) {
       currentObserver.unobserve(entry.target);
     });
   }, { threshold: 0.12 });
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => {
+    if (item.getBoundingClientRect().top >= window.innerHeight) {
+      item.classList.add('reveal-ready');
+      observer.observe(item);
+    }
+  });
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
