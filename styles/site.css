@@ -440,3 +440,45 @@ em { font-style:italic; font-weight:800; }
  .hero-footnote>span:last-child { max-width:55%; text-align:right; }
 }
 @media(max-width:640px) { .practice-intro h2 { font-size:clamp(60px,17.5vw,76px); } }
+
+/* Personal photos keep their color; the viewer uses the original-resolution WebP. */
+.about-gallery { padding:75px 0 25px; }
+.gallery-heading { display:flex; justify-content:space-between; align-items:flex-end; gap:30px; margin-bottom:32px; }
+.gallery-heading .eyebrow { margin-bottom:16px; }
+.gallery-heading h3 { font:800 clamp(44px,5.8vw,84px)/.95 'Barlow Condensed',Impact,sans-serif; text-transform:uppercase; letter-spacing:-.02em; }
+.gallery-heading>p { max-width:350px; font-size:16px; line-height:1.7; color:#fff3f0; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.gallery-photo { position:relative; display:block; aspect-ratio:1; overflow:hidden; background:var(--ink); border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); }
+.gallery-photo img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+.gallery-photo:hover img,.gallery-photo:focus-visible img { transform:scale(1.035); }
+.gallery-photo-number,.gallery-photo-open { position:absolute; display:grid; place-items:center; min-width:36px; height:36px; background:var(--ink); color:var(--paper); pointer-events:none; }
+.gallery-photo-number { left:0; bottom:0; font:14px monospace; }
+.gallery-photo-open { right:0; top:0; font-size:23px; }
+.about-gallery :focus-visible { outline-color:var(--paper); }
+html.gallery-open { overflow:hidden; }
+.gallery-lightbox { position:fixed; inset:0; margin:auto; width:min(1100px,94vw); max-width:94vw; max-height:94vh; max-height:94dvh; padding:22px; border:1px solid #ffffff40; background:var(--ink); color:var(--paper); box-shadow:0 20px 100px #0008; overflow:auto; }
+.gallery-lightbox::backdrop { background:#08080de8; }
+.gallery-lightbox :focus-visible { outline-color:var(--acid); outline-offset:3px; }
+.lightbox-toolbar,.lightbox-controls { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.lightbox-toolbar { margin-bottom:16px; }
+.lightbox-toolbar h2 { font-size:25px; letter-spacing:.02em; line-height:1; }
+.gallery-lightbox button { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:44px; padding:8px 14px; border:1px solid #ffffff55; background:transparent; color:var(--paper); font-size:15px; }
+.gallery-lightbox button:hover { border-color:var(--acid); background:#ff51451a; }
+.lightbox-close span { font-size:25px; line-height:1; }
+.lightbox-figure { margin:0; }
+.lightbox-figure img { width:100%; height:60vh; height:60dvh; object-fit:contain; }
+.lightbox-figure figcaption { margin:14px 0 18px; font-size:15px; line-height:1.5; color:#d0cbd0; }
+.lightbox-controls>span { white-space:nowrap; font:14px monospace; color:#d0cbd0; }
+@media(max-width:640px) {
+  .about-gallery { padding-top:50px; }
+  .gallery-heading { display:block; margin-bottom:25px; }
+  .gallery-heading>p { margin-top:20px; }
+  .gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+  .gallery-photo { border-width:2px; box-shadow:3px 3px 0 var(--ink); }
+  .gallery-photo-number,.gallery-photo-open { min-width:28px; height:28px; }
+  .gallery-photo-open { font-size:20px; }
+  .gallery-lightbox { padding:14px; }
+  .lightbox-toolbar h2 { font-size:22px; }
+  .gallery-lightbox button { padding:8px 10px; font-size:14px; gap:7px; }
+  .lightbox-figure img { height:55vh; height:55dvh; }
+}

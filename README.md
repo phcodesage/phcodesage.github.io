@@ -12,6 +12,8 @@ You can also [view the resume](https://phcodesage.github.io/resume.html) or brow
 
 The About section uses the optimized `assets/rechcel-portrait.webp` portrait, with a 32-pixel favicon at `assets/favicon-32.png`. Original PNG assets remain available.
 
+The personal gallery in About contains nine photos in `assets/about/`. Full-size WebP files preserve each supplied photo’s original dimensions at quality 90; photos wider than 640 pixels also have quality-85 previews for responsive loading. Select a photo to view it at full resolution, use the arrow keys or Previous/Next controls to browse, and press Escape to close. With JavaScript disabled, the gallery links open the WebP files directly.
+
 ## Portfolio
 
 - [Bugnaw Aircon Care](https://bugnaw.lovable.app/) — a Metro Cebu aircon care booking experience with multilingual messaging, available slots, and reminders.
