@@ -16,6 +16,7 @@ The personal gallery in About contains nine photos in `assets/about/`. Full-size
 
 ## Portfolio
 
+- [Clara Health](https://phcodesage.github.io/case-studies/clara-health.html) — a healthcare portfolio prototype with contextual sample conversations, browser voice, doctor discovery, sample booking, records, and provider draft review. DeepSeek is prepared for a later phase; the public demo uses scripted responses and fictional data. [Live demo](https://clara-health.pages.dev/).
 - [Tawaflick](https://phcodesage.github.io/case-studies/tawaflick.html) — a curated Philippine meme library with browser-local GIF and short-video conversion, owner-only uploads, search, and shareable downloads. [Live site](https://tawaflick.pages.dev/).
 - [Bugnaw Aircon Care](https://bugnaw.lovable.app/) — a Metro Cebu aircon care booking experience with multilingual messaging, available slots, and reminders.
 - [Unban Discord Now](https://unban-discord-now.pages.dev/) — a public campaign collecting Filipino workers’ stories and reports about Discord access disruptions.
