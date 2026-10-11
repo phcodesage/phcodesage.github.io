@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Portfolio analytics — phcodesage</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/cat-mark.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="../styles/arrows.css" />
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to analytics</a>
+  <header class="topbar"><a class="brand" href="../"><img src="../assets/cat-mark.svg" width="30" height="30" alt="" />phcodesage<span>.</span></a><a class="back" href="../"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6" /></svg> Back to portfolio</a></header>
+  <main id="main" tabindex="-1">
+    <section id="login-screen" class="login-card" aria-labelledby="login-title">
+      <img class="login-cat" src="../assets/typing-cat.svg" alt="" width="320" height="220" />
+      <p class="eyebrow">YOUR PORTFOLIO, A LITTLE CLEARER</p>
+      <h1 id="login-title">A little insight.</h1>
+      <p>See where visitors come from and which work catches their eye.</p>
+      <form id="login-form">
+        <label for="password">Analytics password</label>
+        <div class="password-wrap"><input id="password" type="password" autocomplete="current-password" required maxlength="512" /><button id="show-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <button id="login-submit" class="button primary" type="submit">Open my analytics <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></button>
+        <p id="login-status" class="status" role="status"></p>
+      </form>
+      <p class="private-note">Your detailed analytics are private.</p>
+    </section>
+
+    <section id="dashboard" hidden aria-labelledby="dashboard-title">
+      <div class="page-heading"><div><p class="eyebrow">YOUR WORK, IN THE WORLD</p><h1 id="dashboard-title" tabindex="-1">The little details.</h1><p>Visitor countries, project interest, and the paths to a conversation.</p></div><button id="logout" class="button secondary" type="button">Sign out</button></div>
+      <div class="toolbar"><div class="period-control" role="group" aria-label="Reporting period"><button data-range="today" aria-pressed="false">Today</button><button data-range="7d" aria-pressed="true">7 days</button><button data-range="30d" aria-pressed="false">30 days</button></div><span id="date-range"></span><button id="refresh" class="button secondary" type="button">Refresh</button></div>
+      <p id="dashboard-status" class="status" role="status"></p>
+      <div id="stats-content">
+        <div class="metrics" aria-label="Traffic overview">
+          <article class="metric"><p>Page views</p><strong data-metric="views">0</strong><span>Across the portfolio</span></article>
+          <article class="metric"><p>Sessions</p><strong data-metric="sessions">0</strong><span>Estimated daily sessions</span></article>
+          <article class="metric"><p>Project clicks</p><strong data-metric="projectClicks">0</strong><span>Work people explored</span></article>
+          <article class="metric"><p>Contact actions</p><strong data-metric="contactActions">0</strong><span>Openings, links &amp; form attempts</span></article>
+        </div>
+        <article class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">DAY BY DAY</p><h2>A little momentum.</h2></div><div class="legend"><span><i class="views-dot"></i>Page views</span><span><i class="clicks-dot"></i>Project clicks</span></div></div><div id="traffic-chart"></div><details class="chart-data"><summary>View the daily numbers</summary><div class="table-wrap"><table><caption class="sr-only">Daily traffic in Manila time</caption><thead><tr><th>Date</th><th>Page views</th><th>Sessions</th><th>Project clicks</th></tr></thead><tbody id="daily-rows"></tbody></table></div></details></article>
+        <div class="panel-grid">
+          <article class="panel"><p class="eyebrow">AROUND THE WORLD</p><h2>Where people visit from.</h2><p class="panel-copy">Country is estimated from the visitor’s network.</p><div id="countries"></div></article>
+          <article class="panel"><p class="eyebrow">WHAT CATCHES THEIR EYE</p><h2>Your most explored work.</h2><p class="panel-copy">Project cards, live demos, and source links.</p><div id="projects"></div></article>
+          <article class="panel"><p class="eyebrow">THE PATH HERE</p><h2>Traffic sources.</h2><p class="panel-copy">Referring websites only; search queries stay private.</p><div id="referrers"></div></article>
+          <article class="panel"><p class="eyebrow">A WAY TO SAY HELLO</p><h2>Contact interest.</h2><p class="panel-copy">Actions are separate from completed inquiries.</p><div id="contacts"></div><p id="inquiries" class="inquiry-total"></p></article>
+        </div>
+        <article class="panel"><p class="eyebrow">A CLOSER LOOK</p><h2>Pages people opened.</h2><div class="table-wrap"><table><caption class="sr-only">Page views by portfolio page</caption><thead><tr><th>Page</th><th>Views</th></tr></thead><tbody id="page-rows"></tbody></table></div></article>
+        <div class="bottom-note"><div><strong>Small screens, big curiosity.</strong><div id="devices"></div></div><p>All dates use Manila time. Sessions are approximate and reset each day. Automated traffic and privacy opt-outs are excluded where detectable.</p></div>
+      </div>
+      <p id="updated-at" class="updated-at"></p>
+    </section>
+    <noscript><p class="status">Enable JavaScript to sign in and load your analytics.</p></noscript>
+  </main>
+  <footer><a href="../privacy/">About traffic analytics</a><span>Made with care &lt;/&gt;</span></footer>
+</body>
+</html>

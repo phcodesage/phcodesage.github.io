@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "portfolio-analytics",
+  "main": "worker.mjs",
+  "account_id": "3d71db83a5798b6ebe74c4dffebb1991",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "vars": { "PORTFOLIO_ORIGIN": "https://phcodesage.github.io" },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "bounty-radar-analytics",
+    "database_id": "01b2cc3b-9b7e-4719-92e6-578538dd551c"
+  }],
+  "triggers": { "crons": ["15 16 * * *"] },
+  "observability": { "enabled": false }
+}

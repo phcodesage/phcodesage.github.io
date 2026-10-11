@@ -141,11 +141,12 @@ contactForm?.addEventListener('submit', async (event) => {
     updateReplyDetails();
     contactStatus.textContent = 'Message sent. I’ll get back to you soon.';
     contactStatus.dataset.state = 'success';
+    document.dispatchEvent(new CustomEvent('portfolio:inquiry-sent'));
   } catch {
     contactStatus.textContent = 'Could not send right now. Use Email or WhatsApp instead.';
     contactStatus.dataset.state = 'error';
   } finally {
     contactSubmit.disabled = false;
-    contactSubmit.textContent = 'Send message ↗';
+    contactSubmit.innerHTML = 'Send message <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>';
   }
 });

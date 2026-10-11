@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Traffic analytics &amp; privacy — phcodesage</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/cat-mark.svg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" />
+  <link rel="stylesheet" href="../analytics/dashboard.css" /><link rel="stylesheet" href="../styles/arrows.css" />
+  <script src="privacy.js" defer></script>
+  <style>main { max-width:740px; padding:42px 0 60px; } main > p { margin:18px 0; } .panel { margin-top:24px; } .panel p { margin:15px 0; } .panel ul { padding-left:22px; } .panel li { margin:10px 0; }</style>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="../"><img src="../assets/cat-mark.svg" width="30" height="30" alt="" />phcodesage<span>.</span></a><a class="back" href="../">Back to portfolio <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg></a></header>
+  <main><p class="eyebrow">A LITTLE TRANSPARENCY</p><h1>Traffic, with care.</h1><p>I use traffic analytics to understand which projects visitors explore and improve this portfolio.</p>
+    <section class="panel"><h2>What gets counted.</h2><ul><li>Portfolio page views, project cards, demo and source links, resume links, and contact actions.</li><li>An approximate country from the visitor’s network, a broad screen-size category, and the referring website’s hostname.</li><li>A random, temporary session identifier. It is transformed on the server into a daily identifier; it does not follow you across days.</li></ul><p>Analytics do not store IP addresses, precise location, full referring URLs, search queries, names, or form contents. Detailed statistics are password protected and detailed events are retained for up to 90 days. The existing page-view archive is preserved for counts.</p><p>Contact-form messages are handled separately by FormSubmit so I can reply to inquiries. Traffic analytics record a submission attempt and a successful send without copying the message or your contact details.</p></section>
+    <section class="panel"><h2>Your browser, your choice.</h2><p>Global Privacy Control and Do Not Track signals stop event collection. You can also turn analytics off in this browser. This preference is stored locally; changing browsers or clearing browser storage resets it.</p><button id="analytics-choice" class="button secondary" type="button" aria-pressed="false">Turn off traffic analytics</button><p id="privacy-status" class="status" role="status"></p></section>
+    <p>Questions about your data? <a href="mailto:rechceltoledo@gmail.com">Email Rechcel</a>.</p>
+  </main>
+  <footer><a href="../">Return to the portfolio</a><span>Made with care &lt;/&gt;</span></footer>
+</body>
+</html>

@@ -54,7 +54,8 @@
       } catch {}
     </script>
     <script src="script.js" defer></script>
-    <script src="site-analytics.js" defer></script>
+    <script src="site-analytics.js?v=20261012" defer></script>
+    <link rel="stylesheet" href="styles/arrows.css?v=20261012" />
   </head>
 
   <body>
@@ -62,7 +63,7 @@
     <header id="top" class="site-header">
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark"><svg class="cat-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z"/><path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30"/></svg></span> phcodesage<span class="brand-period">.</span></a>
-        <div class="nav-links"><a href="#work">Work</a><a href="#companies">Companies</a><a href="#about">About</a><a href="#contact">Say hi <span aria-hidden="true">↗</span></a></div>
+        <div class="nav-links"><a href="#work">Work</a><a href="#companies">Companies</a><a href="#about">About</a><a href="#contact">Say hi <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span data-theme-icon aria-hidden="true">☾</span></button>
       </nav>
     </header>
@@ -73,34 +74,34 @@
         <p class="welcome">Hello, welcome to my little corner of the web <span aria-hidden="true">&lt;/&gt;</span></p>
         <div class="profile"><div><h1 id="intro-title">Rechcel Toledo<span aria-hidden="true">.</span></h1><p>Software developer &amp; product builder</p></div><img class="profile-photo" src="assets/rechcel-avatar.webp" alt="Rechcel Toledo" width="88" height="88" fetchpriority="high" /></div>
         <p class="intro-copy">I’m a developer in Davao, Philippines. I build useful web products, real-time systems, and tools for fellow makers. Thoughtful interfaces, a curious mind, and care beyond the launch.</p>
-        <div class="intro-links"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume.html">My resume <span aria-hidden="true">↗</span></a></div>
+        <div class="intro-links"><a class="button" href="#work">Explore my work <span aria-hidden="true"><svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></span></a><a class="text-link" href="resume.html">My resume <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
       </section>
 
       <section id="work" class="section" aria-labelledby="work-title">
         <div class="section-heading"><h2 id="work-title">Works<span aria-hidden="true"> ✦</span></h2><span class="section-note">Things I’ve built</span></div>
         <div class="project-grid">
-            <a id="clara-health" class="project-card" href="case-studies/clara-health.html">
-              <div class="project-image project-clara-health"><img src="assets/projects/clara-health.webp" alt="Clara healthcare prototype with a blue editorial headline and patient journey previews" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="clara-health" data-analytics-project="clara-health" class="project-card" href="case-studies/clara-health.html">
+              <div class="project-image project-clara-health"><img src="assets/projects/clara-health.webp" alt="Clara healthcare prototype with a blue editorial headline and patient journey previews" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Clara Health</h3><p>A healthcare companion prototype with voice, doctor discovery, booking, and a provider workspace.</p><span class="project-kind">Prototype · Healthcare</span>
             </a>
-            <a id="tawaflick" class="project-card" href="case-studies/tawaflick.html">
-              <div class="project-image project-tawaflick"><img src="assets/projects/tawaflick.webp" alt="Tawaflick meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="tawaflick" data-analytics-project="tawaflick" class="project-card" href="case-studies/tawaflick.html">
+              <div class="project-image project-tawaflick"><img src="assets/projects/tawaflick.webp" alt="Tawaflick meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Tawaflick</h3><p>A little home for Pinoy meme clips, GIFs, and group-chat reactions.</p><span class="project-kind">Product · Media tools</span>
             </a>
-            <a id="sage-cinema" class="project-card" href="case-studies/sage-cinema.html">
-              <div class="project-image project-sage-cinema"><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema movie discovery interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="sage-cinema" data-analytics-project="sage-cinema" class="project-card" href="case-studies/sage-cinema.html">
+              <div class="project-image project-sage-cinema"><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema movie discovery interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Sage Cinema</h3><p>Find your next movie with search, recommendations, and watch history.</p><span class="project-kind">Product · Movie discovery</span>
             </a>
-            <a id="bugnaw" class="project-card" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
-              <div class="project-image project-bugnaw"><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care booking interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="bugnaw" data-analytics-project="bugnaw" class="project-card" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
+              <div class="project-image project-bugnaw"><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care booking interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Bugnaw Aircon Care</h3><p>An easy way to book aircon care in Metro Cebu.</p><span class="project-kind">Product · Booking</span>
             </a>
-            <a id="cookie-checkpoint" class="project-card" href="case-studies/cookie-checkpoint.html">
-              <div class="project-image project-cookie-checkpoint"><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint daily check-in interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="cookie-checkpoint" data-analytics-project="cookie-checkpoint" class="project-card" href="case-studies/cookie-checkpoint.html">
+              <div class="project-image project-cookie-checkpoint"><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint daily check-in interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Cookie Checkpoint</h3><p>Daily check-ins on Cookie Chain, with a little on-chain proof.</p><span class="project-kind">Open source · Web3</span>
             </a>
-            <a id="unban-discord" class="project-card" href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
-              <div class="project-image project-unban-discord"><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now campaign website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="unban-discord" data-analytics-project="unban-discord" class="project-card" href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
+              <div class="project-image project-unban-discord"><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now campaign website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Unban Discord Now</h3><p>Giving Filipino workers a voice about Discord access disruptions.</p><span class="project-kind">Civic tech · Campaign</span>
             </a>
         </div>
@@ -109,12 +110,12 @@
       <section class="section" aria-labelledby="collaborations-title">
         <div class="section-heading"><h2 id="collaborations-title">Client work<span aria-hidden="true"> ♡</span></h2><span class="section-note">Built &amp; cared for</span></div>
         <div class="project-grid">
-            <a id="exceed" class="project-card" href="case-studies/exceed-learning-center.html">
-              <div class="project-image project-exceed"><img src="assets/projects/exceed.webp" alt="Exceed Learning Center education website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="exceed" data-analytics-project="exceed" class="project-card" href="case-studies/exceed-learning-center.html">
+              <div class="project-image project-exceed"><img src="assets/projects/exceed.webp" alt="Exceed Learning Center education website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Exceed Learning Center</h3><p>Development and ongoing care for an education and test-prep platform.</p><span class="project-kind">Client work · Development & maintenance</span>
             </a>
-            <a id="unbreakable-you" class="project-card" href="case-studies/unbreakable-you.html">
-              <div class="project-image project-unbreakable-you"><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You coaching website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+            <a id="unbreakable-you" data-analytics-project="unbreakable-you" class="project-card" href="case-studies/unbreakable-you.html">
+              <div class="project-image project-unbreakable-you"><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You coaching website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Unbreakable You</h3><p>A thoughtful home for healing and empowerment coaching.</p><span class="project-kind">Client work · Development & maintenance</span>
             </a>
         </div>
@@ -124,20 +125,20 @@
         <div class="section-heading"><h2 id="companies-title">Companies &amp; affiliations</h2></div>
         <p class="section-copy">Some lovely companies and organizations I’ve worked with.</p>
         <div class="company-grid">
-            <a class="company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true">↗</span></span></a>
-            <a class="company" href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
         </div>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-heading"><h2 id="about-title">A little about me<span aria-hidden="true"> ☺</span></h2><a class="text-link" href="resume.html">Full resume ↗</a></div>
+        <div class="section-heading"><h2 id="about-title">A little about me<span aria-hidden="true"> ☺</span></h2><a class="text-link" href="resume.html">Full resume <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
         <p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I like making complicated things feel simple, and keeping them working long after they ship.</p>
         <p class="muted">Consumer products, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems, the same care.</p>
         <div id="practice" class="skill-tags" aria-label="Areas I work in"><span>Product builds</span><span>Real-time systems</span><span>Developer tools</span><span>Ongoing care</span></div>
@@ -190,18 +191,18 @@
         <details class="more-details">
           <summary>Peek inside the lab <span class="detail-note">12 projects</span></summary>
           <div class="archive-list">
-<a href="case-studies/jinjalume.html" class="archive-item"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true">↗</span></a>
+<a href="case-studies/jinjalume.html" class="archive-item" data-analytics-project="jinjalume"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="mermail-skills"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="causify-helpers"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="yawp"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="issueanvil"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="swiftpos"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sagemovies-tui"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="virex"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="beamly"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="codesage-orchestrator"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="remotex"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sage-movies"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
           </div>
         </details>
       </section>
@@ -209,8 +210,8 @@
       <section id="contact" class="section contact-section" aria-labelledby="contact-title">
         <div class="section-heading"><h2 id="contact-title">Let’s make something useful<span aria-hidden="true"> ♡</span></h2></div>
         <p>Have a project in mind, a problem to untangle, or just want to say hello?</p>
-        <a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com <span aria-hidden="true">↗</span></a>
-        <div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot ↗</a></div>
+        <a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+        <div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
         <details class="more-details contact-form-details"><summary>Or leave a message here</summary>
           <form id="contact-form" class="contact-form" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
                   <div class="form-row">
@@ -224,7 +225,7 @@
                   <input hidden type="text" name="_honey" tabindex="-1" autocomplete="off" />
                   <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
                   <div class="form-actions">
-                    <button id="contact-submit" type="submit" class="button">Send message ↗</button>
+                    <button id="contact-submit" type="submit" class="button">Send message <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></button>
                     <p id="contact-status" class="form-status" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
                   </div>
                 </form>
@@ -233,15 +234,16 @@
     </main>
 
     <footer class="site-footer page-shell">
-      <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub ↗</a><a href="https://x.com/phcodesage" rel="me">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me">Threads ↗</a></div>
+      <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
       <p>© <span id="year">2026</span> Rechcel Toledo · Made with care <span aria-hidden="true">&lt;/&gt;</span></p>
       <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
-      <a href="#top" class="back-top">Back to top ↑</a>
+      <a href="privacy/" class="text-link">Traffic privacy</a>
+      <a href="#top" class="back-top">Back to top <svg class="arrow-icon" data-direction="up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" /></svg></a>
     </footer>
     <dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="gallery-lightbox-title" aria-describedby="gallery-lightbox-caption">
       <div class="lightbox-toolbar"><h2 id="gallery-lightbox-title">Personal gallery</h2><button class="lightbox-close" type="button" data-gallery-close aria-label="Close photo viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
       <figure class="lightbox-figure"><img data-gallery-image alt="" /><figcaption id="gallery-lightbox-caption" aria-live="polite"></figcaption></figure>
-      <div class="lightbox-controls"><button type="button" data-gallery-prev aria-label="Previous photo"><span aria-hidden="true">←</span> Previous</button><span data-gallery-counter></span><button type="button" data-gallery-next aria-label="Next photo">Next <span aria-hidden="true">→</span></button></div>
+      <div class="lightbox-controls"><button type="button" data-gallery-prev aria-label="Previous photo"><span aria-hidden="true"><svg class="arrow-icon" data-direction="left" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5m6-6-6 6 6 6" /></svg></span> Previous</button><span data-gallery-counter></span><button type="button" data-gallery-next aria-label="Next photo">Next <span aria-hidden="true"><svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span></button></div>
     </dialog>
   </body>
 </html>

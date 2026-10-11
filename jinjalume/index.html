@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="site.css" />
     <script src="site.js" defer></script>
+    <link rel="stylesheet" href="../styles/arrows.css?v=20261012" />
+      <script src="../site-analytics.js?v=20261012" defer></script>
   </head>
 
-  <body class="overflow-x-hidden bg-paper font-sans text-ink">
+  <body data-analytics-project="jinjalume" class="overflow-x-hidden bg-paper font-sans text-ink">
     <div class="pointer-events-none fixed inset-0 z-50 opacity-[0.035] noise" aria-hidden="true"></div>
 
     <header class="absolute inset-x-0 top-0 z-40 px-5 py-5 md:px-10 md:py-7">
@@ -32,8 +34,8 @@
           <a href="#components" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Components</a>
           <a href="#principles" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Why Jinjalume</a>
           <a href="#contribute" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink">Contribute</a>
-          <a href="https://pypi.org/project/jinjalume/" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink" target="_blank" rel="noreferrer">PyPI <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/phcodesage/jinjalume" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://pypi.org/project/jinjalume/" class="rounded-full px-4 py-2 text-sm font-medium text-ink/60 transition hover:bg-ink/5 hover:text-ink" target="_blank" rel="noreferrer">PyPI <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+          <a href="https://github.com/phcodesage/jinjalume" class="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
         </div>
         <button type="button" data-menu-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink text-lg text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
       </nav>
@@ -41,8 +43,8 @@
         <a href="#components" class="block rounded-2xl px-4 py-3 text-base font-semibold">Components</a>
         <a href="#principles" class="block rounded-2xl px-4 py-3 text-base font-semibold">Why Jinjalume</a>
         <a href="#contribute" class="block rounded-2xl px-4 py-3 text-base font-semibold">Contribute</a>
-        <a href="https://pypi.org/project/jinjalume/" class="block rounded-2xl px-4 py-3 text-base font-semibold" target="_blank" rel="noreferrer">Install from PyPI ↗</a>
-        <a href="https://github.com/phcodesage/jinjalume" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+        <a href="https://pypi.org/project/jinjalume/" class="block rounded-2xl px-4 py-3 text-base font-semibold" target="_blank" rel="noreferrer">Install from PyPI <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+        <a href="https://github.com/phcodesage/jinjalume" class="block rounded-2xl bg-violet px-4 py-3 text-base font-semibold text-white" target="_blank" rel="noreferrer">View on GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
       </div>
     </header>
 
@@ -56,7 +58,7 @@
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Open source · MIT</span>
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Flask + Jinja</span>
               <span class="rounded-full border border-ink/15 px-3 py-1.5">Tailwind CSS</span>
-              <a href="https://pypi.org/project/jinjalume/" class="rounded-full border border-ink/15 bg-lime px-3 py-1.5 text-ink transition hover:bg-ink hover:text-white" target="_blank" rel="noreferrer">PyPI · v0.1.0 ↗</a>
+              <a href="https://pypi.org/project/jinjalume/" class="rounded-full border border-ink/15 bg-lime px-3 py-1.5 text-ink transition hover:bg-ink hover:text-white" target="_blank" rel="noreferrer">PyPI · v0.1.0 <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
             </div>
             <p class="mb-7 font-sans text-sm font-medium text-violet" data-reveal>// the missing UI layer for Python’s server-rendered web</p>
             <h1 class="max-w-4xl text-[clamp(3.7rem,8vw,8rem)] font-medium leading-[0.88] tracking-[-0.09em]" data-reveal>
@@ -65,15 +67,15 @@
             </h1>
             <p class="mt-9 max-w-2xl text-lg leading-8 text-ink/65 md:text-xl md:leading-9" data-reveal data-delay="1">Reusable Tailwind components for Flask and Python apps that render HTML on purpose. No SPA migration. No component compiler. Just clean macros you can drop into a template.</p>
             <div class="mt-9 flex flex-wrap gap-3" data-reveal data-delay="2">
-              <a href="#components" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">Explore components <span aria-hidden="true">↓</span></a>
-              <a href="https://github.com/phcodesage/jinjalume" class="rounded-full border border-ink/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-ink" target="_blank" rel="noreferrer">Read the source <span aria-hidden="true">↗</span></a>
+              <a href="#components" class="rounded-full bg-ink px-6 py-3.5 text-base font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-violet">Explore components <span aria-hidden="true"><svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></span></a>
+              <a href="https://github.com/phcodesage/jinjalume" class="rounded-full border border-ink/20 bg-white/60 px-6 py-3.5 text-base font-semibold transition duration-300 hover:-translate-y-1 hover:border-ink" target="_blank" rel="noreferrer">Read the source <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
             </div>
             <div class="mt-5 flex flex-wrap items-center gap-3" data-reveal data-delay="2">
               <div class="flex items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-sm text-white shadow-[0_4px_0_rgba(119,89,238,.85)]">
                 <span class="text-lime" aria-hidden="true">$</span><code id="pip-install-snippet" class="font-sans">pip install jinjalume</code>
                 <button type="button" data-copy="pip-install-snippet" class="rounded-lg border border-white/20 px-2.5 py-1.5 text-xs font-semibold text-white transition hover:border-lime hover:text-lime">Copy</button>
               </div>
-              <a href="https://pypi.org/project/jinjalume/" class="text-sm font-semibold text-ink underline decoration-violet decoration-2 underline-offset-4 transition hover:text-violet" target="_blank" rel="noreferrer">View package on PyPI ↗</a>
+              <a href="https://pypi.org/project/jinjalume/" class="text-sm font-semibold text-ink underline decoration-violet decoration-2 underline-offset-4 transition hover:text-violet" target="_blank" rel="noreferrer">View package on PyPI <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
             </div>
           </div>
 
@@ -112,13 +114,13 @@ Jinjalume(app)
         <div class="mx-auto max-w-7xl">
           <div class="mb-14 flex items-end justify-between gap-8 border-b border-ink/15 pb-5" data-reveal>
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink">(01) Component shelf</p>
-            <div class="component-shelf-meta hidden items-center gap-5 text-sm md:flex"><span>Useful primitives, ready for your templates</span><a href="https://github.com/phcodesage/jinjalume/tree/main/jinjalume/templates/jinjalume/components" target="_blank" rel="noreferrer">Inspect source ↗</a></div>
+            <div class="component-shelf-meta hidden items-center gap-5 text-sm md:flex"><span>Useful primitives, ready for your templates</span><a href="https://github.com/phcodesage/jinjalume/tree/main/jinjalume/templates/jinjalume/components" target="_blank" rel="noreferrer">Inspect source <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
           </div>
           <div class="grid gap-5 lg:grid-cols-12">
             <article class="component-card lg:col-span-7" data-reveal>
               <div class="component-card-head"><span>Actions</span><code>button.html</code></div>
               <div class="flex min-h-48 flex-wrap items-center gap-3 bg-paper p-6 md:p-10">
-                <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet">Save changes <span aria-hidden="true">↗</span></button>
+                <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet">Save changes <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></button>
                 <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-ink shadow-sm ring-1 ring-inset ring-ink/20 transition hover:bg-ink/5">Preview</button>
                 <button type="button" class="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-red-500">Delete</button>
               </div>
@@ -185,7 +187,7 @@ Jinjalume(app)
               <div class="component-card-head"><span>Progressive interaction</span><code>modal.html</code></div>
               <div class="flex min-h-44 flex-col items-start justify-center bg-paper p-6 md:p-10">
                 <p class="mb-4 text-sm text-ink">Native HTML dialog. Add the JavaScript you need.</p>
-                <button type="button" data-open-dialog="demo-dialog" class="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Open dialog ↗</button>
+                <button type="button" data-open-dialog="demo-dialog" class="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet">Open dialog <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></button>
               </div>
               <div class="component-card-foot component-card-footer"><span>native dialog · no framework required</span><details class="code-inspector"><summary><span>Inspect code</span><span aria-hidden="true">+</span></summary><pre><code>{% from "jinjalume/components/modal.html" import modal %}
 {% call modal("example", "Example dialog") %}Content{% endcall %}</code></pre></details></div>
@@ -218,18 +220,18 @@ Jinjalume(app)
             <h2 class="mt-8 max-w-3xl text-[clamp(3.4rem,7vw,7rem)] font-medium leading-[0.9] tracking-[-0.09em]">Everyone is<br /><span class="text-lime">invited.</span></h2>
             <p class="mt-8 max-w-xl text-xl leading-8 text-white/70">Jinjalume is MIT-licensed and built in public. Improve a macro, document a pattern, report an accessibility issue, or propose the next primitive.</p>
             <div class="mt-9 flex flex-wrap gap-3">
-              <a href="https://github.com/phcodesage/jinjalume/blob/main/CONTRIBUTING.md" class="rounded-full bg-lime px-6 py-3.5 text-base font-semibold text-ink transition hover:-translate-y-1 hover:bg-white" target="_blank" rel="noreferrer">Read contributing guide <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/phcodesage/jinjalume/issues" class="rounded-full border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:border-white" target="_blank" rel="noreferrer">Find an issue <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/phcodesage/jinjalume/blob/main/CONTRIBUTING.md" class="rounded-full bg-lime px-6 py-3.5 text-base font-semibold text-ink transition hover:-translate-y-1 hover:bg-white" target="_blank" rel="noreferrer">Read contributing guide <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/jinjalume/issues" class="rounded-full border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:border-white" target="_blank" rel="noreferrer">Find an issue <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
             </div>
           </div>
           <div class="self-end" data-reveal data-delay="1">
             <div class="rounded-[1.5rem] border border-white/15 bg-white/[.06] p-6 md:p-8">
               <p class="font-sans text-sm text-lilac">contribution.md</p>
               <div class="mt-8 space-y-5 text-lg leading-7 text-white/80">
-                <p><span class="mr-3 text-lime">→</span>Clone the repo and run the demo.</p>
-                <p><span class="mr-3 text-lime">→</span>Make a focused, documented change.</p>
-                <p><span class="mr-3 text-lime">→</span>Run tests, lint, and the CSS build.</p>
-                <p><span class="mr-3 text-lime">→</span>Open a pull request. Be kind.</p>
+                <p><span class="mr-3 text-lime"><svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span>Clone the repo and run the demo.</p>
+                <p><span class="mr-3 text-lime"><svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span>Make a focused, documented change.</p>
+                <p><span class="mr-3 text-lime"><svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span>Run tests, lint, and the CSS build.</p>
+                <p><span class="mr-3 text-lime"><svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span>Open a pull request. Be kind.</p>
               </div>
               <div class="mt-8 border-t border-white/15 pt-5 text-sm text-white/45">Good first issues welcome · Code of Conduct included</div>
             </div>
@@ -241,7 +243,7 @@ Jinjalume(app)
         <div class="mx-auto max-w-7xl">
           <div class="flex flex-col justify-between gap-8 border-t border-white/15 py-8 text-sm text-white/55 md:flex-row md:items-center">
             <div><a href="#top" class="text-2xl font-semibold tracking-[-0.08em] text-white">Jinjalume<span class="text-lime">.</span></a><p class="mt-2">Small components for serious Python apps.</p></div>
-            <div class="flex flex-wrap gap-x-6 gap-y-3"><a href="https://github.com/phcodesage/jinjalume" class="footer-link" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://github.com/phcodesage/jinjalume/blob/main/LICENSE" class="footer-link" target="_blank" rel="noreferrer">MIT License ↗</a><a href="../" class="footer-link">phcodesage home ↗</a></div>
+            <div class="flex flex-wrap gap-x-6 gap-y-3"><a href="https://github.com/phcodesage/jinjalume" class="footer-link" target="_blank" rel="noreferrer">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://github.com/phcodesage/jinjalume/blob/main/LICENSE" class="footer-link" target="_blank" rel="noreferrer">MIT License <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="../" class="footer-link">phcodesage home <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
           </div>
           <div class="flex justify-between gap-6 border-t border-white/15 pt-5 text-xs text-white/35"><span>© <span id="year"></span> Jinjalume contributors</span><span>Built with Flask, Jinja &amp; Tailwind</span></div>
         </div>

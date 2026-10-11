@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -c tailwind.config.cjs -i styles/tailwind.css -o assets/site.css --minify && tailwindcss -c jinjalume/tailwind.config.cjs -i styles/tailwind.css -o jinjalume/tailwind.css --minify"
+    "build": "tailwindcss -c tailwind.config.cjs -i styles/tailwind.css -o assets/site.css --minify && tailwindcss -c jinjalume/tailwind.config.cjs -i styles/tailwind.css -o jinjalume/tailwind.css --minify",
+    "test:analytics": "node --test analytics/tests/worker.test.mjs",
+    "test:analytics:browser": "node analytics/tests/browser-check.mjs",
+    "deploy:analytics": "wrangler deploy --config analytics/wrangler.jsonc"
   },
   "devDependencies": {
-    "tailwindcss": "3.4.17"
+    "playwright": "^1.64.0",
+    "tailwindcss": "3.4.17",
+    "wrangler": "^4.149.0"
   }
 }

@@ -125,3 +125,9 @@ Project screenshots are stored locally in `assets/projects/`; capture sources ar
 The portfolio uses a compact layout inspired by [craftz.dog/works](https://www.craftz.dog/works), with cream and lilac colors, rounded thumbnails, Nunito headings, and DM Sans body text. A locally drawn SVG cat types on a laptop, blinks, and swishes its tail. The illustration uses CSS animation and respects reduced-motion preferences. A matching cat icon replaces the floral branding. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
 
 The companies and affiliations section contains the original nine organizations, with logos stored locally in `assets/` and `assets/companies/`. The gallery, experience, experiments, and contact form use native expandable sections. The gallery viewer and reply-channel fields remain available. The theme toggle saves its light/dark setting on the visitor’s device; smooth scrolling and hover transitions respect reduced-motion preferences. Navigation and expandable content remain usable without JavaScript.
+
+## Traffic analytics
+
+The private [analytics dashboard](https://phcodesage.github.io/analytics/) reports countries, project cards and demo/source clicks, page views, traffic sources, devices, and contact actions. Today, 7-day, and 30-day filters use Manila time. Detailed statistics require an owner password; the public page-view total preserves the earlier archive.
+
+The collector stores no IP addresses, precise locations, full referrer URLs, search queries, or form contents. It honors browser privacy signals and the [traffic opt-out](https://phcodesage.github.io/privacy/). See [analytics/README.md](analytics/README.md) for architecture, access, deployment, and checks. Navigation and project cards now use consistent rounded SVG arrows.
