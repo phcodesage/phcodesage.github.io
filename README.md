@@ -16,6 +16,7 @@ The personal gallery in About contains nine photos in `assets/about/`. Full-size
 
 ## Portfolio
 
+- [Tawaflick](https://phcodesage.github.io/case-studies/tawaflick.html) — a curated Philippine meme library with browser-local GIF and short-video conversion, owner-only uploads, search, and shareable downloads. [Live site](https://tawaflick.pages.dev/).
 - [Bugnaw Aircon Care](https://bugnaw.lovable.app/) — a Metro Cebu aircon care booking experience with multilingual messaging, available slots, and reminders.
 - [Unban Discord Now](https://unban-discord-now.pages.dev/) — a public campaign collecting Filipino workers’ stories and reports about Discord access disruptions.
 - [Cookie Checkpoint](https://phcodesage.github.io/case-studies/cookie-checkpoint.html) — an open-source on-chain streak app for Cookie Chain. The hosted demo is currently unavailable; the case study links to its source and local setup instructions.
@@ -73,6 +74,7 @@ flowchart LR
     R --> M[Development + maintenance]
     P --> P1[Sage Cinema]
     P --> P2[Cookie Checkpoint]
+    P --> P6[Tawaflick]
     P --> P5[Bugnaw Aircon Care]
     R --> C[Civic campaigns]
     C --> C1[Unban Discord Now]

@@ -1,7 +1,8 @@
 # Project previews
 
-Screenshots captured at 1440 × 1000 on 2026-10-08, then encoded as WebP. These are interface captures, not generated mockups.
+Screenshots captured at 1440 × 1000, then encoded as WebP. The original set was captured on 2026-10-08; later capture dates are noted below. These are interface captures, not generated mockups.
 
+- `tawaflick.webp`: https://tawaflick.pages.dev/ — captured on 2026-10-11, showing the live library before the first curated upload.
 - `bugnaw.webp`: https://bugnaw.lovable.app/
 - `unban-discord.webp`: https://unban-discord-now.pages.dev/
 - `sage-cinema.webp`: https://sage-cinema-nu.vercel.app/ (necessary storage only)

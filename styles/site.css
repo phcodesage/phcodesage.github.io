@@ -86,6 +86,7 @@ em { font-family:var(--serif); font-weight:400; }
 .project-featured .project-window img { margin-bottom:-10%; }
 .stage-caption { position:absolute; left:24px; bottom:18px; font-size:14px; color:#ffffffb3; letter-spacing:.03em; }
 .project-bugnaw { --stage:#071b27; --glow:#185e72; }
+.project-tawaflick { --stage:#302348; --glow:#7960bc; }
 .project-cookie { --stage:#c2c6bb; --glow:#edece1; }
 .project-cookie .stage-caption,.project-discord .stage-caption { color:#394136; }
 .project-discord { --stage:#a6b3c7; --glow:#e0e7f1; }
