@@ -107,7 +107,7 @@ flowchart LR
 
 ## Local development
 
-This is a static site. Generated Tailwind CSS is committed, so GitHub Pages does not need a build service and the pages do not compile CSS in visitors’ browsers.
+This is a static site. The homepage and case studies use hand-written CSS. The Jinjalume component gallery uses committed Tailwind CSS, so GitHub Pages does not need a build service.
 
 ```bash
 npm ci
@@ -115,12 +115,12 @@ npm run build
 python3 -m http.server 8765
 ```
 
-Open `http://localhost:8765`. After changing utility classes in the homepage, Jinjalume gallery, or their scripts, run `npm run build` and commit the generated `assets/site.css` and `jinjalume/tailwind.css`. Hand-written styles live in `styles/site.css`, `jinjalume/site.css`, and `case-studies/styles.css`.
+Open `http://localhost:8765`. Homepage edits need no build. After changing utility classes in the Jinjalume gallery, run `npm run build` and commit the generated CSS. Hand-written styles live in `styles/site.css`, `jinjalume/site.css`, and `case-studies/styles.css`.
 
 Project screenshots are stored locally in `assets/projects/`; capture sources are documented there. The contact form collects a reply number or username when WhatsApp or Telegram is selected. With JavaScript disabled, it submits through FormSubmit’s standard form endpoint using email as the reply channel.
 
-## Visual design and motion
+## Visual design
 
-The portfolio uses a cinematic red, near-black, and ivory palette with DM Sans for reading and Barlow Condensed for display headings. Body copy is 17–19 pixels; labels and controls are generally 14–16 pixels. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
+The portfolio uses a compact layout inspired by [craftz.dog/works](https://www.craftz.dog/works), with cream and lilac colors, rounded thumbnails, Nunito headings, and DM Sans body text. A small, locally stored SVG sprout illustration adds a playful touch. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
 
-The hero sculpture is projected and drawn locally on a 2D canvas in `script.js`, with no additional animation dependency. It responds to the pointer and scroll position, stops drawing when off-screen or in a background tab, and supports the visible pause control and the system reduced-motion preference. Content and navigation remain usable without JavaScript. Project scenes use the existing optimized interface screenshots. A separate requestAnimationFrame callback updates project depth, rotation, backdrop lettering, and the chapter transition on native scroll events. The pause control and reduced-motion preference disable these scroll transforms.
+The companies and affiliations section contains the original nine organizations, with logos stored locally in `assets/` and `assets/companies/`. The gallery, experience, experiments, and contact form use native expandable sections. The gallery viewer and reply-channel fields remain available. The theme toggle saves its light/dark setting on the visitor’s device; smooth scrolling and hover transitions respect reduced-motion preferences. Navigation and expandable content remain usable without JavaScript.

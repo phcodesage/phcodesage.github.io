@@ -7,7 +7,7 @@
       name="description"
       content="Rechcel Toledo is a product-minded software developer in Davao, Philippines, building web products, real-time systems, and developer tools."
     />
-    <meta name="theme-color" content="#10120f" />
+    <meta name="theme-color" content="#faf7f2" />
     <title>Rechcel Toledo — Software Developer, phcodesage</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="canonical" href="https://phcodesage.github.io/" />
@@ -42,195 +42,198 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=DM+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/site.css" />
     <link rel="stylesheet" href="styles/site.css" />
     <noscript><style>label:has(#preferred-contact) { display: none; }</style></noscript>
+    <script>
+      try {
+        const theme = localStorage.getItem('phcodesage-theme');
+        if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <script src="script.js" defer></script>
     <script src="site-analytics.js" defer></script>
   </head>
 
   <body>
-    <div id="top">
-      <a class="skip-link" href="#main-content">Skip to content</a>
-      <div id="scroll-progress" aria-hidden="true"></div>
-      <header class="site-header">
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark" aria-hidden="true">PH</span> phcodesage<span class="brand-period">.</span></a>
-          <div class="desktop-nav"><a href="#work">Work <span>07</span></a><a href="#about">About</a><a href="#practice">Expertise</a><a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a></div>
-          <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
-        </nav>
-        <div id="mobile-menu" class="mobile-menu hidden" data-mobile-menu><a href="#work">Selected work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#practice">Expertise</a><a href="resume.html">Resume ↗</a><a href="#contact">Let’s talk ↗</a></div>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header id="top" class="site-header">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark" aria-hidden="true">✿</span> phcodesage<span class="brand-period">.</span></a>
+        <div class="nav-links"><a href="#work">Work</a><a href="#companies">Companies</a><a href="#about">About</a><a href="#contact">Say hi <span aria-hidden="true">↗</span></a></div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span data-theme-icon aria-hidden="true">☾</span></button>
+      </nav>
+    </header>
 
-      <main id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-grid" aria-hidden="true"></div><div class="hero-beam" aria-hidden="true"></div>
-          <div class="hero-orbit" aria-hidden="true"><canvas id="orbit-canvas"></canvas><span class="orbit-coordinate orbit-coordinate-top">SYSTEM ONLINE / 001</span><span class="orbit-coordinate orbit-coordinate-bottom">DESIGN × ENGINEERING</span></div>
-          <div class="hero-kicker eyebrow"><span class="status-dot"></span> Independent developer &amp; product builder <span class="hero-location">Davao, Philippines / <span data-local-time>UTC+08</span></span></div>
-          <h1 id="hero-title"><span class="hero-line">Built to <em>work.</em></span><span class="hero-line hero-line-second">Made to <em>feel.</em></span></h1>
-          <div class="hero-bottom"><div class="hero-intro"><p>I’m Rechcel. I build web products, real-time systems, and tools that make the complicated feel effortless.</p><a class="button button-accent" href="#work">Discover the work <span aria-hidden="true">↘</span></a></div><div class="hero-aside"><span class="eyebrow">Thoughtful interfaces.<br />Serious engineering.</span><button type="button" id="motion-toggle" aria-pressed="false" hidden>Pause motion <span aria-hidden="true">Ⅱ</span></button></div></div>
-          <div class="hero-footnote eyebrow"><span>Design-minded. Systems-aware.</span><a href="#work">Scroll to explore <span aria-hidden="true">↓</span></a><span>Available for good work <i class="status-dot"></i></span></div>
-        </section>
+    <main id="main-content" class="page-shell">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="hello-scene" aria-hidden="true"><img src="assets/sage-sprout.svg" alt="" width="240" height="170" /><span class="hello-note">a little care in every line.</span></div>
+        <p class="welcome">Hello, welcome to my little corner of the web <span aria-hidden="true">✿</span></p>
+        <div class="profile"><div><h1 id="intro-title">Rechcel Toledo<span aria-hidden="true">.</span></h1><p>Software developer &amp; product builder</p></div><img class="profile-photo" src="assets/rechcel-avatar.webp" alt="Rechcel Toledo" width="88" height="88" fetchpriority="high" /></div>
+        <p class="intro-copy">I’m a developer in Davao, Philippines. I build useful web products, real-time systems, and tools for fellow makers. Thoughtful interfaces, a curious mind, and care beyond the launch.</p>
+        <div class="intro-links"><a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="resume.html">My resume <span aria-hidden="true">↗</span></a></div>
+      </section>
 
-        <div class="chapter-break" aria-hidden="true" data-scroll-scene><div class="chapter-track"><span>THE NEXT CHAPTER</span><strong>IDEAS INTO ACTION.</strong><span>SCROLL TO DISCOVER ↓</span></div></div>
-        <section id="work" class="work-section" aria-labelledby="work-title">
-          <div class="section-heading" data-reveal><div><p class="eyebrow section-index">01 / Selected work</p><h2 id="work-title">Ideas into<br /><em>real things.</em></h2></div><p class="section-summary">A collection of products, experiments, and client platforms. Built with intention. Shipped into the world.</p></div>
-          <div class="project-grid">
-            <a id="tawaflick" class="project-card project-tawaflick project-featured" href="case-studies/tawaflick.html" data-reveal>
-              <div class="project-topline"><span class="eyebrow">01 / Web product / Media tools</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Tawaflick</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Tawaflick</span></div><img src="assets/projects/tawaflick.webp" alt="Tawaflick’s Philippine meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">Pinoy reactions. Ready to send.</span></div>
-              <div class="project-info"><div><h3>Tawaflick</h3><p>A curated Philippine meme library with video uploads, looping GIFs, and short-video downloads.</p></div><span class="project-cta">Explore case study <span aria-hidden="true">↗</span></span></div>
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading"><h2 id="work-title">Works<span aria-hidden="true"> ✦</span></h2><span class="section-note">Things I’ve built</span></div>
+        <div class="project-grid">
+            <a id="tawaflick" class="project-card" href="case-studies/tawaflick.html">
+              <div class="project-image project-tawaflick"><img src="assets/projects/tawaflick.webp" alt="Tawaflick meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Tawaflick</h3><p>A little home for Pinoy meme clips, GIFs, and group-chat reactions.</p><span class="project-kind">Product · Media tools</span>
             </a>
-            <a class="project-card project-sage project-featured" href="case-studies/sage-cinema.html" data-reveal>
-              <div class="project-topline"><span class="eyebrow">02 / Product design / Full-stack</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Sage</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Sage Cinema</span></div><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A better way to find your next world.</span></div>
-              <div class="project-info"><div><h3>Sage Cinema</h3><p>Search, recommendations, and watch history in one movie discovery experience.</p></div><span class="project-cta">Explore case study <span aria-hidden="true">↗</span></span></div>
+            <a id="sage-cinema" class="project-card" href="case-studies/sage-cinema.html">
+              <div class="project-image project-sage-cinema"><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema movie discovery interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Sage Cinema</h3><p>Find your next movie with search, recommendations, and watch history.</p><span class="project-kind">Product · Movie discovery</span>
             </a>
-            <a class="project-card project-bugnaw project-featured" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer" data-reveal>
-              <div class="project-topline"><span class="eyebrow">03 / Web product / Booking</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Bugnaw</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Bugnaw Aircon Care</span></div><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">From “pwede ba ugma?” to booked.</span></div>
-              <div class="project-info"><div><h3>Bugnaw Aircon Care</h3><p>An aircon care booking experience for Metro Cebu, with multilingual messaging and available slots.</p></div><span class="project-cta">Visit live project <span aria-hidden="true">↗</span></span></div>
+            <a id="bugnaw" class="project-card" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
+              <div class="project-image project-bugnaw"><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care booking interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Bugnaw Aircon Care</h3><p>An easy way to book aircon care in Metro Cebu.</p><span class="project-kind">Product · Booking</span>
             </a>
-            <a class="project-card project-cookie " href="case-studies/cookie-checkpoint.html" data-reveal>
-              <div class="project-topline"><span class="eyebrow">04 / On-chain / Open source</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Cookie</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cookie Checkpoint</span></div><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A small action. A public signal.</span></div>
-              <div class="project-info"><div><h3>Cookie Checkpoint</h3><p>Verifiable daily check-ins on Cookie Chain with Nightly wallet support.</p></div><span class="project-cta">Explore case study <span aria-hidden="true">↗</span></span></div>
+            <a id="cookie-checkpoint" class="project-card" href="case-studies/cookie-checkpoint.html">
+              <div class="project-image project-cookie-checkpoint"><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint daily check-in interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Cookie Checkpoint</h3><p>Daily check-ins on Cookie Chain, with a little on-chain proof.</p><span class="project-kind">Open source · Web3</span>
             </a>
-            <a class="project-card project-discord " href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer" data-reveal>
-              <div class="project-topline"><span class="eyebrow">05 / Civic tech / Campaign</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Unban</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Unban Discord Now</span></div><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">Built to give people a voice.</span></div>
-              <div class="project-info"><div><h3>Unban Discord Now</h3><p>Collecting Filipino workers’ stories and reports about Discord access disruptions.</p></div><span class="project-cta">Visit live project <span aria-hidden="true">↗</span></span></div>
+            <a id="unban-discord" class="project-card" href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
+              <div class="project-image project-unban-discord"><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now campaign website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Unban Discord Now</h3><p>Giving Filipino workers a voice about Discord access disruptions.</p><span class="project-kind">Civic tech · Campaign</span>
             </a>
-            <a class="project-card project-exceed " href="case-studies/exceed-learning-center.html" data-reveal>
-              <div class="project-topline"><span class="eyebrow">06 / Client work / Maintenance</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Exceed</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Exceed Learning Center</span></div><img src="assets/projects/exceed.webp" alt="Exceed Learning Center interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">Room to learn. Built to grow.</span></div>
-              <div class="project-info"><div><h3>Exceed Learning Center</h3><p>Development and maintenance for an education, tutoring, and test-prep platform.</p></div><span class="project-cta">Explore client work <span aria-hidden="true">↗</span></span></div>
-            </a>
-            <a class="project-card project-unbreakable " href="case-studies/unbreakable-you.html" data-reveal>
-              <div class="project-topline"><span class="eyebrow">07 / Client work / Maintenance</span><span class="project-open" aria-hidden="true">↗</span></div>
-              <div class="project-stage" data-scroll-scene><span class="stage-word" aria-hidden="true">Unbreakable</span><div class="project-window"><div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>Unbreakable You</span></div><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You interface" width="1440" height="1000" loading="lazy" decoding="async" /></div><span class="stage-caption" aria-hidden="true">A thoughtful space for a new chapter.</span></div>
-              <div class="project-info"><div><h3>Unbreakable You</h3><p>Development and maintenance for a healing and empowerment coaching platform.</p></div><span class="project-cta">Explore client work <span aria-hidden="true">↗</span></span></div>
-            </a>
+        </div>
+      </section>
 
-          </div>
-          <div class="work-note"><span class="brand-mark" aria-hidden="true">✳</span><p>From the first interface to the life of the product.<br /><span>Development &amp; maintenance for Exceed Learning Center and Unbreakable You.</span></p><a href="#contact" class="text-link">Your project next? ↗</a></div>
-        </section>
+      <section class="section" aria-labelledby="collaborations-title">
+        <div class="section-heading"><h2 id="collaborations-title">Client work<span aria-hidden="true"> ♡</span></h2><span class="section-note">Built &amp; cared for</span></div>
+        <div class="project-grid">
+            <a id="exceed" class="project-card" href="case-studies/exceed-learning-center.html">
+              <div class="project-image project-exceed"><img src="assets/projects/exceed.webp" alt="Exceed Learning Center education website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Exceed Learning Center</h3><p>Development and ongoing care for an education and test-prep platform.</p><span class="project-kind">Client work · Development & maintenance</span>
+            </a>
+            <a id="unbreakable-you" class="project-card" href="case-studies/unbreakable-you.html">
+              <div class="project-image project-unbreakable-you"><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You coaching website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>Unbreakable You</h3><p>A thoughtful home for healing and empowerment coaching.</p><span class="project-kind">Client work · Development & maintenance</span>
+            </a>
+        </div>
+      </section>
 
-        <section id="about" class="about-section" aria-labelledby="about-title">
-          <div class="about-top eyebrow"><span>02 / The person behind the work</span><span>Based in Davao. Building everywhere.</span></div>
-          <div class="about-grid"><div class="about-portrait" data-reveal><img src="assets/rechcel-portrait.webp" alt="Rechcel Toledo" width="780" height="780" loading="lazy" /><div class="portrait-caption"><span>Rechcel Toledo</span><span>Developer &amp; maintainer ↗</span></div></div><div class="about-copy" data-reveal><h2 id="about-title">A builder.<br />A thinker.<br /><em>Still curious.</em></h2><p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I care about how a product feels—and what keeps it working six months later.</p><p>Consumer experiences, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems. The same care.</p><a href="resume.html" class="button button-dark">A little more about me <span aria-hidden="true">↗</span></a></div></div>
-          <div class="about-principles"><span>01 — Make it useful.</span><span>02 — Make it considered.</span><span>03 — Keep making it better.</span></div>
-          <section id="gallery" class="about-gallery" aria-labelledby="gallery-title">
-            <div class="gallery-heading">
-              <div><p class="eyebrow">Personal gallery / 09 photos</p><h3 id="gallery-title">A little more <em>of me.</em></h3></div>
-              <p>At the desk, out and about, and in between.<br />Select a photo for a closer look.</p>
-            </div>
-            <div class="gallery-grid">
+      <section id="companies" class="section companies-section" aria-labelledby="companies-title">
+        <div class="section-heading"><h2 id="companies-title">Companies &amp; affiliations</h2></div>
+        <p class="section-copy">Some lovely companies and organizations I’ve worked with.</p>
+        <div class="company-grid">
+            <a class="company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true">↗</span></span></a>
+            <a class="company" href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true">↗</span></span></a>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title">A little about me<span aria-hidden="true"> ☺</span></h2><a class="text-link" href="resume.html">Full resume ↗</a></div>
+        <p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I like making complicated things feel simple, and keeping them working long after they ship.</p>
+        <p class="muted">Consumer products, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems, the same care.</p>
+        <div id="practice" class="skill-tags" aria-label="Areas I work in"><span>Product builds</span><span>Real-time systems</span><span>Developer tools</span><span>Ongoing care</span></div>
+        <details class="more-details">
+          <summary>A little more of me <span class="detail-note">9 photos</span></summary>
+          <div id="gallery" class="gallery-grid">
               <a class="gallery-photo" href="assets/about/rechcel-cafe.webp" data-gallery-photo aria-label="Enlarge photo 1 of 9: Rechcel seated at a wooden table">
-                <img src="assets/about/rechcel-cafe-640.webp" srcset="assets/about/rechcel-cafe-640.webp 640w, assets/about/rechcel-cafe.webp 1536w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel smiling while seated at a wooden table" width="1536" height="2048" loading="lazy" decoding="async" style="object-position:50% 80%" />
-                <span class="gallery-photo-number" aria-hidden="true">01</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-cafe-640.webp" srcset="assets/about/rechcel-cafe-640.webp 640w, assets/about/rechcel-cafe.webp 1536w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling while seated at a wooden table" width="1536" height="2048" loading="lazy" decoding="async" style="object-position:50% 80%" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-at-the-desk.webp" data-gallery-photo aria-label="Enlarge photo 2 of 9: Rechcel at his laptop">
-                <img src="assets/about/rechcel-at-the-desk-640.webp" srcset="assets/about/rechcel-at-the-desk-640.webp 640w, assets/about/rechcel-at-the-desk.webp 2048w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel wearing headphones at a laptop beside a ring light" width="2048" height="1955" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">02</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-at-the-desk-640.webp" srcset="assets/about/rechcel-at-the-desk-640.webp 640w, assets/about/rechcel-at-the-desk.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing headphones at a laptop beside a ring light" width="2048" height="1955" loading="lazy" decoding="async" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-on-a-call.webp" data-gallery-photo aria-label="Enlarge photo 3 of 9: Rechcel wearing earbuds at his desk">
-                <img src="assets/about/rechcel-on-a-call-640.webp" srcset="assets/about/rechcel-on-a-call-640.webp 640w, assets/about/rechcel-on-a-call.webp 2048w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel smiling in a black hoodie with earbuds and a phone in front of him" width="2048" height="1365" loading="lazy" decoding="async" style="object-position:65% 50%" />
-                <span class="gallery-photo-number" aria-hidden="true">03</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-on-a-call-640.webp" srcset="assets/about/rechcel-on-a-call-640.webp 640w, assets/about/rechcel-on-a-call.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling in a black hoodie with earbuds and a phone in front of him" width="2048" height="1365" loading="lazy" decoding="async" style="object-position:65% 50%" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-in-a-blazer.webp" data-gallery-photo aria-label="Enlarge photo 4 of 9: Rechcel in a navy blazer">
-                <img src="assets/about/rechcel-in-a-blazer-640.webp" srcset="assets/about/rechcel-in-a-blazer-640.webp 640w, assets/about/rechcel-in-a-blazer.webp 1365w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel in a navy blazer and a yellow patterned shirt" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:50% 20%" />
-                <span class="gallery-photo-number" aria-hidden="true">04</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-in-a-blazer-640.webp" srcset="assets/about/rechcel-in-a-blazer-640.webp 640w, assets/about/rechcel-in-a-blazer.webp 1365w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a navy blazer and a yellow patterned shirt" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:50% 20%" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-poolside.webp" data-gallery-photo aria-label="Enlarge photo 5 of 9: Rechcel seated by a pool">
-                <img src="assets/about/rechcel-poolside-640.webp" srcset="assets/about/rechcel-poolside-640.webp 640w, assets/about/rechcel-poolside.webp 958w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel with a backpack seated on a lounge chair beside a pool" width="958" height="960" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">05</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-poolside-640.webp" srcset="assets/about/rechcel-poolside-640.webp 640w, assets/about/rechcel-poolside.webp 958w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel with a backpack seated on a lounge chair beside a pool" width="958" height="960" loading="lazy" decoding="async" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-out-and-about.webp" data-gallery-photo aria-label="Enlarge photo 6 of 9: Rechcel seated against a wooden wall">
-                <img src="assets/about/rechcel-out-and-about-640.webp" srcset="assets/about/rechcel-out-and-about-640.webp 640w, assets/about/rechcel-out-and-about.webp 947w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel in a black hoodie seated on a bench against a wooden slat wall" width="947" height="960" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">06</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-out-and-about-640.webp" srcset="assets/about/rechcel-out-and-about-640.webp 640w, assets/about/rechcel-out-and-about.webp 947w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a black hoodie seated on a bench against a wooden slat wall" width="947" height="960" loading="lazy" decoding="async" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-at-a-restaurant.webp" data-gallery-photo aria-label="Enlarge photo 7 of 9: Rechcel at a restaurant">
-                <img src="assets/about/rechcel-at-a-restaurant-640.webp" srcset="assets/about/rechcel-at-a-restaurant-640.webp 640w, assets/about/rechcel-at-a-restaurant.webp 690w" sizes="(max-width: 640px) 43vw, 30vw" alt="Rechcel wearing glasses and a backward cap at a restaurant table" width="690" height="682" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">07</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
+                <img src="assets/about/rechcel-at-a-restaurant-640.webp" srcset="assets/about/rechcel-at-a-restaurant-640.webp 640w, assets/about/rechcel-at-a-restaurant.webp 690w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing glasses and a backward cap at a restaurant table" width="690" height="682" loading="lazy" decoding="async" />
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-in-a-blue-shirt.webp" data-gallery-photo aria-label="Enlarge photo 8 of 9: Rechcel in a light blue shirt">
                 <img src="assets/about/rechcel-in-a-blue-shirt.webp" alt="Rechcel wearing a light blue shirt and a black face mask while seated" width="544" height="540" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">08</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
               </a>
               <a class="gallery-photo" href="assets/about/rechcel-harbour-city.webp" data-gallery-photo aria-label="Enlarge photo 9 of 9: Rechcel outside Harbour City">
                 <img src="assets/about/rechcel-harbour-city.webp" alt="Rechcel wearing a blue face mask outside Harbour City" width="526" height="537" loading="lazy" decoding="async" />
-                <span class="gallery-photo-number" aria-hidden="true">09</span><span class="gallery-photo-open" aria-hidden="true">↗</span>
               </a>
-            </div>
-          </section>
-        </section>
-
-        <section id="experience" class="experience-section" aria-labelledby="experience-title">
-          <div class="section-heading compact" data-reveal><div><p class="eyebrow section-index">03 / Experience</p><h2 id="experience-title">Time at<br /><em>the keyboard.</em></h2></div><a href="resume.html" class="text-link">View full resume ↗</a></div>
+          </div>
+        </details>
+        <details id="experience" class="more-details">
+          <summary>Time at the keyboard <span class="detail-note">Experience</span></summary>
           <div class="experience-list">
-            <article data-reveal><span class="experience-date">2023 — Present</span><div><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p></div><p>Building real-time communication with Flask, WebRTC, and WebSockets: messaging, voice and video calls, and user presence.</p><span class="experience-number" aria-hidden="true">01</span></article>
-            <article data-reveal><span class="experience-date">Jun — Aug 2023</span><div><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p></div><p>Practical frontend and backend lessons, project-based course materials, and hands-on guidance for aspiring developers.</p><span class="experience-number" aria-hidden="true">02</span></article>
-            <article data-reveal><span class="experience-date">Mar — May 2023</span><div><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p></div><p>Implementing and maintaining user-facing features for a mortgage platform under senior developer guidance.</p><span class="experience-number" aria-hidden="true">03</span></article>
-            <article data-reveal><span class="experience-date">Dec 2022 — Mar 2023</span><div><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p></div><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p><span class="experience-number" aria-hidden="true">04</span></article>
+            <article><span class="experience-date">2023 — Present</span><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p><p>Building messaging, voice and video calls, and user presence with Flask, WebRTC, and WebSockets.</p></article>
+            <article><span class="experience-date">Jun — Aug 2023</span><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p><p>Practical frontend and backend lessons, project-based materials, and hands-on guidance.</p></article>
+            <article><span class="experience-date">Mar — May 2023</span><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p><p>Implementing and maintaining user-facing features for a mortgage platform.</p></article>
+            <article><span class="experience-date">Dec 2022 — Mar 2023</span><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p></article>
           </div>
-        </section>
+        </details>
+      </section>
 
-        <section id="practice" class="practice-section" aria-labelledby="practice-title">
-          <div class="practice-intro" data-reveal><p class="eyebrow section-index">04 / What I bring</p><h2 id="practice-title">The details<br />make the<br /><em>difference.</em></h2><p>From a rough idea to a reliable product. I connect the design decisions with the systems behind them.</p><a href="#contact" class="text-link">Let’s build something ↗</a></div>
-          <div class="service-list">
-            <article data-reveal><span class="eyebrow">01 / Interface &amp; experience</span><h3>Product builds</h3><p>MVPs, responsive interfaces, and features that take a product from concept to launch.</p><div class="service-tags"><span>React</span><span>Next.js</span><span>UI systems</span></div></article>
-            <article data-reveal><span class="eyebrow">02 / Connection &amp; infrastructure</span><h3>Real-time systems</h3><p>Messaging, live calls, APIs, and the integrations that keep information moving.</p><div class="service-tags"><span>Flask</span><span>WebRTC</span><span>WebSockets</span></div></article>
-            <article data-reveal><span class="eyebrow">03 / Tools for the makers</span><h3>Developer tools</h3><p>Open-source packages, agent workflows, and utilities that remove friction from everyday work.</p><div class="service-tags"><span>Python</span><span>Rust</span><span>MCP</span></div></article>
-            <article data-reveal><span class="eyebrow">04 / Beyond the launch</span><h3>Ongoing care</h3><p>Maintenance, performance, accessibility, and thoughtful improvements to a live product.</p><div class="service-tags"><span>Maintenance</span><span>Performance</span><span>Accessibility</span></div></article>
-          </div>
-        </section>
-
-        <section class="archive-section" aria-labelledby="archive-title">
-          <div class="section-heading compact" data-reveal><div><p class="eyebrow section-index">05 / The lab</p><h2 id="archive-title">Curiosity,<br /><em>in public.</em></h2></div><p class="section-summary">Smaller experiments. Open-source contributions. Tools I wanted to exist.</p></div>
+      <section class="section lab-section" aria-labelledby="archive-title">
+        <div class="section-heading"><h2 id="archive-title">Little experiments<span aria-hidden="true"> ✳</span></h2></div>
+        <p class="section-copy">Open-source tools and things I wanted to exist.</p>
+        <details class="more-details">
+          <summary>Peek inside the lab <span class="detail-note">12 projects</span></summary>
           <div class="archive-list">
-<a href="case-studies/jinjalume.html" class="archive-item"><span class="archive-number">01</span><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">02</span><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">03</span><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">04</span><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">05</span><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">06</span><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">07</span><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">08</span><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">09</span><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">10</span><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">11</span><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true">↗</span></a>
-<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item"><span class="archive-number">12</span><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true">↗</span></a>
+<a href="case-studies/jinjalume.html" class="archive-item"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true">↗</span></a>
+<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true">↗</span></a>
           </div>
-        </section>
+        </details>
+      </section>
 
-        <section id="contact" class="contact-section" aria-labelledby="contact-title">
-          <div class="contact-heading" data-reveal><p class="eyebrow section-index">06 / Your next chapter</p><h2 id="contact-title">Have a good<br /><em>feeling?</em><a href="mailto:rechceltoledo@gmail.com" class="contact-orb" aria-label="Email Rechcel"><span aria-hidden="true">↗</span></a></h2></div>
-          <div class="contact-grid"><div class="contact-intro"><h3>Let’s make something useful.</h3><p>Tell me what you’re building, what’s stuck, or what needs a careful second pair of hands.</p><a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com ↗</a><div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot ↗</a></div><div class="contact-availability"><span class="status-dot"></span> Open to good work <span>Davao, Philippines · UTC+08</span></div></div><div class="contact-form-wrap">
-<form id="contact-form" class="grid gap-4" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
-                  <div class="grid gap-4 sm:grid-cols-2">
-                    <label class="grid gap-2 text-base"><span class="text-white/65">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
-                    <label class="grid gap-2 text-base"><span class="text-white/65">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div class="section-heading"><h2 id="contact-title">Let’s make something useful<span aria-hidden="true"> ♡</span></h2></div>
+        <p>Have a project in mind, a problem to untangle, or just want to say hello?</p>
+        <a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot ↗</a></div>
+        <details class="more-details contact-form-details"><summary>Or leave a message here</summary>
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
+                  <div class="form-row">
+                    <label class="form-field"><span class="form-label">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
+                    <label class="form-field"><span class="form-label">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
                   </div>
-                  <label class="grid gap-2 text-base"><span class="text-white/65">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
-                  <label id="reply-detail-field" class="grid gap-2 text-base" hidden><span id="reply-detail-label" class="text-white/65">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="text-sm text-white/65"></span></label>
-                  <label class="grid gap-2 text-base"><span class="text-white/65">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
-                  <label class="grid gap-2 text-base"><span class="text-white/65">What can I help with?</span><textarea class="contact-input min-h-40 resize-y" name="message" rows="5" required></textarea></label>
-                  <input class="hidden" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+                  <label class="form-field"><span class="form-label">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
+                  <label id="reply-detail-field" class="form-field" hidden><span id="reply-detail-label" class="form-label">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="form-hint"></span></label>
+                  <label class="form-field"><span class="form-label">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
+                  <label class="form-field"><span class="form-label">What can I help with?</span><textarea class="contact-input" name="message" rows="5" required></textarea></label>
+                  <input hidden type="text" name="_honey" tabindex="-1" autocomplete="off" />
                   <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
-                  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <button id="contact-submit" type="submit" class="rounded-full bg-violet px-6 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:bg-lilac hover:text-ink">Send inquiry ↗</button>
-                    <p id="contact-status" class="text-base text-white/55" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
+                  <div class="form-actions">
+                    <button id="contact-submit" type="submit" class="button">Send message ↗</button>
+                    <p id="contact-status" class="form-status" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
                   </div>
                 </form>
-          </div></div>
-          <footer class="site-footer"><a href="#top" class="wordmark"><span class="brand-mark" aria-hidden="true">PH</span> phcodesage.</a><div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub ↗</a><a href="https://x.com/phcodesage" rel="me">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me">Threads ↗</a><a href="resume.html">Resume ↗</a></div><a href="#top" class="back-top">Back to top ↑</a><div class="footer-bottom"><p>© <span id="year">2026</span> Rechcel Toledo</p><p>Built with care. Always in progress.</p><p id="portfolio-page-views">Page views · loading…</p></div></footer>
-        </section>
-      </main>
-    </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer page-shell">
+      <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub ↗</a><a href="https://x.com/phcodesage" rel="me">X ↗</a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram ↗</a><a href="https://www.threads.com/@phcodesage" rel="me">Threads ↗</a></div>
+      <p>© <span id="year">2026</span> Rechcel Toledo · Made with care <span aria-hidden="true">✿</span></p>
+      <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </footer>
     <dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="gallery-lightbox-title" aria-describedby="gallery-lightbox-caption">
       <div class="lightbox-toolbar"><h2 id="gallery-lightbox-title">Personal gallery</h2><button class="lightbox-close" type="button" data-gallery-close aria-label="Close photo viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
       <figure class="lightbox-figure"><img data-gallery-image alt="" /><figcaption id="gallery-lightbox-caption" aria-live="polite"></figcaption></figure>
