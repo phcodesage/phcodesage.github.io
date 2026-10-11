@@ -10,7 +10,7 @@ Visit the live portfolio at [phcodesage.github.io](https://phcodesage.github.io/
 
 You can also [view the resume](https://phcodesage.github.io/resume.html) or browse the [case studies](https://phcodesage.github.io/#work).
 
-The About section uses the optimized `assets/rechcel-portrait.webp` portrait, with a 32-pixel favicon at `assets/favicon-32.png`. Original PNG assets remain available.
+The About section uses the optimized `assets/rechcel-portrait.webp` portrait, with a cat favicon at `assets/cat-mark.svg`. Original PNG assets remain available.
 
 The personal gallery in About contains nine photos in `assets/about/`. Full-size WebP files preserve each supplied photo’s original dimensions at quality 90; photos wider than 640 pixels also have quality-85 previews for responsive loading. Select a photo to view it at full resolution, use the arrow keys or Previous/Next controls to browse, and press Escape to close. With JavaScript disabled, the gallery links open the WebP files directly.
 
@@ -122,6 +122,6 @@ Project screenshots are stored locally in `assets/projects/`; capture sources ar
 
 ## Visual design
 
-The portfolio uses a compact layout inspired by [craftz.dog/works](https://www.craftz.dog/works), with cream and lilac colors, rounded thumbnails, Nunito headings, and DM Sans body text. A small, locally stored SVG sprout illustration adds a playful touch. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
+The portfolio uses a compact layout inspired by [craftz.dog/works](https://www.craftz.dog/works), with cream and lilac colors, rounded thumbnails, Nunito headings, and DM Sans body text. A locally drawn SVG cat types on a laptop, blinks, and swishes its tail. The illustration uses CSS animation and respects reduced-motion preferences. A matching cat icon replaces the floral branding. The homepage design lives in `styles/site.css`; case studies share `case-studies/styles.css`.
 
 The companies and affiliations section contains the original nine organizations, with logos stored locally in `assets/` and `assets/companies/`. The gallery, experience, experiments, and contact form use native expandable sections. The gallery viewer and reply-channel fields remain available. The theme toggle saves its light/dark setting on the visitor’s device; smooth scrolling and hover transitions respect reduced-motion preferences. Navigation and expandable content remain usable without JavaScript.

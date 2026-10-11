@@ -182,3 +182,15 @@ textarea.contact-input { min-height:130px; resize:vertical; }
   html { scroll-behavior:auto; }
   *,*::before,*::after { transition:none !important; animation:none !important; }
 }
+
+/* A coding cat for the studio, drawn and animated as a lightweight SVG. */
+.brand-mark { display:inline-flex; align-items:center; }
+.cat-mark { width:29px; height:29px; stroke:currentColor; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+.hello-scene { gap:16px; min-height:213px; }
+.hello-scene img { width:280px; max-width:72%; }
+.hello-note { max-width:112px; font-size:16px; line-height:1.6; transform:rotate(-6deg); }
+@media (max-width:480px) {
+  .hello-scene { min-height:180px; gap:9px; }
+  .hello-scene img { width:235px; max-width:74%; }
+  .hello-note { font-size:16px; max-width:91px; }
+}

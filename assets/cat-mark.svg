@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <style>path,circle{stroke:#705392}@media(prefers-color-scheme:dark){path,circle{stroke:#cfb5ed}}</style>
+  <path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
