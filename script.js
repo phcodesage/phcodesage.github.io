@@ -8,7 +8,7 @@ function updateThemeButton() {
   themeToggle.setAttribute('aria-pressed', String(dark));
   themeToggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
   themeIcon.textContent = dark ? '☀' : '☾';
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#232129' : '#faf7f2';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#0e1328' : '#fbf8f6';
 }
 if (themeToggle) {
   themeToggle.hidden = false;
@@ -19,6 +19,215 @@ if (themeToggle) {
     try { localStorage.setItem('phcodesage-theme', theme); } catch {}
     updateThemeButton();
   });
+}
+
+// The header settles onto paper once the garden is behind us.
+const siteHeader = document.querySelector('.site-header');
+function updateHeader() { siteHeader?.classList.toggle('is-scrolled', window.scrollY > 40); }
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+
+
+// Scroll-linked motion. Each [data-scroll] element gets three numbers that CSS turns into motion:
+//   --enter 0 → 1 while its top rises from the bottom of the viewport to just past the middle,
+//   --p     0 → 1 across its whole pass through the viewport,
+//   --exit  0 → 1 while it scrolls off the top.
+// The pinned voyage ([data-scroll="pin"]) instead gets --p across the distance it stays pinned.
+const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
+
+// The About paragraphs light up word by word as they are read.
+document.querySelectorAll('[data-words]').forEach((paragraph) => {
+  if (!motionOK) return;
+  const words = paragraph.textContent.trim().split(/\s+/);
+  paragraph.textContent = '';
+  paragraph.style.setProperty('--n', String(words.length));
+  words.forEach((word, index) => {
+    const span = document.createElement('span');
+    span.className = 'word';
+    span.style.setProperty('--i', String(index));
+    span.textContent = word;
+    paragraph.append(span, index < words.length - 1 ? ' ' : '');
+  });
+});
+
+const scrollItems = motionOK ? [...document.querySelectorAll('[data-scroll]')] : [];
+const voyage = document.querySelector('[data-voyage]');
+const voyageCaptions = voyage ? [...voyage.querySelectorAll('.voyage-caption')] : [];
+const voyageStops = voyage ? [...voyage.querySelectorAll('[data-voyage-goto]')] : [];
+let scrollQueued = false;
+
+function updateScrollMotion() {
+  scrollQueued = false;
+  const viewport = window.innerHeight;
+  scrollItems.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (element.dataset.scroll === 'pin') {
+      element.style.setProperty('--p', clamp01(-rect.top / Math.max(rect.height - viewport, 1)).toFixed(4));
+      return;
+    }
+    if (rect.bottom < -viewport || rect.top > viewport * 2) return;
+    element.style.setProperty('--enter', clamp01((viewport - rect.top) / (viewport * 0.45)).toFixed(3));
+    element.style.setProperty('--p', clamp01((viewport - rect.top) / (viewport + rect.height)).toFixed(3));
+    element.style.setProperty('--exit', clamp01(-rect.top / Math.max(rect.height, 1)).toFixed(3));
+  });
+  if (voyage && motionOK) updateVoyage(parseFloat(voyage.style.getPropertyValue('--p')) || 0);
+}
+
+// Captions fade in, hold, and drift away across their slice of the voyage.
+function updateVoyage(progress) {
+  voyageCaptions.forEach((caption) => {
+    const from = parseFloat(caption.dataset.from);
+    const to = parseFloat(caption.dataset.to);
+    const local = (progress - from) / (to - from);
+    const show = clamp01(Math.min(local / 0.18, (1 - local) / 0.18));
+    caption.style.setProperty('--show', show.toFixed(3));
+    caption.style.setProperty('--local', clamp01(local).toFixed(3));
+    caption.classList.toggle('is-active', show > 0.5);
+  });
+  voyageStops.forEach((stop, index) => {
+    const next = voyageStops[index + 1];
+    const start = parseFloat(stop.dataset.voyageGoto) - 0.11;
+    const end = next ? parseFloat(next.dataset.voyageGoto) - 0.11 : 0.9;
+    stop.toggleAttribute('aria-current', progress >= start && progress < end);
+  });
+}
+
+function queueScrollMotion() {
+  if (scrollQueued) return;
+  scrollQueued = true;
+  requestAnimationFrame(updateScrollMotion);
+}
+if (motionOK) {
+  window.addEventListener('scroll', queueScrollMotion, { passive: true });
+  window.addEventListener('resize', queueScrollMotion);
+  updateScrollMotion();
+  document.documentElement.classList.add('scroll-motion');
+}
+
+// Chapter dots jump to their part of the voyage.
+voyageStops.forEach((stop) => stop.addEventListener('click', () => {
+  const travel = voyage.offsetHeight - window.innerHeight;
+  window.scrollTo({ top: voyage.offsetTop + travel * parseFloat(stop.dataset.voyageGoto), behavior: motionOK ? 'smooth' : 'auto' });
+}));
+
+// Cards lean toward the pointer, like a print held up to the light.
+if (motionOK && window.matchMedia('(hover: hover)').matches) {
+  document.querySelectorAll('[data-tilt]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--tx', (((event.clientX - rect.left) / rect.width) * 2 - 1).toFixed(3));
+      card.style.setProperty('--ty', (((event.clientY - rect.top) / rect.height) * 2 - 1).toFixed(3));
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--tx', '0');
+      card.style.setProperty('--ty', '0');
+    });
+  });
+}
+
+const gardenHint = document.querySelector('.garden-hint-text');
+if (gardenHint && !window.matchMedia('(hover: hover)').matches) gardenHint.textContent = 'Tap the sand to rake it.';
+
+// A thin crimson-to-gold bar shows how far down the page you are.
+const scrollProgress = document.querySelector('.scroll-progress');
+function updateProgress() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  scrollProgress?.style.setProperty('--progress', max > 0 ? String(window.scrollY / max) : '0');
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+// Maple leaves keep drifting down the page after the garden scrolls away.
+const petalLayer = document.querySelector('.petal-layer');
+const heroSection = document.querySelector('.hero');
+if (petalLayer?.getContext && heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const context = petalLayer.getContext('2d');
+  const count = window.innerWidth < 700 ? 8 : 14;
+  let width = 0;
+  let height = 0;
+  let frame = 0;
+  let heroVisible = true;
+  const petals = Array.from({ length: count }, () => ({}));
+  function resetPetal(petal, scatter) {
+    petal.x = Math.random() * width;
+    petal.y = scatter ? Math.random() * height : -20;
+    petal.size = 7 + Math.random() * 7;
+    petal.fall = 18 + Math.random() * 26;
+    petal.drift = 10 + Math.random() * 22;
+    petal.phase = Math.random() * Math.PI * 2;
+    petal.spin = (Math.random() - 0.5) * 2;
+    petal.angle = Math.random() * Math.PI * 2;
+    petal.tone = Math.floor(Math.random() * 3);
+  }
+  // A seven-lobed maple leaf, cached per size.
+  const leafPaths = new Map();
+  function leafPath(size) {
+    const key = Math.round(size);
+    if (leafPaths.has(key)) return leafPaths.get(key);
+    const path = new Path2D();
+    const lobes = 7;
+    path.moveTo(0, key);
+    for (let i = 0; i <= lobes * 2; i++) {
+      const angle = -Math.PI * 0.82 + (i / (lobes * 2)) * Math.PI * 1.64;
+      const lobe = 1 - (Math.abs(angle) / Math.PI) * 0.55;
+      const radius = (i % 2 ? lobe : 0.32 + lobe * 0.08) * key;
+      path.lineTo(Math.sin(angle) * radius, -Math.cos(angle) * radius + key * 0.1);
+    }
+    path.closePath();
+    leafPaths.set(key, path);
+    return path;
+  }
+  function resize() {
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    petalLayer.width = width * ratio;
+    petalLayer.height = height * ratio;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+  }
+  function drawPetal(petal, time) {
+    const flutter = Math.cos(time * 2 + petal.phase);
+    context.save();
+    context.translate(petal.x, petal.y);
+    context.rotate(petal.angle);
+    context.scale(1, 0.35 + Math.abs(flutter) * 0.65);
+    context.fillStyle = petalColors[petal.tone];
+    context.fill(leafPath(petal.size));
+    context.restore();
+  }
+  let petalColors = [];
+  function readPetalColors() {
+    const css = getComputedStyle(document.documentElement);
+    petalColors = ['--garden-leaf', '--garden-leaf-2', '--garden-leaf-3'].map((name) => css.getPropertyValue(name).trim());
+  }
+  let last = performance.now();
+  function tick(now) {
+    const dt = Math.min((now - last) / 1000, 0.05);
+    last = now;
+    const time = now / 1000;
+    context.clearRect(0, 0, width, height);
+    petals.forEach((petal) => {
+      petal.y += petal.fall * dt;
+      petal.x += Math.sin(time * 0.8 + petal.phase) * petal.drift * dt;
+      petal.angle += petal.spin * dt;
+      if (petal.y > height + 20) resetPetal(petal, false);
+      drawPetal(petal, time);
+    });
+    frame = requestAnimationFrame(tick);
+  }
+  function update() {
+    const run = !heroVisible && !document.hidden;
+    if (run && !frame) { last = performance.now(); frame = requestAnimationFrame(tick); }
+    if (!run && frame) { cancelAnimationFrame(frame); frame = 0; context.clearRect(0, 0, width, height); }
+  }
+  resize();
+  readPetalColors();
+  petals.forEach((petal) => resetPetal(petal, true));
+  window.addEventListener('resize', resize);
+  new MutationObserver(readPetalColors).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  new IntersectionObserver(([entry]) => { heroVisible = entry.intersectionRatio > 0.35; update(); }, { threshold: [0, 0.35, 1] }).observe(heroSection);
+  document.addEventListener('visibilitychange', update);
 }
 
 // Open a collapsed section when following a direct link, including old gallery URLs.

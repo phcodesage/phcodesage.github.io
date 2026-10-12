@@ -7,7 +7,7 @@
       name="description"
       content="Rechcel Toledo is a product-minded software developer in Davao, Philippines, building web products, real-time systems, and developer tools."
     />
-    <meta name="theme-color" content="#faf7f2" />
+    <meta name="theme-color" content="#fbf8f6" />
     <title>Rechcel Toledo — Software Developer, phcodesage</title>
     <link rel="icon" type="image/svg+xml" href="assets/cat-mark.svg" />
     <link rel="canonical" href="https://phcodesage.github.io/" />
@@ -42,134 +42,196 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/site.css" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="styles/site.css?v=20261013" />
     <noscript><style>label:has(#preferred-contact) { display: none; }</style></noscript>
     <script>
+      document.documentElement.classList.add('js');
       try {
         const theme = localStorage.getItem('phcodesage-theme');
         if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark';
       } catch {}
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20261013" defer></script>
+    <script src="garden.js?v=20261013" type="module"></script>
+    <script src="voyage.js?v=20261013" type="module"></script>
     <script src="site-analytics.js?v=20261012" defer></script>
-    <link rel="stylesheet" href="styles/arrows.css?v=20261012" />
+    <link rel="stylesheet" href="styles/arrows.css?v=20261013" />
   </head>
 
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="cloud" viewBox="0 0 230 100">
+        <g style="fill: var(--cloud-shade)"><circle cx="44" cy="66" r="26" /><circle cx="82" cy="50" r="34" /><circle cx="126" cy="42" r="40" /><circle cx="170" cy="56" r="30" /><circle cx="200" cy="70" r="20" /><rect x="22" y="62" width="196" height="30" rx="15" /></g>
+        <g style="fill: var(--cloud)" transform="translate(-2 -8)"><circle cx="46" cy="66" r="23" /><circle cx="82" cy="50" r="31" /><circle cx="126" cy="42" r="37" /><circle cx="170" cy="56" r="27" /><circle cx="198" cy="70" r="16" /><rect x="30" y="62" width="180" height="22" rx="11" /></g>
+        <g style="fill: var(--cloud-light)"><circle cx="108" cy="24" r="9" /><circle cx="124" cy="18" r="6" /></g>
+      </symbol>
+    </svg>
+    <canvas class="petal-layer" aria-hidden="true"></canvas>
     <header id="top" class="site-header">
+      <div class="scroll-progress" aria-hidden="true"></div>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark"><svg class="cat-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z"/><path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30"/></svg></span> phcodesage<span class="brand-period">.</span></a>
-        <div class="nav-links"><a href="#work">Work</a><a href="#companies">Companies</a><a href="#about">About</a><a href="#contact">Say hi <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
+        <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="seal"><svg class="cat-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z"/><path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30"/></svg></span><span>phcodesage</span></a>
+        <div class="nav-links"><a href="#work"><span class="nav-jp" lang="ja" aria-hidden="true">作品</span>Work</a><a href="#companies"><span class="nav-jp" lang="ja" aria-hidden="true">縁</span>Companies</a><a href="#about"><span class="nav-jp" lang="ja" aria-hidden="true">私</span>About</a><a class="nav-cta" href="#contact"><span class="nav-jp" lang="ja" aria-hidden="true">連絡</span>Say hi</a></div>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span data-theme-icon aria-hidden="true">☾</span></button>
       </nav>
     </header>
 
-    <main id="main-content" class="page-shell">
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="hello-scene" aria-hidden="true"><img src="assets/typing-cat.svg" alt="" width="320" height="220" fetchpriority="high" /><span class="hello-note">a little code.<br />a lot of curiosity.</span></div>
-        <p class="welcome">Hello, welcome to my little corner of the web <span aria-hidden="true">&lt;/&gt;</span></p>
-        <div class="profile"><div><h1 id="intro-title">Rechcel Toledo<span aria-hidden="true">.</span></h1><p>Software developer &amp; product builder</p></div><img class="profile-photo" src="assets/rechcel-avatar.webp" alt="Rechcel Toledo" width="88" height="88" fetchpriority="high" /></div>
-        <p class="intro-copy">I’m a developer in Davao, Philippines. I build useful web products, real-time systems, and tools for fellow makers. Thoughtful interfaces, a curious mind, and care beyond the launch.</p>
-        <div class="intro-links"><a class="button" href="#work">Explore my work <span aria-hidden="true"><svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></span></a><a class="text-link" href="resume.html">My resume <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
+    <main id="main-content">
+      <section class="hero" data-garden data-scroll aria-labelledby="intro-title">
+        <div class="sky" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="moon"></div>
+          <svg class="cloud cloud-1" viewBox="0 0 230 100" aria-hidden="true"><use href="#cloud" /></svg>
+          <svg class="cloud cloud-2" viewBox="0 0 230 100" aria-hidden="true"><use href="#cloud" /></svg>
+          <svg class="cloud cloud-3" viewBox="0 0 230 100" aria-hidden="true"><use href="#cloud" /></svg>
+          <svg class="cloud cloud-4" viewBox="0 0 230 100" aria-hidden="true"><use href="#cloud" /></svg>
+        </div>
+        <canvas class="garden-canvas" aria-hidden="true"></canvas>
+        <div class="garden-fallback" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="hero-vertical" lang="ja" aria-hidden="true">レチェル・トレド<span>ものづくり</span></p>
+          <div class="hero-copy">
+            <p class="hero-greeting"><span lang="ja" aria-hidden="true">こんにちは!</span> Hello, welcome to my little corner of the web.</p>
+            <h1 id="intro-title"><span class="line">Rechcel</span> <span class="line">Toledo</span></h1>
+            <p class="hero-role">Software developer &amp; product builder in Davao, Philippines</p>
+            <p class="intro-copy">I build useful web products, real-time systems, and tools for fellow makers. Thoughtful interfaces, a curious mind, and care beyond the launch.</p>
+            <div class="intro-links"><a class="button" href="#work">Explore my work <svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></a><a class="text-link" href="resume.html">My resume <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
+          </div>
+        </div>
+        <p class="garden-hint" aria-hidden="true"><span>✦</span> <span class="garden-hint-text">Move across the sand to rake it.</span></p>
       </section>
 
-      <section id="work" class="section" aria-labelledby="work-title">
-        <div class="section-heading"><h2 id="work-title">Works<span aria-hidden="true"> ✦</span></h2><span class="section-note">Things I’ve built</span></div>
+      <section class="voyage" data-voyage data-scroll="pin" aria-labelledby="voyage-title">
+        <div class="voyage-stage">
+          <div class="voyage-sky" aria-hidden="true"><div class="stars"></div></div>
+          <canvas class="voyage-canvas" aria-hidden="true"></canvas>
+          <div class="voyage-mark"><span class="voyage-kanji" lang="ja" aria-hidden="true">航</span><div><h2 id="voyage-title">The voyage</h2><p>kō, to set sail</p></div></div>
+          <div class="voyage-captions">
+            <article class="voyage-caption" data-from="0.03" data-to="0.24"><h3>Every build starts as a rough idea.</h3><p>I run phcodesage, a one-person studio in Davao, and I still ship the code.</p></article>
+            <article class="voyage-caption" data-from="0.24" data-to="0.46"><h3>Interfaces people enjoy using.</h3><p>Thoughtful frontends, from the first sketch to a polished release.</p></article>
+            <article class="voyage-caption" data-from="0.46" data-to="0.68"><h3>Systems that hold up in real time.</h3><p>Messaging, voice and video calls, and presence, built with Flask, WebRTC, and WebSockets.</p></article>
+            <article class="voyage-caption" data-from="0.68" data-to="0.88"><h3>Care long after launch.</h3><p>Client platforms I build, then keep fast, secure, and working.</p></article>
+            <article class="voyage-caption voyage-caption-end" data-from="0.88" data-to="1.2"><h3>Here’s where the voyage has been.</h3><p><a class="button" href="#work">See the work <svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></a></p></article>
+          </div>
+          <ol class="voyage-route" aria-label="Voyage chapters">
+            <li><button type="button" data-voyage-goto="0.13" aria-label="Chapter 1: a rough idea"><span lang="ja" aria-hidden="true">一</span></button></li>
+            <li><button type="button" data-voyage-goto="0.35" aria-label="Chapter 2: interfaces"><span lang="ja" aria-hidden="true">二</span></button></li>
+            <li><button type="button" data-voyage-goto="0.57" aria-label="Chapter 3: real-time systems"><span lang="ja" aria-hidden="true">三</span></button></li>
+            <li><button type="button" data-voyage-goto="0.78" aria-label="Chapter 4: care after launch"><span lang="ja" aria-hidden="true">四</span></button></li>
+          </ol>
+          <p class="voyage-hint" aria-hidden="true">Scroll to set sail <svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></p>
+        </div>
+      </section>
+
+      <div class="page-shell">
+      <section id="work" class="section" data-scroll aria-labelledby="work-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">作</span><span class="kanji-gloss" aria-hidden="true">saku, to make</span><h2 id="work-title">Works</h2><p class="section-note">Things I’ve built</p></div>
+        <div class="section-body">
         <div class="project-grid">
-            <a id="clara-health" data-analytics-project="clara-health" class="project-card" href="case-studies/clara-health.html">
+            <a id="clara-health" data-analytics-project="clara-health" class="project-card" data-scroll data-tilt href="case-studies/clara-health.html">
               <div class="project-image project-clara-health"><img src="assets/projects/clara-health.webp" alt="Clara healthcare prototype with a blue editorial headline and patient journey previews" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Clara Health</h3><p>A healthcare companion prototype with voice, doctor discovery, booking, and a provider workspace.</p><span class="project-kind">Prototype · Healthcare</span>
             </a>
-            <a id="tawaflick" data-analytics-project="tawaflick" class="project-card" href="case-studies/tawaflick.html">
+            <a id="tawaflick" data-analytics-project="tawaflick" class="project-card" data-scroll data-tilt href="case-studies/tawaflick.html">
               <div class="project-image project-tawaflick"><img src="assets/projects/tawaflick.webp" alt="Tawaflick meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Tawaflick</h3><p>A little home for Pinoy meme clips, GIFs, and group-chat reactions.</p><span class="project-kind">Product · Media tools</span>
             </a>
-            <a id="sage-cinema" data-analytics-project="sage-cinema" class="project-card" href="case-studies/sage-cinema.html">
+            <a id="sage-cinema" data-analytics-project="sage-cinema" class="project-card" data-scroll data-tilt href="case-studies/sage-cinema.html">
               <div class="project-image project-sage-cinema"><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema movie discovery interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Sage Cinema</h3><p>Find your next movie with search, recommendations, and watch history.</p><span class="project-kind">Product · Movie discovery</span>
             </a>
-            <a id="bugnaw" data-analytics-project="bugnaw" class="project-card" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
+            <a id="bugnaw" data-analytics-project="bugnaw" class="project-card" data-scroll data-tilt href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
               <div class="project-image project-bugnaw"><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care booking interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Bugnaw Aircon Care</h3><p>An easy way to book aircon care in Metro Cebu.</p><span class="project-kind">Product · Booking</span>
             </a>
-            <a id="cookie-checkpoint" data-analytics-project="cookie-checkpoint" class="project-card" href="case-studies/cookie-checkpoint.html">
+            <a id="cookie-checkpoint" data-analytics-project="cookie-checkpoint" class="project-card" data-scroll data-tilt href="case-studies/cookie-checkpoint.html">
               <div class="project-image project-cookie-checkpoint"><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint daily check-in interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Cookie Checkpoint</h3><p>Daily check-ins on Cookie Chain, with a little on-chain proof.</p><span class="project-kind">Open source · Web3</span>
             </a>
-            <a id="unban-discord" data-analytics-project="unban-discord" class="project-card" href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
+            <a id="unban-discord" data-analytics-project="unban-discord" class="project-card" data-scroll data-tilt href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
               <div class="project-image project-unban-discord"><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now campaign website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Unban Discord Now</h3><p>Giving Filipino workers a voice about Discord access disruptions.</p><span class="project-kind">Civic tech · Campaign</span>
             </a>
         </div>
+        </div>
       </section>
 
-      <section class="section" aria-labelledby="collaborations-title">
-        <div class="section-heading"><h2 id="collaborations-title">Client work<span aria-hidden="true"> ♡</span></h2><span class="section-note">Built &amp; cared for</span></div>
+      <section class="section band band-steel" data-scroll aria-labelledby="collaborations-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">守</span><span class="kanji-gloss" aria-hidden="true">mamoru, to look after</span><h2 id="collaborations-title">Client work</h2><p class="section-note">Built &amp; cared for</p></div>
+        <div class="section-body">
         <div class="project-grid">
-            <a id="exceed" data-analytics-project="exceed" class="project-card" href="case-studies/exceed-learning-center.html">
+            <a id="exceed" data-analytics-project="exceed" class="project-card" data-scroll data-tilt href="case-studies/exceed-learning-center.html">
               <div class="project-image project-exceed"><img src="assets/projects/exceed.webp" alt="Exceed Learning Center education website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Exceed Learning Center</h3><p>Development and ongoing care for an education and test-prep platform.</p><span class="project-kind">Client work · Development & maintenance</span>
             </a>
-            <a id="unbreakable-you" data-analytics-project="unbreakable-you" class="project-card" href="case-studies/unbreakable-you.html">
+            <a id="unbreakable-you" data-analytics-project="unbreakable-you" class="project-card" data-scroll data-tilt href="case-studies/unbreakable-you.html">
               <div class="project-image project-unbreakable-you"><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You coaching website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
               <h3>Unbreakable You</h3><p>A thoughtful home for healing and empowerment coaching.</p><span class="project-kind">Client work · Development & maintenance</span>
             </a>
         </div>
-      </section>
-
-      <section id="companies" class="section companies-section" aria-labelledby="companies-title">
-        <div class="section-heading"><h2 id="companies-title">Companies &amp; affiliations</h2></div>
-        <p class="section-copy">Some lovely companies and organizations I’ve worked with.</p>
-        <div class="company-grid">
-            <a class="company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
         </div>
       </section>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-heading"><h2 id="about-title">A little about me<span aria-hidden="true"> ☺</span></h2><a class="text-link" href="resume.html">Full resume <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
-        <p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I like making complicated things feel simple, and keeping them working long after they ship.</p>
-        <p class="muted">Consumer products, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems, the same care.</p>
-        <div id="practice" class="skill-tags" aria-label="Areas I work in"><span>Product builds</span><span>Real-time systems</span><span>Developer tools</span><span>Ongoing care</span></div>
+      <section id="companies" class="section companies-section" data-scroll aria-labelledby="companies-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">縁</span><span class="kanji-gloss" aria-hidden="true">en, the ties between people</span><h2 id="companies-title">Companies &amp; affiliations</h2></div>
+        <div class="section-body">
+        <p class="section-copy">Some lovely companies and organizations I’ve worked with.</p>
+        <div class="company-grid">
+            <a class="company" data-scroll href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+            <a class="company" data-scroll href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+        </div>
+        </div>
+      </section>
+
+      <section id="about" class="section band band-sky" data-scroll aria-labelledby="about-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">人</span><span class="kanji-gloss" aria-hidden="true">hito, a person</span><h2 id="about-title">A little about me</h2></div>
+        <div class="section-body">
+        <div class="about-intro"><figure class="portrait" data-scroll><img src="assets/rechcel-portrait.webp" alt="Rechcel Toledo" width="780" height="780" loading="lazy" decoding="async" /></figure><div>
+        <p data-scroll data-words>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I like making complicated things feel simple, and keeping them working long after they ship.</p>
+        <p class="muted" data-scroll data-words>Consumer products, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems, the same care.</p>
+        <p><a class="text-link" href="resume.html">Full resume <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></p></div></div>
+        <div id="practice" class="skill-tags" data-scroll aria-label="Areas I work in"><span>Product builds</span><span>Real-time systems</span><span>Developer tools</span><span>Ongoing care</span></div>
         <details class="more-details">
           <summary>A little more of me <span class="detail-note">9 photos</span></summary>
           <div id="gallery" class="gallery-grid">
-              <a class="gallery-photo" href="assets/about/rechcel-cafe.webp" data-gallery-photo aria-label="Enlarge photo 1 of 9: Rechcel seated at a wooden table">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-cafe.webp" data-gallery-photo aria-label="Enlarge photo 1 of 9: Rechcel seated at a wooden table">
                 <img src="assets/about/rechcel-cafe-640.webp" srcset="assets/about/rechcel-cafe-640.webp 640w, assets/about/rechcel-cafe.webp 1536w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling while seated at a wooden table" width="1536" height="2048" loading="lazy" decoding="async" style="object-position:50% 80%" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-at-the-desk.webp" data-gallery-photo aria-label="Enlarge photo 2 of 9: Rechcel at his laptop">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-at-the-desk.webp" data-gallery-photo aria-label="Enlarge photo 2 of 9: Rechcel at his laptop">
                 <img src="assets/about/rechcel-at-the-desk-640.webp" srcset="assets/about/rechcel-at-the-desk-640.webp 640w, assets/about/rechcel-at-the-desk.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing headphones at a laptop beside a ring light" width="2048" height="1955" loading="lazy" decoding="async" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-on-a-call.webp" data-gallery-photo aria-label="Enlarge photo 3 of 9: Rechcel wearing earbuds at his desk">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-on-a-call.webp" data-gallery-photo aria-label="Enlarge photo 3 of 9: Rechcel wearing earbuds at his desk">
                 <img src="assets/about/rechcel-on-a-call-640.webp" srcset="assets/about/rechcel-on-a-call-640.webp 640w, assets/about/rechcel-on-a-call.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling in a black hoodie with earbuds and a phone in front of him" width="2048" height="1365" loading="lazy" decoding="async" style="object-position:65% 50%" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-in-a-blazer.webp" data-gallery-photo aria-label="Enlarge photo 4 of 9: Rechcel in a navy blazer">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-in-a-blazer.webp" data-gallery-photo aria-label="Enlarge photo 4 of 9: Rechcel in a navy blazer">
                 <img src="assets/about/rechcel-in-a-blazer-640.webp" srcset="assets/about/rechcel-in-a-blazer-640.webp 640w, assets/about/rechcel-in-a-blazer.webp 1365w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a navy blazer and a yellow patterned shirt" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:50% 20%" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-poolside.webp" data-gallery-photo aria-label="Enlarge photo 5 of 9: Rechcel seated by a pool">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-poolside.webp" data-gallery-photo aria-label="Enlarge photo 5 of 9: Rechcel seated by a pool">
                 <img src="assets/about/rechcel-poolside-640.webp" srcset="assets/about/rechcel-poolside-640.webp 640w, assets/about/rechcel-poolside.webp 958w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel with a backpack seated on a lounge chair beside a pool" width="958" height="960" loading="lazy" decoding="async" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-out-and-about.webp" data-gallery-photo aria-label="Enlarge photo 6 of 9: Rechcel seated against a wooden wall">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-out-and-about.webp" data-gallery-photo aria-label="Enlarge photo 6 of 9: Rechcel seated against a wooden wall">
                 <img src="assets/about/rechcel-out-and-about-640.webp" srcset="assets/about/rechcel-out-and-about-640.webp 640w, assets/about/rechcel-out-and-about.webp 947w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a black hoodie seated on a bench against a wooden slat wall" width="947" height="960" loading="lazy" decoding="async" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-at-a-restaurant.webp" data-gallery-photo aria-label="Enlarge photo 7 of 9: Rechcel at a restaurant">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-at-a-restaurant.webp" data-gallery-photo aria-label="Enlarge photo 7 of 9: Rechcel at a restaurant">
                 <img src="assets/about/rechcel-at-a-restaurant-640.webp" srcset="assets/about/rechcel-at-a-restaurant-640.webp 640w, assets/about/rechcel-at-a-restaurant.webp 690w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing glasses and a backward cap at a restaurant table" width="690" height="682" loading="lazy" decoding="async" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-in-a-blue-shirt.webp" data-gallery-photo aria-label="Enlarge photo 8 of 9: Rechcel in a light blue shirt">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-in-a-blue-shirt.webp" data-gallery-photo aria-label="Enlarge photo 8 of 9: Rechcel in a light blue shirt">
                 <img src="assets/about/rechcel-in-a-blue-shirt.webp" alt="Rechcel wearing a light blue shirt and a black face mask while seated" width="544" height="540" loading="lazy" decoding="async" />
               </a>
-              <a class="gallery-photo" href="assets/about/rechcel-harbour-city.webp" data-gallery-photo aria-label="Enlarge photo 9 of 9: Rechcel outside Harbour City">
+              <a class="gallery-photo" data-scroll href="assets/about/rechcel-harbour-city.webp" data-gallery-photo aria-label="Enlarge photo 9 of 9: Rechcel outside Harbour City">
                 <img src="assets/about/rechcel-harbour-city.webp" alt="Rechcel wearing a blue face mask outside Harbour City" width="526" height="537" loading="lazy" decoding="async" />
               </a>
           </div>
@@ -177,38 +239,42 @@
         <details id="experience" class="more-details">
           <summary>Time at the keyboard <span class="detail-note">Experience</span></summary>
           <div class="experience-list">
-            <article><span class="experience-date">2023 — Present</span><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p><p>Building messaging, voice and video calls, and user presence with Flask, WebRTC, and WebSockets.</p></article>
-            <article><span class="experience-date">Jun — Aug 2023</span><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p><p>Practical frontend and backend lessons, project-based materials, and hands-on guidance.</p></article>
-            <article><span class="experience-date">Mar — May 2023</span><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p><p>Implementing and maintaining user-facing features for a mortgage platform.</p></article>
-            <article><span class="experience-date">Dec 2022 — Mar 2023</span><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p></article>
+            <article data-scroll><span class="experience-date">2023 — Present</span><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p><p>Building messaging, voice and video calls, and user presence with Flask, WebRTC, and WebSockets.</p></article>
+            <article data-scroll><span class="experience-date">Jun — Aug 2023</span><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p><p>Practical frontend and backend lessons, project-based materials, and hands-on guidance.</p></article>
+            <article data-scroll><span class="experience-date">Mar — May 2023</span><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p><p>Implementing and maintaining user-facing features for a mortgage platform.</p></article>
+            <article data-scroll><span class="experience-date">Dec 2022 — Mar 2023</span><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p></article>
           </div>
         </details>
+        </div>
       </section>
 
-      <section class="section lab-section" aria-labelledby="archive-title">
-        <div class="section-heading"><h2 id="archive-title">Little experiments<span aria-hidden="true"> { }</span></h2></div>
+      <section class="section lab-section" data-scroll aria-labelledby="archive-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">試</span><span class="kanji-gloss" aria-hidden="true">tamesu, to try</span><h2 id="archive-title">Little experiments</h2></div>
+        <div class="section-body">
         <p class="section-copy">Open-source tools and things I wanted to exist.</p>
         <details class="more-details">
           <summary>Peek inside the lab <span class="detail-note">12 projects</span></summary>
           <div class="archive-list">
-<a href="case-studies/jinjalume.html" class="archive-item" data-analytics-project="jinjalume"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="mermail-skills"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="causify-helpers"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="yawp"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="issueanvil"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="swiftpos"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sagemovies-tui"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="virex"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="beamly"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="codesage-orchestrator"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="remotex"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sage-movies"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="case-studies/jinjalume.html" class="archive-item" data-scroll data-analytics-project="jinjalume"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="mermail-skills"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="causify-helpers"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="yawp"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="issueanvil"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="swiftpos"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="sagemovies-tui"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="virex"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="beamly"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="codesage-orchestrator"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="remotex"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item" data-scroll data-analytics-project="sage-movies"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
           </div>
         </details>
+        </div>
       </section>
 
-      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-        <div class="section-heading"><h2 id="contact-title">Let’s make something useful<span aria-hidden="true"> ♡</span></h2></div>
+      <section id="contact" class="section contact-section" data-scroll aria-labelledby="contact-title">
+        <div class="section-mark"><span class="kanji" lang="ja" aria-hidden="true">文</span><span class="kanji-gloss" aria-hidden="true">fumi, a letter</span><h2 id="contact-title">Let’s make something useful</h2></div>
+        <div class="section-body">
         <p>Have a project in mind, a problem to untangle, or just want to say hello?</p>
         <a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
         <div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
@@ -230,15 +296,19 @@
                   </div>
                 </form>
         </details>
+        </div>
       </section>
+      </div>
     </main>
 
-    <footer class="site-footer page-shell">
-      <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
-      <p>© <span id="year">2026</span> Rechcel Toledo · Made with care <span aria-hidden="true">&lt;/&gt;</span></p>
-      <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
-      <a href="privacy/" class="text-link">Traffic privacy</a>
-      <a href="#top" class="back-top">Back to top <svg class="arrow-icon" data-direction="up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" /></svg></a>
+    <footer class="site-footer" data-scroll>
+      <div class="footer-inner">
+        <a href="#top" class="footer-seal" aria-label="Back to top"><span class="seal"><svg class="cat-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z"/><path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30"/></svg></span></a>
+        <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
+        <p>© <span id="year">2026</span> Rechcel Toledo. Made with care in Davao.</p>
+        <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
+        <p class="footer-links"><a href="privacy/" class="text-link">Traffic privacy</a><a href="#top" class="text-link">Back to top <svg class="arrow-icon" data-direction="up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" /></svg></a></p>
+      </div>
     </footer>
     <dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="gallery-lightbox-title" aria-describedby="gallery-lightbox-caption">
       <div class="lightbox-toolbar"><h2 id="gallery-lightbox-title">Personal gallery</h2><button class="lightbox-close" type="button" data-gallery-close aria-label="Close photo viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>

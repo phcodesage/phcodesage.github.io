@@ -1,6 +1,5 @@
 /* Consistent rounded arrows, independent of font glyph rendering. */
 .arrow-icon { display:inline-block; width:1.2em; height:1.2em; flex-shrink:0; vertical-align:-.2em; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform 180ms ease; }
-.project-arrow { width:36px; height:36px; background:#fffdfa; border:1px solid #e8deef; color:#705392; box-shadow:0 2px 8px #35313b12; }
 .project-arrow .arrow-icon { width:20px; height:20px; }
 a:hover .arrow-icon[data-direction="up-right"],a:focus-visible .arrow-icon[data-direction="up-right"] { transform:translate(2px,-2px); }
 @media (prefers-reduced-motion:reduce) { .arrow-icon { transition:none; } a:hover .arrow-icon,a:focus-visible .arrow-icon { transform:none; } }
