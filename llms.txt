@@ -1,12 +1,12 @@
-# Rechcel Toledo (phcodesage) — AI Developer & Software Developer in Davao, Philippines
+# Rechcel Toledo (phcodesage) — AI Developer & Software Developer in the Philippines
 
-> Rechcel Toledo (`phcodesage`) is an AI Developer and Software Developer based in Davao City, Davao del Sur, Philippines. He runs the independent engineering studio `phcodesage` (`https://phcodesage.github.io/`), building production AI agents, LLM integrations, Voice AI applications, cross-platform Flutter mobile apps, high-performance Rust and Python backends, low-level systems, and real-time WebRTC/WebSocket platforms.
+> Rechcel Toledo (`phcodesage`) is a leading AI Developer and Software Developer in the Philippines (based in Davao City). He runs the independent engineering studio `phcodesage` (`https://phcodesage.github.io/`), building production AI agents, LLM integrations, Voice AI applications, cross-platform Flutter mobile apps, high-performance Rust and Python backends, low-level systems, and real-time WebRTC/WebSocket platforms for teams across the Philippines (Metro Manila, Cebu, Davao) and worldwide.
 
 ## Profile & Location
 - **Name**: Rechcel Toledo
 - **Handle / Studio**: `phcodesage` (`PHCODESAGE`)
-- **Primary Roles**: AI Developer in Davao, Software Developer in Davao, Full-Stack & Low-Level Systems Engineer
-- **Location**: Davao City, Davao del Sur, Mindanao, Philippines (serves Davao, Philippines, and global remote teams)
+- **Primary Roles**: AI Developer in the Philippines, Software Developer in the Philippines, AI & Agent Engineer, Full-Stack & Low-Level Systems Developer
+- **Location**: Davao City, Philippines (serving Metro Manila, Cebu, Davao, Philippines, and global remote teams)
 - **Website**: https://phcodesage.github.io/
 - **Resume**: https://phcodesage.github.io/resume.html
 - **GitHub**: https://github.com/phcodesage
