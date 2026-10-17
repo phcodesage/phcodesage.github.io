@@ -397,6 +397,33 @@ if (galleryPhotos.length && typeof galleryLightbox?.showModal === 'function') {
   });
 }
 
+const contactDetails = document.querySelector('.contact-form-details');
+const contactSummary = contactDetails?.querySelector('summary');
+contactSummary?.addEventListener('click', (event) => {
+  if (contactDetails.open) {
+    event.preventDefault();
+    contactDetails.querySelector('input[name="name"]')?.focus();
+  }
+});
+
+const copyEmailBtn = document.querySelector('#copy-email-btn');
+let copyEmailTimer = null;
+copyEmailBtn?.addEventListener('click', async () => {
+  const email = copyEmailBtn.getAttribute('data-email') || 'rechceltoledo@gmail.com';
+  try {
+    await navigator.clipboard.writeText(email);
+    copyEmailBtn.textContent = 'Copied!';
+    copyEmailBtn.dataset.copied = 'true';
+    window.clearTimeout(copyEmailTimer);
+    copyEmailTimer = window.setTimeout(() => {
+      copyEmailBtn.textContent = 'Copy email';
+      delete copyEmailBtn.dataset.copied;
+    }, 2000);
+  } catch {
+    window.location.href = `mailto:${email}`;
+  }
+});
+
 const contactForm = document.querySelector('#contact-form');
 const contactStatus = document.querySelector('#contact-status');
 const contactSubmit = document.querySelector('#contact-submit');
@@ -415,8 +442,16 @@ function updateReplyDetails() {
   replyDetail.required = needsDetail;
   replyDetail.type = channel === 'WhatsApp' ? 'tel' : 'text';
   replyDetail.autocomplete = channel === 'WhatsApp' ? 'tel' : 'off';
-  replyDetailLabel.textContent = channel === 'WhatsApp' ? 'WhatsApp number' : 'Telegram username';
-  replyDetailHint.textContent = channel === 'WhatsApp' ? 'Include your country code, for example +63.' : 'Enter the @username where I can reach you.';
+  if (channel === 'WhatsApp') {
+    replyDetailLabel.textContent = 'WhatsApp number';
+    replyDetailHint.textContent = 'Include your country code, for example +63 or +1.';
+  } else if (channel === 'LinkedIn') {
+    replyDetailLabel.textContent = 'LinkedIn profile URL or name';
+    replyDetailHint.textContent = 'Share your LinkedIn profile link or name so I can message you.';
+  } else {
+    replyDetailLabel.textContent = 'Telegram username';
+    replyDetailHint.textContent = 'Enter the @username where I can reach you.';
+  }
   replyDetail.setAttribute('aria-describedby', 'reply-detail-hint');
 }
 preferredContact?.addEventListener('change', () => {

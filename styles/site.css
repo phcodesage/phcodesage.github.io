@@ -2261,19 +2261,69 @@ summary:hover {
   gap: 16px;
 }
 
+.contact-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.contact-availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2f9e66;
+  box-shadow: 0 0 0 4px rgba(47, 158, 102, 0.16);
+  flex-shrink: 0;
+}
+
+.contact-email-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
 .contact-email {
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: clamp(1.35rem, 2.2vw, 32px);
+  font-size: clamp(1.25rem, 2.2vw, 32px);
   font-weight: 500;
   letter-spacing: -0.03em;
   color: var(--ink);
   border-bottom: 2px solid var(--ink);
   padding-bottom: 4px;
+  word-break: break-all;
 }
 
 .contact-email:hover {
   color: #705392;
   border-color: #705392;
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-email-btn:hover,
+.copy-email-btn[data-copied="true"] {
+  border-color: #705392;
+  background: #705392;
+  color: #ffffff;
 }
 
 .contact-channels {

@@ -95,6 +95,7 @@
             ],
             "sameAs": [
               "https://github.com/phcodesage",
+              "https://www.linkedin.com/in/rechcel-araneta-624781167/",
               "https://x.com/phcodesage",
               "https://www.instagram.com/phcodesage/",
               "https://www.threads.com/@phcodesage"
@@ -345,6 +346,7 @@
               <p class="menu-aside-label">Follow me</p>
               <div class="menu-aside-links">
                 <a href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/rechcel-araneta-624781167/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <a href="https://x.com/phcodesage" target="_blank" rel="noreferrer">X / Twitter</a>
                 <a href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer">Instagram</a>
                 <a href="https://www.threads.com/@phcodesage" target="_blank" rel="noreferrer">Threads</a>
@@ -1467,27 +1469,35 @@
                 <p class="opus-body-lg">Have a project in mind, a problem to untangle, or just want to say hello?</p>
               </div>
               <div class="contact-direct-col">
-                <a class="contact-email" href="mailto:rechceltoledo@gmail.com">
-                  rechceltoledo@gmail.com
-                  <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
-                </a>
+                <span class="contact-availability">
+                  <span class="contact-availability-dot" aria-hidden="true"></span>
+                  <span>Replies within 24h · GMT+8 (US, EU &amp; APAC overlap)</span>
+                </span>
+                <div class="contact-email-row">
+                  <a class="contact-email" href="mailto:rechceltoledo@gmail.com">
+                    rechceltoledo@gmail.com
+                    <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                  </a>
+                  <button id="copy-email-btn" class="copy-email-btn" type="button" data-email="rechceltoledo@gmail.com">Copy email</button>
+                </div>
                 <div class="contact-channels">
                   <a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+                  <a href="https://www.linkedin.com/in/rechcel-araneta-624781167/" target="_blank" rel="noreferrer">LinkedIn <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
                   <a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
                 </div>
               </div>
             </div>
 
-            <details class="more-details contact-form-details">
+            <details class="more-details contact-form-details" open>
               <summary>Or leave a message here</summary>
               <form id="contact-form" class="contact-form" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
                 <div class="form-row">
                   <label class="form-field"><span class="form-label">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
                   <label class="form-field"><span class="form-label">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
                 </div>
-                <label class="form-field"><span class="form-label">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
+                <label class="form-field"><span class="form-label">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="LinkedIn">LinkedIn</option><option value="Telegram">Telegram</option></select></label>
                 <label id="reply-detail-field" class="form-field" hidden><span id="reply-detail-label" class="form-label">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="form-hint"></span></label>
-                <label class="form-field"><span class="form-label">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
+                <label class="form-field"><span class="form-label">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Custom AI Agent / Chatbot / RAG Pipeline">Custom AI Agent / Chatbot / RAG Pipeline</option><option value="SaaS MVP / Full-Stack Web App (Next.js / React)">SaaS MVP / Full-Stack Web App (Next.js / React)</option><option value="Flutter Mobile App (iOS &amp; Android)">Flutter Mobile App (iOS &amp; Android)</option><option value="Rust / Python Backend &amp; Low-Level Systems">Rust / Python Backend &amp; Low-Level Systems</option><option value="Real-Time System (WebRTC / WebSockets)">Real-Time System (WebRTC / WebSockets)</option><option value="Ongoing Platform Stewardship / Retainer">Ongoing Platform Stewardship / Retainer</option><option value="Something else">Something else</option></select></label>
                 <label class="form-field"><span class="form-label">What can I help with?</span><textarea class="contact-input" name="message" rows="5" required></textarea></label>
                 <input hidden type="text" name="_honey" tabindex="-1" autocomplete="off" />
                 <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
@@ -1534,6 +1544,7 @@
           <div class="footer-links-row">
             <div class="footer-social">
               <a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+              <a href="https://www.linkedin.com/in/rechcel-araneta-624781167/" rel="me">LinkedIn <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
               <a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
               <a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
               <a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
