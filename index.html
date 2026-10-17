@@ -9,7 +9,9 @@
     />
     <meta name="theme-color" content="#faf7f2" />
     <title>Rechcel Toledo — Software Developer, phcodesage</title>
-    <link rel="icon" type="image/svg+xml" href="assets/cat-mark.svg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
     <link rel="canonical" href="https://phcodesage.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Rechcel Toledo — Software Developer, phcodesage" />
@@ -42,9 +44,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@500;600&family=Onest:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <style data-opus-fonts>
+      @font-face { font-family: "Inter Display"; src: url("https://framerusercontent.com/assets/iwWTDc49ENF2tCHbqlNARXw6Ug.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 500; }
+      @font-face { font-family: "Inter Display"; src: url("https://framerusercontent.com/assets/RkMAGv2iAm3rw7tZzs7FaZf0rM.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 500; }
+      @font-face { font-family: "Inter Display"; src: url("https://framerusercontent.com/assets/PfdOpgzFf7N2Uye9JX7xRKYTgSc.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 600; }
+      @font-face { font-family: "Inter Display"; src: url("https://framerusercontent.com/assets/qITWJ2WdG0wrgQPDb8lvnYnTXDg.woff2") format("woff2"); font-display: swap; font-style: normal; font-weight: 700; }
+      @font-face { font-family: "Inter Display"; src: url("https://framerusercontent.com/assets/MzumQQZJQBC6KM1omtmwOtsogtI.woff2") format("woff2"); font-display: swap; font-style: italic; font-weight: 700; }
+      @font-face { font-family: "Inter Display Placeholder"; src: local("Arial"); ascent-override: 98.56%; descent-override: 24.54%; line-gap-override: 0.00%; size-adjust: 98.29%; }
+      @font-face { font-family: "Inter Placeholder"; src: local("Arial"); ascent-override: 89.79%; descent-override: 22.36%; line-gap-override: 0.00%; size-adjust: 107.89%; }
+      @font-face { font-family: "Onest Placeholder"; src: local("Arial"); ascent-override: 91.42%; descent-override: 28.75%; line-gap-override: 0.00%; size-adjust: 106.10%; }
+      @font-face { font-family: "Manrope Placeholder"; src: local("Arial"); ascent-override: 102.74%; descent-override: 28.91%; line-gap-override: 0.00%; size-adjust: 103.76%; }
+    </style>
+    <link rel="stylesheet" href="styles/lenis.css" />
     <link rel="stylesheet" href="styles/site.css" />
     <noscript><style>label:has(#preferred-contact) { display: none; }</style></noscript>
     <script>
@@ -53,6 +67,7 @@
         if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
       } catch {}
     </script>
+    <script src="assets/lenis.min.js" defer></script>
     <script src="script.js" defer></script>
     <script src="site-analytics.js?v=20261012" defer></script>
     <link rel="stylesheet" href="styles/arrows.css?v=20261012" />
@@ -60,186 +75,1260 @@
 
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header id="top" class="site-header">
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#top" class="wordmark" aria-label="phcodesage — Back to top"><span class="brand-mark"><svg class="cat-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 19V7L16 13Q20 11 24 13L32 7V19C36 31 27 35 20 35S4 31 8 19Z"/><path d="M14 23V24M26 23V24M18 27L20 29L22 27M20 29V31M9 26L3 24M9 29L3 30M31 26L37 24M31 29L37 30"/></svg></span> phcodesage<span class="brand-period">.</span></a>
-        <div class="nav-links"><a href="#work">Work</a><a href="#companies">Companies</a><a href="#about">About</a><a href="#contact">Say hi <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span data-theme-icon aria-hidden="true">☾</span></button>
-      </nav>
+
+    <!-- OPUS FIXED NAVBAR + FULL-SCREEN ELECTRIC BLUE OVERLAY MENU -->
+    <header id="top" class="site-header" data-menu-open="false">
+      <div class="nav-bar">
+        <a href="#top" class="wordmark" aria-label="phcodesage — Back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-avatar" src="assets/brand-avatar.png" alt="" width="34" height="34" />
+          </span>
+          <span class="wordmark-text">PHCODESAGE</span>
+        </a>
+
+        <nav class="nav-inline-links" aria-label="Primary sections">
+          <a href="#work">Work</a>
+          <a href="#companies">Companies</a>
+          <a href="#about">About</a>
+          <a href="#contact">Say hi <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark theme"
+            aria-pressed="false"
+            hidden
+          >
+            <span data-theme-icon aria-hidden="true">☾</span>
+          </button>
+          <button
+            id="menu-toggle"
+            class="menu-pill"
+            type="button"
+            aria-expanded="false"
+            aria-controls="opus-menu-overlay"
+          >
+            <span data-menu-label>Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="opus-menu-overlay" class="menu-overlay" aria-hidden="true">
+        <div class="menu-overlay-inner opus-container">
+          <nav class="menu-overlay-nav" aria-label="Full screen navigation">
+            <a class="menu-big-link" href="#top" data-menu-close><span>Home</span></a>
+            <a class="menu-big-link" href="#work" data-menu-close><span>Projects</span></a>
+            <a class="menu-big-link" href="#companies" data-menu-close><span>Companies</span></a>
+            <a class="menu-big-link" href="#about" data-menu-close><span>About</span></a>
+            <a class="menu-big-link" href="#contact" data-menu-close><span>Contact</span></a>
+          </nav>
+          <div class="menu-overlay-aside">
+            <div class="menu-aside-group">
+              <p class="menu-aside-label">Follow me</p>
+              <div class="menu-aside-links">
+                <a href="https://github.com/phcodesage" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://x.com/phcodesage" target="_blank" rel="noreferrer">X / Twitter</a>
+                <a href="https://www.instagram.com/phcodesage/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://www.threads.com/@phcodesage" target="_blank" rel="noreferrer">Threads</a>
+              </div>
+            </div>
+            <div class="menu-aside-group">
+              <p class="menu-aside-label">Direct</p>
+              <div class="menu-aside-links">
+                <a href="resume.html">Full Resume</a>
+                <a href="privacy/">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main id="main-content" class="page-shell">
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="hello-scene" aria-hidden="true"><img src="assets/typing-cat.svg" alt="" width="320" height="220" fetchpriority="high" /><span class="hello-note">a little code.<br />a lot of curiosity.</span></div>
-        <p class="welcome">Hello, welcome to my little corner of the web <span aria-hidden="true">&lt;/&gt;</span></p>
-        <div class="profile"><div><h1 id="intro-title">Rechcel Toledo<span aria-hidden="true">.</span></h1><p>Software developer &amp; product builder</p></div><img class="profile-photo" src="assets/rechcel-avatar.webp" alt="Rechcel Toledo" width="88" height="88" fetchpriority="high" /></div>
-        <p class="intro-copy">I’m a developer in Davao, Philippines. I build useful web products, real-time systems, and tools for fellow makers. Thoughtful interfaces, a curious mind, and care beyond the launch.</p>
-        <div class="intro-links"><a class="button" href="#work">Explore my work <span aria-hidden="true"><svg class="arrow-icon" data-direction="down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14m-6-6 6 6 6-6" /></svg></span></a><a class="text-link" href="resume.html">My resume <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a></div>
-      </section>
+    <main id="main-content">
+      <!-- 1. OPUS HERO SECTION -->
+      <section class="hero-section intro" aria-labelledby="intro-title">
+        <div class="opus-container">
+          <div class="hero-display-wrap">
+            <div class="hero-row-top" aria-hidden="true">
+              <span class="hero-giant-word" data-hero-word="1">PHCODE</span>
+            </div>
+            <div class="hero-row-bottom">
+              <h1 id="intro-title" class="hero-giant-word" data-hero-word="2">
+                <span class="sr-only">Rechcel Toledo — phcode</span>SAGE
+              </h1>
+              <div class="hero-visual-pill">
+                <div class="hero-pill-backdrop">
+                  <div class="hero-wave-canvas" data-parallax-media aria-hidden="true"></div>
+                  <div class="hero-studio-card">
+                    <div class="hero-avatar-wrap">
+                      <img
+                        class="profile-photo"
+                        src="assets/favicon.png"
+                        alt="Rechcel Toledo"
+                        width="112"
+                        height="112"
+                        fetchpriority="high"
+                      />
+                      <span class="hero-online-dot" aria-hidden="true"></span>
+                    </div>
+                    <div class="hero-studio-meta">
+                      <span class="hero-status-pill">Available for select work</span>
+                      <strong>Rechcel Toledo</strong>
+                      <span>Software developer · Davao, PH</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <section id="work" class="section" aria-labelledby="work-title">
-        <div class="section-heading"><h2 id="work-title">Works<span aria-hidden="true"> ✦</span></h2><span class="section-note">Things I’ve built</span></div>
-        <div class="project-grid">
-            <a id="clara-health" data-analytics-project="clara-health" class="project-card" href="case-studies/clara-health.html">
-              <div class="project-image project-clara-health"><img src="assets/projects/clara-health.webp" alt="Clara healthcare prototype with a blue editorial headline and patient journey previews" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Clara Health</h3><p>A healthcare companion prototype with voice, doctor discovery, booking, and a provider workspace.</p><span class="project-kind">Prototype · Healthcare</span>
-            </a>
-            <a id="tawaflick" data-analytics-project="tawaflick" class="project-card" href="case-studies/tawaflick.html">
-              <div class="project-image project-tawaflick"><img src="assets/projects/tawaflick.webp" alt="Tawaflick meme library with search and mood filters" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Tawaflick</h3><p>A little home for Pinoy meme clips, GIFs, and group-chat reactions.</p><span class="project-kind">Product · Media tools</span>
-            </a>
-            <a id="sage-cinema" data-analytics-project="sage-cinema" class="project-card" href="case-studies/sage-cinema.html">
-              <div class="project-image project-sage-cinema"><img src="assets/projects/sage-cinema.webp" alt="Sage Cinema movie discovery interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Sage Cinema</h3><p>Find your next movie with search, recommendations, and watch history.</p><span class="project-kind">Product · Movie discovery</span>
-            </a>
-            <a id="bugnaw" data-analytics-project="bugnaw" class="project-card" href="https://bugnaw.lovable.app/" target="_blank" rel="noreferrer">
-              <div class="project-image project-bugnaw"><img src="assets/projects/bugnaw.webp" alt="Bugnaw Aircon Care booking interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Bugnaw Aircon Care</h3><p>An easy way to book aircon care in Metro Cebu.</p><span class="project-kind">Product · Booking</span>
-            </a>
-            <a id="cookie-checkpoint" data-analytics-project="cookie-checkpoint" class="project-card" href="case-studies/cookie-checkpoint.html">
-              <div class="project-image project-cookie-checkpoint"><img src="assets/projects/cookie-checkpoint.webp" alt="Cookie Checkpoint daily check-in interface" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Cookie Checkpoint</h3><p>Daily check-ins on Cookie Chain, with a little on-chain proof.</p><span class="project-kind">Open source · Web3</span>
-            </a>
-            <a id="unban-discord" data-analytics-project="unban-discord" class="project-card" href="https://unban-discord-now.pages.dev/" target="_blank" rel="noreferrer">
-              <div class="project-image project-unban-discord"><img src="assets/projects/unban-discord.webp" alt="Unban Discord Now campaign website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Unban Discord Now</h3><p>Giving Filipino workers a voice about Discord access disruptions.</p><span class="project-kind">Civic tech · Campaign</span>
-            </a>
+          <div class="opus-divider" role="presentation"></div>
+
+          <div class="hero-sub-block">
+            <h2 class="hero-statement" data-scroll-reveal>
+              At phcodesage, I help teams and founders build stronger web products, real-time systems, and developer tools that actually perform.
+            </h2>
+            <div class="hero-cta-row">
+              <a class="opus-line-link opus-line-link-lg" href="#work">
+                <span>Explore my work</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+              <a class="opus-line-link opus-line-link-sm" href="resume.html">
+                <span>My resume</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="collaborations-title">
-        <div class="section-heading"><h2 id="collaborations-title">Client work<span aria-hidden="true"> ♡</span></h2><span class="section-note">Built &amp; cared for</span></div>
-        <div class="project-grid">
-            <a id="exceed" data-analytics-project="exceed" class="project-card" href="case-studies/exceed-learning-center.html">
-              <div class="project-image project-exceed"><img src="assets/projects/exceed.webp" alt="Exceed Learning Center education website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Exceed Learning Center</h3><p>Development and ongoing care for an education and test-prep platform.</p><span class="project-kind">Client work · Development & maintenance</span>
-            </a>
-            <a id="unbreakable-you" data-analytics-project="unbreakable-you" class="project-card" href="case-studies/unbreakable-you.html">
-              <div class="project-image project-unbreakable-you"><img src="assets/projects/unbreakable-you.webp" alt="Unbreakable You coaching website" width="1440" height="1000" loading="lazy" decoding="async" /><span class="project-arrow" aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></div>
-              <h3>Unbreakable You</h3><p>A thoughtful home for healing and empowerment coaching.</p><span class="project-kind">Client work · Development & maintenance</span>
-            </a>
+      <!-- 2. OUR VISION + SCROLL TEXT REVEAL + BLUE STATS + LOGO MARQUEE -->
+      <section class="vision-section" aria-labelledby="vision-title">
+        <div class="opus-container">
+          <div class="vision-grid">
+            <div class="vision-left">
+              <div class="opus-badge">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>OUR VISION</span>
+              </div>
+            </div>
+            <div class="vision-right">
+              <h2 id="vision-title" class="opus-display-lg" data-scroll-words>
+                Whether it's a web product, a real-time platform, or developer tooling - I create software that works.
+              </h2>
+              <p class="opus-body-lg vision-subcopy">
+                Good engineering isn't just about looks. It's about solving real problems, shipping maintainable code, and getting results. Here’s mine.
+              </p>
+
+              <div class="opus-stats-row">
+                <div class="opus-stat-item">
+                  <span class="opus-stat-number" data-count-target="21" data-count-suffix="+">21+</span>
+                  <p class="opus-stat-label">Products &amp; tools shipped</p>
+                </div>
+                <div class="opus-stat-item">
+                  <span class="opus-stat-number" data-count-target="9" data-count-suffix="+">9+</span>
+                  <p class="opus-stat-label">Client &amp; team platforms</p>
+                </div>
+                <div class="opus-stat-item">
+                  <span class="opus-stat-number" data-count-target="100" data-count-suffix="%">100%</span>
+                  <p class="opus-stat-label">Founder-led execution</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="opus-divider" role="presentation"></div>
+
+          <!-- COMPANIES MARQUEE + ACCESSIBLE LINKS -->
+          <div id="companies" class="companies-marquee-wrap" aria-labelledby="companies-title">
+            <h2 id="companies-title" class="sr-only">Companies &amp; affiliations</h2>
+            <div class="marquee-viewport">
+              <div class="marquee-track">
+                <a class="company marquee-company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Unconventional Psychotherapy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Tri-State Coach Bus <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Exceed Learning Center <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Unbreakable You <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://swimstuds.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Swim Studs <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Ventured <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://purpleroof.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Purple Roof <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://www.udemy.com/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Udemy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <a class="company marquee-company" href="https://rooche.net/" target="_blank" rel="noreferrer">
+                  <span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Rooche Digital <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span>
+                </a>
+                <!-- Duplicate set for seamless loop -->
+                <a class="company marquee-company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Unconventional Psychotherapy</span>
+                </a>
+                <a class="company marquee-company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Tri-State Coach Bus</span>
+                </a>
+                <a class="company marquee-company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Exceed Learning Center</span>
+                </a>
+                <a class="company marquee-company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Unbreakable You</span>
+                </a>
+                <a class="company marquee-company" href="https://swimstuds.com/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Swim Studs</span>
+                </a>
+                <a class="company marquee-company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true">
+                  <span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span>Ventured</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="companies" class="section companies-section" aria-labelledby="companies-title">
-        <div class="section-heading"><h2 id="companies-title">Companies &amp; affiliations</h2></div>
-        <p class="section-copy">Some lovely companies and organizations I’ve worked with.</p>
-        <div class="company-grid">
-            <a class="company" href="https://unconventionalpsychotherapy.com/about/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/unconventional-psychotherapy.png" alt="" loading="lazy" decoding="async" /></span><span>Unconventional Psychotherapy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://tristatecoachbus.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/coach-bus.svg" alt="" loading="lazy" decoding="async" /></span><span>Tri-State Coach Bus <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.exceedlearningcenterny.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/exceed-wordmark.webp" alt="" loading="lazy" decoding="async" /></span><span>Exceed Learning Center <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://unbreakable-you.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/unbreakable-you-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Unbreakable You <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://swimstuds.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/swim-studs-logo.png" alt="" loading="lazy" decoding="async" /></span><span>Swim Studs <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.venturedbrands.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/ventured-wordmark.png" alt="" loading="lazy" decoding="async" /></span><span>Ventured <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://purpleroof.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/purple-roof.png" alt="" loading="lazy" decoding="async" /></span><span>Purple Roof <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://www.udemy.com/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/udemy.svg" alt="" loading="lazy" decoding="async" /></span><span>Udemy <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
-            <a class="company" href="https://rooche.net/" target="_blank" rel="noreferrer"><span class="company-logo"><img src="assets/companies/rooche-digital.svg" alt="" loading="lazy" decoding="async" /></span><span>Rooche Digital <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></span></a>
+      <!-- 3. SERVICES / CAPABILITIES ACCORDION SECTION -->
+      <section id="practice" class="services-section" aria-labelledby="services-title">
+        <div class="opus-container">
+          <h2 id="services-title" class="opus-display-md services-heading" data-scroll-words>
+            This is how I help ambitious teams and products succeed.
+          </h2>
+
+          <div class="services-list" role="region" aria-label="Core capabilities">
+            <div class="service-row" data-service-row data-active="true" tabindex="0" role="button" aria-expanded="true">
+              <div class="service-left">
+                <span class="service-num">01</span>
+                <h3 class="service-title">Product Frontend</h3>
+              </div>
+              <p class="service-desc">
+                Every interface I build is crafted to feel effortless and responsive—using React, Next.js, and modern web standards that make users stay, explore, and return.
+              </p>
+              <span class="service-plus" aria-hidden="true"></span>
+            </div>
+
+            <div class="service-row" data-service-row data-active="false" tabindex="0" role="button" aria-expanded="false">
+              <div class="service-left">
+                <span class="service-num">02</span>
+                <h3 class="service-title">Real-Time Systems</h3>
+              </div>
+              <p class="service-desc">
+                Low-latency messaging, WebRTC voice and video calls, WebSockets, and live presence engineered for teams and platforms that communicate in real time.
+              </p>
+              <span class="service-plus" aria-hidden="true"></span>
+            </div>
+
+            <div class="service-row" data-service-row data-active="false" tabindex="0" role="button" aria-expanded="false">
+              <div class="service-left">
+                <span class="service-num">03</span>
+                <h3 class="service-title">Backend &amp; APIs</h3>
+              </div>
+              <p class="service-desc">
+                Clean Python, Flask, and FastAPI architectures, third-party integrations, database migrations, and automated test suites built for maintainability.
+              </p>
+              <span class="service-plus" aria-hidden="true"></span>
+            </div>
+
+            <div class="service-row" data-service-row data-active="false" tabindex="0" role="button" aria-expanded="false">
+              <div class="service-left">
+                <span class="service-num">04</span>
+                <h3 class="service-title">Agent &amp; Dev Tools</h3>
+              </div>
+              <p class="service-desc">
+                Portable AI agent workflows, MCP servers, deterministic Rust CLIs, and open-source UI component libraries designed to speed up fellow makers.
+              </p>
+              <span class="service-plus" aria-hidden="true"></span>
+            </div>
+
+            <div class="service-row" data-service-row data-active="false" tabindex="0" role="button" aria-expanded="false">
+              <div class="service-left">
+                <span class="service-num">05</span>
+                <h3 class="service-title">Stewardship</h3>
+              </div>
+              <p class="service-desc">
+                Long-term technical care, performance optimization, Web3 experiments, and dependable ongoing engineering long after the initial launch.
+              </p>
+              <span class="service-plus" aria-hidden="true"></span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-heading"><h2 id="about-title">A little about me<span aria-hidden="true"> ☺</span></h2><a class="text-link" href="resume.html">Full resume <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
-        <p>I run phcodesage, a one-person studio working across interfaces, backends, and integrations. I like making complicated things feel simple, and keeping them working long after they ship.</p>
-        <p class="muted">Consumer products, open-source tools, on-chain experiments, and platforms I maintain over time. Different problems, the same care.</p>
-        <div id="practice" class="skill-tags" aria-label="Areas I work in"><span>Product builds</span><span>Real-time systems</span><span>Developer tools</span><span>Ongoing care</span></div>
-        <details class="more-details">
-          <summary>A little more of me <span class="detail-note">9 photos</span></summary>
-          <div id="gallery" class="gallery-grid">
-              <a class="gallery-photo" href="assets/about/rechcel-cafe.webp" data-gallery-photo aria-label="Enlarge photo 1 of 9: Rechcel seated at a wooden table">
-                <img src="assets/about/rechcel-cafe-640.webp" srcset="assets/about/rechcel-cafe-640.webp 640w, assets/about/rechcel-cafe.webp 1536w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling while seated at a wooden table" width="1536" height="2048" loading="lazy" decoding="async" style="object-position:50% 80%" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-at-the-desk.webp" data-gallery-photo aria-label="Enlarge photo 2 of 9: Rechcel at his laptop">
-                <img src="assets/about/rechcel-at-the-desk-640.webp" srcset="assets/about/rechcel-at-the-desk-640.webp 640w, assets/about/rechcel-at-the-desk.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing headphones at a laptop beside a ring light" width="2048" height="1955" loading="lazy" decoding="async" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-on-a-call.webp" data-gallery-photo aria-label="Enlarge photo 3 of 9: Rechcel wearing earbuds at his desk">
-                <img src="assets/about/rechcel-on-a-call-640.webp" srcset="assets/about/rechcel-on-a-call-640.webp 640w, assets/about/rechcel-on-a-call.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling in a black hoodie with earbuds and a phone in front of him" width="2048" height="1365" loading="lazy" decoding="async" style="object-position:65% 50%" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-in-a-blazer.webp" data-gallery-photo aria-label="Enlarge photo 4 of 9: Rechcel in a navy blazer">
-                <img src="assets/about/rechcel-in-a-blazer-640.webp" srcset="assets/about/rechcel-in-a-blazer-640.webp 640w, assets/about/rechcel-in-a-blazer.webp 1365w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a navy blazer and a yellow patterned shirt" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:50% 20%" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-poolside.webp" data-gallery-photo aria-label="Enlarge photo 5 of 9: Rechcel seated by a pool">
-                <img src="assets/about/rechcel-poolside-640.webp" srcset="assets/about/rechcel-poolside-640.webp 640w, assets/about/rechcel-poolside.webp 958w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel with a backpack seated on a lounge chair beside a pool" width="958" height="960" loading="lazy" decoding="async" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-out-and-about.webp" data-gallery-photo aria-label="Enlarge photo 6 of 9: Rechcel seated against a wooden wall">
-                <img src="assets/about/rechcel-out-and-about-640.webp" srcset="assets/about/rechcel-out-and-about-640.webp 640w, assets/about/rechcel-out-and-about.webp 947w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a black hoodie seated on a bench against a wooden slat wall" width="947" height="960" loading="lazy" decoding="async" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-at-a-restaurant.webp" data-gallery-photo aria-label="Enlarge photo 7 of 9: Rechcel at a restaurant">
-                <img src="assets/about/rechcel-at-a-restaurant-640.webp" srcset="assets/about/rechcel-at-a-restaurant-640.webp 640w, assets/about/rechcel-at-a-restaurant.webp 690w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing glasses and a backward cap at a restaurant table" width="690" height="682" loading="lazy" decoding="async" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-in-a-blue-shirt.webp" data-gallery-photo aria-label="Enlarge photo 8 of 9: Rechcel in a light blue shirt">
-                <img src="assets/about/rechcel-in-a-blue-shirt.webp" alt="Rechcel wearing a light blue shirt and a black face mask while seated" width="544" height="540" loading="lazy" decoding="async" />
-              </a>
-              <a class="gallery-photo" href="assets/about/rechcel-harbour-city.webp" data-gallery-photo aria-label="Enlarge photo 9 of 9: Rechcel outside Harbour City">
-                <img src="assets/about/rechcel-harbour-city.webp" alt="Rechcel wearing a blue face mask outside Harbour City" width="526" height="537" loading="lazy" decoding="async" />
-              </a>
+      <!-- 4. DARK PROCESS SECTION (#0c120c) -->
+      <section class="process-section" aria-labelledby="process-title">
+        <div class="opus-container">
+          <div class="process-header">
+            <div class="process-badge-col">
+              <div class="opus-badge opus-badge-dark">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>OUR PROCESS</span>
+              </div>
+            </div>
+            <div class="process-title-col">
+              <h2 id="process-title" class="opus-display-md process-heading" data-scroll-words>
+                My mission is to help products grow through strategic engineering, creating software that performs as good as it looks.
+              </h2>
+            </div>
           </div>
-        </details>
-        <details id="experience" class="more-details">
-          <summary>Time at the keyboard <span class="detail-note">Experience</span></summary>
-          <div class="experience-list">
-            <article><span class="experience-date">2023 — Present</span><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p><p>Building messaging, voice and video calls, and user presence with Flask, WebRTC, and WebSockets.</p></article>
-            <article><span class="experience-date">Jun — Aug 2023</span><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p><p>Practical frontend and backend lessons, project-based materials, and hands-on guidance.</p></article>
-            <article><span class="experience-date">Mar — May 2023</span><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p><p>Implementing and maintaining user-facing features for a mortgage platform.</p></article>
-            <article><span class="experience-date">Dec 2022 — Mar 2023</span><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p></article>
+
+          <div class="process-cards" role="region" aria-label="Development process steps">
+            <article class="process-card" data-process-card data-active="true" tabindex="0">
+              <div class="process-card-top">
+                <span class="process-num">01</span>
+                <h3 class="process-step-title">Strategy &amp; Architecture</h3>
+              </div>
+              <div class="process-card-bottom">
+                <p class="process-step-desc">
+                  I start by understanding your users, product goals, and technical constraints. This sets the foundation for software that actually performs.
+                </p>
+                <span class="process-dot-ring" aria-hidden="true"><span class="process-dot-core"></span></span>
+              </div>
+            </article>
+
+            <article class="process-card" data-process-card data-active="false" tabindex="0">
+              <div class="process-card-top">
+                <span class="process-num">02</span>
+                <h3 class="process-step-title">Design &amp; Prototype</h3>
+              </div>
+              <div class="process-card-bottom">
+                <p class="process-step-desc">
+                  Rough ideas become interactive, high-craft interfaces early—validating user flows, responsive layouts, and real-time interactions in the browser.
+                </p>
+                <span class="process-dot-ring" aria-hidden="true"><span class="process-dot-core"></span></span>
+              </div>
+            </article>
+
+            <article class="process-card" data-process-card data-active="false" tabindex="0">
+              <div class="process-card-top">
+                <span class="process-num">03</span>
+                <h3 class="process-step-title">Build, Test &amp; Optimize</h3>
+              </div>
+              <div class="process-card-bottom">
+                <p class="process-step-desc">
+                  Full-stack implementation across frontend, APIs, and live sockets, backed by automated verification and crisp performance budgets.
+                </p>
+                <span class="process-dot-ring" aria-hidden="true"><span class="process-dot-core"></span></span>
+              </div>
+            </article>
+
+            <article class="process-card" data-process-card data-active="false" tabindex="0">
+              <div class="process-card-top">
+                <span class="process-num">04</span>
+                <h3 class="process-step-title">Launch &amp; Support</h3>
+              </div>
+              <div class="process-card-bottom">
+                <p class="process-step-desc">
+                  Smooth deployment, analytics, and ongoing technical stewardship so your platform stays fast, secure, and dependable over time.
+                </p>
+                <span class="process-dot-ring" aria-hidden="true"><span class="process-dot-core"></span></span>
+              </div>
+            </article>
           </div>
-        </details>
+        </div>
       </section>
 
-      <section class="section lab-section" aria-labelledby="archive-title">
-        <div class="section-heading"><h2 id="archive-title">Little experiments<span aria-hidden="true"> { }</span></h2></div>
-        <p class="section-copy">Open-source tools and things I wanted to exist.</p>
-        <details class="more-details">
-          <summary>Peek inside the lab <span class="detail-note">12 projects</span></summary>
-          <div class="archive-list">
-<a href="case-studies/jinjalume.html" class="archive-item" data-analytics-project="jinjalume"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="mermail-skills"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="causify-helpers"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="yawp"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="issueanvil"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="swiftpos"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sagemovies-tui"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="virex"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="beamly"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="codesage-orchestrator"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="remotex"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-<a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sage-movies"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+      <!-- 5. OUR WORK — STAGGERED ASYMMETRIC EDITORIAL PROJECT GRID -->
+      <section id="work" class="work-section" aria-labelledby="work-title">
+        <div class="opus-container">
+          <div class="section-split-header">
+            <div class="split-header-left">
+              <div class="opus-badge">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>OUR WORK</span>
+              </div>
+            </div>
+            <div class="split-header-right">
+              <h2 id="work-title" class="opus-display-lg" data-scroll-reveal>Our recent projects</h2>
+              <p class="opus-body-lg split-header-sub">
+                Dive into my collection of products, prototypes, and client platforms, where thoughtful design meets reliable technology to solve real-world challenges.
+              </p>
+              <a class="opus-line-link opus-line-link-sm" href="#archive-title">
+                <span>All projects</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+            </div>
           </div>
-        </details>
+
+          <div class="opus-work-grid">
+            <!-- Row 1: Left Square (Clara Health) + Right Wide (Tawaflick) -->
+            <div class="work-row work-row-1">
+              <a
+                id="clara-health"
+                data-analytics-project="clara-health"
+                class="project-card opus-card-square"
+                href="case-studies/clara-health.html"
+                data-scroll-card
+              >
+                <div class="project-image project-clara-health">
+                  <img
+                    src="assets/projects/clara-health.webp"
+                    alt="Clara healthcare prototype with a blue editorial headline and patient journey previews"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Clara Health</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Healthcare</span>
+                    <span class="project-tag">Voice AI</span>
+                    <span class="project-tag">Prototype</span>
+                  </div>
+                </div>
+                <p class="project-summary">A healthcare companion prototype with voice, doctor discovery, booking, and a provider workspace.</p>
+              </a>
+
+              <a
+                id="tawaflick"
+                data-analytics-project="tawaflick"
+                class="project-card opus-card-wide"
+                href="case-studies/tawaflick.html"
+                data-scroll-card
+              >
+                <div class="project-image project-tawaflick">
+                  <img
+                    src="assets/projects/tawaflick.webp"
+                    alt="Tawaflick meme library with search and mood filters"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Tawaflick</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Product</span>
+                    <span class="project-tag">Media Tools</span>
+                  </div>
+                </div>
+                <p class="project-summary">A curated Philippine meme library with browser-local GIF and short-video conversion.</p>
+              </a>
+            </div>
+
+            <!-- Row 2: Staggered Twin Squares (Sage Cinema + Bugnaw Aircon Care) -->
+            <div class="work-row work-row-2">
+              <a
+                id="sage-cinema"
+                data-analytics-project="sage-cinema"
+                class="project-card opus-card-offset-left"
+                href="case-studies/sage-cinema.html"
+                data-scroll-card
+              >
+                <div class="project-image project-sage-cinema">
+                  <img
+                    src="assets/projects/sage-cinema.webp"
+                    alt="Sage Cinema movie discovery interface"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Sage Cinema</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Product</span>
+                    <span class="project-tag">Discovery</span>
+                  </div>
+                </div>
+                <p class="project-summary">Find your next movie with search, recommendations, and watch history.</p>
+              </a>
+
+              <a
+                id="bugnaw"
+                data-analytics-project="bugnaw"
+                class="project-card opus-card-offset-right"
+                href="https://bugnaw.lovable.app/"
+                target="_blank"
+                rel="noreferrer"
+                data-scroll-card
+              >
+                <div class="project-image project-bugnaw">
+                  <img
+                    src="assets/projects/bugnaw.webp"
+                    alt="Bugnaw Aircon Care booking interface"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Bugnaw Aircon Care</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Booking</span>
+                    <span class="project-tag">Web App</span>
+                  </div>
+                </div>
+                <p class="project-summary">An easy way to book aircon care in Metro Cebu with multilingual messaging.</p>
+              </a>
+            </div>
+
+            <!-- Row 3: Left Wide (Cookie Checkpoint) + Right Square (Unban Discord Now) -->
+            <div class="work-row work-row-3">
+              <a
+                id="cookie-checkpoint"
+                data-analytics-project="cookie-checkpoint"
+                class="project-card opus-card-wide-left"
+                href="case-studies/cookie-checkpoint.html"
+                data-scroll-card
+              >
+                <div class="project-image project-cookie-checkpoint">
+                  <img
+                    src="assets/projects/cookie-checkpoint.webp"
+                    alt="Cookie Checkpoint daily check-in interface"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Cookie Checkpoint</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Open Source</span>
+                    <span class="project-tag">Web3</span>
+                    <span class="project-tag">Development</span>
+                  </div>
+                </div>
+                <p class="project-summary">Daily check-ins on Cookie Chain, with verifiable on-chain streak proof.</p>
+              </a>
+
+              <a
+                id="unban-discord"
+                data-analytics-project="unban-discord"
+                class="project-card opus-card-square-right"
+                href="https://unban-discord-now.pages.dev/"
+                target="_blank"
+                rel="noreferrer"
+                data-scroll-card
+              >
+                <div class="project-image project-unban-discord">
+                  <img
+                    src="assets/projects/unban-discord.webp"
+                    alt="Unban Discord Now campaign website"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Unban Discord Now</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Civic Tech</span>
+                    <span class="project-tag">Campaign</span>
+                  </div>
+                </div>
+                <p class="project-summary">Giving Filipino workers a voice about Discord access disruptions.</p>
+              </a>
+            </div>
+
+            <!-- Row 4: Client Work & Stewardship (Exceed Learning Center + Unbreakable You) -->
+            <div class="work-row work-row-1">
+              <a
+                id="exceed"
+                data-analytics-project="exceed"
+                class="project-card opus-card-square"
+                href="case-studies/exceed-learning-center.html"
+                data-scroll-card
+              >
+                <div class="project-image project-exceed">
+                  <img
+                    src="assets/projects/exceed.webp"
+                    alt="Exceed Learning Center education website"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Exceed Learning Center</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Client Work</span>
+                    <span class="project-tag">Stewardship</span>
+                  </div>
+                </div>
+                <p class="project-summary">Development and ongoing care for an education and test-prep platform.</p>
+              </a>
+
+              <a
+                id="unbreakable-you"
+                data-analytics-project="unbreakable-you"
+                class="project-card opus-card-wide"
+                href="case-studies/unbreakable-you.html"
+                data-scroll-card
+              >
+                <div class="project-image project-unbreakable-you">
+                  <img
+                    src="assets/projects/unbreakable-you.webp"
+                    alt="Unbreakable You coaching website"
+                    width="1440"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-arrow" aria-hidden="true">
+                    <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                  </span>
+                </div>
+                <div class="project-meta">
+                  <h3>Unbreakable You</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Client Work</span>
+                    <span class="project-tag">Platform Care</span>
+                  </div>
+                </div>
+                <p class="project-summary">A thoughtful home for healing and empowerment coaching.</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!-- 6. MID-PAGE CTA + "OR GET TO KNOW US FIRST!" EXPANDING PHOTO BANNER + ABOUT -->
+      <section class="mid-cta-section" aria-label="Project inquiry prompt">
+        <div class="opus-container">
+          <div class="mid-cta-grid">
+            <div class="mid-cta-spacer" aria-hidden="true"></div>
+            <div class="mid-cta-content">
+              <h2 class="opus-display-xl" data-scroll-words>Want to build something better?</h2>
+              <p class="opus-body-xl mid-cta-sub">
+                I bring together product design sensibility, full-stack engineering, and long-term care to help you ship.
+              </p>
+              <a class="opus-line-link opus-line-link-lg" href="#contact">
+                <span>Start now</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-opus-section" aria-labelledby="about-title">
+        <div class="know-first-header">
+          <h2 class="opus-display-lg know-first-title" data-scroll-reveal>or get to know me first!</h2>
+        </div>
+
+        <div class="team-banner-wrapper" data-scroll-expand>
+          <div class="team-banner-media">
+            <img
+              src="assets/about/rechcel-on-a-call.webp"
+              alt="Rechcel smiling in a black hoodie with earbuds at his desk"
+              width="2048"
+              height="1365"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="team-banner-overlay"></div>
+            <div class="opus-container team-banner-stats">
+              <div class="banner-stat">
+                <span class="banner-stat-num">01</span>
+                <span class="banner-stat-text">person studio<br />in Davao, PH</span>
+              </div>
+              <div class="banner-stat">
+                <span class="banner-stat-num">21<em class="blue-plus">+</em></span>
+                <span class="banner-stat-text">projects &amp; tools<br />later</span>
+              </div>
+              <div class="banner-stat">
+                <span class="banner-stat-num">∞</span>
+                <span class="banner-stat-text">curiosity &amp;<br />care beyond launch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="opus-container about-split-container">
+          <div class="about-split-left">
+            <h3 id="about-title" class="opus-display-md" data-scroll-words>
+              I run phcodesage, a one-person studio dedicated to making complicated software feel simple and dependable in the digital world.
+            </h3>
+            <p class="opus-body-lg about-split-copy">
+              I combine product vision with hands-on technical execution across interfaces, backends, real-time sockets, and agent tooling—keeping software working smoothly long after it ships.
+            </p>
+            <a class="opus-line-link opus-line-link-md" href="resume.html">
+              <span>Full resume</span>
+              <span class="opus-blue-icon" aria-hidden="true">
+                <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+              </span>
+            </a>
+
+            <div class="about-accordions">
+              <details class="more-details">
+                <summary>A little more of me <span class="detail-note">9 photos</span></summary>
+                <div id="gallery" class="gallery-grid">
+                  <a class="gallery-photo" href="assets/about/rechcel-cafe.webp" data-gallery-photo aria-label="Enlarge photo 1 of 9: Rechcel seated at a wooden table">
+                    <img src="assets/about/rechcel-cafe-640.webp" srcset="assets/about/rechcel-cafe-640.webp 640w, assets/about/rechcel-cafe.webp 1536w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling while seated at a wooden table" width="1536" height="2048" loading="lazy" decoding="async" style="object-position:50% 80%" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-at-the-desk.webp" data-gallery-photo aria-label="Enlarge photo 2 of 9: Rechcel at his laptop">
+                    <img src="assets/about/rechcel-at-the-desk-640.webp" srcset="assets/about/rechcel-at-the-desk-640.webp 640w, assets/about/rechcel-at-the-desk.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing headphones at a laptop beside a ring light" width="2048" height="1955" loading="lazy" decoding="async" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-on-a-call.webp" data-gallery-photo aria-label="Enlarge photo 3 of 9: Rechcel wearing earbuds at his desk">
+                    <img src="assets/about/rechcel-on-a-call-640.webp" srcset="assets/about/rechcel-on-a-call-640.webp 640w, assets/about/rechcel-on-a-call.webp 2048w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel smiling in a black hoodie with earbuds and a phone in front of him" width="2048" height="1365" loading="lazy" decoding="async" style="object-position:65% 50%" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-in-a-blazer.webp" data-gallery-photo aria-label="Enlarge photo 4 of 9: Rechcel in a navy blazer">
+                    <img src="assets/about/rechcel-in-a-blazer-640.webp" srcset="assets/about/rechcel-in-a-blazer-640.webp 640w, assets/about/rechcel-in-a-blazer.webp 1365w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a navy blazer and a yellow patterned shirt" width="1365" height="2048" loading="lazy" decoding="async" style="object-position:50% 20%" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-poolside.webp" data-gallery-photo aria-label="Enlarge photo 5 of 9: Rechcel seated by a pool">
+                    <img src="assets/about/rechcel-poolside-640.webp" srcset="assets/about/rechcel-poolside-640.webp 640w, assets/about/rechcel-poolside.webp 958w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel with a backpack seated on a lounge chair beside a pool" width="958" height="960" loading="lazy" decoding="async" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-out-and-about.webp" data-gallery-photo aria-label="Enlarge photo 6 of 9: Rechcel seated against a wooden wall">
+                    <img src="assets/about/rechcel-out-and-about-640.webp" srcset="assets/about/rechcel-out-and-about-640.webp 640w, assets/about/rechcel-out-and-about.webp 947w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel in a black hoodie seated on a bench against a wooden slat wall" width="947" height="960" loading="lazy" decoding="async" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-at-a-restaurant.webp" data-gallery-photo aria-label="Enlarge photo 7 of 9: Rechcel at a restaurant">
+                    <img src="assets/about/rechcel-at-a-restaurant-640.webp" srcset="assets/about/rechcel-at-a-restaurant-640.webp 640w, assets/about/rechcel-at-a-restaurant.webp 690w" sizes="(max-width: 480px) 42vw, (max-width: 760px) 28vw, 205px" alt="Rechcel wearing glasses and a backward cap at a restaurant table" width="690" height="682" loading="lazy" decoding="async" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-in-a-blue-shirt.webp" data-gallery-photo aria-label="Enlarge photo 8 of 9: Rechcel in a light blue shirt">
+                    <img src="assets/about/rechcel-in-a-blue-shirt.webp" alt="Rechcel wearing a light blue shirt and a black face mask while seated" width="544" height="540" loading="lazy" decoding="async" />
+                  </a>
+                  <a class="gallery-photo" href="assets/about/rechcel-harbour-city.webp" data-gallery-photo aria-label="Enlarge photo 9 of 9: Rechcel outside Harbour City">
+                    <img src="assets/about/rechcel-harbour-city.webp" alt="Rechcel wearing a blue face mask outside Harbour City" width="526" height="537" loading="lazy" decoding="async" />
+                  </a>
+                </div>
+              </details>
+
+              <details id="experience" class="more-details" open>
+                <summary>Time at the keyboard <span class="detail-note">Experience</span></summary>
+                <div class="experience-list">
+                  <article><span class="experience-date">2023 — Present</span><h3>Software Developer</h3><p class="experience-org">Onlinejobs.ph</p><p>Building messaging, voice and video calls, and user presence with Flask, WebRTC, and WebSockets.</p></article>
+                  <article><span class="experience-date">Jun — Aug 2023</span><h3>Web Development Instructor</h3><p class="experience-org">Courses on Udemy</p><p>Practical frontend and backend lessons, project-based materials, and hands-on guidance.</p></article>
+                  <article><span class="experience-date">Mar — May 2023</span><h3>Junior Frontend Developer</h3><p class="experience-org">Purple Roof</p><p>Implementing and maintaining user-facing features for a mortgage platform.</p></article>
+                  <article><span class="experience-date">Dec 2022 — Mar 2023</span><h3>Backend Python Developer</h3><p class="experience-org">Rooche Digital</p><p>Ecommerce APIs, backend integrations, and collaboration with frontend teams.</p></article>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="about-split-right">
+            <div class="about-portrait-card" data-scroll-card>
+              <img
+                src="assets/rechcel-portrait.webp"
+                alt="Portrait of Rechcel Toledo"
+                width="1024"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. OPUS #f3f3f1 PRICING / ENGAGEMENT SECTION -->
+      <section class="pricing-section" aria-labelledby="engagement-title">
+        <div class="opus-container">
+          <div class="section-split-header">
+            <div class="split-header-left">
+              <div class="opus-badge">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>COLLABORATION</span>
+              </div>
+            </div>
+            <div class="split-header-right">
+              <h2 id="engagement-title" class="opus-display-lg" data-scroll-reveal>Start building today</h2>
+              <p class="opus-body-lg split-header-sub">
+                Choose a collaboration mode that fits your roadmap. Direct access to a product-minded developer ready to ship.
+              </p>
+            </div>
+          </div>
+
+          <div class="pricing-toggle-bar" role="group" aria-label="Engagement cadence">
+            <span class="toggle-label" data-cadence-label="sprint">Project Sprint</span>
+            <button id="cadence-switch" class="opus-switch" type="button" role="switch" aria-checked="true" aria-label="Toggle ongoing partnership view">
+              <span class="opus-switch-thumb"></span>
+            </button>
+            <span class="toggle-label active" data-cadence-label="ongoing">Ongoing Partner</span>
+            <span class="save-pill">Direct Studio</span>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Card 1 -->
+            <article class="pricing-card" data-scroll-card>
+              <p class="plan-name">Prototype &amp; MVP</p>
+              <div class="plan-price-row">
+                <span class="plan-price" data-price-sprint="2–4 wks" data-price-ongoing="Focused">Focused</span>
+                <span class="plan-period">/ build</span>
+              </div>
+              <p class="plan-desc">
+                For founders and teams ready to turn a rough concept into an interactive, production-grade web product or prototype.
+              </p>
+              <a class="plan-btn plan-btn-light" href="#contact">Get Started Today</a>
+              <div class="plan-meta-list">
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9.5 11h5M9.5 14h3"/></svg></span>
+                  <span>Direct async &amp; live communication</span>
+                </div>
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                  <span>Founder-led execution</span>
+                </div>
+              </div>
+              <div class="plan-divider"></div>
+              <p class="plan-includes-title">Includes:</p>
+              <ul class="plan-features">
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Interactive UI &amp; component system</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Responsive desktop &amp; mobile polish</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>API &amp; database integration</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Automated browser verification</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Production deployment &amp; handoff</span></li>
+              </ul>
+            </article>
+
+            <!-- Card 2: Featured White Card -->
+            <article class="pricing-card pricing-card-featured" data-scroll-card>
+              <div class="best-value-ribbon">Best Value!</div>
+              <p class="plan-name">Full-Stack &amp; Real-Time</p>
+              <div class="plan-price-row">
+                <span class="plan-price" data-price-sprint="End-to-End" data-price-ongoing="Dedicated">Dedicated</span>
+                <span class="plan-period">/ partner</span>
+              </div>
+              <p class="plan-desc">
+                For growing companies that need ongoing frontend, backend, WebRTC/WebSocket systems, and AI workflows across their product.
+              </p>
+              <a class="plan-btn plan-btn-dark" href="#contact">Get Started Today</a>
+              <div class="plan-meta-list">
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9.5 11h5M9.5 14h3"/></svg></span>
+                  <span>Slack, WhatsApp &amp; Telegram</span>
+                </div>
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                  <span>Full-stack architecture + UI</span>
+                </div>
+              </div>
+              <div class="plan-divider"></div>
+              <p class="plan-includes-title">Includes:</p>
+              <ul class="plan-features">
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Real-time WebRTC &amp; WebSocket systems</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Python, Flask, FastAPI &amp; React/Next.js</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Custom AI concierges &amp; MCP tooling</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Weekly iterations &amp; code reviews</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Fast response within 24h</span></li>
+              </ul>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="pricing-card" data-scroll-card>
+              <p class="plan-name">Platform Stewardship</p>
+              <div class="plan-price-row">
+                <span class="plan-price" data-price-sprint="Retainer" data-price-ongoing="Long-Term">Long-Term</span>
+                <span class="plan-period">/ care</span>
+              </div>
+              <p class="plan-desc">
+                For established businesses that want a dependable developer to maintain, improve, and safeguard their live platform.
+              </p>
+              <a class="plan-btn plan-btn-light" href="#contact">Get Started Today</a>
+              <div class="plan-meta-list">
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9.5 11h5M9.5 14h3"/></svg></span>
+                  <span>Direct maintainer access</span>
+                </div>
+                <div class="plan-meta-item">
+                  <span class="plan-meta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                  <span>Continuous uptime &amp; care</span>
+                </div>
+              </div>
+              <div class="plan-divider"></div>
+              <p class="plan-includes-title">Includes:</p>
+              <ul class="plan-features">
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Ongoing feature development</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Core Web Vitals &amp; speed optimization</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Bug resolution &amp; dependency updates</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Content &amp; landing page launches</span></li>
+                <li><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg><span>Proactive monitoring &amp; support</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. TESTIMONIALS / STEWARDSHIP FROSTED-GLASS SHOWCASE -->
+      <section class="testimonials-section" aria-labelledby="testimonials-title">
+        <div class="opus-container">
+          <div class="testimonials-header">
+            <div class="opus-badge">
+              <span class="opus-badge-dot" aria-hidden="true"></span>
+              <span>STEWARDSHIP</span>
+            </div>
+            <h2 id="testimonials-title" class="opus-display-lg" data-scroll-reveal>Real systems, real stewardship</h2>
+            <p class="opus-body-lg testimonials-sub">
+              Teams and platforms I’ve helped build and maintain through thoughtful engineering, real-time infrastructure, and long-term care.
+            </p>
+          </div>
+
+          <div class="testimonial-stage" data-scroll-card>
+            <img
+              class="testimonial-bg-image"
+              src="assets/about/rechcel-at-the-desk.webp"
+              alt="Rechcel working at his desk"
+              width="2048"
+              height="1955"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="testimonial-backdrop-dim" aria-hidden="true"></div>
+
+            <div class="testimonial-glass-card" aria-live="polite">
+              <div class="testimonial-quote-row">
+                <span class="opus-quote-mark" aria-hidden="true">
+                  <svg viewBox="0 0 80 64" width="64" height="52" fill="currentColor">
+                    <path d="M0 36.8C0 16.4 12.4 3.6 31.2 0v14.8C20.8 17.6 16.4 24.4 16 32h15.2v32H0V36.8zm48.8 0C48.8 16.4 61.2 3.6 80 0v14.8C69.6 17.6 65.2 24.4 64.8 32H80v32H48.8V36.8z"/>
+                  </svg>
+                </span>
+              </div>
+              <p id="testimonial-quote" class="testimonial-quote-text">
+                Building real-time messaging, WebRTC voice and video calling, and live user presence at scale—keeping remote teams and Filipino talent connected every day.
+              </p>
+              <div class="testimonial-author-row">
+                <div class="testimonial-author-info">
+                  <strong id="testimonial-name">Onlinejobs.ph</strong>
+                  <span id="testimonial-role">Software Developer · Real-Time Systems (2023 — Present)</span>
+                </div>
+                <img
+                  id="testimonial-avatar"
+                  class="testimonial-avatar"
+                  src="assets/favicon.png"
+                  alt="Rechcel Toledo"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-controls">
+            <div class="testimonial-arrows">
+              <button type="button" class="testimonial-nav-btn" data-testimonial-prev aria-label="Previous highlight">
+                <svg class="arrow-icon" data-direction="left" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5m6-6-6 6 6 6" /></svg>
+              </button>
+              <button type="button" class="testimonial-nav-btn" data-testimonial-next aria-label="Next highlight">
+                <svg class="arrow-icon" data-direction="right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+              </button>
+            </div>
+            <div class="testimonial-progress-track" aria-hidden="true">
+              <div id="testimonial-progress-bar" class="testimonial-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FAQ ("Common Qs") SECTION -->
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="opus-container">
+          <div class="faq-grid">
+            <div class="faq-left">
+              <div class="opus-badge">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>FAQ</span>
+              </div>
+              <h2 id="faq-title" class="opus-display-lg">Common Qs</h2>
+              <p class="opus-body-lg faq-sub">
+                Get quick answers about working with me and my approach to building software. Can’t find what you’re looking for? Reach out below!
+              </p>
+              <a class="opus-line-link opus-line-link-sm" href="#contact">
+                <span>Contact me</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="faq-right">
+              <details class="opus-faq-item" open>
+                <summary>What types of projects do you typically work on?</summary>
+                <p>
+                  I build full-stack web products, real-time communication systems (WebRTC, WebSockets, live chat), developer tools, AI agent workflows, and marketing or booking platforms that need custom engineering.
+                </p>
+              </details>
+              <details class="opus-faq-item">
+                <summary>How long does a typical project take?</summary>
+                <p>
+                  Focused prototypes and landing experiences typically ship in 1 to 3 weeks. Full-stack products and real-time systems usually take 4 to 8 weeks with weekly shippable milestones.
+                </p>
+              </details>
+              <details class="opus-faq-item">
+                <summary>What is your development process like?</summary>
+                <p>
+                  You work directly with me—no handoffs or layers. We clarify the problem, build a working interactive interface early, wire up tested backend APIs, and verify across desktop and mobile before launch.
+                </p>
+              </details>
+              <details class="opus-faq-item">
+                <summary>Do you provide ongoing support after launch?</summary>
+                <p>
+                  Yes. Several platforms in my portfolio—like Exceed Learning Center and Unbreakable You—are long-term partnerships where I handle new features, maintenance, and performance optimization over time.
+                </p>
+              </details>
+              <details class="opus-faq-item">
+                <summary>Can you work with our existing codebase and team?</summary>
+                <p>
+                  Absolutely. Whether shipping features inside an existing Python/Flask or React/TypeScript repository, contributing AST linters, or building standalone services, I integrate cleanly with your workflow.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. BLOG / PERSPECTIVES & OPEN-SOURCE LAB ARCHIVE -->
+      <section class="perspectives-section lab-section" aria-labelledby="archive-title">
+        <div class="opus-container">
+          <div class="section-split-header">
+            <div class="split-header-left">
+              <div class="opus-badge">
+                <span class="opus-badge-dot" aria-hidden="true"></span>
+                <span>THE LAB</span>
+              </div>
+            </div>
+            <div class="split-header-right">
+              <h2 id="archive-title" class="opus-display-lg" data-scroll-reveal>Little experiments</h2>
+              <p class="opus-body-lg split-header-sub">
+                Open-source tools, Rust CLIs, macOS apps, and agent workflows I wanted to exist.
+              </p>
+              <a class="opus-line-link opus-line-link-sm" href="https://github.com/phcodesage" target="_blank" rel="noreferrer">
+                <span>All repositories</span>
+                <span class="opus-blue-icon" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Opus 3-Card Perspectives Asymmetric Showcase -->
+          <div class="perspectives-grid">
+            <a href="case-studies/jinjalume.html" class="perspective-card perspective-card-large" data-analytics-project="jinjalume" data-scroll-card>
+              <div class="perspective-media perspective-media-jinjalume">
+                <div class="perspective-visual-art">
+                  <span class="perspective-code-pill">pip install jinjalume</span>
+                  <strong>Jinjalume UI</strong>
+                  <span>Server-rendered Tailwind components for Flask &amp; Jinja</span>
+                </div>
+                <span class="lab-arrow" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </div>
+              <span class="perspective-date">Open Source · Python &amp; Jinja</span>
+              <h3 class="perspective-title">Jinjalume: Accessible Tailwind UI Components for Flask Apps</h3>
+            </a>
+
+            <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="perspective-card" data-analytics-project="mermail-skills" data-scroll-card>
+              <div class="perspective-media perspective-media-mermail">
+                <div class="perspective-visual-art">
+                  <span class="perspective-code-pill">MCP &amp; Agent Skills</span>
+                  <strong>Mermail Skills</strong>
+                </div>
+                <span class="lab-arrow" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </div>
+              <span class="perspective-date">Agent Tooling · Workflows</span>
+              <h3 class="perspective-title">Portable Agent Workflows for Email, Scheduling &amp; GTM</h3>
+            </a>
+
+            <a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="perspective-card" data-analytics-project="codesage-orchestrator" data-scroll-card>
+              <div class="perspective-media perspective-media-orchestrator">
+                <div class="perspective-visual-art">
+                  <span class="perspective-code-pill">Multi-Agent Codex</span>
+                  <strong>Orchestrator</strong>
+                </div>
+                <span class="lab-arrow" aria-hidden="true">
+                  <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </span>
+              </div>
+              <span class="perspective-date">AI Systems · Verification</span>
+              <h3 class="perspective-title">CodeSage Orchestrator: Bounded Roles for Autonomous Coding</h3>
+            </a>
+          </div>
+
+          <details class="more-details lab-archive-details" open>
+            <summary>Peek inside the lab <span class="detail-note">12 projects</span></summary>
+            <div class="archive-list">
+              <a href="case-studies/jinjalume.html" class="archive-item" data-analytics-project="jinjalume"><h3>Jinjalume</h3><span class="archive-desc">Tailwind UI for Flask &amp; Jinja</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/mermail-skills" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="mermail-skills"><h3>Mermail Skills</h3><span class="archive-desc">Portable agent workflows</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/causify-ai/helpers/pull/1396" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="causify-helpers"><h3>Causify Helpers</h3><span class="archive-desc">Python AST linter contribution</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/yawp" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="yawp"><h3>yawp</h3><span class="archive-desc">Local macOS dictation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/issueanvil" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="issueanvil"><h3>IssueAnvil</h3><span class="archive-desc">Deterministic GitHub housekeeping CLI</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/Swift-Pos" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="swiftpos"><h3>SwiftPOS</h3><span class="archive-desc">Point of sale for small stores</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/sagemovies-tui" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sagemovies-tui"><h3>SageMovies TUI</h3><span class="archive-desc">Keyboard-first Rust terminal</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/Virex" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="virex"><h3>Virex</h3><span class="archive-desc">Native writing assistant</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/beamly" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="beamly"><h3>Beamly</h3><span class="archive-desc">Encrypted peer-to-peer transfer</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/codesage-orchestrator" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="codesage-orchestrator"><h3>CodeSage Orchestrator</h3><span class="archive-desc">Multi-agent Codex workflow</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/remoteX" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="remotex"><h3>RemoteX</h3><span class="archive-desc">Attended remote-support foundation</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+              <a href="https://github.com/phcodesage/sage_movies" target="_blank" rel="noreferrer" class="archive-item" data-analytics-project="sage-movies"><h3>Sage Movies</h3><span class="archive-desc">Open-source platform source</span><span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 11. CONTACT SECTION (WITH EXPANDABLE INQUIRY FORM) -->
       <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-        <div class="section-heading"><h2 id="contact-title">Let’s make something useful<span aria-hidden="true"> ♡</span></h2></div>
-        <p>Have a project in mind, a problem to untangle, or just want to say hello?</p>
-        <a class="contact-email" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span></a>
-        <div class="contact-channels"><a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
-        <details class="more-details contact-form-details"><summary>Or leave a message here</summary>
-          <form id="contact-form" class="contact-form" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
-                  <div class="form-row">
-                    <label class="form-field"><span class="form-label">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
-                    <label class="form-field"><span class="form-label">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
-                  </div>
-                  <label class="form-field"><span class="form-label">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
-                  <label id="reply-detail-field" class="form-field" hidden><span id="reply-detail-label" class="form-label">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="form-hint"></span></label>
-                  <label class="form-field"><span class="form-label">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
-                  <label class="form-field"><span class="form-label">What can I help with?</span><textarea class="contact-input" name="message" rows="5" required></textarea></label>
-                  <input hidden type="text" name="_honey" tabindex="-1" autocomplete="off" />
-                  <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
-                  <div class="form-actions">
-                    <button id="contact-submit" type="submit" class="button">Send message <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></button>
-                    <p id="contact-status" class="form-status" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
-                  </div>
-                </form>
-        </details>
+        <div class="opus-container">
+          <div class="contact-card-shell">
+            <div class="contact-top-grid">
+              <div>
+                <div class="opus-badge">
+                  <span class="opus-badge-dot" aria-hidden="true"></span>
+                  <span>CONTACT</span>
+                </div>
+                <h2 id="contact-title" class="opus-display-md contact-heading">Let’s make something useful</h2>
+                <p class="opus-body-lg">Have a project in mind, a problem to untangle, or just want to say hello?</p>
+              </div>
+              <div class="contact-direct-col">
+                <a class="contact-email" href="mailto:rechceltoledo@gmail.com">
+                  rechceltoledo@gmail.com
+                  <span aria-hidden="true"><svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></span>
+                </a>
+                <div class="contact-channels">
+                  <a href="https://wa.me/639703224930" target="_blank" rel="noreferrer">WhatsApp <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+                  <a href="https://t.me/phcodesage-portfolio" target="_blank" rel="noreferrer">Telegram bot <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+                </div>
+              </div>
+            </div>
+
+            <details class="more-details contact-form-details">
+              <summary>Or leave a message here</summary>
+              <form id="contact-form" class="contact-form" action="https://formsubmit.co/rechceltoledo@gmail.com" method="POST">
+                <div class="form-row">
+                  <label class="form-field"><span class="form-label">Your name</span><input class="contact-input" type="text" name="name" autocomplete="name" required /></label>
+                  <label class="form-field"><span class="form-label">Email address</span><input class="contact-input" type="email" name="email" autocomplete="email" required /></label>
+                </div>
+                <label class="form-field"><span class="form-label">Preferred reply</span><select id="preferred-contact" class="contact-input" name="preferred_contact"><option value="Email">Email</option><option value="WhatsApp">WhatsApp</option><option value="Telegram">Telegram</option></select></label>
+                <label id="reply-detail-field" class="form-field" hidden><span id="reply-detail-label" class="form-label">Reply contact</span><input id="reply-detail" class="contact-input" name="reply_contact" type="text" disabled /><span id="reply-detail-hint" class="form-hint"></span></label>
+                <label class="form-field"><span class="form-label">What kind of help do you need?</span><select class="contact-input" name="engagement"><option value="Product build">Product build</option><option value="Real-time system">Real-time system</option><option value="Developer tool">Developer tool</option><option value="Ongoing maintenance">Ongoing maintenance</option><option value="Something else">Something else</option></select></label>
+                <label class="form-field"><span class="form-label">What can I help with?</span><textarea class="contact-input" name="message" rows="5" required></textarea></label>
+                <input hidden type="text" name="_honey" tabindex="-1" autocomplete="off" />
+                <input type="hidden" name="_subject" value="New portfolio inquiry — phcodesage" />
+                <div class="form-actions">
+                  <button id="contact-submit" type="submit" class="button">Send message <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></button>
+                  <p id="contact-status" class="form-status" role="status" aria-live="polite">I’ll reply by email unless you choose another channel.</p>
+                </div>
+              </form>
+            </details>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer page-shell">
-      <div class="footer-social"><a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a><a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></div>
-      <p>© <span id="year">2026</span> Rechcel Toledo · Made with care <span aria-hidden="true">&lt;/&gt;</span></p>
-      <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
-      <a href="privacy/" class="text-link">Traffic privacy</a>
-      <a href="#top" class="back-top">Back to top <svg class="arrow-icon" data-direction="up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" /></svg></a>
+    <!-- 12. OPUS DARK #000000 FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-cta-banner">
+        <div class="opus-container footer-cta-inner">
+          <h2 class="opus-display-xl footer-cta-title" data-scroll-words>
+            Let's build something great together
+          </h2>
+          <p class="footer-cta-sub">
+            Get in touch to explore how we can bring your next web product, real-time system, or tool to life.
+          </p>
+          <a class="footer-white-btn" href="#contact">Get Started Today</a>
+        </div>
+      </div>
+
+      <div class="footer-main-content">
+        <div class="opus-container">
+          <div class="footer-top-row">
+            <div class="footer-brand-stack">
+              <h2 class="footer-brand-heading">PHCODESAGE</h2>
+              <p class="footer-brand-bio">
+                I help teams and founders succeed in the digital space by creating thoughtful software that combines clean design, reliable engineering, and a deep understanding of what users really need.
+              </p>
+            </div>
+            <div class="footer-email-stack">
+              <p class="footer-email-label">You can also email me at:</p>
+              <a class="footer-email-address" href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="footer-links-row">
+            <div class="footer-social">
+              <a href="https://github.com/phcodesage" rel="me">GitHub <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+              <a href="https://x.com/phcodesage" rel="me">X <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+              <a href="https://www.instagram.com/phcodesage/" rel="me">Instagram <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+              <a href="https://www.threads.com/@phcodesage" rel="me">Threads <svg class="arrow-icon" data-direction="up-right" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a>
+            </div>
+            <div class="footer-nav-links">
+              <a href="#top">Home</a>
+              <a href="#work">Projects</a>
+              <a href="#companies">Companies</a>
+              <a href="#about">About</a>
+              <a href="resume.html">Resume</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer-bottom-row">
+            <div class="footer-copyright-group">
+              <p>© <span id="year">2026</span> Rechcel Toledo, All Rights Reserved</p>
+              <p id="portfolio-page-views" class="page-views">Page views · loading…</p>
+            </div>
+            <div class="footer-legal-links">
+              <a href="privacy/" class="text-link">Traffic privacy</a>
+              <a href="#top" class="back-top">Back to top <svg class="arrow-icon" data-direction="up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m-6 6 6-6 6 6" /></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="gallery-lightbox-title" aria-describedby="gallery-lightbox-caption">
       <div class="lightbox-toolbar"><h2 id="gallery-lightbox-title">Personal gallery</h2><button class="lightbox-close" type="button" data-gallery-close aria-label="Close photo viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
       <figure class="lightbox-figure"><img data-gallery-image alt="" /><figcaption id="gallery-lightbox-caption" aria-live="polite"></figcaption></figure>
