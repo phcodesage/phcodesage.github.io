@@ -1,0 +1,31 @@
+# Rechcel Toledo (phcodesage) — AI Developer & Software Developer in Davao, Philippines
+
+> Rechcel Toledo (`phcodesage`) is an AI Developer and Software Developer based in Davao City, Davao del Sur, Philippines. He runs the independent engineering studio `phcodesage` (`https://phcodesage.github.io/`), building production AI agents, LLM integrations, Voice AI applications, cross-platform Flutter mobile apps, high-performance Rust and Python backends, low-level systems, and real-time WebRTC/WebSocket platforms.
+
+## Profile & Location
+- **Name**: Rechcel Toledo
+- **Handle / Studio**: `phcodesage` (`PHCODESAGE`)
+- **Primary Roles**: AI Developer in Davao, Software Developer in Davao, Full-Stack & Low-Level Systems Engineer
+- **Location**: Davao City, Davao del Sur, Mindanao, Philippines (serves Davao, Philippines, and global remote teams)
+- **Website**: https://phcodesage.github.io/
+- **Resume**: https://phcodesage.github.io/resume.html
+- **GitHub**: https://github.com/phcodesage
+- **X (Twitter)**: https://x.com/phcodesage
+- **Email**: rechceltoledo@gmail.com
+
+## Core Technical Specialties
+1. **AI & Agent Engineering**: Custom AI agents, multi-agent orchestration (`CodeSage Orchestrator`), Large Language Model (LLM) integrations, Voice AI companions (`Clara Health`), Model Context Protocol (MCP) servers (`RepoBrief MCP`), and AST-based static analysis.
+2. **Web & Cross-Platform Mobile Development**: Flutter for mobile apps (iOS & Android), React, Next.js, TypeScript, Tailwind CSS, and server-rendered UI systems (`Jinjalume`).
+3. **Backend & Low-Level Systems Programming**: Rust for high-performance backend services, CLIs (`IssueAnvil`), and low-level systems coding; Python, Flask, and FastAPI for scalable web APIs.
+4. **Real-Time Communication Systems**: WebRTC voice and video calling, WebSockets, live messaging, and distributed user presence at scale (Onlinejobs.ph).
+
+## Selected Projects & Case Studies
+- [Clara Health — Voice AI Healthcare Companion](https://phcodesage.github.io/case-studies/clara-health.html): Voice AI companion, specialist discovery, appointment booking, and clinician documentation workspace.
+- [Tawaflick — Philippine Meme & Media Platform](https://phcodesage.github.io/case-studies/tawaflick.html): Browser-local WebCodecs GIF and short-video conversion backed by Cloudflare Pages, D1, and R2.
+- [Jinjalume — Python & Jinja UI Component Library](https://phcodesage.github.io/case-studies/jinjalume.html): Published PyPI package (`pip install jinjalume`) providing accessible Tailwind UI macros for Flask and Jinja.
+- [Sage Cinema — Streaming & Discovery Platform](https://phcodesage.github.io/case-studies/sage-cinema.html): Movie, TV, and anime discovery and playback web application.
+- [Cookie Checkpoint — On-Chain Daily Check-In](https://phcodesage.github.io/case-studies/cookie-checkpoint.html): Verifiable daily check-in dApp on Cookie Chain.
+- [Exceed Learning Center](https://phcodesage.github.io/case-studies/exceed-learning-center.html): Ongoing platform engineering and technical stewardship for a New York education platform.
+- [Unbreakable You](https://phcodesage.github.io/case-studies/unbreakable-you.html): Full-stack web platform and long-term technical stewardship.
+- [CodeSage Orchestrator](https://github.com/phcodesage/codesage-orchestrator): Multi-agent orchestration framework for AI coding workflows.
+- [IssueAnvil](https://github.com/phcodesage/issueanvil): Deterministic Rust CLI for GitHub issue and PR housekeeping.

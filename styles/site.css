@@ -2667,7 +2667,10 @@ textarea.contact-input {
     justify-self: start;
   }
   .service-left {
-    gap: 36px;
+    gap: 24px;
+  }
+  .service-title {
+    white-space: normal;
   }
   .service-row {
     grid-template-columns: 1fr;
