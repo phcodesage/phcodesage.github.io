@@ -26,6 +26,8 @@ The browser keeps a random ID in session storage. The backend transforms it usin
 
 Detailed events expire after 90 days via a daily maintenance trigger. The existing page-view archive is preserved. The public `/api/summary` endpoint exposes only the total views. `/api/stats` requires `Authorization: Bearer <ADMIN_TOKEN>` and never accepts the token in a URL. Responses are not cached. Dashboard access is kept only in the current browser tab and cleared by Sign out.
 
+The footer reads the public total after the current page-view request finishes, then refreshes every minute while visible and when returning to the tab or restoring it from browser history. Refreshes never record extra visits. Requests time out after five seconds; a failed refresh preserves the last successful count. Privacy opt-outs still suppress collection while allowing the public total to load.
+
 No Telegram bot, Telegram secrets, or Telegram report schedule is configured.
 
 ## Development and deployment

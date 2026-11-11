@@ -31,6 +31,10 @@ async function setup(context) {
     const request = new Request(incoming.url(), { method: incoming.method(), headers: incoming.headers(), ...(incoming.postData() ? { body: incoming.postData() } : {}) });
     Object.defineProperty(request, 'cf', { value: { country: 'PH' } });
     if (new URL(incoming.url()).pathname === '/api/events' && incoming.method() === 'POST') tracked.push(JSON.parse(incoming.postData()));
+    // Make the collector slower than the summary to expose stale first-load counts.
+    if (new URL(incoming.url()).pathname === '/api/events' && incoming.method() === 'POST' && JSON.parse(incoming.postData()).kind === 'page_view') {
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
     const response = await worker.fetch(request, emptyMode ? emptyEnv : env);
     await route.fulfill({ status: response.status, headers: Object.fromEntries(response.headers), body: await response.text() });
   });
@@ -56,8 +60,21 @@ const context = await browser.newContext({ viewport: { width: 1440, height: 1000
 await setup(context);
 const page = await context.newPage();
 try {
+  await page.clock.install();
   await page.goto(base + '/', { waitUntil: 'networkidle' });
   assert.equal(tracked.filter(row => row.kind === 'page_view').length, 1);
+  assert.equal(await page.locator('#portfolio-page-views').innerText(), 'Page views · 1 in the last 30 days');
+  await env.DB.prepare('INSERT INTO page_views (path,session_id,viewed_at) VALUES (?,?,?)').bind('/', 'counter-refresh-test', new Date().toISOString()).run();
+  await page.clock.fastForward(60000);
+  await page.waitForFunction(() => document.querySelector('#portfolio-page-views').textContent === 'Page views · 2 in the last 30 days');
+  assert.equal(tracked.filter(row => row.kind === 'page_view').length, 1, 'Refreshing the total must not record another visit');
+  await env.DB.prepare('DELETE FROM page_views WHERE session_id = ?').bind('counter-refresh-test').run();
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.locator('.site-footer').screenshot({ path: path.join(output, `counter-footer-${width}.png`) });
+    assert.ok(await page.locator('#portfolio-page-views').isVisible());
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
   assert.equal(await page.locator('.project-arrow .arrow-icon').count(), 8);
   assert.ok(!/[↗↓↑←→]/.test(await page.locator('body').innerText()));
   await page.locator('#clara-health').click();

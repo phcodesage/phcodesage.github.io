@@ -31,10 +31,13 @@
       referrer: referrer(), ...details,
     });
     const url = `${origin}/api/events`;
-    try {
-      if (navigator.sendBeacon?.(url, new Blob([payload], { type: 'text/plain' }))) return;
-    } catch { /* Fall back without interrupting the clicked link. */ }
-    fetch(url, { method: 'POST', body: payload, headers: { 'Content-Type': 'text/plain' }, keepalive: true }).catch(() => {});
+    if (kind !== 'page_view') {
+      try {
+        if (navigator.sendBeacon?.(url, new Blob([payload], { type: 'text/plain' }))) return;
+      } catch { /* Fall back without interrupting the clicked link. */ }
+    }
+    // Page views need a response so the public count includes this visit.
+    return fetch(url, { method: 'POST', body: payload, headers: { 'Content-Type': 'text/plain' }, keepalive: true, signal: AbortSignal.timeout(5000) }).catch(() => {});
   }
 
   function linkEvent(event) {
@@ -63,17 +66,34 @@
     if (event.target.checkValidity()) record('contact_click', { target: 'form_attempt', source: 'contact' });
   });
   document.addEventListener('portfolio:inquiry-sent', () => record('contact_click', { target: 'form_sent', source: 'contact' }));
-  record('page_view');
+  const pageView = record('page_view');
+  let loadingPageViews = false;
+  let loadedPageViews = false;
 
   async function loadPageViews() {
     const element = document.querySelector('#portfolio-page-views');
-    if (!element) return;
+    if (!element || loadingPageViews) return;
+    loadingPageViews = true;
     try {
-      const response = await fetch(`${origin}/api/summary`, { cache: 'no-store' });
+      await pageView;
+      const response = await fetch(`${origin}/api/summary`, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
       if (!response.ok) throw new Error();
       const data = await response.json();
-      element.textContent = `Page views · ${Number(data.views || 0).toLocaleString()} in the last 30 days`;
-    } catch { element.textContent = 'Page views · unavailable'; }
+      if (!Number.isSafeInteger(data.views) || data.views < 0) throw new Error();
+      element.textContent = `Page views · ${data.views.toLocaleString()} in the last 30 days`;
+      loadedPageViews = true;
+    } catch {
+      if (!loadedPageViews) element.textContent = 'Page views · unavailable';
+    } finally { loadingPageViews = false; }
   }
+  if (!document.querySelector('#portfolio-page-views')) return;
   loadPageViews();
+  function refreshPageViews() {
+    if (document.visibilityState === 'visible') loadPageViews();
+  }
+  setInterval(refreshPageViews, 60000);
+  document.addEventListener('visibilitychange', refreshPageViews);
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) refreshPageViews();
+  });
 })();
