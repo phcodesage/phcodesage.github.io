@@ -38,142 +38,101 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <meta name="theme-color" content="#f0e7db" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" />
     <style>
-      @font-face {
-        font-family: "Inter Display";
-        src: url("https://framerusercontent.com/assets/2uIBiALfCHVpWbHqRMZutfT7giU.woff2") format("woff2");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Inter Display";
-        src: url("https://framerusercontent.com/assets/ePuN3mCjzajIHnyCdvKBFiZkyY0.woff2") format("woff2");
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Inter Display";
-        src: url("https://framerusercontent.com/assets/cwミル7bCaG0I7L2A78H4T6G3v0E.woff2") format("woff2"),
-             url("https://framerusercontent.com/assets/f2M2tT1p2T0yG9i1s6V7vR8Z3U.woff2") format("woff2");
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-      :root {
-        --ink: #35313b;
-        --paper: #faf7f2;
-        --violet: #705392;
-        --muted: #716b78;
-        --line: #e5ded7;
-        --soft: #ede5f5;
-      }
+      :root { --desk: #f0e7db; --paper: #fbf8f2; --ink: #1a202c; --pencil: #5a6070; --rule: rgba(26, 32, 44, 0.18); }
       * { box-sizing: border-box; }
+      html { background: var(--desk); }
       body {
         margin: 0;
-        background: var(--paper);
+        padding: 48px 16px;
         color: var(--ink);
-        font-family: "Inter", "Inter Display", Arial, sans-serif;
-        line-height: 1.55;
-        -webkit-font-smoothing: antialiased;
+        font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       }
-      .page { width: min(980px, calc(100% - 40px)); margin: 0 auto; }
-      header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 32px;
-        border-bottom: 2px solid var(--ink);
-        padding: 48px 0 28px;
+      .sheet {
+        max-width: 720px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 56px 64px;
+        box-shadow: 0 1px 2px rgba(60, 45, 20, 0.12);
       }
-      h1, h2, h3, p { margin-top: 0; }
-      h1, h2, h3 { font-family: "Inter Display", "Inter", sans-serif; }
-      h1 {
-        margin-bottom: 8px;
-        font-size: clamp(2.4rem, 6vw, 4.8rem);
-        font-weight: 600;
-        letter-spacing: -0.06em;
-        line-height: 0.96;
+      a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+      a:hover { text-decoration-color: var(--ink); }
+      h1, h2 { font-family: "M PLUS Rounded 1c", system-ui, sans-serif; font-weight: 700; margin: 0; }
+      h1 { font-size: 32px; line-height: 1.1; }
+      .role { margin: 4px 0 0; }
+      .contact { margin: 12px 0 0; color: var(--pencil); font-size: 14px; }
+      h2 {
+        font-size: 15px;
+        margin: 32px 0 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--ink);
       }
-      .role { color: var(--violet); font-size: 1.125rem; font-weight: 600; letter-spacing: -0.02em; }
-      .contact { color: var(--muted); font-size: 1rem; line-height: 1.8; text-align: right; }
-      a { color: inherit; }
-      .actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px 0; }
-      .button {
-        display: inline-flex;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: var(--soft);
-        padding: 10px 18px;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-      }
-      .button.primary { border-color: var(--violet); background: var(--violet); color: #ffffff; }
-      .button:hover { border-color: var(--ink); background: var(--ink); color: #ffffff; }
-      .summary { border-bottom: 1px solid var(--line); padding: 6px 0 28px; color: var(--muted); font-size: 1.125rem; }
-      main { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 64px; padding: 36px 0 64px; }
-      section + section { margin-top: 44px; }
-      .label {
-        margin-bottom: 16px;
-        color: var(--violet);
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: -0.02em;
-        text-transform: uppercase;
-      }
-      h2 { margin-bottom: 18px; font-size: 1.35rem; letter-spacing: -0.04em; }
-      h3 { margin-bottom: 4px; font-size: 1.125rem; font-weight: 600; letter-spacing: -0.03em; }
-      .muted { color: var(--muted); font-size: 1rem; }
-      .entry { border-top: 1px solid var(--line); padding: 18px 0; }
-      .entry:first-of-type { border-top: 0; padding-top: 0; }
-      .entry-meta { color: var(--violet); font-size: 1rem; font-weight: 600; }
-      .entry p { margin-bottom: 0; color: var(--muted); font-size: 1rem; }
-      .skills { display: grid; gap: 14px; }
-      .skill strong { display: block; font-size: 1rem; }
-      .skill span { color: var(--muted); font-size: 1rem; }
-      footer { border-top: 1px solid var(--line); padding: 18px 0 40px; color: var(--muted); font-size: 1rem; }
-      @media (max-width: 700px) {
-        .page { width: min(100% - 28px, 980px); }
-        header { display: block; }
-        .contact { margin-top: 18px; text-align: left; }
-        main { display: block; padding-top: 28px; }
-        main > aside { margin-bottom: 42px; }
+      p { margin: 0; }
+      .row { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 6px 0; }
+      .row time { color: var(--pencil); font-size: 14px; }
+      .row b { font-weight: 600; }
+      .row p { color: var(--pencil); }
+      ul { margin: 0; padding-left: 18px; }
+      li { padding: 2px 0; }
+      li span { color: var(--pencil); }
+      .links { max-width: 720px; margin: 0 auto 14px; font-size: 14px; color: var(--pencil); }
+      .links a { color: var(--ink); }
+      @media (max-width: 640px) {
+        body { padding: 16px 0 0; }
+        .links { padding: 0 16px; }
+        .sheet { padding: 32px 20px; box-shadow: none; }
+        .row { grid-template-columns: 1fr; gap: 0; }
       }
       @media print {
-        body { background: #fff; }
-        .page { width: 100%; }
-        .actions { display: none; }
-        header { padding-top: 0; }
+        html, body { background: #fff; padding: 0; }
+        .links { display: none; }
+        .sheet { box-shadow: none; padding: 0; max-width: none; background: #fff; }
         a { text-decoration: none; }
       }
     </style>
     <script src="site-analytics.js?v=20261111" defer></script>
     <title>Resume — Rechcel Toledo (phcodesage) | AI &amp; Software Developer in Davao, Philippines</title>
-    <link rel="stylesheet" href="styles/arrows.css?v=20261012" />
   </head>
   <body>
-    <div class="page">
+    <nav class="links"><a href="./">← Portfolio</a> · <a href="output/pdf/rechcel-toledo-resume.pdf" download>PDF</a> · <a href="mailto:rechceltoledo@gmail.com">Email</a></nav>
+    <main class="sheet">
       <header>
-        <div><h1>Rechcel Toledo</h1><p class="role">AI Developer &amp; Software Developer · phcodesage</p></div>
-        <div class="contact">Davao City, Philippines<br /><a href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com</a><br /><a href="https://github.com/phcodesage">github.com/phcodesage</a><br /><a href="https://www.linkedin.com/in/rechcel-araneta-624781167/">linkedin.com/in/rechcel-araneta-624781167</a><br /><a href="https://phcodesage.github.io/">phcodesage.github.io</a></div>
+        <h1>Rechcel Toledo</h1>
+        <p class="role">Freelance full-stack &amp; AI developer · Davao, Philippines</p>
+        <p class="contact">
+          <a href="mailto:rechceltoledo@gmail.com">rechceltoledo@gmail.com</a> ·
+          <a href="https://github.com/phcodesage">github.com/phcodesage</a> ·
+          <a href="https://www.linkedin.com/in/rechcel-araneta-624781167/">LinkedIn</a> ·
+          <a href="https://phcodesage.github.io/">phcodesage.github.io</a>
+        </p>
       </header>
-      <div class="actions"><a class="button primary" href="output/pdf/rechcel-toledo-resume.pdf" download>Download PDF</a><a class="button" href="./">Back to portfolio</a><a class="button" href="mailto:rechceltoledo@gmail.com">Email Rechcel</a></div>
-      <p class="summary">AI Developer and Software Developer in the Philippines (Davao City) building custom AI agents, RAG pipelines, LLM workflow automation, Voice AI companions, SaaS MVPs, web and Flutter iOS/Android mobile apps, Rust and Python backends, low-level systems, and real-time platforms. Available for contract, freelance, and select product work across the Philippines and worldwide.</p>
-      <main>
-        <aside>
-          <section><p class="label">Practice</p><div class="skills"><div class="skill"><strong>AI &amp; agent engineering</strong><span>Custom AI agents, RAG pipelines, OpenAI &amp; Claude LLM integrations, business workflow automation, Voice AI, MCP servers, multi-agent orchestration</span></div><div class="skill"><strong>Web &amp; mobile frontend</strong><span>React, Next.js, TypeScript, SaaS MVPs, Flutter for iOS &amp; Android mobile apps, responsive interfaces</span></div><div class="skill"><strong>Backend &amp; low-level</strong><span>Rust, Python, Flask, FastAPI, low-level systems coding, APIs, automated testing</span></div><div class="skill"><strong>Real-time systems</strong><span>WebRTC, WebSockets, presence, chat, voice &amp; video calls</span></div><div class="skill"><strong>Developer tools &amp; Web3</strong><span>Rust CLIs, Jinja UI components, Solana-compatible apps, on-chain UX</span></div></div></section>
-          <section><p class="label">Selected work</p><p class="muted"><a href="https://cookie-checkpoint.vercel.app">Cookie Checkpoint</a><br />Verifiable daily check-ins on Cookie Chain.</p><p class="muted"><a href="https://sage-cinema-nu.vercel.app/">Sage Cinema</a><br />Movie discovery and playback experience.</p><p class="muted"><a href="https://pypi.org/project/jinjalume/">Jinjalume</a><br />Server-rendered UI components for Flask and Jinja.</p><p class="muted"><a href="https://github.com/phcodesage/issueanvil">IssueAnvil</a><br />Deterministic GitHub housekeeping CLI.</p></section>
-        </aside>
-        <div>
-          <section><p class="label">Experience</p><article class="entry"><div class="entry-meta">Aug 2023 - Present</div><h3>Software Developer · Onlinejobs.ph</h3><p>Developing a real-time communication system with Flask, WebRTC, WebSockets, messaging, voice and video calls, and user presence management.</p></article><article class="entry"><div class="entry-meta">Jun - Aug 2023</div><h3>Web Development Instructor · Udemy</h3><p>Created and taught practical front-end and back-end web development courses with project-based materials.</p></article><article class="entry"><div class="entry-meta">Mar - May 2023</div><h3>Junior Frontend Developer · Purple Roof</h3><p>Implemented and maintained user-facing features for a mortgage services platform.</p></article><article class="entry"><div class="entry-meta">Dec 2022 - Mar 2023</div><h3>Backend Python Developer · Rooche Digital</h3><p>Developed and maintained ecommerce APIs with a focus on integrations, scalability, performance, and clean collaboration.</p></article></section>
-          <section><p class="label">Open source and community</p><article class="entry"><h3><a href="https://github.com/phcodesage/codesage-orchestrator">CodeSage Orchestrator</a></h3><p>Drop-in multi-agent setup for OpenAI Codex with bounded scout, builder, verifier, scholar, and critic roles.</p></article><article class="entry"><h3><a href="https://github.com/causify-ai/helpers/pull/1396">Causify Helpers contribution</a></h3><p>Python AST-based private-function linter contribution with tests and actionable diagnostics.</p></article></section>
-        </div>
-      </main>
-      <footer>References, testimonials, and detailed project evidence are available on request. <a href="mailto:rechceltoledo@gmail.com">Contact Rechcel</a>.</footer>
-    </div>
+
+      <h2>Experience</h2>
+      <div class="row"><time>2023 — now</time><div><b>Software Developer, Onlinejobs.ph</b><p>Real-time messaging, voice and video calls, presence. Flask, WebRTC, WebSockets.</p></div></div>
+      <div class="row"><time>Jun — Aug 2023</time><div><b>Web Development Instructor, Udemy</b><p>Project-based frontend and backend courses.</p></div></div>
+      <div class="row"><time>Mar — May 2023</time><div><b>Junior Frontend Developer, Purple Roof</b><p>Features for a mortgage services platform.</p></div></div>
+      <div class="row"><time>Dec 2022 — Mar 2023</time><div><b>Backend Python Developer, Rooche Digital</b><p>Ecommerce APIs and integrations.</p></div></div>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>AI agents, RAG, LLM workflows, MCP servers <span>— OpenAI, Claude</span></li>
+        <li>Web &amp; mobile <span>— React, Next.js, TypeScript, Flutter</span></li>
+        <li>Backend <span>— Rust, Python, Flask, FastAPI</span></li>
+        <li>Real-time <span>— WebRTC, WebSockets</span></li>
+      </ul>
+
+      <h2>Selected work</h2>
+      <ul>
+        <li><a href="https://pypi.org/project/jinjalume/">Jinjalume</a> <span>— UI components for Flask &amp; Jinja</span></li>
+        <li><a href="https://github.com/phcodesage/codesage-orchestrator">CodeSage Orchestrator</a> <span>— multi-agent setup for Codex</span></li>
+        <li><a href="https://github.com/phcodesage/issueanvil">IssueAnvil</a> <span>— GitHub housekeeping CLI in Rust</span></li>
+        <li><a href="https://sage-cinema-nu.vercel.app/">Sage Cinema</a> <span>— movie discovery app</span></li>
+        <li><a href="https://github.com/causify-ai/helpers/pull/1396">Causify Helpers</a> <span>— Python AST linter contribution</span></li>
+      </ul>
+    </main>
   </body>
 </html>
